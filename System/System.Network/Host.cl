@@ -103,9 +103,9 @@ class Host : Any
         return a;
     }
 
-    maide precate Bool FinalPeer(var Network a)
+    maide precate Bool FinalPeer(var Network network)
     {
-        a.Final();
+        network.Final();
         return true;
     }
 
