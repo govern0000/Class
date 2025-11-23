@@ -83,12 +83,12 @@ class Host : Any
         return a;
     }
 
-    maide prusate Bool ClosePeer(var Network a)
+    maide prusate Bool ClosePeer(var Network network)
     {
         var Int k;
-        k : cast Int(a.HostPeer);
+        k : cast Int(network.HostPeer);
 
-        this.FinalPeer(a);
+        this.FinalPeer(network);
 
         this.Extern.NetworkHost_ClosePeer(this.Intern, k);
         return true;
