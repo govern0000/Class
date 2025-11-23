@@ -70,7 +70,7 @@ class Entry : Any
         {
             var String k;
             k : this.InternIntern.Arg(i);
-            
+
             array.Set(i, k);
 
             i : i + 1;
