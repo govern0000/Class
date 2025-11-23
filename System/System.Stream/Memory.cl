@@ -12,7 +12,7 @@ class Memory : Any
         extern.Memory_Init(this.Intern);
         return true;
     }
-    
+
     maide prusate Bool Final()
     {
         var Extern extern;
@@ -26,7 +26,7 @@ class Memory : Any
     field prusate Stream Stream { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
-    
+
     maide prusate Bool Open()
     {
         inf (~(this.Stream = null))
