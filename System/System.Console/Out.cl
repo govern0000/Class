@@ -1,6 +1,6 @@
 class Out : Any
 {
-    maide prusate Bool Write(var String k)
+    maide prusate Bool Write(var String value)
     {
     }
 }
