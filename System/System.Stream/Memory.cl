@@ -7,6 +7,7 @@ class Memory : Any
 
         var Extern extern;
         extern : this.Extern;
+
         this.Intern : extern.Memory_New();
         extern.Memory_Init(this.Intern);
         return true;
@@ -32,23 +33,23 @@ class Memory : Any
         {
             return false;
         }
-        
+
         var Stream stream;
         stream : this.CreateStream();
-        
+
         var Int k;
         k : cast Int(stream.Ident);
 
         var Extern extern;
         extern : this.Extern;
-        
+
         extern.Memory_StreamSet(this.Intern, k);
         extern.Memory_Open(this.Intern);
-        
+
         this.Stream : stream;
         return true;
     }
-    
+
     maide prusate Bool Close()
     {
         var Extern extern;
@@ -61,7 +62,7 @@ class Memory : Any
         this.Stream : null;
         return true;
     }
-    
+
     maide precate Stream CreateStream()
     {
         var MemoryStream k;
