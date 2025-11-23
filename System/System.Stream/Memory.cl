@@ -19,7 +19,7 @@ class Memory : Any
 
         extern.Memory_Final(this.Intern);
         extern.Memory_Delete(this.Intern);
-        return true;        
+        return true;
     }
 
     field prusate Stream Stream { get { return data; } set { data : value; } }
