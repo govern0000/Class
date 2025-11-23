@@ -4,15 +4,22 @@ class Rand : Any
     {
         base.Init();
         this.Extern : share Extern;
-        this.Intern : this.Extern.Rand_New();
-        this.Extern.Rand_Init(this.Intern);
+
+        var Extern extern;
+        extern : this.Extern;
+
+        this.Intern : extern.Rand_New();
+        extern.Rand_Init(this.Intern);
         return true;
     }
 
     maide prusate Bool Final()
     {
-        this.Extern.Rand_Final(this.Intern);
-        this.Extern.Rand_Delete(this.Intern);
+        var Extern extern;
+        extern : this.Extern;
+
+        extern.Rand_Final(this.Intern);
+        extern.Rand_Delete(this.Intern);
         return true;
     }
 
