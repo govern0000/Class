@@ -30,26 +30,26 @@ class Rand : Any
     {
         get
         {
-            var Int u;
-            u : this.Extern.Rand_SeedGet(this.Intern);
+            var Int k;
+            k : this.Extern.Rand_SeedGet(this.Intern);
             var Int a;
-            a : u;
+            a : k;
             return a;
         }
         set
         {
-            var Int u;
-            u : value;
-            this.Extern.Rand_SeedSet(this.Intern, u);
+            var Int k;
+            k : value;
+            this.Extern.Rand_SeedSet(this.Intern, k);
         }
     }
 
     maide prusate Int Execute()
     {
-        var Int u;
-        u : this.Extern.Rand_Execute(this.Intern);
+        var Int k;
+        k : this.Extern.Rand_Execute(this.Intern);
         var Int a;
-        a : u;
+        a : k;
         return a;
     }
 }
