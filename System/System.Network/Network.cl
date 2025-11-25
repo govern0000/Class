@@ -69,7 +69,7 @@ class Network : Any
         extern.Network_StatusEventStateSet(this.Intern, this.InternStatusEventState);
         extern.Network_CaseEventStateSet(this.Intern, this.InternCaseEventState);
         extern.Network_DataEventStateSet(this.Intern, this.InternDataEventState);
-        return true;        
+        return true;
     }
 
     maide prusate Bool Final()
