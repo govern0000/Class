@@ -8,7 +8,7 @@ class Storage : Any
         this.InternInfra : share InternInfra;
         this.StorageInfra : share Infra;
         this.StorageStatusList : share StatusList;
-        
+
         var Extern extern;
         extern : this.Extern;
 
