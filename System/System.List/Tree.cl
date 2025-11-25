@@ -143,7 +143,7 @@ class Tree : Any
                     x.Balance : 0 - direct;
 
                     z : x;
-                    
+
                     x : z.Parent;
                 }
             }
@@ -322,7 +322,7 @@ class Tree : Any
             z.Balance : direct;
         }
         inf (~b)
-        { 
+        {
             x.Balance : 0;
 
             z.Balance : 0;
@@ -436,7 +436,7 @@ class Tree : Any
         {
             t23.Parent : x;
         }
-        
+
         z.ChildLite : x;
 
         x.Parent : z;
@@ -455,7 +455,7 @@ class Tree : Any
         {
             t23.Parent : x;
         }
-        
+
         z.ChildRite : x;
 
         x.Parent : z;
@@ -476,7 +476,7 @@ class Tree : Any
                 b : true;
             }
         }
-        
+
         inf (~b)
         {
             inf (z.ChildRite = null)
@@ -486,7 +486,7 @@ class Tree : Any
                 b : true;
             }
         }
-        
+
         inf (~b)
         {
             var TreeNode y;
@@ -516,7 +516,7 @@ class Tree : Any
     {
         var Bool b;
         b : false;
-        
+
         inf (~b)
         {
             inf (u.Parent = null)
@@ -531,7 +531,7 @@ class Tree : Any
             inf (u = u.Parent.ChildLite)
             {
                 u.Parent.ChildLite : v;
-            
+
                 b : true;
             }
         }
