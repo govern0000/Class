@@ -23,7 +23,7 @@ class Network : Any
         this.DataEvent();
         return true;
     }
-    
+
     maide prusate Bool Init()
     {
         base.Init();
@@ -32,7 +32,7 @@ class Network : Any
         this.InternInfra : share InternInfra;
         this.NetworkStatusList : share StatusList;
         this.NetworkCaseList : share CaseList;
-        
+
         var Int ka;
         var Int kb;
         var Int kc;
@@ -102,7 +102,7 @@ class Network : Any
     field prusate StreamStream Stream { get { return data; } set { data : value; } }
     field precate StreamStream DataStream { get { return data; } set { data : value; } }
     field prusate Bool LoadOpen { get { return data; } set { data : value; } }
-    
+
     field prusate Status Status
     {
         get
@@ -198,7 +198,7 @@ class Network : Any
         extern : this.Extern;
 
         extern.Network_Close(this.Intern);
-        
+
         extern.Network_StreamSet(this.Intern, 0);
         extern.Network_HostPortSet(this.Intern, 0);
         extern.Network_HostNameSet(this.Intern, 0);
