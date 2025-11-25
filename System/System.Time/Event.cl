@@ -12,13 +12,13 @@ class Event : Any
         this.InternIntern : share Intern;
         this.Extern : share Extern;
         this.InternInfra : share InternInfra;
-        
+
         var Int ka;
         ka : this.InternIntern.StateTimeEventElapse();
         var Int arg;
         arg : this.InternIntern.StateArgMemory(this);
         this.InternElapseState : this.InternInfra.StateCreate(ka, arg);
-        
+
         var Extern extern;
         extern : this.Extern;
 
@@ -27,7 +27,7 @@ class Event : Any
         extern.TimeEvent_ElapseStateSet(this.Intern, this.InternElapseState);
         return true;
     }
-    
+
     maide prusate Bool Final()
     {
         var Extern extern;
@@ -35,7 +35,7 @@ class Event : Any
 
         extern.TimeEvent_Final(this.Intern);
         extern.TimeEvent_Delete(this.Intern);
-        
+
         this.InternInfra.StateDelete(this.InternElapseState);
         return true;
     }
@@ -50,7 +50,7 @@ class Event : Any
         }
         set
         {
-            this.Extern.TimeEvent_TimeSet(this.Intern, value);   
+            this.Extern.TimeEvent_TimeSet(this.Intern, value);
         }
     }
     field private Intern InternIntern { get { return data; } set { data : value; } }
@@ -64,13 +64,13 @@ class Event : Any
         this.Extern.TimeEvent_Start(this.Intern);
         return true;
     }
-    
+
     maide prusate Bool Stop()
     {
         this.Extern.TimeEvent_Stop(this.Intern);
         return true;
     }
-    
+
     maide prusate Bool Elapse()
     {
     }
