@@ -54,16 +54,16 @@ class Math : Any
 
     maide prusate Bool Less(var Int valueA, var Int valueB)
     {
-        var Int u;
-        u : this.Extern.Math_Less(this.Intern, valueA, valueB);
+        var Int ka;
+        ka : this.Extern.Math_Less(this.Intern, valueA, valueB);
 
-        inf (u = null)
+        inf (ka = null)
         {
             return null;
         }
 
         var Bool k;
-        k : ~(u = 0);
+        k : ~(ka = 0);
 
         var Bool a;
         a : k;
