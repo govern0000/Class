@@ -105,11 +105,11 @@ class Program : Any
         extern.Program_EnvironSet(this.Intern, environU);
 
         extern.Program_Execute(this.Intern);
-        
+
         extern.Program_EnvironSet(this.Intern, 0);
         extern.Program_WorkFoldSet(this.Intern, 0);
         extern.Program_ArgueSet(this.Intern, 0);
-        extern.Program_NameSet(this.Intern, 0);       
+        extern.Program_NameSet(this.Intern, 0);
 
         inf (bb)
         {
@@ -133,7 +133,7 @@ class Program : Any
         stringList.IterSet(iter);
         var Int count;
         count : stringList.Count;
-        
+
         var Extern extern;
         extern : this.Extern;
 
@@ -241,7 +241,7 @@ class Program : Any
 
         var Int count;
         count : extern.Array_CountGet(a);
-        
+
         var Int i;
         i : 0;
         while (i < count)
