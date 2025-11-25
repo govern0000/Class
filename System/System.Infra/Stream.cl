@@ -30,7 +30,7 @@ class Stream : Any
         this.Ident : this.Intern;
         return true;
     }
-    
+
     maide prusate Bool Final()
     {
         var Extern extern;
@@ -44,15 +44,15 @@ class Stream : Any
 
         extern.Range_Final(this.InternRange);
         extern.Range_Delete(this.InternRange);
-        
+
         extern.Data_Final(this.InternData);
         extern.Data_Delete(this.InternData);
         return true;
     }
-    
+
     field prusate Any SetIntern { get { return data; } set { data : value; } }
     field prusate Any Ident { get { return data; } set { data : value; } }
-    
+
     field prusate Bool HasCount
     {
         get
@@ -67,7 +67,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Bool HasPos
     {
         get
@@ -82,7 +82,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Bool CanRead
     {
         get
@@ -97,7 +97,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Bool CanWrite
     {
         get
@@ -112,7 +112,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Int Count
     {
         get
@@ -125,7 +125,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Int Pos
     {
         get
@@ -138,7 +138,7 @@ class Stream : Any
         {
         }
     }
-    
+
     field prusate Int Status
     {
         get
@@ -151,19 +151,19 @@ class Stream : Any
         {
         }
     }
-    
+
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternRange { get { return data; } set { data : value; } }
     field private Int InternData { get { return data; } set { data : value; } }
-    
+
     maide prusate Bool PosSet(var Int value)
     {
         this.Extern.Stream_PosSet(this.Intern, value);
         return true;
     }
-    
+
     maide prusate Bool Read(var Data data, var Range range)
     {
         inf (~this.CanRead)
@@ -177,7 +177,7 @@ class Stream : Any
         this.InternInfra.StreamRead(this.Intern, data.Value, this.InternData, this.InternRange);
         return true;
     }
-    
+
     maide prusate Bool Write(var Data data, var Range range)
     {
         inf (~this.CanWrite)
@@ -191,13 +191,13 @@ class Stream : Any
         this.InternInfra.StreamWrite(this.Intern, data.Value, this.InternData, this.InternRange);
         return true;
     }
-    
+
     maide private Bool InternDataCountSet(var Int count)
     {
         this.Extern.Data_CountSet(this.InternData, count);
         return true;
     }
-    
+
     maide private Bool InternRangeSet(var Int index, var Int count)
     {
         this.Extern.Range_IndexSet(this.InternRange, index);
