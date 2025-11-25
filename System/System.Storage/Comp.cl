@@ -50,7 +50,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool FileCopy(var String path, var String destPath)
     {
         var Int pathU;
@@ -68,7 +68,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool FileDelete(var String path)
     {
         var Int pathU;
@@ -83,7 +83,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool FoldCreate(var String path)
     {
         var Int pathU;
@@ -98,7 +98,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool FoldCopy(var String path, var String destPath)
     {
         var Int pathU;
@@ -116,7 +116,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool FoldDelete(var String path)
     {
         var Int pathU;
@@ -131,7 +131,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool Exist(var String path)
     {
         var Int pathU;
@@ -163,7 +163,7 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate Bool Fold(var String path)
     {
         var Int pathU;
@@ -206,20 +206,20 @@ class Comp : Any
         a : ~(k = 0);
         return a;
     }
-    
+
     maide prusate String ThisFoldGet()
     {
         var Int k;
         k : this.Extern.StorageComp_ThisFoldGet(this.Intern);
-        
+
         var String a;
         a : this.InternInfra.StringCreateIntern(k);
-        
+
         this.InternInfra.StringDelete(k);
-        
+
         return a;
     }
-    
+
     maide prusate Bool ThisFoldSet(var String path)
     {
         var Int pathU;
