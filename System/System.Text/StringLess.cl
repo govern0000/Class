@@ -5,7 +5,7 @@ class StringLess : InfraLess
         this.StringComp : share StringComp;
         return true;
     }
-    
+
     field prusate IntLess CharLess { get { return data; } set { data : value; } }
     field prusate Form LiteForm { get { return data; } set { data : value; } }
     field prusate Form RiteForm { get { return data; } set { data : value; } }
@@ -15,7 +15,7 @@ class StringLess : InfraLess
     {
         var StringComp stringComp;
         stringComp : this.StringComp;
-        
+
         var String liteString;
         var String riteString;
         liteString : cast String(lite);
