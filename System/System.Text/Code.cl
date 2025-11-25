@@ -28,7 +28,7 @@ class Code : Any
             return null;
         }
 
-        var Int k;        
+        var Int k;
         k : this.InternInfra.TextCodeCount(innKind.Intern, outKind.Intern, data.Value, dataIndex, dataCount);
 
         var Int a;
