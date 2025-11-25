@@ -131,7 +131,7 @@ class Infra : Any
         {
             return null;
         }
-        
+
         var TextCodeKind innKind;
         var TextCodeKind outKind;
         innKind : kindList.Utf8;
@@ -144,7 +144,7 @@ class Infra : Any
         dataRange.Count : data.Count;
 
         var Data result;
-        result : this.TextInfra.Code(innKind, outKind, data, dataRange); 
+        result : this.TextInfra.Code(innKind, outKind, data, dataRange);
 
         var String k;
         k : this.StringComp.CreateData(result, null);
@@ -263,7 +263,7 @@ class Infra : Any
 
         var Bool b;
         b : textInfra.Same(entryPath, colon, less);
-        
+
         range.Index : indexA;
         range.Count : countA;
 
