@@ -86,7 +86,7 @@ class Infra : Any
         {
             return null;
         }
-        
+
         var Int oa;
         oa : count;
         oa : oa * 4;
@@ -169,7 +169,7 @@ class Infra : Any
         dataCount : data.Count;
         var Int totalCount;
         totalCount : dataCount / 4;
-        
+
         inf (~this.InfraInfra.ValidRange(totalCount, range.Index, range.Count))
         {
             return false;
@@ -245,7 +245,7 @@ class Infra : Any
             m : digit - 10;
             n : alphaStart + m;
         }
-        
+
         n : bit &(n, 0hffffffff);
 
         var Int a;
@@ -295,7 +295,7 @@ class Infra : Any
         count : range.Count;
         var Int otherCount;
         otherCount : other.Range.Count;
-        
+
         inf (count < otherCount)
         {
             return false;
@@ -328,7 +328,7 @@ class Infra : Any
 
         var Int index;
         index : range.Index;
-        
+
         var Int end;
         end : index + count;
 
@@ -372,7 +372,7 @@ class Infra : Any
         }
 
         var Int k;
-        
+
         var Int count;
         count : textCount - otherCount + 1;
         var Int i;
@@ -542,18 +542,18 @@ class Infra : Any
 
         return array;
     }
-    
+
     maide prusate Text Join(var Array array, var Text join)
     {
         var Int k;
         k : 0;
-        
+
         var Range joinRange;
         joinRange : join.Range;
-        
+
         var Int joinCount;
         joinCount : joinRange.Count;
-        
+
         var Int count;
         count : array.Count;
         var Int i;
@@ -564,27 +564,27 @@ class Infra : Any
             {
                 k : k + joinCount;
             }
-            
+
             var Text kk;
             kk : cast Text(array.Get(i));
-            
+
             k : k + kk.Range.Count;
-            
+
             i : i + 1;
         }
-        
+
         var Text text;
         text : this.TextCreate(k);
-        
+
         var Data dest;
         dest : text.Data;
-        
+
         var Data joinData;
         joinData : join.Data;
-        
+
         var Int joinIndex;
         joinIndex : joinRange.Index;
-        
+
         k : 0;
         i : 0;
         while (i < count)
@@ -592,82 +592,82 @@ class Infra : Any
             inf (0 < i)
             {
                 this.Copy(dest, k, joinData, joinIndex, joinCount);
-                
+
                 k : k + joinCount;
             }
-            
+
             var Text ka;
             ka : cast Text(array.Get(i));
-            
+
             var Data kaData;
             kaData : ka.Data;
-            
+
             var Range kaRange;
             kaRange : ka.Range;
-            
+
             var Int kaCount;
             kaCount : kaRange.Count;
-            
+
             this.Copy(dest, k, kaData, kaRange.Index, kaCount);
-            
+
             k : k + kaCount;
-            
+
             i : i + 1;
         }
-        
+
         return text;
     }
-    
+
     maide prusate Text Place(var Text text, var Text limit, var Text join, var InfraLess less)
     {
         var Array array;
         array : this.Limit(text, limit, less);
-        
+
         var Text k;
         k : this.Join(array, join);
-        
+
         var Text a;
         a : k;
         return a;
     }
-    
+
     maide prusate Bool Form(var Text dest, var Text source, var Form form)
     {
         var Int count;
         count : dest.Range.Count;
-        
+
         inf (~(count = source.Range.Count))
         {
             return false;
         }
-        
+
         var Data sourceData;
         var Data destData;
         sourceData : source.Data;
         destData : dest.Data;
-        
+
         var Int sourceIndex;
         var Int destIndex;
         sourceIndex : source.Range.Index;
         destIndex : dest.Range.Index;
-        
+
         var Int i;
         i : 0;
         while (i < count)
         {
             var Int n;
             n : this.DataCharGet(sourceData, sourceIndex + i);
-            
+
             n : form.Execute(n);
-            
+
             this.DataCharSet(destData, destIndex + i, n);
-            
+
             i : i + 1;
         }
-        
+
         return true;
     }
-    
+
     maide prusate StringLess StringLessCreate()
     {
         var IntLess charLess;
@@ -686,12 +686,12 @@ class Infra : Any
         a.Init();
         return a;
     }
-    
+
     maide prusate Bool Copy(var Data dest, var Int destIndex, var Data source, var Int sourceIndex, var Int count)
     {
         var Int ka;
         ka : 4;
-        
+
         return this.InfraInfra.DataCopy(dest, destIndex * ka, source, sourceIndex * ka, count * ka);
     }
 
@@ -725,7 +725,7 @@ class Infra : Any
         aa.Init();
         aa.Index : range.Index;
         aa.Count : range.Count;
-        
+
         var Text a;
         a : new Text;
         a.Init();
