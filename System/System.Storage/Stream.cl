@@ -7,13 +7,13 @@ class Stream : StreamStream
         this.Intern.Init();
         return true;
     }
-    
+
     maide prusate Bool Final()
     {
         this.Intern.Final();
         return true;
     }
-    
+
     field prusate Any Ident
     {
         get
@@ -25,7 +25,7 @@ class Stream : StreamStream
             this.Intern.Ident : value;
         }
     }
-    
+
     field prusate Bool HasCount
     {
         get
@@ -37,7 +37,7 @@ class Stream : StreamStream
             this.Intern.HasCount : value;
         }
     }
-    
+
     field prusate Bool HasPos
     {
         get
@@ -49,7 +49,7 @@ class Stream : StreamStream
             this.Intern.HasPos : value;
         }
     }
-    
+
     field prusate Bool CanRead
     {
         get
@@ -61,7 +61,7 @@ class Stream : StreamStream
             this.Intern.CanRead : value;
         }
     }
-    
+
     field prusate Bool CanWrite
     {
         get
@@ -85,7 +85,7 @@ class Stream : StreamStream
             this.Intern.Count : value;
         }
     }
-    
+
     field prusate Int Pos
     {
         get
@@ -97,7 +97,7 @@ class Stream : StreamStream
             this.Intern.Pos : value;
         }
     }
-    
+
     field prusate Int Status
     {
         get
@@ -111,17 +111,17 @@ class Stream : StreamStream
     }
 
     field private InternStream Intern { get { return data; } set { data : value; } }
-    
+
     maide prusate Bool PosSet(var Int value)
     {
         return this.Intern.PosSet(value);
     }
-    
+
     maide prusate Bool Read(var Data data, var Range range)
     {
         return this.Intern.Read(data, range);
     }
-    
+
     maide prusate Bool Write(var Data data, var Range range)
     {
         return this.Intern.Write(data, range);
