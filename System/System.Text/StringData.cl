@@ -12,7 +12,7 @@ class StringData : Data
     {
         return true;
     }
-    
+
     field prusate String ValueString
     {
         get
