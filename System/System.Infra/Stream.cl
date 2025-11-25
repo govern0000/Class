@@ -57,10 +57,10 @@ class Stream : Any
     {
         get
         {
-            var Int u;
-            u : this.Extern.Stream_HasCount(this.Intern);
+            var Int k;
+            k : this.Extern.Stream_HasCount(this.Intern);
             var Bool a;
-            a : ~(u = 0);
+            a : ~(k = 0);
             return a;
         }
         set
@@ -72,10 +72,10 @@ class Stream : Any
     {
         get
         {
-            var Int u;
-            u : this.Extern.Stream_HasPos(this.Intern);
+            var Int k;
+            k : this.Extern.Stream_HasPos(this.Intern);
             var Bool a;
-            a : ~(u = 0);
+            a : ~(k = 0);
             return a;
         }
         set
@@ -87,10 +87,10 @@ class Stream : Any
     {
         get
         {
-            var Int u;
-            u : this.Extern.Stream_CanRead(this.Intern);
+            var Int k;
+            k : this.Extern.Stream_CanRead(this.Intern);
             var Bool a;
-            a : ~(u = 0);
+            a : ~(k = 0);
             return a;
         }
         set
@@ -102,10 +102,10 @@ class Stream : Any
     {
         get
         {
-            var Int u;
-            u : this.Extern.Stream_CanWrite(this.Intern);
+            var Int k;
+            k : this.Extern.Stream_CanWrite(this.Intern);
             var Bool a;
-            a : ~(u = 0);
+            a : ~(k = 0);
             return a;
         }
         set
