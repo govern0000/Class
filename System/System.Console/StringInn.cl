@@ -15,7 +15,7 @@ class StringInn : Inn
     field prusate String String { get { return data; } set { data : value; } }
     field prusate Int Index { get { return data; } set { data : value; } }
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
-    field precate TextInfra TextInfra { get { return data; } set { data : value; } }    
+    field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Range Range { get { return data; } set { data : value; } }
     field precate Int NewLineChar { get { return data; } set { data : value; } }
@@ -73,7 +73,7 @@ class StringInn : Inn
 
             index : index + countB + 1;
         }
-        
+
         this.Index : index;
 
         return a;
@@ -99,7 +99,7 @@ class StringInn : Inn
         {
             var Int ka;
             ka : stringComp.Char(string, i);
-            
+
             inf (ka = value)
             {
                 return i;
