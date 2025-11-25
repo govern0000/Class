@@ -7,7 +7,7 @@ class Time : Any
 
         var Extern extern;
         extern : this.Extern;
-        
+
         this.Intern : extern.Time_New();
         extern.Time_Init(this.Intern);
         return true;
@@ -17,7 +17,7 @@ class Time : Any
     {
         var Extern extern;
         extern : this.Extern;
-        
+
         extern.Time_Final(this.Intern);
         extern.Time_Delete(this.Intern);
         return true;
@@ -155,7 +155,7 @@ class Time : Any
         {
         }
     }
-    
+
     field prusate Int YeaDayCount
     {
         get
@@ -168,7 +168,7 @@ class Time : Any
         {
         }
     }
-    
+
     field prusate Int MonDayCount
     {
         get
@@ -199,7 +199,7 @@ class Time : Any
     {
         var Int k;
         k : this.Extern.Time_This(this.Intern);
-        
+
         var Bool a;
         a : ~(k = 0);
         return true;
@@ -215,7 +215,7 @@ class Time : Any
     {
         var Int k;
         k : this.Extern.Time_AddYea(this.Intern, value);
-        
+
         var Bool a;
         a : ~(k = 0);
         return a;
@@ -225,7 +225,7 @@ class Time : Any
     {
         var Int k;
         k : this.Extern.Time_AddMon(this.Intern, value);
-        
+
         var Bool a;
         a : ~(k = 0);
         return a;
@@ -235,7 +235,7 @@ class Time : Any
     {
         var Int k;
         k : this.Extern.Time_AddDay(this.Intern, value);
-        
+
         var Bool a;
         a : ~(k = 0);
         return a;
@@ -245,7 +245,7 @@ class Time : Any
     {
         var Int k;
         k : this.Extern.Time_AddTick(this.Intern, value);
-        
+
         var Bool a;
         a : ~(k = 0);
         return a;
