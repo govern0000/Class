@@ -63,9 +63,9 @@ class Table : List
             return null;
         }
 
-        var ListNode u;
-        u : this.ListNode(entry.Index);
-        inf (~(u = null))
+        var ListNode ka;
+        ka : this.ListNode(entry.Index);
+        inf (~(ka = null))
         {
             return null;
         }
