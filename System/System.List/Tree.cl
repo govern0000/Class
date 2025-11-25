@@ -365,14 +365,14 @@ class Tree : Any
         return y;
     }
 
-    maide private Int Sign(var Int u)
+    maide private Int Sign(var Int k)
     {
-        inf (sign <(u, 0))
+        inf (sign <(k, 0))
         {
             return 0 - this.DirectValue;
         }
 
-        inf (sign <(0, u))
+        inf (sign <(0, k))
         {
             return this.DirectValue;
         }
