@@ -45,7 +45,7 @@ class Demo : Add
         while (i < count)
         {
             var Int nak;
-            
+
             ba : ba & (nak = null);
 
             nak : 2;
@@ -60,7 +60,7 @@ class Demo : Add
         #k : console.Inn.Read();
 
         # var String a;
-        
+
         # a : this.AddClear().Add("k: ").AddLine()
             # .Add(k)
             # .AddLine().AddResult();
@@ -188,7 +188,7 @@ class Demo : Add
         b : b & (ka = 0);
 
         var Bool ba;
-        ba : sign <(0sn11, 0sn10); 
+        ba : sign <(0sn11, 0sn10);
 
         b : b & ba;
 
@@ -329,7 +329,7 @@ class Demo : Add
     {
         var DemoC ka;
         ka : new DemoC;
-        
+
         var Any kk;
         kk : ka;
 
@@ -703,7 +703,7 @@ class Demo : Add
     maide private Bool ConsoleWriteMathValue(var String prefix, var Int value)
     {
         this.Math.Comp(this.MathComp, value);
-        
+
         var String ka;
         ka : this.StringSInt(this.MathComp.Expo);
 
@@ -734,7 +734,7 @@ class Demo : Add
         inf (sign <(n, 0))
         {
             k : 0 - n;
-        
+
             this.Add("-");
         }
 
@@ -830,7 +830,7 @@ class Demo : Add
 
         return true;
     }
-    
+
     maide private Bool ExecuteFormat()
     {
         var FormatArg argA;
