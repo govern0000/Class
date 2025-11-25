@@ -491,7 +491,7 @@ class Tree : Any
         {
             var TreeNode y;
 
-            y : this.Successor(z);
+            y : this.Succeed(z);
 
             inf (~(y.Parent = z))
             {
@@ -548,7 +548,7 @@ class Tree : Any
         return true;
     }
 
-    maide private TreeNode Successor(var TreeNode x)
+    maide private TreeNode Succeed(var TreeNode x)
     {
         inf (~(x.ChildRite = null))
         {
