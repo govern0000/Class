@@ -176,7 +176,7 @@ class Format : Any
                     oa : resultStart + resultIndex;
                     resultRange.Index : oa;
                     resultRange.Count : countA;
-                    
+
                     this.ExecuteArgResult(arg, result);
 
                     resultRange.Index : resultStart;
@@ -198,7 +198,7 @@ class Format : Any
                 n : textInfra.DataCharGet(baseData, baseStart + i);
 
                 textInfra.DataCharSet(resultData, resultStart + resultIndex, n);
-                
+
                 resultIndex : resultIndex + 1;
             }
 
@@ -311,7 +311,7 @@ class Format : Any
         {
             source : textInfra.BoolTrueString;
         }
-        
+
         var Bool baa;
         baa : (form = null);
 
@@ -333,7 +333,7 @@ class Format : Any
             {
                 n : form.Execute(n);
             }
-            
+
             textInfra.DataCharSet(destData, destIndex + i, n);
 
             i : i + 1;
@@ -545,9 +545,9 @@ class Format : Any
 
             inf (text = null)
             {
-                return false;   
+                return false;
             }
-            
+
             inf (~this.TextInfra.ValidRange(text))
             {
                 return false;
