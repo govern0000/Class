@@ -10,7 +10,7 @@ class BoolFormatCountState : FormatCountState
 
     field precate Infra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
-    
+
     maide prusate Bool Execute()
     {
         var Infra textInfra;
@@ -18,7 +18,7 @@ class BoolFormatCountState : FormatCountState
 
         var StringComp stringComp;
         stringComp : this.StringComp;
-        
+
         var FormatArg arg;
         arg : cast FormatArg(this.Arg);
 
@@ -34,7 +34,7 @@ class BoolFormatCountState : FormatCountState
         {
             k : stringComp.Count(textInfra.BoolTrueString);
         }
-        
+
         this.Result : k;
         return true;
     }
