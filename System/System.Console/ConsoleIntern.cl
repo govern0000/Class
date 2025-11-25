@@ -13,17 +13,17 @@ class ConsoleIntern : Any
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
 
-    maide prusate Bool Write(var Int stream, var String a)
+    maide prusate Bool Write(var Int stream, var String value)
     {
         var Bool b;
-        b : (stream = 0);
+        b : stream = 0;
         inf (b)
         {
-            this.OutWrite(a);
+            this.OutWrite(value);
         }
         inf (~b)
         {
-            this.ErrWrite(a);
+            this.ErrWrite(value);
         }
         return true;
     }
