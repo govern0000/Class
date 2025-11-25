@@ -7,7 +7,7 @@ class InternInfra : Any
         this.Extern : share Extern;
         return true;
     }
-    
+
     field prusate String ModuleFoldPath { get { return data; } set { data : value; } }
     field precate Intern InternIntern { get { return data; } set { data : value; } }
     field precate Extern Extern { get { return data; } set { data : value; } }
@@ -112,27 +112,27 @@ class InternInfra : Any
         this.Extern.TextCode_ExecuteResult(0, resultValue, innKind, outKind, dataValue, dataCount);
         return true;
     }
-    
+
     maide prusate Bool CopyToByteArray(var Int source, var Any dest, var Int index, var Int count)
     {
         var Int dataValue;
         dataValue : this.InternIntern.Memory(dest);
         dataValue : dataValue + index;
-        
+
         this.Extern.Environ_Copy(dataValue, source, count);
         return true;
     }
-    
+
     maide prusate Bool CopyFromByteArray(var Int dest, var Any source, var Int index, var Int count)
     {
         var Int dataValue;
         dataValue : this.InternIntern.Memory(source);
         dataValue : dataValue + index;
-        
+
         this.Extern.Environ_Copy(dest, dataValue, count);
         return true;
     }
-    
+
     maide prusate Int StringCreate(var String k)
     {
         var Any value;
@@ -159,7 +159,7 @@ class InternInfra : Any
         extern.String_CountSet(a, count);
         return a;
     }
-    
+
     maide prusate Bool StringDelete(var Int k)
     {
         var Extern extern;
@@ -249,7 +249,7 @@ class InternInfra : Any
         extern.Range_Delete(a);
         return true;
     }
-    
+
     maide prusate Bool RangeSet(var Int range, var Int index, var Int count)
     {
         var Extern extern;
@@ -257,7 +257,7 @@ class InternInfra : Any
         extern.Range_IndexSet(range, index);
         extern.Range_CountSet(range, count);
         return true;
-    }    
+    }
 
     maide prusate Int PosCreate()
     {
@@ -344,7 +344,7 @@ class InternInfra : Any
         var Int size;
         pos : extern.Rect_PosGet(rect);
         size : extern.Rect_SizeGet(rect);
-        
+
         extern.Rect_Final(rect);
         extern.Rect_Delete(rect);
 
@@ -398,7 +398,7 @@ class InternInfra : Any
         extern.Data_ValueSet(data, 0);
         return true;
     }
-    
+
     maide prusate Bool StreamWrite(var Int stream, var Any dataValue, var Int data, var Int range)
     {
         var Int k;
