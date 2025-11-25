@@ -7,7 +7,7 @@ class DemoA : Add
     {
         var Console console;
         console : share Console;
-        
+
         console.Out.Write("DemoA Execute\n");
         return true;
     }

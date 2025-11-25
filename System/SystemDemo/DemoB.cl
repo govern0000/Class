@@ -9,7 +9,7 @@ class DemoB : DemoA
 
         var Console console;
         console : share Console;
-        
+
         console.Out.Write("DemoB Execute\n");
         return true;
     }
