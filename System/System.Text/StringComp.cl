@@ -8,11 +8,11 @@ class StringComp : Any
         this.InfraInfra : share InfraInfra;
         return true;
     }
-    
+
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
-    
+
     maide prusate String CreateChar(var Int char, var Int count)
     {
         var InternInfra internInfra;
@@ -38,7 +38,7 @@ class StringComp : Any
         {
             var Int index;
             index : i * ko;
-            
+
             internInfra.DataCharSet(value, index, char);
 
             i : i + 1;
@@ -50,24 +50,24 @@ class StringComp : Any
         this.InternIntern.StringCountSet(a, count);
         return a;
     }
-    
+
     maide prusate String CreateData(var Data data, var Range range)
     {
         inf (data = null)
         {
             return null;
         }
-        
+
         return this.CreateDataValue(data.Value, data.Count, range);
     }
-    
+
     maide prusate String CreateString(var String string, var Range range)
     {
         inf (string = null)
         {
             return null;
         }
-        
+
         var Any k;
         k : this.InternIntern.StringValueGet(string);
 
@@ -77,7 +77,7 @@ class StringComp : Any
 
         return this.CreateDataValue(k, count, range);
     }
-    
+
     maide private String CreateDataValue(var Any data, var Int dataCount, var Range range)
     {
         var InternInfra internInfra;
@@ -104,7 +104,7 @@ class StringComp : Any
         {
             index : range.Index;
             count : range.Count;
-    
+
             inf (~this.InfraInfra.ValidRange(totalCount, index, count))
             {
                 return null;
@@ -125,12 +125,12 @@ class StringComp : Any
             var Int kb;
             ka : (index + i) * kka;
             kb : i * kka;
-            
+
             var Int n;
             n : internInfra.DataCharGet(data, ka);
-            
+
             internInfra.DataCharSet(value, kb, n);
-            
+
             i : i + 1;
         }
 
@@ -141,17 +141,17 @@ class StringComp : Any
         this.InternIntern.StringCountSet(a, count);
         return a;
     }
-    
+
     maide prusate Int Count(var String string)
     {
         inf (string = null)
         {
             return null;
         }
-        
+
         return this.InternIntern.StringCountGet(string);
     }
-    
+
     maide prusate Int Char(var String string, var Int index)
     {
         var Int count;
