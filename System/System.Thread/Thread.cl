@@ -9,7 +9,7 @@ class Thread : Any
 
         return a;
     }
-    
+
     maide prusate Bool Init()
     {
         base.Init();
@@ -45,7 +45,7 @@ class Thread : Any
         this.InternIntern.MainThreadSet(this);
         return true;
     }
-    
+
     maide prusate Bool Final()
     {
         this.InternIntern.FinalThread(this.Intern);
