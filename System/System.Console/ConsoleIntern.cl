@@ -28,10 +28,10 @@ class ConsoleIntern : Any
         return true;
     }
 
-    maide prusate Bool OutWrite(var String a)
+    maide prusate Bool OutWrite(var String value)
     {
         var Int k;
-        k : this.InternInfra.StringCreate(a);
+        k : this.InternInfra.StringCreate(value);
 
         this.Extern.Console_OutWrite(this.Intern, k);
 
