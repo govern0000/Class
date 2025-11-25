@@ -18,7 +18,7 @@ class ThreadNetworkHostState : StateA
         host : new NetworkHostA;
         host.Init();
         host.ThreadState : this;
-        
+
         this.Host : host;
 
         host.Port : port;
