@@ -50,7 +50,7 @@ class Less : InfraLess
         var Int riteCount;
         riteIndex : riteRange.Index;
         riteCount : riteRange.Count;
-        
+
         var IntLess charLess;
         charLess : this.CharLess;
 
