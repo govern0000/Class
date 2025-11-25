@@ -20,7 +20,6 @@ class Math : Any
 
         var Int a;
         a : this.Extern.Math_Value(this.Intern, cand, expo);
-
         return a;
     }
 
