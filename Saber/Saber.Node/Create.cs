@@ -183,7 +183,7 @@ public class Create : ClassCreate
         return true;
     }
 
-    private RangeState RangeStateSet(RangeState state)
+    protected virtual RangeState RangeStateSet(RangeState state)
     {
         state.Init();
         state.Create = this;
@@ -197,7 +197,7 @@ public class Create : ClassCreate
         return state;
     }
 
-    private NodeState NodeStateSet(NodeState state)
+    protected virtual NodeState NodeStateSet(NodeState state)
     {
         state.Init();
         state.Create = this;
@@ -216,7 +216,10 @@ public class Create : ClassCreate
         {
             NodeKind kind;
             kind = this.NodeKind.Get(i);
+
             this.AddNodeState(kind);
+            this.SetStateSet(kind);
+
             i = i + 1;
         }
         return true;
@@ -227,6 +230,12 @@ public class Create : ClassCreate
         kind.NodeState.Create = this;
 
         this.ListInfra.TableAdd(this.NodeStateTable, kind.Name, kind.NodeState);
+        return true;
+    }
+
+    protected virtual bool SetStateSet(NodeKind kind)
+    {
+        kind.SetState.Create = this;
         return true;
     }
 
