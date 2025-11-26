@@ -39,7 +39,7 @@ public class CreateKindOperate : CreateOperate
         arg = create.Arg;
 
         NodeKind kind;
-        kind = create.SetArg.Kind;
+        kind = create.SetStateArg.Kind;
 
         long index;
         index = arg.NodeIndex;
