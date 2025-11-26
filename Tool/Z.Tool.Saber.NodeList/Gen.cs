@@ -30,10 +30,10 @@ public class Gen : Any
         nodeStateGen.ClassTable = this.ClassTable;
         nodeStateGen.Execute();
 
-        CreateSetStateGen createSetStateGen;
-        createSetStateGen = this.CreateCreateSetStateGen();
-        createSetStateGen.ClassTable = this.ClassTable;
-        createSetStateGen.Execute();
+        SetStateGen setStateGen;
+        setStateGen = this.CreateSetStateGen();
+        setStateGen.ClassTable = this.ClassTable;
+        setStateGen.Execute();
 
         this.ExecuteNodeKindList();
 
@@ -88,10 +88,10 @@ public class Gen : Any
         return a;
     }
 
-    protected virtual CreateSetStateGen CreateCreateSetStateGen()
+    protected virtual SetStateGen CreateSetStateGen()
     {
-        CreateSetStateGen a;
-        a = new CreateSetStateGen();
+        SetStateGen a;
+        a = new SetStateGen();
         a.Init();
         return a;
     }
