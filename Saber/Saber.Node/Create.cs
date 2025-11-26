@@ -930,14 +930,14 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.SetUnvalid, braceStart, braceEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.Field;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varClass;
-        this.SetArg.Field01 = name;
-        this.SetArg.Field02 = count;
-        this.SetArg.Field03 = varGet;
-        this.SetArg.Field04 = varSet;
+        this.SetStateArg.Kind = this.NodeKind.Field;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varClass;
+        this.SetStateArg.Field01 = name;
+        this.SetStateArg.Field02 = count;
+        this.SetStateArg.Field03 = varGet;
+        this.SetStateArg.Field04 = varSet;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1073,14 +1073,14 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.CallUnvalid, callStart, callEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.Maide;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varClass;
-        this.SetArg.Field01 = name;
-        this.SetArg.Field02 = count;
-        this.SetArg.Field03 = param;
-        this.SetArg.Field04 = call;
+        this.SetStateArg.Kind = this.NodeKind.Maide;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varClass;
+        this.SetStateArg.Field01 = name;
+        this.SetStateArg.Field02 = count;
+        this.SetStateArg.Field03 = param;
+        this.SetStateArg.Field04 = call;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1137,11 +1137,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.NameUnvalid, nameStart, nameEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.Var;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varClass;
-        this.SetArg.Field01 = name;
+        this.SetStateArg.Kind = this.NodeKind.Var;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varClass;
+        this.SetStateArg.Field01 = name;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1318,10 +1318,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.BoolValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.FieldBool = value;
+        this.SetStateArg.Kind = this.NodeKind.BoolValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.FieldBool = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1353,10 +1353,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.IntHexSignValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.FieldInt = value;
+        this.SetStateArg.Kind = this.NodeKind.IntHexSignValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.FieldInt = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1388,10 +1388,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.IntHexValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.FieldInt = value;
+        this.SetStateArg.Kind = this.NodeKind.IntHexValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.FieldInt = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1423,10 +1423,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.IntSignValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.FieldInt = value;
+        this.SetStateArg.Kind = this.NodeKind.IntSignValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.FieldInt = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1458,10 +1458,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.IntValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.FieldInt = value;
+        this.SetStateArg.Kind = this.NodeKind.IntValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.FieldInt = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1495,10 +1495,10 @@ public class Create : ClassCreate
         String value;
         value = this.Operate.ExecuteStringValue(text);
 
-        this.SetArg.Kind = this.NodeKind.StringValue;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = this.NodeKind.StringValue;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1644,10 +1644,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.ResultUnvalid, resultStart, resultEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.ReturnExecute;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = result;
+        this.SetStateArg.Kind = this.NodeKind.ReturnExecute;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = result;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1699,10 +1699,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.VarUnvalid, varStart, varEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.ReferExecute;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varVar;
+        this.SetStateArg.Kind = this.NodeKind.ReferExecute;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varVar;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1761,11 +1761,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.ValueUnvalid, valueStart, valueEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.AreExecute;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = mark;
-        this.SetArg.Field01 = value;
+        this.SetStateArg.Kind = this.NodeKind.AreExecute;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = mark;
+        this.SetStateArg.Field01 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -1805,10 +1805,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.AnyUnvalid, anyStart, anyEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.OperateExecute;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = any;
+        this.SetStateArg.Kind = this.NodeKind.OperateExecute;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = any;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2061,11 +2061,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.AnyUnvalid, anyStart, anyEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.CastOperate;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varClass;
-        this.SetArg.Field01 = any;
+        this.SetStateArg.Kind = this.NodeKind.CastOperate;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varClass;
+        this.SetStateArg.Field01 = any;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2114,10 +2114,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.AnyUnvalid, anyStart, anyEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.BraceOperate;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = any;
+        this.SetStateArg.Kind = this.NodeKind.BraceOperate;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = any;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2142,10 +2142,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = this.NodeKind.ValueOperate;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = this.NodeKind.ValueOperate;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2327,11 +2327,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.BodyUnvalid, bodyStart, bodyEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = cond;
-        this.SetArg.Field01 = body;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = cond;
+        this.SetStateArg.Field01 = body;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2351,9 +2351,9 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2393,10 +2393,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.ClassUnvalid, classStart, classEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varClass;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varClass;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2440,11 +2440,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.FieldUnvalid, fieldStart, fieldEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varThis;
-        this.SetArg.Field01 = field;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varThis;
+        this.SetStateArg.Field01 = field;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2522,12 +2522,12 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.ArgueUnvalid, argueStart, argueEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varThis;
-        this.SetArg.Field01 = maide;
-        this.SetArg.Field02 = argue;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varThis;
+        this.SetStateArg.Field01 = maide;
+        this.SetStateArg.Field02 = argue;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2547,10 +2547,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = varVar;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = varVar;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2606,10 +2606,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2676,11 +2676,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.OperandUnvalid, riteStart, riteEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = lite;
-        this.SetArg.Field01 = rite;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = lite;
+        this.SetStateArg.Field01 = rite;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2717,10 +2717,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.OperandUnvalid, valueStart, valueEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2812,11 +2812,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.OperandUnvalid, riteStart, riteEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = lite;
-        this.SetArg.Field01 = rite;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = lite;
+        this.SetStateArg.Field01 = rite;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2889,10 +2889,10 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.OperandUnvalid, valueStart, valueEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -2996,11 +2996,11 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.OperandUnvalid, riteStart, riteEnd);
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = lite;
-        this.SetArg.Field01 = rite;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = lite;
+        this.SetStateArg.Field01 = rite;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -3020,10 +3020,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
@@ -3043,10 +3043,10 @@ public class Create : ClassCreate
             return null;
         }
 
-        this.SetArg.Kind = kind;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = value;
+        this.SetStateArg.Kind = kind;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = value;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
