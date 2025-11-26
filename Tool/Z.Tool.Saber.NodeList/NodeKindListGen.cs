@@ -82,8 +82,8 @@ public class NodeKindListGen : SourceGen
             .AddS("(")
             .AddS("\"").Add(aa).AddS("\"").AddS(",").AddS(" ")
             .AddS("new").AddS(" ").Add(aa).AddS("(").AddS(")").AddS(",").AddS(" ")
-            .AddS("new").AddS(" ").Add(aa).AddS("NewState").AddS("(").AddS(")").AddS(",").AddS(" ")
             .AddS("new").AddS(" ").Add(aa).AddS("NodeState").AddS("(").AddS(")").AddS(",").AddS(" ")
+            .AddS("new").AddS(" ").Add(aa).AddS("NewState").AddS("(").AddS(")").AddS(",").AddS(" ")
             .AddS("new").AddS(" ").Add(aa).AddS("SetState").AddS("(").AddS(")")
             .AddS(")")
             ;
