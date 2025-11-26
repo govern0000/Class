@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class SetArg : Any
+public class SetStateArg : Any
 {
     public virtual Node Node { get; set; }
     public virtual NodeKind Kind { get; set; }
