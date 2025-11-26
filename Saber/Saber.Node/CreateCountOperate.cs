@@ -41,7 +41,7 @@ public class CreateCountOperate : CreateOperate
         arg.NodeIndex = index;
 
         Node a;
-        a = this.Create.SetArg.Kind.Node;
+        a = this.Create.SetStateArg.Kind.Node;
         return a;
     }
 
