@@ -16,7 +16,7 @@ public class Create : ClassCreate
         this.CountOperate = this.CreateCountOperate();
         this.KindOperate = this.CreateKindOperate();
         this.SetOperate = this.CreateSetOperate();
-        this.SetArg = this.CreateSetArg();
+        this.SetStateArg = this.CreateSetStateArg();
         this.NameValid = this.CreateNameValid();
         this.ClassIntParse = this.CreateClassIntParse();
         this.StringWrite = this.CreateStringWrite();
@@ -68,10 +68,10 @@ public class Create : ClassCreate
         return a;
     }
 
-    protected virtual CreateSetArg CreateSetArg()
+    protected virtual SetStateArg CreateSetStateArg()
     {
-        CreateSetArg a;
-        a = new CreateSetArg();
+        SetStateArg a;
+        a = new SetStateArg();
         a.Init();
         a.Range = new Range();
         a.Range.Init();
@@ -132,7 +132,7 @@ public class Create : ClassCreate
     public virtual CreateCountOperate CountOperate { get; set; }
     public virtual CreateKindOperate KindOperate { get; set; }
     public virtual CreateSetOperate SetOperate { get; set; }
-    public virtual CreateSetArg SetArg { get; set; }
+    public virtual SetStateArg SetStateArg { get; set; }
     protected virtual InfraInfra InfraInfra { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual ClassInfra ClassInfra { get; set; }
