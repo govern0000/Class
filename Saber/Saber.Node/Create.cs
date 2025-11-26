@@ -246,7 +246,7 @@ public class Create : ClassCreate
         long count;
         count = this.NodeKind.Count;
 
-        int i;
+        long i;
         i = 0;
         while (i < count)
         {
@@ -265,7 +265,7 @@ public class Create : ClassCreate
         long count;
         count = this.NodeKind.Count;
 
-        int i;
+        long i;
         i = 0;
         while (i < count)
         {
