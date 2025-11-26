@@ -75,7 +75,7 @@ public class NodeKindListGen : SourceGen
     protected override bool AddInitFieldAddItem(String index, object value)
     {
         String aa;
-        aa = (String)value;
+        aa = value as String;
 
         this
             .AddS("AddItem")
