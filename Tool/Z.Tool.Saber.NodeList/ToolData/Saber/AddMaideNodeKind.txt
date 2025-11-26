@@ -1,4 +1,4 @@
-    protected virtual #ItemClassName# AddItem(string name, Node node, InfraState newState, NodeState nodeState, SetState setState)
+    protected virtual #ItemClassName# AddItem(string name, Node node, NodeState nodeState, NewState newState, SetState setState)
     {
         node.Init();
         newState.Init();
@@ -14,8 +14,8 @@
         item.Index = this.Index;
         item.Name = k;
         item.Node = node;
-        item.NewState = newState;
         item.NodeState = nodeState;
+        item.NewState = newState;
         item.SetState = setState;
         this.Array.SetAt(item.Index, item);
         this.Index = this.Index + 1;
