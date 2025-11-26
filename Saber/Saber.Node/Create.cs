@@ -245,6 +245,7 @@ public class Create : ClassCreate
     {
         long count;
         count = this.NodeKind.Count;
+
         int i;
         i = 0;
         while (i < count)
@@ -259,9 +260,22 @@ public class Create : ClassCreate
         return true;
     }
 
-    protected virtual bool SetStateSet(NodeKind kind)
+    protected virtual bool InitSetState()
     {
-        kind.SetState.Create = this;
+        long count;
+        count = this.NodeKind.Count;
+
+        int i;
+        i = 0;
+        while (i < count)
+        {
+            NodeKind kind;
+            kind = this.NodeKind.Get(i);
+
+            kind.SetState.Create = this;
+
+            i = i + 1;
+        }
         return true;
     }
 
