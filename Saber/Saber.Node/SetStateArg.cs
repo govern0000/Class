@@ -2,8 +2,8 @@ namespace Saber.Node;
 
 public class SetStateArg : Any
 {
-    public virtual Node Node { get; set; }
     public virtual NodeKind Kind { get; set; }
+    public virtual Node Node { get; set; }
     public virtual object Field00 { get; set; }
     public virtual object Field01 { get; set; }
     public virtual object Field02 { get; set; }
