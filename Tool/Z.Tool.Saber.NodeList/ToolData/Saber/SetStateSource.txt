@@ -1,13 +1,11 @@
 namespace Saber.Node;
 
-public class #NodeKind#CreateSetState : CreateSetState
+public class #NodeKind#SetState : SetState
 {
     public override bool Execute()
     {
-        CreateSetStateArg arg;
-        arg = this.Arg as CreateSetStateArg;
-        CreateSetArg k;
-        k = arg.Arg;
+        SetStateArg arg;
+        arg = this.Arg as SetStateArg;
 
         #NodeKind# node;
         node = arg.Node as #NodeKind#;
