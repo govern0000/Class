@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class PrivateCountNewState : InfraState
+public class PrivateCountNewState : NewState
 {
     public override bool Execute()
     {

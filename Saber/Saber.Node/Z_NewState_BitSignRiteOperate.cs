@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class BitSignRiteOperateNewState : InfraState
+public class BitSignRiteOperateNewState : NewState
 {
     public override bool Execute()
     {

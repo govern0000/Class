@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class SignDivOperateNewState : InfraState
+public class SignDivOperateNewState : NewState
 {
     public override bool Execute()
     {

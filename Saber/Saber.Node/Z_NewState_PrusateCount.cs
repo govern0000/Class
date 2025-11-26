@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class PrusateCountNewState : InfraState
+public class PrusateCountNewState : NewState
 {
     public override bool Execute()
     {

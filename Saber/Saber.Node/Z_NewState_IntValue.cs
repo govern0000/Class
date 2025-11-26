@@ -1,6 +1,6 @@
 namespace Saber.Node;
 
-public class IntValueNewState : InfraState
+public class IntValueNewState : NewState
 {
     public override bool Execute()
     {
