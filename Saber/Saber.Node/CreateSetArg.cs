@@ -1,7 +1,8 @@
 namespace Saber.Node;
 
-public class CreateSetArg : Any
+public class SetArg : Any
 {
+    public virtual Node Node { get; set; }
     public virtual NodeKind Kind { get; set; }
     public virtual object Field00 { get; set; }
     public virtual object Field01 { get; set; }
