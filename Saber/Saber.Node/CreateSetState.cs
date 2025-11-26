@@ -1,15 +1,6 @@
 namespace Saber.Node;
 
-public class CreateSetState : InfraState
+public class SetState : InfraState
 {
-    public override bool Init()
-    {
-        base.Init();
-
-        CreateSetStateArg k;
-        k = new CreateSetStateArg();
-        k.Init();
-        this.Arg = k;
-        return true;
-    }
+    public virtual Create Create { get; set; }
 }
