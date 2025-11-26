@@ -36,8 +36,7 @@ public class Create : ClassCreate
         this.TokenJ = this.CreateToken();
         this.TokenK = this.CreateToken();
 
-        this.InitListItemState();
-        this.InitNodeState();
+        this.InitState();
         return true;
     }
 
@@ -169,6 +168,16 @@ public class Create : ClassCreate
     protected virtual Token TokenJ { get; set; }
     protected virtual Token TokenK { get; set; }
 
+    protected virtual bool InitState()
+    {
+        this.InitNodeState();
+        this.InitNewState();
+        this.InitSetState();
+        this.InitListItemState();
+        return true;
+    }
+
+
     protected virtual bool InitListItemState()
     {
         this.PartItemRangeState = this.RangeStateSet(new PartItemRangeState());
@@ -219,9 +228,6 @@ public class Create : ClassCreate
 
             this.AddNodeState(kind);
 
-            this.NewStateSet(kind);
-            this.SetStateSet(kind);
-
             i = i + 1;
         }
         return true;
@@ -235,9 +241,21 @@ public class Create : ClassCreate
         return true;
     }
 
-    protected virtual bool NewStateSet(NodeKind kind)
+    protected virtual bool InitNewState()
     {
-        kind.NewState.Create = this;
+        long count;
+        count = this.NodeKind.Count;
+        int i;
+        i = 0;
+        while (i < count)
+        {
+            NodeKind kind;
+            kind = this.NodeKind.Get(i);
+
+            kind.NewState.Create = this;
+
+            i = i + 1;
+        }
         return true;
     }
 
