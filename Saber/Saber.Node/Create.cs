@@ -567,7 +567,7 @@ public class Create : ClassCreate
             i = i + 1;
         }
 
-        this.SetArgClear();
+        this.SetStateArgClear();
         this.ClearData();
         return true;
     }
