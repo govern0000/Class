@@ -21,29 +21,29 @@ public class CreateSetOperate : CreateOperate
         CreateArg arg;
         arg = create.Arg;
 
-        CreateSetArg ka;
-        ka = create.SetArg;
-
         long index;
         index = arg.NodeIndex;
 
         Node node;
         node = arg.NodeArray.GetAt(index) as Node;
 
-        CreateSetState state;
-        state = ka.Kind.CreateSetState;
+        SetStateArg stateArg;
+        stateArg = create.SetStateArg;
 
-        CreateSetStateArg stateArg;
-        stateArg = state.Arg as CreateSetStateArg;
         stateArg.Node = node;
-        stateArg.Arg = ka;
+
+        SetState state;
+        state = stateArg.Kind.SetState;
+
+        state.Arg = stateArg;
 
         state.Execute();
 
-        stateArg.Arg = null;
+        state.Arg = null;
+
         stateArg.Node = null;
 
-        create.NodeInfo(node, ka.Range);
+        create.NodeInfo(node, stateArg.Range);
 
         index = index + 1;
 
