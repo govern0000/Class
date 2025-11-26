@@ -1,6 +1,6 @@
 namespace Z.Tool.Saber.NodeList;
 
-public class CreateSetStateGen : ToolBase
+public class SetStateGen : ToolBase
 {
     public override bool Init()
     {
@@ -8,7 +8,7 @@ public class CreateSetStateGen : ToolBase
         this.BoolClass = this.TextCreate(this.S("Bool"));
         this.IntClass = this.TextCreate(this.S("Int"));
         this.OutputFoldPath = this.S("../../Saber/Saber.Node");
-        this.SourceFileName = this.S("ToolData/Saber/CreateSetStateSource.txt");
+        this.SourceFileName = this.S("ToolData/Saber/SetStateSource.txt");
         return true;
     }
 
@@ -96,7 +96,7 @@ public class CreateSetStateGen : ToolBase
             .AddS("node").AddS(".").Add(field.Name)
             .AddS(" ").AddS("=").AddS(" ");
 
-        this.AddS("k").AddS(".");
+        this.AddS("arg").AddS(".");
 
         if (isValueClass)
         {
@@ -160,7 +160,7 @@ public class CreateSetStateGen : ToolBase
     protected virtual String OutputFilePath(String kind)
     {
         String fileName;
-        fileName = this.AddClear().AddS("Z_CreateSetState_").Add(kind).AddS(".cs").AddResult();
+        fileName = this.AddClear().AddS("Z_SetState_").Add(kind).AddS(".cs").AddResult();
 
         String filePath;
         filePath = this.AddClear().Add(this.OutputFoldPath).Add(this.TextInfra.PathCombine).Add(fileName).AddResult();
