@@ -177,7 +177,6 @@ public class Create : ClassCreate
         return true;
     }
 
-
     protected virtual bool InitListItemState()
     {
         this.PartItemRangeState = this.RangeStateSet(new PartItemRangeState());
