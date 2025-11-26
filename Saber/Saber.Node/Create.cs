@@ -233,6 +233,12 @@ public class Create : ClassCreate
         return true;
     }
 
+    protected virtual bool NewStateSet(NodeKind kind)
+    {
+        kind.NewState.Create = this;
+        return true;
+    }
+
     protected virtual bool SetStateSet(NodeKind kind)
     {
         kind.SetState.Create = this;
