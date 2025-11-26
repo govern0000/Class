@@ -218,6 +218,8 @@ public class Create : ClassCreate
             kind = this.NodeKind.Get(i);
 
             this.AddNodeState(kind);
+
+            this.NewStateSet(kind);
             this.SetStateSet(kind);
 
             i = i + 1;
