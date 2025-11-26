@@ -686,12 +686,12 @@ public class Create : ClassCreate
             this.Error(this.ErrorKind.PartUnvalid, partStart, partEnd);
         }
 
-        this.SetArg.Kind = this.NodeKind.Class;
-        this.SetArg.Range.Start = start;
-        this.SetArg.Range.End = end;
-        this.SetArg.Field00 = name;
-        this.SetArg.Field01 = varBase;
-        this.SetArg.Field02 = part;
+        this.SetStateArg.Kind = this.NodeKind.Class;
+        this.SetStateArg.Range.Start = start;
+        this.SetStateArg.Range.End = end;
+        this.SetStateArg.Field00 = name;
+        this.SetStateArg.Field01 = varBase;
+        this.SetStateArg.Field02 = part;
         Node ret;
         ret = this.Operate.ExecuteNode();
         return ret;
