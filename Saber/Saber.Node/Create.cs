@@ -310,11 +310,12 @@ public class Create : ClassCreate
         return true;
     }
 
-    protected virtual bool SetArgClear()
+    protected virtual bool SetStateArgClear()
     {
-        CreateSetArg a;
-        a = this.SetArg;
+        SetStateArg a;
+        a = this.SetStateArg;
         a.Kind = null;
+        a.Node = null;
         a.Field00 = null;
         a.Field01 = null;
         a.Field02 = null;
