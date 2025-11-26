@@ -161,8 +161,8 @@ public class NodeKindList : Any
     protected virtual NodeKind AddItem(string name, Node node, NodeState nodeState, NewState newState, SetState setState)
     {
         node.Init();
-        newState.Init();
         nodeState.Init();
+        newState.Init();
         setState.Init();
 
         String k;
