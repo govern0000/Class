@@ -171,5 +171,24 @@ Int Environ_VarFinal()
     String_ConstantDelete(Environ_Var_ErrPath);
     String_ConstantDelete(Environ_Var_InnPath);
 
+    Environ_Var_OutPath = null;
+    Environ_Var_ErrPath = null;
+    Environ_Var_InnPath = null;
+
     return true;
+}
+
+Int Environ_OutPath()
+{
+    return Environ_Var_OutPath;
+}
+
+Int Environ_ErrPath()
+{
+    return Environ_Var_ErrPath;
+}
+
+Int Environ_InnPath()
+{
+    return Environ_Var_InnPath;
 }
