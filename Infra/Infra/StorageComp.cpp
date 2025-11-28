@@ -364,7 +364,7 @@ Int StorageComp_EntryQFileInfo(Int o, Int result, Int fileInfo)
     kNameA = CastInt(&kName);
 
     Int name;
-    name = StorageComp_StringCreate(o, kNameA);
+    name = String_StringCreate(kNameA);
 
     StorageEntry_NameSet(result, name);
     StorageEntry_ExistSet(result, exist);
@@ -465,7 +465,7 @@ Int StorageComp_ThisFoldGet(Int o)
     ka = CastInt(&k);
 
     Int a;
-    a = StorageComp_StringCreate(o, ka);
+    a = String_StringCreate(ka);
 
     return a;
 }
@@ -481,55 +481,6 @@ Int StorageComp_ThisFoldSet(Int o, Int path)
     k = QDir::setCurrent(pathU);
 
     Bool a;
-    a = k;
-    return a;
-}
-
-Int StorageComp_StringCreate(Int o, Int u)
-{
-    QString* ka;
-    ka = (QString*)u;
-
-    QList<uint> kk;
-    kk = ka->toUcs4();
-
-    qsizetype countU;
-    countU = kk.size();
-
-    Int count;
-    count = countU;
-
-    Int dataCount;
-    dataCount = count * Constant_CharByteCount();
-
-    Int value;
-    value = Environ_New(dataCount);
-
-    Char* p;
-    p = (Char*)value;
-
-    Int i;
-    i = 0;
-    while (i < count)
-    {
-        qsizetype iU;
-        iU = i;
-        
-        uint n;
-        n = kk.at(iU);
-
-        p[i] = n;
-
-        i = i + 1;
-    }
-
-    Int k;
-    k = String_New();
-    String_Init(k);
-    String_ValueSet(k, value);
-    String_CountSet(k, count);
-
-    Int a;
     a = k;
     return a;
 }
