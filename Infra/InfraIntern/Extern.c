@@ -55,6 +55,39 @@ Int Intern_Extern_Environ_Exit(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Environ_OutPath(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 0;
+
+    Int a;
+    a = Environ_OutPath();
+
+    Return;
+}
+
+Int Intern_Extern_Environ_ErrPath(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 0;
+
+    Int a;
+    a = Environ_ErrPath();
+
+    Return;
+}
+
+Int Intern_Extern_Environ_InnPath(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 0;
+
+    Int a;
+    a = Environ_InnPath();
+
+    Return;
+}
+
 Int Intern_Extern_Environ_System(Eval* eval, Int frame)
 {
     Int paramCount;
