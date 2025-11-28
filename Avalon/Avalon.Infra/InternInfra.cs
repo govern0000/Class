@@ -27,7 +27,9 @@ public class InternInfra : Any
     }
 
     public virtual String ModuleFoldPath { get; set; }
-    public virtual object EnvironVar { get; set; }
+    public virtual String ConsoleOutPath { get; set; }
+    public virtual String ConsoleErrPath { get; set; }
+    public virtual String ConsoleInnPath { get; set; }
     protected virtual long IntCapValue { get; set; }
     protected virtual Intern InternIntern { get; set; }
 
