@@ -6,6 +6,9 @@ Intern_Api Int Intern_Extern_Environ_New(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Environ_Delete(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Environ_Copy(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Environ_Exit(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Environ_OutPath(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Environ_ErrPath(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Environ_InnPath(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Environ_System(Eval* e, Int f);
 
 Intern_Api Int Intern_Extern_String_New(Eval* e, Int f);
