@@ -140,5 +140,12 @@ Int Environ_OutPath()
     indexErrPath = "INFRA_ERR_PATH";
     indexInnPath = "INFRA_INN_PATH";
 
+    QString valueOutPath;
+    QString valueErrPath;
+    QString valueInnPath;
+    valueOutPath = k.value(indexOutPath);
+    valueErrPath = k.value(indexErrPath);
+    valueInnPath = k.value(indexInnPath);
+
     return null;
 }
