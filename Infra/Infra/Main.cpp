@@ -40,6 +40,8 @@ Int Main_Init(Int argc, Int argv)
 
     Main_InitArg();
 
+    Environ_VarInit();
+
     return true;
 }
 
@@ -47,6 +49,8 @@ Int Main_Final()
 {
     Main* m;
     m = &D_Var;
+
+    Environ_VarFinal();
 
     Main_FinalArg();
 
