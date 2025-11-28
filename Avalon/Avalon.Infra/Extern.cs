@@ -8,6 +8,9 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Environ_Delete(ulong any);
     [DllImport(InfraLib)] public extern static ulong Environ_Copy(ulong dest, ulong source, ulong count);
     [DllImport(InfraLib)] public extern static ulong Environ_Exit(ulong status);
+    [DllImport(InfraLib)] public extern static ulong Environ_OutPath();
+    [DllImport(InfraLib)] public extern static ulong Environ_ErrPath();
+    [DllImport(InfraLib)] public extern static ulong Environ_InnPath();
     [DllImport(InfraLib)] public extern static ulong Environ_System();
 
     [DllImport(InfraLib)] public extern static ulong String_New();
