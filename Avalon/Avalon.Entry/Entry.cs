@@ -12,8 +12,8 @@ public class Entry : Any
 
     private Intern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
+    private StringComp StringComp { get; set; }
     protected virtual TextStringValue TextStringValue { get; set; }
-    protected virtual TextInfra TextInfra { get; set; }
     private StorageComp StorageComp { get; set; }
     private string[] InternArg { get; set; }
 
@@ -65,7 +65,7 @@ public class Entry : Any
 
         this.TextStringValue = TextStringValue.This;
 
-        this.TextInfra = TextInfra.This;
+        this.StringComp = StringComp.This;
 
         this.StorageComp = StorageComp.This;
 
@@ -76,12 +76,7 @@ public class Entry : Any
 
         this.StorageComp.ModuleFoldPath = kk;
 
-        Table varTable;
-        varTable = new Table();
-        varTable.Less = this.TextInfra.StringLessCreate();
-        varTable.Init();
-
-        this.InternInfra.EnvironVar = varTable;
+        this.InitConsolePath();
 
         this.ArrayArg();
         return true;
@@ -125,6 +120,29 @@ public class Entry : Any
         this.Arg = array;
 
         return true;
+    }
+
+    private bool InitConsolePath()
+    {
+        this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
+        this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
+        this.InternInfra.ConsoleInnPath = this.ConsolePath(Extern.Environ_InnPath());
+        return true;
+    }
+
+    private String ConsolePath(ulong k)
+    {
+        String kk;
+        kk = this.InternInfra.StringCreateIntern(k);
+
+        if (this.StringComp.Count(kk) == 0)
+        {
+            kk = null;
+        }
+
+        String a;
+        a = kk;
+        return a;
     }
 
     public virtual Array Arg
