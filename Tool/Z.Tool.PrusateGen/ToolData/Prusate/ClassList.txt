@@ -3,6 +3,9 @@ Environ -
     Delete(any) -
     Copy(dest, source, count) -
     Exit(status) -
+    OutPath() -
+    ErrPath() -
+    InnPath() -
     System() -
 
 String
