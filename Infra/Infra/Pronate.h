@@ -92,6 +92,7 @@ Int Environ_OS_System(Int compute);
 Int Main_OS_Arg(Int argc, Int argv);
 
 Int Environ_HasFlag(Int value, Int flag);
+Int Environ_VarInit();
 
 Int Share_New();
 Int Share_Delete(Int o);
