@@ -4,6 +4,9 @@ class Extern : Any
     maide prusate Int Environ_Delete(var Int any) { }
     maide prusate Int Environ_Copy(var Int dest, var Int source, var Int count) { }
     maide prusate Int Environ_Exit(var Int status) { }
+    maide prusate Int Environ_OutPath() { }
+    maide prusate Int Environ_ErrPath() { }
+    maide prusate Int Environ_InnPath() { }
     maide prusate Int Environ_System() { }
 
     maide prusate Int String_New() { }
