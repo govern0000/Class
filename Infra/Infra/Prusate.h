@@ -96,6 +96,9 @@ Infra_Api Int Environ_New(Int count);
 Infra_Api Int Environ_Delete(Int any);
 Infra_Api Int Environ_Copy(Int dest, Int source, Int count);
 Infra_Api Int Environ_Exit(Int status);
+Infra_Api Int Environ_OutPath();
+Infra_Api Int Environ_ErrPath();
+Infra_Api Int Environ_InnPath();
 Infra_Api Int Environ_System();
 
 InfraApiNew(String)
