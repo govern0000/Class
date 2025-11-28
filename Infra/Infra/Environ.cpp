@@ -127,3 +127,18 @@ Int Environ_HasFlag(Int value, Int flag)
     a = (!((value & flag) == 0));
     return a;
 }
+
+Int Environ_OutPath()
+{
+    QProcessEnvironment k;
+    k = QProcessEnvironment::systemEnvironment();
+
+    QString indexOutPath;
+    QString indexErrPath;
+    QString indexInnPath;
+    indexOutPath = "INFRA_OUT_PATH";
+    indexErrPath = "INFRA_ERR_PATH";
+    indexInnPath = "INFRA_INN_PATH";
+
+    return null;
+}
