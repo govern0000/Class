@@ -1,4 +1,4 @@
-#include "Environ.h"
+#include "Environ.hpp"
 
 Int Environ_Memory_M_K;
 
@@ -12,7 +12,7 @@ Int Environ_New(Int k)
     }
 
     void* p;
-    p = calloc(1, k);
+    p = std::calloc(1, k);
 
     if (p == null)
     {
@@ -49,7 +49,7 @@ Int Environ_TrigAlloc(Int k, Int memory)
     }
 
     Byte* p;
-    p = CastPointer(memory);
+    p = (Byte*)memory;
 
     Int count;
     count = ka;
