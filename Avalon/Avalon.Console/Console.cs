@@ -17,6 +17,7 @@ public class Console : Any
     public override bool Init()
     {
         base.Init();
+        this.InternInfra = InternInfra.This;
 
         this.Intern = new ConsoleIntern();
         this.Intern.Init();
@@ -47,5 +48,6 @@ public class Console : Any
     public virtual Out Out { get; set; }
     public virtual Out Err { get; set; }
     public virtual Inn Inn { get; set; }
+    private InternInfra InternInfra { get; set; }
     private ConsoleIntern Intern { get; set; }
 }
