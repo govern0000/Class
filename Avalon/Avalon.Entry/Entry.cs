@@ -13,6 +13,7 @@ public class Entry : Any
     private Intern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
     protected virtual TextStringValue TextStringValue { get; set; }
+    protected virtual TextInfra TextInfra { get; set; }
     private StorageComp StorageComp { get; set; }
     private string[] InternArg { get; set; }
 
@@ -64,6 +65,8 @@ public class Entry : Any
 
         this.TextStringValue = TextStringValue.This;
 
+        this.TextInfra = TextInfra.This;
+
         this.StorageComp = StorageComp.This;
 
         String kk;
@@ -72,6 +75,13 @@ public class Entry : Any
         this.InternInfra.ModuleFoldPath = kk;
 
         this.StorageComp.ModuleFoldPath = kk;
+
+        Table varTable;
+        varTable = new Table();
+        varTable.Less = this.TextInfra.StringLessCreate();
+        varTable.Init();
+
+        this.InternInfra.EnvironVar = varTable;
 
         this.ArrayArg();
         return true;
