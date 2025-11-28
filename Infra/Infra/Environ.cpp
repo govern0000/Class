@@ -128,7 +128,7 @@ Int Environ_HasFlag(Int value, Int flag)
     return a;
 }
 
-Int Environ_OutPath()
+Int Environ_VarInit()
 {
     QProcessEnvironment k;
     k = QProcessEnvironment::systemEnvironment();
