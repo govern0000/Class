@@ -6,6 +6,7 @@ Int Main_ExecuteMain();
 Int Main_Exit(Int status);
 
 Int String_QStringSet(Int result, Int a);
+Int String_StringCreate(Int qstring);
 
 Int Stream_FlushStorage(Int device);
 Int Stream_FlushNetwork(Int device);
