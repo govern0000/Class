@@ -2,6 +2,10 @@
 
 Int Environ_Memory_M_K;
 
+Int Environ_Var_OutPath;
+Int Environ_Var_ErrPath;
+Int Environ_Var_InnPath;
+
 Int Environ_New(Int k)
 {
     if (k == 0)
