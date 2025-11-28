@@ -27,7 +27,6 @@ class ConsoleIntern : Any
         return true;
     }
 
-
     public virtual bool OutWrite(String a)
     {
         ulong k;
