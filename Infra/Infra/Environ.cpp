@@ -151,5 +151,16 @@ Int Environ_VarInit()
     valueErrPath = k.value(indexErrPath);
     valueInnPath = k.value(indexInnPath);
 
-    return null;
+    Int kaa;
+    Int kab;
+    Int kac;
+    kaa = CastInt(&valueOutPath);
+    kab = CastInt(&valueErrPath);
+    kac = CastInt(&valueInnPath);
+
+    Environ_Var_OutPath = String_StringCreate(kaa);
+    Environ_Var_ErrPath = String_StringCreate(kab);
+    Environ_Var_InnPath = String_StringCreate(kac);
+
+    return true;
 }
