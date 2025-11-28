@@ -164,3 +164,12 @@ Int Environ_VarInit()
 
     return true;
 }
+
+Int Environ_VarFinal()
+{
+    String_ConstantDelete(Environ_Var_OutPath);
+    String_ConstantDelete(Environ_Var_ErrPath);
+    String_ConstantDelete(Environ_Var_InnPath);
+
+    return true;
+}
