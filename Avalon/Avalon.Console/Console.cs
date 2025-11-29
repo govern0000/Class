@@ -22,25 +22,38 @@ public class Console : Any
         this.Intern = new ConsoleIntern();
         this.Intern.Init();
 
-        ConsoleOut ka;
-        ka = new ConsoleOut();
-        ka.Init();
-        ka.Intern = this.Intern;
-        ka.Stream = 0;
-        this.Out = ka;
+        this.Out = this.InternInfra.ConsoleOut as Out;
+        this.Err = this.InternInfra.ConsoleErr as Out;
+        this.Inn = this.InternInfra.ConsoleInn as Inn;
 
-        ConsoleOut kb;
-        kb = new ConsoleOut();
-        kb.Init();
-        kb.Intern = this.Intern;
-        kb.Stream = 1;
-        this.Err = kb;
+        if (this.Out == null)
+        {
+            ConsoleOut ka;
+            ka = new ConsoleOut();
+            ka.Init();
+            ka.Intern = this.Intern;
+            ka.Stream = 0;
+            this.Out = ka;
+        }
 
-        ConsoleInn kc;
-        kc = new ConsoleInn();
-        kc.Init();
-        kc.Intern = this.Intern;
-        this.Inn = kc;
+        if (this.Err == null)
+        {
+            ConsoleOut kb;
+            kb = new ConsoleOut();
+            kb.Init();
+            kb.Intern = this.Intern;
+            kb.Stream = 1;
+            this.Err = kb;
+        }
+
+        if (this.Inn == null)
+        {
+            ConsoleInn kc;
+            kc = new ConsoleInn();
+            kc.Init();
+            kc.Intern = this.Intern;
+            this.Inn = kc;
+        }
 
         return true;
     }
