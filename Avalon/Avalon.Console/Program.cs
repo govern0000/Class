@@ -93,6 +93,7 @@ public class Program : Any
         bb = !(this.Environ == null);
         if (bb)
         {
+            this.EnvironConsolePath();
             environU = this.InternStringEntryListCreate(this.Environ);
         }
 
