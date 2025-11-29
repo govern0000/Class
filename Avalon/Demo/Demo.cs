@@ -1453,13 +1453,20 @@ class Demo : TextAdd
         list = new List();
         list.Init();
 
+        Table environ;
+        environ = new Table();
+        environ.Less = this.SLess;
+        environ.Init();
+
+        this.ListInfra.TableAdd(environ, this.S("INFRA_OUT_PATH"), this.S("DemoNetworkOut.txt"));
+
         Program program;
         program = new Program();
         program.Init();
         program.Name = this.S("DemoNetwork.exe");
         program.Argue = list;
         program.WorkFold = null;
-        program.Environ = null;
+        program.Environ = environ;
 
         program.Execute();
 
