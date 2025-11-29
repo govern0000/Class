@@ -76,7 +76,7 @@ public class Entry : Any
 
         this.StorageComp.ModuleFoldPath = kk;
 
-        this.InitConsolePath();
+        this.InitConsole();
 
         this.ArrayArg();
         return true;
