@@ -131,6 +131,16 @@ public class Entry : Any
         this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
         this.InternInfra.ConsoleInnPath = this.ConsolePath(Extern.Environ_InnPath());
 
+        if (!(this.InternInfra.ConsoleOutPath == null))
+        {
+            this.InternInfra.ConsoleOut = this.CreateStringOut();
+        }
+
+        if (!(this.InternInfra.ConsoleErrPath == null))
+        {
+            this.InternInfra.ConsoleErr = this.CreateStringOut();
+        }
+
         if (!(this.InternInfra.ConsoleInnPath == null))
         {
             String k;
@@ -146,6 +156,14 @@ public class Entry : Any
             this.InternInfra.ConsoleInn = inn;
         }
         return true;
+    }
+
+    private StringOut CreateStringOut()
+    {
+        StringOut a;
+        a = new StringOut();
+        a.Init();
+        return a;
     }
 
     private String ConsolePath(ulong k)

@@ -11,4 +11,5 @@ global using ThreadThread = Avalon.Thread.Thread;
 global using StorageComp = Avalon.Storage.Comp;
 global using StorageInfra = Avalon.Storage.Infra;
 global using ConsoleConsole = Avalon.Console.Console;
+global using StringOut = Avalon.Console.StringOut;
 global using StringInn = Avalon.Console.StringInn;
