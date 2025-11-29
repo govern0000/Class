@@ -6,6 +6,8 @@ public class Program : Any
     {
         base.Init();
         this.InternInfra = InternInfra.This;
+        this.ListInfra = ListInfra.This;
+        this.TextInfra = TextInfra.This;
 
         this.Intern = Extern.Program_New();
         Extern.Program_Init(this.Intern);
@@ -53,6 +55,8 @@ public class Program : Any
         }
     }
     private InternInfra InternInfra { get; set; }
+    private ListInfra ListInfra { get; set; }
+    private TextInfra TextInfra { get; set; }
     private ulong Intern { get; set; }
 
     public virtual bool Wait()
@@ -116,6 +120,26 @@ public class Program : Any
         this.InternStringListDelete(argueU);
 
         this.InternInfra.StringDelete(nameU);
+        return true;
+    }
+
+    private bool EnvironConsolePath()
+    {
+        this.EnvironConsolePathVar("INFRA_OUT_PATH");
+        this.EnvironConsolePathVar("INFRA_ERR_PATH");
+        this.EnvironConsolePathVar("INFRA_INN_PATH");
+        return true;
+    }
+
+    private bool EnvironConsolePathVar(string o)
+    {
+        String index;
+        index = this.TextInfra.S(o);
+
+        if (!this.Environ.Valid(index))
+        {
+            this.ListInfra.TableAdd(this.Environ, index, this.TextInfra.Zero);
+        }
         return true;
     }
 
