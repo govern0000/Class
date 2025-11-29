@@ -81,12 +81,14 @@ public class Entry : Any
 
         this.StorageInfra = StorageInfra.This;
 
-        this.InitConsole();
+        this.MainBeforeConsole();
         return true;
     }
 
     protected virtual bool MainAfter()
     {
+        this.MainAfterConsole();
+
         Extern.Main_Final();
         return true;
     }
@@ -125,7 +127,7 @@ public class Entry : Any
         return true;
     }
 
-    private bool InitConsole()
+    private bool MainBeforeConsole()
     {
         this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
         this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
@@ -155,6 +157,33 @@ public class Entry : Any
 
             this.InternInfra.ConsoleInn = inn;
         }
+        return true;
+    }
+
+    private bool MainAfterConsole()
+    {
+        if (!(this.InternInfra.ConsoleOutPath == null))
+        {
+            StringOut stringOut;
+            stringOut = this.InternInfra.ConsoleOut as StringOut;
+
+            String outText;
+            outText = stringOut.Result();
+
+            this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
+        }
+
+        if (!(this.InternInfra.ConsoleErrPath == null))
+        {
+            StringOut stringErr;
+            stringErr = this.InternInfra.ConsoleErr as StringOut;
+
+            String errText;
+            errText = stringErr.Result();
+
+            this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
+        }
+
         return true;
     }
 
