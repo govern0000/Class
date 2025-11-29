@@ -75,13 +75,13 @@ public class Entry : Any
 
         this.StorageComp.ModuleFoldPath = kk;
 
+        this.ArrayArg();
+
         this.StringComp = StringComp.This;
 
         this.StorageInfra = StorageInfra.This;
 
         this.InitConsole();
-
-        this.ArrayArg();
         return true;
     }
 
