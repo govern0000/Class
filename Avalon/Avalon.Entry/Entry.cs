@@ -170,7 +170,13 @@ public class Entry : Any
             String outText;
             outText = stringOut.Result();
 
-            this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
+            bool ba;
+            ba = this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
+
+            if (!ba)
+            {
+                Extern.Environ_Exit(191);
+            }
         }
 
         if (!(this.InternInfra.ConsoleErrPath == null))
@@ -181,7 +187,13 @@ public class Entry : Any
             String errText;
             errText = stringErr.Result();
 
-            this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
+            bool bb;
+            bb = this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
+
+            if (!bb)
+            {
+                Extern.Environ_Exit(192);
+            }
         }
 
         return true;
