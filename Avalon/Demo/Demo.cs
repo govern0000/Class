@@ -1459,6 +1459,7 @@ class Demo : TextAdd
         environ.Init();
 
         this.ListInfra.TableAdd(environ, this.S("INFRA_OUT_PATH"), this.S("DemoNetworkOut.txt"));
+        this.ListInfra.TableAdd(environ, this.S("INFRA_ERR_PATH"), this.S("DemoNetworkErr.txt"));
 
         Program program;
         program = new Program();
