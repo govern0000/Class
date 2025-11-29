@@ -133,7 +133,17 @@ public class Entry : Any
 
         if (!(this.InternInfra.ConsoleInnPath == null))
         {
-            
+            String k;
+            k = this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
+
+            StringInn inn;
+            inn = new StringInn();
+            inn.Init();
+
+            inn.String = k;
+            inn.Index = 0;
+
+            this.InternInfra.ConsoleInn = inn;
         }
         return true;
     }
