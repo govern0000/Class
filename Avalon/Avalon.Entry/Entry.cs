@@ -122,7 +122,7 @@ public class Entry : Any
         return true;
     }
 
-    private bool InitConsolePath()
+    private bool InitConsole()
     {
         this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
         this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
