@@ -12,6 +12,7 @@ public class Entry : Any
 
     private Intern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
+    private StorageInfra StorageInfra { get; set; }
     private StringComp StringComp { get; set; }
     protected virtual TextStringValue TextStringValue { get; set; }
     private StorageComp StorageComp { get; set; }
@@ -65,8 +66,6 @@ public class Entry : Any
 
         this.TextStringValue = TextStringValue.This;
 
-        this.StringComp = StringComp.This;
-
         this.StorageComp = StorageComp.This;
 
         String kk;
@@ -75,6 +74,10 @@ public class Entry : Any
         this.InternInfra.ModuleFoldPath = kk;
 
         this.StorageComp.ModuleFoldPath = kk;
+
+        this.StringComp = StringComp.This;
+
+        this.StorageInfra = StorageInfra.This;
 
         this.InitConsole();
 
@@ -127,6 +130,11 @@ public class Entry : Any
         this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
         this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
         this.InternInfra.ConsoleInnPath = this.ConsolePath(Extern.Environ_InnPath());
+
+        if (!(this.InternInfra.ConsoleInnPath == null))
+        {
+            
+        }
         return true;
     }
 
