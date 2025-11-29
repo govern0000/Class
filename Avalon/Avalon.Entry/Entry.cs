@@ -148,6 +148,11 @@ public class Entry : Any
             String innString;
             innString = this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
 
+            if (innString == null)
+            {
+                Extern.Environ_Exit(193);
+            }
+
             StringInn inn;
             inn = new StringInn();
             inn.Init();
