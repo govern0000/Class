@@ -4,12 +4,12 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net8.0</TargetFramework>
         <OutputPath>../../Out</OutputPath>
-        <AssemblyName>Saber.Console-ExeCon</AssemblyName>
+        <AssemblyName>Saber.Class-ExeCon</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="../../Avalon/Avalon.Entry/Avalon.Entry.csproj" />
-        <ProjectReference Include="../Saber.Console/Saber.Console.csproj" />
+        <ProjectReference Include="../Saber.Class/Saber.Class.csproj" />
     </ItemGroup>
 
 </Project>
