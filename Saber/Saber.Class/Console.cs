@@ -210,7 +210,7 @@ public class Console : TextAdd
 
     public virtual bool Load()
     {
-        this.ClassPath = this.StorageInfra.TextRead(this.S("Saber.Console.data/ClassPath.txt"));
+        this.ClassPath = this.StorageInfra.TextRead(this.S("Saber.Class.data/ClassPath.txt"));
 
         if (this.ClassPath == null)
         {
