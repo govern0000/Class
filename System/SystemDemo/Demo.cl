@@ -982,7 +982,7 @@ class Demo : Add
 
         phore.Open();
 
-        this.Console.Out.Write("Phore Open\n");
+        this.Console.Out.Write("Phore Open Success\n");
 
         thread.Wait();
 
