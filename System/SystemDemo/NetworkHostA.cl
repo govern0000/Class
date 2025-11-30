@@ -1,6 +1,6 @@
 class NetworkHostA : NetworkHost
 {
-    field prusate ThreadNetworkHostState ThreadState { get { return data; } set { data : value; } }
+    field prusate NetworkHostState ThreadState { get { return data; } set { data : value; } }
 
     maide prusate Bool NewPeer()
     {

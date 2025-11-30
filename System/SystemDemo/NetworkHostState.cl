@@ -1,4 +1,4 @@
-class ThreadNetworkHostState : StateA
+class NetworkHostState : StateA
 {
     field prusate Network Peer { get { return data; } set { data : value; } }
     field prusate NetworkHost Host { get { return data; } set { data : value; } }

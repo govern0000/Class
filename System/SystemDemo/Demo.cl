@@ -1450,8 +1450,8 @@ class Demo : Add
         hostThread : new Thread;
         hostThread.Init();
 
-        var ThreadNetworkHostState hostState;
-        hostState : new ThreadNetworkHostState;
+        var NetworkHostState hostState;
+        hostState : new NetworkHostState;
         hostState.Init();
 
         hostThread.ExecuteState : hostState;
@@ -1491,8 +1491,8 @@ class Demo : Add
         hostThread : new Thread;
         hostThread.Init();
 
-        var ThreadNetworkHostState hostState;
-        hostState : new ThreadNetworkHostState;
+        var NetworkHostState hostState;
+        hostState : new NetworkHostState;
         hostState.Init();
 
         hostThread.ExecuteState : hostState;
