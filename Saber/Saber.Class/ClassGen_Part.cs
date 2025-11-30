@@ -1,4 +1,4 @@
-namespace Saber.Console;
+namespace Saber.Class;
 
 partial class ClassGen
 {
