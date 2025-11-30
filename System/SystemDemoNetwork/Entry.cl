@@ -2,8 +2,8 @@ class Entry : ModuleEntry
 {
     maide precate Int ExecuteMain()
     {
-        var ThreadNetworkState state;
-        state : new ThreadNetworkState;
+        var NetworkState state;
+        state : new NetworkState;
         state.Init();
 
         state.Execute();

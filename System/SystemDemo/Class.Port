@@ -71,7 +71,7 @@ DemoB
 DemoC
 Add
 StateA
-ThreadNetworkState
+NetworkState
 
 [Storage]
 A.txt:DemoA.txt

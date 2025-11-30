@@ -7,7 +7,7 @@ System.Infra
 System.Entry
     ModuleEntry Entry
 SystemDemo:96207.08.47
-    ThreadNetworkState ThreadNetworkState
+    NetworkState NetworkState
 
 [Export]
 
