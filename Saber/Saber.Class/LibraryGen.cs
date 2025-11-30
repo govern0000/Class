@@ -128,7 +128,7 @@ public class LibraryGen : TextAdd
 
     public virtual bool Load()
     {
-        this.ModuleExeText = this.StorageInfra.TextRead(this.S("Saber.Console.data/ModuleExe.txt"));
+        this.ModuleExeText = this.StorageInfra.TextRead(this.S("Saber.Class.data/ModuleExe.txt"));
 
         if (this.ModuleExeText == null)
         {
@@ -189,7 +189,7 @@ public class LibraryGen : TextAdd
         this.ModuleRefString = this.ClassInfra.ModuleRefString(this.ModuleRef);
 
         String genFoldPath;
-        genFoldPath = this.S("Saber.Console.data/Gen");
+        genFoldPath = this.S("Saber.Class.data/Gen");
 
         this.GenModuleFoldPath = this.AddClear().Add(genFoldPath).Add(this.TextInfra.PathCombine)
             .Add(this.ModuleRefString).AddResult();
@@ -675,7 +675,7 @@ public class LibraryGen : TextAdd
         program.Init();
         program.Name = this.S("bash");
         program.Argue = list;
-        program.WorkFold = this.S("Saber.Console.data");
+        program.WorkFold = this.S("Saber.Class.data");
         program.Environ = null;
 
         return program;
