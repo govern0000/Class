@@ -1,4 +1,4 @@
-class ThreadNetworkState : StateA
+class NetworkState : StateA
 {
     maide prusate Bool Init()
     {

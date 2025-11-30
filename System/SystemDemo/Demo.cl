@@ -1462,8 +1462,8 @@ class Demo : Add
         networkThread : new Thread;
         networkThread.Init();
 
-        var ThreadNetworkState networkState;
-        networkState : new ThreadNetworkState;
+        var NetworkState networkState;
+        networkState : new NetworkState;
         networkState.Init();
 
         networkThread.ExecuteState : networkState;
