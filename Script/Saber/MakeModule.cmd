@@ -7,5 +7,5 @@ dotnet build -v quiet
 popd
 pushd %DotNetModuleOutFold%
 del /F /Q saber.exe 2>NUL
-rename Saber.Console-ExeCon.exe saber.exe
+rename Saber.Class-ExeCon.exe saber.exe
 popd
