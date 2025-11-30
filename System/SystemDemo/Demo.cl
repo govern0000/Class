@@ -1127,9 +1127,9 @@ class Demo : Add
 
         k.Wait(1000);
 
-        k.Final();
+        this.Console.Out.Write("TimeEvent Wait Success\n");
 
-        this.Console.Out.Write("TimeEvent Wait\n");
+        k.Final();
 
         return true;
     }
