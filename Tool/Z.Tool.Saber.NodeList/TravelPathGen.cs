@@ -6,7 +6,7 @@ public class TravelPathGen : TravelGen
     {
         base.Init();
 
-        this.PathOutput = this.S("../../Saber/Saber.Console/PathTravel_Part.cs");
+        this.PathOutput = this.S("../../Saber/Saber.Class/PathTravel_Part.cs");
         this.PathSource = this.GetPath(this.S("PathSource"));
         this.PathArray = this.GetPath(this.S("PathArray"));
         this.PathExecuteNode = this.GetPath(this.S("PathExecuteNode"));
