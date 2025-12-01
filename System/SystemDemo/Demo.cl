@@ -1506,7 +1506,7 @@ class Demo : Add
         var Program program;
         program : new Program;
         program.Init();
-        program.Name : "./SystemDemoNetwork-0.00.00.exe";
+        program.Name : "../Library/SystemDemoNetwork-0.00.00.exe";
         program.Argue : list;
         program.WorkFold : null;
         program.Environ : null;
