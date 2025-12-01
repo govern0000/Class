@@ -1,8 +1,8 @@
 @echo off
 
-set ClassFold=C:\Users\aaabb\Package\Class\Out\Class
+set InfraFold=C:\Users\aaabb\Package\Class\Out\Class\Infra
 
 pushd Out\Class\Module
-set "PATH=%ClassFold%;%PATH%" & set "QT_PLUGIN_PATH=%ClassFold%" & ..\Library\SystemDemo-96207.08.47.exe
+set "PATH=%InfraFold%;%PATH%" & set "QT_PLUGIN_PATH=%InfraFold%" & ..\Library\SystemDemo-96207.08.47.exe
 echo Status: %errorlevel%
 popd
