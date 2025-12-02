@@ -167,9 +167,6 @@ public class NetworkA : NetworkNetwork
 
                 this.Stage = 2;
 
-                TextInfra textInfra;
-                textInfra = this.TextInfra;
-
                 String oo;
                 oo = this.S("Fy Oi");
 
@@ -182,7 +179,7 @@ public class NetworkA : NetworkNetwork
                     long nn;
                     nn = this.StringComp.Char(oo, i);
 
-                    textInfra.DataCharSet(data, i, nn);
+                    this.TextInfra.DataCharSet(data, i, nn);
 
                     i = i + 1;
                 }
