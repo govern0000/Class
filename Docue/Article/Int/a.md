@@ -14,3 +14,5 @@ The not enough easiness for human minds is specific form.
 Int data layout is define as little endian.
 
 Inf Int data layout is not define, Int is not enough develop element.
+
+Int Xross Bit Count is 60.
