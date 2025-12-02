@@ -1,7 +1,7 @@
 class NetworkHostState : StateA
 {
-    field prusate Network Peer { get { return data; } set { data : value; } }
     field prusate NetworkHost Host { get { return data; } set { data : value; } }
+    field prusate Int Count { get { return data; } set { data : value; } }
 
     maide prusate Bool Execute()
     {
@@ -32,39 +32,46 @@ class NetworkHostState : StateA
         var Int ka;
         ka : varThis.Thread.ExecuteMain();
 
+        this.Host.Close();
         this.Host.Final();
 
-        this.Peer : null;
         this.Host : null;
+
+        return true;
+    }
+
+    maide prusate Bool ExitNetwork(var Int status, var Network peer)
+    {
+        this.Host.ClosePeer(peer);
 
         var String k;
 
-        var Bool b;
-        b : (ka = 0);
-        inf (b)
+        var Bool ba;
+        ba : (ka = 0);
+        inf (ba)
         {
             k : "Success";
         }
-        inf (~b)
+        inf (~ba)
         {
             k : "Fail";
         }
 
         share Console.Out.Write(this.AddClear().Add("Network Host ").Add(k).Add(", status: ").Add(this.StringInt(ka)).AddLine().AddResult());
-        return true;
-    }
 
-    maide prusate Bool ExitNetwork(var Int status)
-    {
-        this.Host.ClosePeer(this.Peer);
+        this.Count : this.Count + 1;
 
-        this.Host.Close();
+        var Bool b;
+        b : this.Count = 2;
 
-        var ThreadThis varThis;
-        varThis : new ThreadThis;
-        varThis.Init();
+        inf (b)
+        {
+            var ThreadThis varThis;
+            varThis : new ThreadThis;
+            varThis.Init();
 
-        varThis.Thread.Exit(status);
+            varThis.Thread.Exit(status);
+        }
         return true;
     }
 }
