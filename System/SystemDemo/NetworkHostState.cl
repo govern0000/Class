@@ -26,7 +26,7 @@ class NetworkHostState : StateA
 
         host.Port : port;
 
-        this..Demo.Host.Open();
+        this.Demo.Host.Open();
 
         var Thread thread;
         thread : share ThreadThis.Thread;
