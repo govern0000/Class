@@ -69,7 +69,11 @@ class NetworkState : State
             k : "Fail";
         }
 
-        share Console.Out.Write(this.AddClear().Add("Network ").Add(k).Add(", status: ").Add(this.StringInt(status)).AddLine().AddResult());
+        var Add add;
+        add : new Add;
+        add.Init();
+s
+        share Console.Out.Write(add.AddClear().Add("Network ").Add(k).Add(", status: ").Add(add.StringInt(status)).AddLine().AddResult());
 
         this.Count : this.Count + 1;
 
