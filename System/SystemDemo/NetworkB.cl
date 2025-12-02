@@ -117,7 +117,7 @@ class NetworkB : Network
 
             inf (~b)
             {
-                share Console.Out.Write("Network Host Case 0 Read Data Invalid\n");
+                share Console.Out.Write("Network Host Case 0 Read Data Unvalid\n");
                 this.StatusCode : 4610;
                 return false;
             }
@@ -151,7 +151,7 @@ class NetworkB : Network
             }
             inf (~ba)
             {
-                share Console.Out.Write("Network Host Case 1 Read Data Invalid\n");
+                share Console.Out.Write("Network Host Case 1 Read Data Unvalid\n");
                 this.StatusCode : 4610;
                 return false;
             }
