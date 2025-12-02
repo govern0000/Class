@@ -1,7 +1,19 @@
 namespace Avalon.Thread;
 
-public class This : Any
+public class ThreadThis : Any
 {
+    public static ThreadThis This { get; } = ShareCreate();
+
+    private static ThreadThis ShareCreate()
+    {
+        ThreadThis share;
+        share = new ThreadThis();
+        Any a;
+        a = share;
+        a.Init();
+        return share;
+    }
+
     public virtual Thread Thread
     {
         get
