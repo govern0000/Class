@@ -9,12 +9,8 @@ class TimeEventState : State
 
     public override bool Execute()
     {
-        ThreadThis varThis;
-        varThis = new ThreadThis();
-        varThis.Init();
-
         ThreadThread thread;
-        thread = varThis.Thread;
+        thread = ThreadThis.This.Thread;
 
         TimeEventA varEvent;
         varEvent = new TimeEventA();
