@@ -16,6 +16,7 @@ class Demo : Add
         return true;
     }
 
+    field prusate NetworkHostA Host { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
