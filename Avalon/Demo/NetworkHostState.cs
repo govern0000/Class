@@ -43,14 +43,14 @@ class NetworkHostState : State
         return true;
     }
 
-    public virtual bool ExitNetwork(long code, NetworkNetwork peer)
+    public virtual bool ExitNetwork(long status, NetworkNetwork peer)
     {
         this.Demo.Host.ClosePeer(peer);
 
         string k;
         k = null;
         bool ba;
-        ba = (code == 0);
+        ba = (status == 0);
         if (ba)
         {
             k = "Success";
@@ -60,7 +60,7 @@ class NetworkHostState : State
             k = "Fail";
         }
 
-        this.Demo.Console.Out.Write(this.Demo.S("Network Host " + k + ", code: " + code + "\n"));
+        this.Demo.Console.Out.Write(this.Demo.S("Network Host " + k + ", status: " + status + "\n"));
 
         this.Count = this.Count + 1;
 
@@ -72,7 +72,7 @@ class NetworkHostState : State
             ThreadThread thread;
             thread = ThreadThis.This.Thread;
 
-            thread.Exit(code);
+            thread.Exit(status);
         }
         return true;
     }
