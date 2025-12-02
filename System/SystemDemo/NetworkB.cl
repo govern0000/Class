@@ -165,10 +165,20 @@ class NetworkB : Network
             var Bool bb;
             bb : this.ThreadState.Demo.TextSame(this.ThreadState.Demo.TA(kaa), this.ThreadState.Demo.TB("Fy Oi"));
 
-            share Console.Out.Write(this.ThreadState.AddClear().Add("Network Host Case 2 ").Add(this.ThreadState.StatusString(bb)).AddLine().AddResult());
+            inf (bb)
+            {
+                share Console.Out.Write(this.ThreadState.AddClear().Add("Network Host Case 2 ").Add(this.ThreadState.StatusString(bb)).AddLine().AddResult());
 
-            this.ThreadState.ExitNetwork(0);
-            return true;
+                this.ThreadState.ExitNetwork(0, this);
+                return true;
+            }
+
+            inf (~bb)
+            {
+                share Console.Out.Write("Network Host Case 2 Read Data Unvalid\n");
+                this.StatusCode : 4610;
+                return false;
+            }
         }
         return true;
     }
