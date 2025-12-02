@@ -1,4 +1,4 @@
-class NetworkHostState : StateA
+class NetworkHostState : State
 {
     field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate Int Count { get { return data; } set { data : value; } }
@@ -59,7 +59,7 @@ class NetworkHostState : StateA
             k : "Fail";
         }
 
-        this.Demo.Console.Out.Write(this.AddClear().Add("Network Host ").Add(k).Add(", status: ").Add(this.StringInt(status)).AddLine().AddResult());
+        this.Demo.Console.Out.Write(this.Demo.AddClear().Add("Network Host ").Add(k).Add(", status: ").Add(this.Demo.StringInt(status)).AddLine().AddResult());
 
         this.Count : this.Count + 1;
 
