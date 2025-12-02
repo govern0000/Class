@@ -1499,6 +1499,7 @@ class Demo : Add
 
         var NetworkHostState hostState;
         hostState : new NetworkHostState;
+        hostState.Demo : this;
         hostState.Init();
 
         hostThread.ExecuteState : hostState;
