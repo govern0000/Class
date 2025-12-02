@@ -37,12 +37,8 @@ public class NetworkState : State
 
         network.Open();
 
-        ThreadThis varThis;
-        varThis = new ThreadThis();
-        varThis.Init();
-
         ThreadThread thread;
-        thread = varThis.Thread;
+        thread = ThreadThis.This.Thread;
 
         long o;
         o = thread.ExecuteMain();
@@ -82,11 +78,8 @@ public class NetworkState : State
 
         if (b)
         {
-            ThreadThis varThis;
-            varThis = new ThreadThis();
-            varThis.Init();
             ThreadThread thread;
-            thread = varThis.Thread;
+            thread = ThreadThis.This.Thread;
 
             thread.Exit(code);
         }
