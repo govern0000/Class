@@ -717,6 +717,7 @@ public class LibraryGen : TextAdd
             list.Add(this.S("-Wl,-subsystem,console"));
         }
 
+        list.Add(this.AddClear().AddS("-L../../../").Add(this.ClassPath).Add(this.TextInfra.PathCombine).AddS("Infra").AddResult());
         list.Add(this.AddClear().AddS("-L../../../").Add(this.LibraryPath).AddResult());
         list.Add(this.S("-lInfra"));
         list.Add(this.S("-lInfraIntern"));
