@@ -118,7 +118,7 @@ class NetworkB : NetworkNetwork
             }
             if (!b)
             {
-                Console.This.Err.Write(this.S("Network Host Case 0 Read Data Invalid\n"));
+                Console.This.Err.Write(this.S("Network Host Case 0 Read Data Unvalid\n"));
                 this.StatusCode = 22;
                 return false;
             }
@@ -151,7 +151,7 @@ class NetworkB : NetworkNetwork
             }
             if (!ba)
             {
-                Console.This.Err.Write(this.S("Network Host Case 1 Read Data Invalid\n"));
+                Console.This.Err.Write(this.S("Network Host Case 1 Read Data Unvalid\n"));
                 this.StatusCode = 23;
                 return false;
             }
@@ -175,7 +175,7 @@ class NetworkB : NetworkNetwork
 
             if (!bb)
             {
-                Console.This.Err.Write(this.S("Network Host Case 2 Read Data Invalid\n"));
+                Console.This.Err.Write(this.S("Network Host Case 2 Read Data Unvalid\n"));
                 this.StatusCode = 24;
                 return false;
             }
