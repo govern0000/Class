@@ -1,19 +1,12 @@
 class NetworkHostA : NetworkHost
 {
+    field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate NetworkHostState ThreadState { get { return data; } set { data : value; } }
 
     maide prusate Bool NewPeer()
     {
-        inf (~(this.ThreadState.Peer = null))
-        {
-            share Console.Out.Write("Network Peer is more one\n");
-            return false;
-        }
-
         var Network network;
         network : this.OpenPeer();
-
-        this.ThreadState.Peer : network;
         return true;
     }
 
