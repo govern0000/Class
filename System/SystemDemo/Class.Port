@@ -71,6 +71,8 @@ DemoB
 DemoC
 Add
 NetworkState
+NetworkHostA
+NetworkHostState
 
 [Storage]
 A.txt:DemoA.txt
