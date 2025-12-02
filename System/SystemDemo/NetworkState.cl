@@ -1,4 +1,4 @@
-class NetworkState : StateA
+class NetworkState : State
 {
     maide prusate Bool Init()
     {
