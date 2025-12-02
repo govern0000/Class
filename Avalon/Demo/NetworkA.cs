@@ -5,7 +5,6 @@ public class NetworkA : NetworkNetwork
     public override bool Init()
     {
         base.Init();
-
         this.TextInfra = TextInfra.This;
         this.StringComp = StringComp.This;
 
@@ -18,14 +17,11 @@ public class NetworkA : NetworkNetwork
         return true;
     }
 
-    public Data Data { get; set; }
-    public Range Range { get; set; }
-
+    public virtual Data Data { get; set; }
+    public virtual Range Range { get; set; }
     public virtual NetworkState ThreadState { get; set; }
-
     public virtual long StatusCode { get; set; }
     public virtual long Stage { get; set; }
-
     protected virtual TextInfra TextInfra { get; set; }
     protected virtual StringComp StringComp { get; set; }
 
