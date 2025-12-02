@@ -18,7 +18,7 @@ public class ThreadThis : Any
     {
         get
         {
-            return (Thread)InternIntern.ThisThread;
+            return InternIntern.ThisThread as Thread;
         }
         set
         {
