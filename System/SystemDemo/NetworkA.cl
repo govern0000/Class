@@ -3,9 +3,8 @@ class NetworkA : Network
     maide prusate Bool Init()
     {
         base.Init();
+        this.TextInfra : share TextInfra;
         this.StringComp : share StringComp;
-        this.NetworkStatusList : share NetworkStatusList;
-        this.NetworkCaseList : share NetworkCaseList;
 
         this.Data : new Data;
         this.Data.Count : 5 * 4;
@@ -16,18 +15,17 @@ class NetworkA : Network
         return true;
     }
 
+    field prusate Data Data { get { return data; } set { data : value; } }
+    field prusate Range Range { get { return data; } set { data : value; } }
     field prusate NetworkState ThreadState { get { return data; } set { data : value; } }
-    field precate StringComp StringComp { get { return data; } set { data : value; } }
-    field precate NetworkStatusList NetworkStatusList { get { return data; } set { data : value; } }
-    field precate NetworkCaseList NetworkCaseList { get { return data; } set { data : value; } }
-    field precate Data Data { get { return data; } set { data : value; } }
-    field precate Range Range { get { return data; } set { data : value; } }
     field precate Int StatusCode { get { return data; } set { data : value; } }
     field precate Int Stage { get { return data; } set { data : value; } }
+    field precate TextInfra TextInfra { get { return data; } set { data : value; } }
+    field precate StringComp StringComp { get { return data; } set { data : value; } }
 
     maide prusate Bool CaseEvent()
     {
-        inf (this.Case = this.NetworkCaseList.Connected)
+        inf (this.Case = this.ThreadState.NetworkCaseList.Connected)
         {
             this.Stage : 0;
 
@@ -45,7 +43,7 @@ class NetworkA : Network
             this.Stream.Write(data, range);
         }
 
-        inf (this.Case = this.NetworkCaseList.Unconnected)
+        inf (this.Case = this.ThreadState.NetworkCaseList.Unconnected)
         {
         }
 
