@@ -3,14 +3,17 @@ class NetworkState : StateA
     maide prusate Bool Init()
     {
         base.Init();
+        this.TextInfra : share TextInfra;
         this.NetworkStatusList : share NetworkStatusList;
         this.NetworkCaseList : share NetworkCaseList;
         return true;
     }
 
-    field precate NetworkStatusList NetworkStatusList { get { return data; } set { data : value; } }
-    field precate NetworkCaseList NetworkCaseList { get { return data; } set { data : value; } }
-    field private NetworkA Network { get { return data; } set { data : value; } }
+    field prusate TextInfra TextInfra { get { return data; } set { data : value; } }
+    field prusate NetworkStatusList NetworkStatusList { get { return data; } set { data : value; } }
+    field prusate NetworkCaseList NetworkCaseList { get { return data; } set { data : value; } }
+    field prusate NetworkA Network { get { return data; } set { data : value; } }
+    field prusate Int Count { get { return data; } set { data : value; } }
 
     maide prusate Bool Execute()
     {
@@ -32,12 +35,11 @@ class NetworkState : StateA
 
         network.Open();
 
-        var ThreadThis varThis;
-        varThis : new ThreadThis;
-        varThis.Init();
+        var Thread thread;
+        thread : share ThreadThis.Thread;
 
         var Int ka;
-        ka : varThis.Thread.ExecuteMain();
+        ka : thread.ExecuteMain();
 
         network.Final();
 
