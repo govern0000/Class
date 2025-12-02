@@ -13,8 +13,8 @@ class TimeEventA : TimeEvent
 
     maide prusate Bool Elapse()
     {
-        share Console.Out.Write(this.ThreadState.AddClear().Add("Time Event Elapse Index: ")
-            .Add(this.ThreadState.StringInt(this.Count)).AddLine().AddResult());
+        share Console.Out.Write(this.ThreadState.Demo.AddClear().Add("Time Event Elapse Index: ")
+            .Add(this.ThreadState.Demo.StringInt(this.Count)).AddLine().AddResult());
 
         this.Count : this.Count + 1;
 
