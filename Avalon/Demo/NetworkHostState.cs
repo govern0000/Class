@@ -29,12 +29,8 @@ class NetworkHostState : State
 
         this.Demo.Host.Open();
 
-        ThreadThis varThis;
-        varThis = new ThreadThis();
-        varThis.Init();
-
         ThreadThread thread;
-        thread = varThis.Thread;
+        thread = ThreadThis.This.Thread;
 
         long o;
         o = thread.ExecuteMain();
@@ -73,11 +69,8 @@ class NetworkHostState : State
 
         if (b)
         {
-            ThreadThis varThis;
-            varThis = new ThreadThis();
-            varThis.Init();
             ThreadThread thread;
-            thread = varThis.Thread;
+            thread = ThreadThis.This.Thread;
 
             thread.Exit(code);
         }
