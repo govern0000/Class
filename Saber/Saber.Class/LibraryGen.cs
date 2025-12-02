@@ -751,13 +751,13 @@ public class LibraryGen : TextAdd
 
         if (!exe)
         {
-            list.Add(this.AddClear().AddS("../../../").Add(this.ClassPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".dll").AddResult());
+            list.Add(this.AddClear().AddS("../../../").Add(this.LibraryPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".dll").AddResult());
             list.Add(this.S("Module.c"));
         }
 
         if (exe)
         {
-            list.Add(this.AddClear().AddS("../../../").Add(this.ClassPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".exe").AddResult());
+            list.Add(this.AddClear().AddS("../../../").Add(this.LibraryPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".exe").AddResult());
             list.Add(this.S("Main.c"));
         }
 
