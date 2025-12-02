@@ -459,12 +459,12 @@ public class LibraryGen : TextAdd
     protected virtual bool ExecuteClean()
     {
         String libFilePath;
-        libFilePath = this.AddClear().Add(this.ClassPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".dll").AddResult();
+        libFilePath = this.AddClear().Add(this.LibraryPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".dll").AddResult();
 
         this.StorageComp.FileDelete(libFilePath);
 
         String exeFilePath;
-        exeFilePath = this.AddClear().Add(this.ClassPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".exe").AddResult();
+        exeFilePath = this.AddClear().Add(this.LibraryPath).Add(this.TextInfra.PathCombine).Add(this.ModuleRefString).AddS(".exe").AddResult();
 
         this.StorageComp.FileDelete(exeFilePath);
 
