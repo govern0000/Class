@@ -2,9 +2,11 @@
 
 echo Deploy Infra
 
-set ClassInfraOutFold=.\Out\Class\Infra
+set ClassOutFold=.\Out\Class
 set InfraDeployFold=.\Out\InfraDeploy
 
-mkdir %ClassInfraOutFold% 1>NUL 2>NUL
+mkdir %ClassOutFold%\Infra 1>NUL 2>NUL
+mkdir %ClassOutFold%\Module 1>NUL 2>NUL
+mkdir %ClassOutFold%\Library 1>NUL 2>NUL
 
-xcopy /S /E /Y "%InfraDeployFold%" "%ClassInfraOutFold%" 1>NUL 2>NUL
+xcopy /S /E /Y "%InfraDeployFold%" "%ClassOutFold%\Infra" 1>NUL 2>NUL
