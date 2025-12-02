@@ -1,5 +1,6 @@
-class ThreadState : StateA
+class ThreadState : State
 {
+    field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate Phore Phore { get { return data; } set { data : value; } }
 
     maide prusate Bool Execute()
