@@ -3,10 +3,7 @@ class NetworkB : Network
     maide prusate Bool Init()
     {
         base.Init();
-        this.TextInfra : share TextInfra;
         this.StringComp : share StringComp;
-        this.NetworkStatusList : share NetworkStatusList;
-        this.NetworkCaseList : share NetworkCaseList;
 
         this.Data : new Data;
         this.Data.Count : 5 * 4;
@@ -20,10 +17,7 @@ class NetworkB : Network
     }
 
     field prusate NetworkHostState ThreadState { get { return data; } set { data : value; } }
-    field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate StringComp StringComp { get { return data; } set { data : value; } }
-    field precate NetworkStatusList NetworkStatusList { get { return data; } set { data : value; } }
-    field precate NetworkCaseList NetworkCaseList { get { return data; } set { data : value; } }
     field precate Data Data { get { return data; } set { data : value; } }
     field precate Range Range { get { return data; } set { data : value; } }
     field precate Int StatusCode { get { return data; } set { data : value; } }
@@ -35,14 +29,14 @@ class NetworkB : Network
         b : this.StatusExecute();
         inf (~b)
         {
-            this.ThreadState.ExitNetwork(this.StatusCode);
+            this.ThreadState.ExitNetwork(this.StatusCode, this);
         }
         return true;
     }
 
     maide private Bool StatusExecute()
     {
-        inf (~(this.Status = this.NetworkStatusList.NoError))
+        inf (~(this.Status = this.ThreadState.Demo.NetworkStatusList.NoError))
         {
             this.StatusCode : 4500 + this.Status.Index;
             return false;
@@ -57,7 +51,7 @@ class NetworkB : Network
         b : this.DataExecute();
         inf (~b)
         {
-            this.ThreadState.ExitNetwork(this.StatusCode);
+            this.ThreadState.ExitNetwork(this.StatusCode, this);
         }
         return true;
     }
