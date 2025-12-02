@@ -17,6 +17,8 @@ class NetworkState : StateA
 
     maide prusate Bool Execute()
     {
+        this.Count : 0;
+
         var String hostName;
         hostName : "localhost";
         var Int hostPort;
@@ -69,11 +71,23 @@ class NetworkState : StateA
 
         share Console.Out.Write(this.AddClear().Add("Network ").Add(k).Add(", status: ").Add(this.StringInt(status)).AddLine().AddResult());
 
-        var ThreadThis varThis;
-        varThis : new ThreadThis;
-        varThis.Init();
+        this.Count : this.Count + 1;
 
-        varThis.Thread.Exit(status);
+        var Bool b;
+        b : this.Count = 2;
+
+        inf (b)
+        {
+            var Thread thread;
+            thread : share ThreadThis.Thread;
+
+            thread.Exit(status);
+        }
+
+        inf (~b)
+        {
+            network.Open();
+        }
         return true;
     }
 }
