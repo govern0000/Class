@@ -2,4 +2,4 @@
 
 Math has expo.
 
-Math operate precise is max 60 bit.
+Math operate precise is max 50 bit.
