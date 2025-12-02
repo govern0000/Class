@@ -162,14 +162,8 @@ class NetworkB : Network
             var String kaa;
             kaa : this.StringComp.CreateData(data, null);
 
-            var StringLess less;
-            less : this.TextInfra.StringLessCreate();
-
-            var Int kee;
-            kee : less.Execute(kaa, "Fy Oi");
-
             var Bool bb;
-            bb : kee = 0;
+            bb : this.ThreadState.Demo.TextSame(this.ThreadState.Demo.TA(kaa), this.ThreadState.Demo.TB("Fy Oi"));
 
             share Console.Out.Write(this.ThreadState.AddClear().Add("Network Host Case 2 ").Add(this.ThreadState.StatusString(bb)).AddLine().AddResult());
 
