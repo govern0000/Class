@@ -26,8 +26,8 @@ public class StorageGen : TextAdd
 
         String dataFoldPath;
         dataFoldPath = this.AddClear().Add(this.ClassInfra.ClassModulePath(this.ClassPath))
-            .Add(this.TextInfra.PathCombine)
-            .Add(moduleRefString).Add(this.TextInfra.PathCombine).Add(this.SData).AddResult();
+            .Add(this.TextInfra.PathCombine).Add(moduleRefString)
+            .Add(this.TextInfra.PathCombine).Add(this.SData).AddResult();
 
         this.StorageComp.FoldDelete(dataFoldPath);
 
