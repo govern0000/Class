@@ -973,6 +973,7 @@ class Demo : Add
 
         var ThreadState threadState;
         threadState : new ThreadState;
+        threadState.Demo : this;
         threadState.Init();
 
         var Thread thread;
