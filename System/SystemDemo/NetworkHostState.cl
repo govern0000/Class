@@ -42,12 +42,12 @@ class NetworkHostState : StateA
 
     maide prusate Bool ExitNetwork(var Int status, var Network peer)
     {
-        this.Host.ClosePeer(peer);
+        this.Demo.Host.ClosePeer(peer);
 
         var String k;
 
         var Bool ba;
-        ba : (ka = 0);
+        ba : status = 0;
         inf (ba)
         {
             k : "Success";
@@ -57,7 +57,7 @@ class NetworkHostState : StateA
             k : "Fail";
         }
 
-        share Console.Out.Write(this.AddClear().Add("Network Host ").Add(k).Add(", status: ").Add(this.StringInt(ka)).AddLine().AddResult());
+        this.Demo.Console.Out.Write(this.AddClear().Add("Network Host ").Add(k).Add(", status: ").Add(this.StringInt(status)).AddLine().AddResult());
 
         this.Count : this.Count + 1;
 
@@ -66,11 +66,10 @@ class NetworkHostState : StateA
 
         inf (b)
         {
-            var ThreadThis varThis;
-            varThis : new ThreadThis;
-            varThis.Init();
+            var Thread thread;
+            thread : share ThreadThis.Thread;
 
-            varThis.Thread.Exit(status);
+            thread.Exit(status);
         }
         return true;
     }
