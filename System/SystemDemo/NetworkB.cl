@@ -167,7 +167,7 @@ class NetworkB : Network
 
             inf (bb)
             {
-                share Console.Out.Write(this.ThreadState.AddClear().Add("Network Host Case 2 ").Add(this.ThreadState.StatusString(bb)).AddLine().AddResult());
+                share Console.Out.Write(this.ThreadState.Demo.AddClear().Add("Network Host Case 2 ").Add(this.ThreadState.Demo.StatusString(bb)).AddLine().AddResult());
 
                 this.ThreadState.ExitNetwork(0, this);
                 return true;
