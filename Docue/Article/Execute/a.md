@@ -23,5 +23,5 @@ Fourth tier has lowest execute certainty.
 
 Module execute speeds is measured in count of function call base line maximum duration.
 
-Class system programming module Infra memory allocation maide returns
-memory address of memory block that can be read or write to without triggering function call.
+Memory alloc operate is not source.
+Effect load operate is not source.
