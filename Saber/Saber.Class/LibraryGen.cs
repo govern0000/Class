@@ -20,6 +20,7 @@ public class LibraryGen : TextAdd
         this.TModuleRef = this.CreateModuleRef();
 
         this.SSystemDotInfra = this.S("System.Infra");
+        this.SLibrary = this.S("Library");
         this.SC = this.S("c");
         this.SModule = this.S("Module");
         this.SExe = this.S("Exe");
@@ -115,12 +116,14 @@ public class LibraryGen : TextAdd
     protected virtual Array BaseArray { get; set; }
     protected virtual Array CompArray { get; set; }
     protected virtual Array StringArray { get; set; }
+    protected virtual String LibraryPath { get; set; }
     protected virtual String ModuleExeText { get; set; }
     protected virtual String GenModuleFoldPath { get; set; }
     protected virtual ModuleRef TModuleRef { get; set; }
     protected virtual String ModuleExeString { get; set; }
     protected virtual long Stage { get; set; }
     protected virtual String SSystemDotInfra { get; set; }
+    protected virtual String SLibrary { get; set; }
     protected virtual String SC { get; set; }
     protected virtual String SModule { get; set; }
     protected virtual String SExe { get; set; }
@@ -185,6 +188,9 @@ public class LibraryGen : TextAdd
         this.ExecuteComp();
 
         this.ExecuteString();
+
+        this.LibraryPath = this.AddClear().Add(this.ClassPath).Add(this.TextInfra.PathCombine)
+            .Add(this.SLibrary).AddResult();
 
         this.ModuleRefString = this.ClassInfra.ModuleRefString(this.ModuleRef);
 
