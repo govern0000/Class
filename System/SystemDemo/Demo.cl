@@ -9,6 +9,8 @@ class Demo : Add
         this.StorageInfra : share StorageInfra;
         this.Math : share Math;
         this.StorageComp : share StorageComp;
+        this.NetworkCaseList : share NetworkCaseList;
+        this.NetworkStatusList : share NetworkStatusList;
         this.Console : share Console;
 
         this.MathComp : new MathComp;
@@ -23,6 +25,8 @@ class Demo : Add
     field precate StorageInfra StorageInfra { get { return data; } set { data : value; } }
     field prusate Math Math { get { return data; } set { data : value; } }
     field precate StorageComp StorageComp { get { return data; } set { data : value; } }
+    field prusate NetworkCaseList NetworkCaseList { get { return data; } set { data : value; } }
+    field prusate NetworkStatusList NetworkStatusList { get { return data; } set { data : value; } }
     field prusate Console Console { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate Int ArrayIndex { get { return data; } set { data : value; } }
