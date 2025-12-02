@@ -44,27 +44,30 @@ class NetworkState : StateA
         network.Final();
 
         this.Network : null;
-
-        var String k;
-
-        var Bool b;
-        b : (ka = 0);
-        inf (b)
-        {
-            k : "Success";
-        }
-        inf (~b)
-        {
-            k : "Fail";
-        }
-
-        share Console.Out.Write(this.AddClear().Add("Network ").Add(k).Add(", status: ").Add(this.StringInt(ka)).AddLine().AddResult());
         return true;
     }
 
     maide prusate Bool ExitNetwork(var Int status)
     {
-        this.Network.Close();
+        var NetworkA network;
+        network : this.Network;
+
+        network.Close();
+
+        var String k;
+
+        var Bool ba;
+        ba : status = 0;
+        inf (ba)
+        {
+            k : "Success";
+        }
+        inf (~ba)
+        {
+            k : "Fail";
+        }
+
+        share Console.Out.Write(this.AddClear().Add("Network ").Add(k).Add(", status: ").Add(this.StringInt(status)).AddLine().AddResult());
 
         var ThreadThis varThis;
         varThis : new ThreadThis;
