@@ -148,7 +148,7 @@ public class NetworkA : NetworkNetwork
             }
             if (!b)
             {
-                Console.This.Err.Write(this.S("Network Case 0 Read Data Invalid\n"));
+                Console.This.Err.Write(this.S("Network Case 0 Read Data Unvalid\n"));
                 this.StatusCode = 12;
                 return false;
             }
@@ -196,7 +196,7 @@ public class NetworkA : NetworkNetwork
             }
             if (!b)
             {
-                Console.This.Err.Write(this.S("Network Case 1 Read Data Invalid\n"));
+                Console.This.Err.Write(this.S("Network Case 1 Read Data Unvalid\n"));
                 this.StatusCode = 14;
                 return false;
             }
