@@ -6,12 +6,8 @@ class PostState : State
 
     public override bool Execute()
     {
-        ThreadThis varThis;
-        varThis = new ThreadThis();
-        varThis.Init();
-
         ThreadThread thread;
-        thread = varThis.Thread;
+        thread = ThreadThis.This.Thread;
         thread.Exit(0x89f6);
 
         Console console;
