@@ -5,6 +5,8 @@ class NetworkHostState : StateA
 
     maide prusate Bool Execute()
     {
+        this.Count : 0;
+
         var NetworkPortKindList portKindList;
         portKindList : share NetworkPortKindList;
 
