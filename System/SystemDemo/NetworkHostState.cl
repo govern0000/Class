@@ -1,6 +1,6 @@
 class NetworkHostState : StateA
 {
-    field prusate NetworkHost Host { get { return data; } set { data : value; } }
+    field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate Int Count { get { return data; } set { data : value; } }
 
     maide prusate Bool Execute()
@@ -18,24 +18,24 @@ class NetworkHostState : StateA
         host : new NetworkHostA;
         host.Init();
         host.ThreadState : this;
+        host.Demo : this.Demo;
 
-        this.Host : host;
+        this.Demo.Host : host;
 
         host.Port : port;
 
-        this.Host.Open();
+        this..Demo.Host.Open();
 
-        var ThreadThis varThis;
-        varThis : new ThreadThis;
-        varThis.Init();
+        var Thread thread;
+        thread : share ThreadThis.Thread;
 
         var Int ka;
-        ka : varThis.Thread.ExecuteMain();
+        ka : thread.ExecuteMain();
 
-        this.Host.Close();
-        this.Host.Final();
+        this.Demo.Host.Close();
+        this.Demo.Host.Final();
 
-        this.Host : null;
+        this.Demo.Host : null;
 
         return true;
     }
