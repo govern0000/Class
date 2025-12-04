@@ -52,6 +52,8 @@ Word "mark" has meaning that is goaled.
 
 Word "park" has meaning that is ultimate.
 
+Word "xross" has meaning that is cross.
+
 Word "human" has meaning that is live entity.
 
 Word "client" has meaning that is user.
