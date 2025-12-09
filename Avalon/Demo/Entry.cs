@@ -14,12 +14,6 @@ class Entry : EntryEntry
     [STAThread]
     static int Main(string[] arg)
     {
-        EntryEntry a;
-        a = new Entry();
-        a.Init();
-        a.ArgSet(arg);
-        int o;
-        o = a.Execute();
-        return o;
+        return EntryEntry.Main(new Entry(), arg);
     }
 }
