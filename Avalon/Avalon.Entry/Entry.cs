@@ -242,4 +242,13 @@ public class Entry : Any
     {
         return this.TextStringValue.Execute(o);
     }
+
+    public static int Main(Entry entry, string[] arg)
+    {
+        entry.Init();
+        entry.ArgSet(arg);
+        int o;
+        o = entry.Execute();
+        return o;
+    }
 }
