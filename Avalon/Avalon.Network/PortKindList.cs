@@ -76,6 +76,6 @@ public class PortKindList : Any
 
     public virtual PortKind Get(long index)
     {
-        return (PortKind)this.Array.GetAt(index);
+        return this.Array.GetAt(index) as PortKind;
     }
 }

@@ -68,6 +68,6 @@ public class CaseList : Any
 
     public virtual Case Get(long index)
     {
-        return (Case)this.Array.GetAt(index);
+        return this.Array.GetAt(index) as Case;
     }
 }

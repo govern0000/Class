@@ -66,6 +66,6 @@ public class CodeKindList : Any
 
     public virtual CodeKind Get(long index)
     {
-        return (CodeKind)this.Array.GetAt(index);
+        return this.Array.GetAt(index) as CodeKind;
     }
 }

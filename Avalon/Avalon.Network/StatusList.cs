@@ -102,6 +102,6 @@ public class StatusList : Any
 
     public virtual Status Get(long index)
     {
-        return (Status)this.Array.GetAt(index);
+        return this.Array.GetAt(index) as Status;
     }
 }
