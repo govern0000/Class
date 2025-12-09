@@ -7,20 +7,14 @@ class Entry : EntryEntry
         Gen gen;
         gen = new Gen();
         gen.Init();
-        long k;
-        k = gen.Execute();
-        return k;
+        long o;
+        o = gen.Execute();
+        return o;
     }
 
     [STAThread]
     static int Main(string[] arg)
     {
-        EntryEntry a;
-        a = new Entry();
-        a.Init();
-        a.ArgSet(arg);
-        int k;
-        k = a.Execute();
-        return k;
+        return EntryEntry.Main(new Entry(), arg);
     }
 }
