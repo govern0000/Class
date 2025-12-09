@@ -50,7 +50,7 @@ class Gen : ToolBase
         this.ExecuteOne("Infra.StatImageBinary");
         this.ExecuteOne("MathGen");
         this.ExecuteOne("PrusateGen");
-        this.ExecuteOne("NodeListGen");
+        this.ExecuteOne("InternGen");
 
         return true;
     }
