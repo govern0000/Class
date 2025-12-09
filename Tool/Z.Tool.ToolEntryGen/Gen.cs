@@ -8,6 +8,13 @@ class Gen : ToolBase
     {
         this.SourceTemplate = this.StorageTextRead(this.S("ToolData/Entry.txt"));
 
+        this.ExecuteList();
+
+        return 0;
+    }
+
+    protected virtual bool ExecuteList()
+    {
         this.ExecuteOne("Avalon.TextCodeKindList");
         this.ExecuteOne("Avalon.StorageStatusList");
         this.ExecuteOne("Avalon.NetworkCaseList");
@@ -45,7 +52,7 @@ class Gen : ToolBase
         this.ExecuteOne("PrusateGen");
         this.ExecuteOne("NodeListGen");
 
-        return 0;
+        return true;
     }
 
     protected virtual bool ExecuteOne(string toolName)
