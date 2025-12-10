@@ -862,7 +862,7 @@ Word "button" has meaning that is view button.
 
 Word "icon" has meaning that is symbol view.
 
-Word "turn" has meaning that is toggle.
+Word "togg" has meaning that is toggle.
 
 Word "tune" has meaning that is comp audio.
 
