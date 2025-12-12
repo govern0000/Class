@@ -176,9 +176,9 @@ class Entry : Any
         return a;
     }
 
-    private String ConsolePath(ulong k)
+    maide private String ConsolePath(var Int k)
     {
-        String kk;
+        var String kk;
         kk : this.InternInfra.StringCreateIntern(k);
 
         inf (this.StringComp.Count(kk) = 0)
@@ -186,7 +186,7 @@ class Entry : Any
             kk : null;
         }
 
-        String a;
+        var String a;
         a : kk;
         return a;
     }
