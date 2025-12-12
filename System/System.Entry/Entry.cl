@@ -103,7 +103,7 @@ class Entry : Any
 
         inf (~(this.InternInfra.ConsoleInnPath = null))
         {
-            String innString;
+            var String innString;
             innString : this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
 
             inf (innString = null)
@@ -111,8 +111,8 @@ class Entry : Any
                 Extern.Environ_Exit(193);
             }
 
-            PathInn inn;
-            inn : new PathInn();
+            var PathInn inn;
+            inn : new PathInn;
             inn.Init();
 
             inn.String : innString;
