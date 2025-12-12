@@ -22,3 +22,6 @@ Shell Plat layer on top of Class Plat.
 Business Gene Plat including Secure module list layer on top of Shell Plat.
 
 Tool Plat layer on top of Business Gene Plat.
+
+In MARK, All Plat is Endgame Gene Plat except
+Business Gene Plat is Effecon Gene Plat.
