@@ -11,7 +11,7 @@ public class LibraryMake : TextAdd
         this.StorageComp = StorageComp.This;
 
         this.MakeLoad = this.CreateLibraryMakeLoad();
-        this.LibraryInitGen = this.CreateLibraryInitGen();
+        this.InitGen = this.CreateLibraryInitGen();
         this.LibraryBaseGen = this.CreateLibraryBaseGen();
         this.LibraryCompGen = this.CreateLibraryCompGen();
         this.LibraryStringGen = this.CreateLibraryStringGen();
@@ -99,7 +99,7 @@ public class LibraryMake : TextAdd
     protected virtual ClassInfra ClassInfra { get; set; }
     protected virtual StorageComp StorageComp { get; set; }
     protected virtual LibraryMakeLoad MakeLoad { get; set; }
-    protected virtual LibraryInitGen LibraryInitGen { get; set; }
+    protected virtual LibraryInitGen InitGen { get; set; }
     protected virtual LibraryBaseGen LibraryBaseGen { get; set; }
     protected virtual LibraryCompGen LibraryCompGen { get; set; }
     protected virtual LibraryStringGen LibraryStringGen { get; set; }
@@ -340,16 +340,16 @@ public class LibraryMake : TextAdd
 
     protected virtual bool ExecuteInit()
     {
-        this.LibraryInitGen.Module = this.Module;
-        this.LibraryInitGen.AnyClass = this.System.Any;
+        this.InitGen.Module = this.Module;
+        this.InitGen.AnyClass = this.System.Any;
 
-        this.LibraryInitGen.Execute();
+        this.InitGen.Execute();
 
-        this.InitArray = this.LibraryInitGen.Result;
+        this.InitArray = this.InitGen.Result;
 
-        this.LibraryInitGen.Result = null;
-        this.LibraryInitGen.AnyClass = null;
-        this.LibraryInitGen.Module = null;
+        this.InitGen.Result = null;
+        this.InitGen.AnyClass = null;
+        this.InitGen.Module = null;
         return true;
     }
 
