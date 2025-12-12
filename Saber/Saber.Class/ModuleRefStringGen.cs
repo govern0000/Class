@@ -2,13 +2,13 @@ namespace Saber.Class;
 
 public class ModuleRefStringGen : TextAdd
 {
-    public virtual ClassGen Gen { get; set; }
+    public virtual LibraryGen Gen { get; set; }
     public virtual ClassModule Module { get; set; }
     public virtual String Result { get; set; }
 
     public virtual bool Execute()
     {
-        ClassGen gen;
+        LibraryGen gen;
         gen = this.Gen;
 
         gen.Arg = new ClassGenArg();
@@ -42,7 +42,7 @@ public class ModuleRefStringGen : TextAdd
 
     public virtual bool ExecuteStage()
     {
-        ClassGen gen;
+        LibraryGen gen;
         gen = this.Gen;
 
         gen.ModuleStructName(this.Module.Ref);

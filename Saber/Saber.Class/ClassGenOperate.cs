@@ -2,7 +2,7 @@ namespace Saber.Class;
 
 public class ClassGenOperate : Any
 {
-    public virtual ClassGen Gen { get; set; }
+    public virtual LibraryGen Gen { get; set; }
 
     public virtual bool ExecuteChar(long o)
     {

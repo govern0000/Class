@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-partial class ClassGen
+partial class LibraryGen
 {
     public virtual bool InitOperateKindState()
     {
