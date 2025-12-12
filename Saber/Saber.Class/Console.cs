@@ -20,7 +20,7 @@ public class Console : TextAdd
         this.PortLoad = this.CreatePortLoad();
         this.BinaryGen = this.CreateBinaryGen();
         this.StorageGen = this.CreateStorageGen();
-        this.LibraryGen = this.CreateLibraryMake();
+        this.LibraryMake = this.CreateLibraryMake();
         this.ErrorString = this.CreateErrorString();
         this.InfoToken = this.CreateInfoToken();
         this.InfoTravel = this.CreateInfoTravel();
@@ -185,7 +185,7 @@ public class Console : TextAdd
     protected virtual PortRead PortRead { get; set; }
     protected virtual PortLoad PortLoad { get; set; }
     protected virtual BinaryGen BinaryGen { get; set; }
-    protected virtual LibraryMake LibraryGen { get; set; }
+    protected virtual LibraryMake LibraryMake { get; set; }
     protected virtual StorageGen StorageGen { get; set; }
     protected virtual ErrorString ErrorString { get; set; }
     protected virtual NameValid NameValid { get; set; }
@@ -219,7 +219,7 @@ public class Console : TextAdd
 
         bool b;
 
-        b = this.LibraryGen.Load();
+        b = this.LibraryMake.Load();
         if (!b)
         {
             return false;
@@ -691,22 +691,22 @@ public class Console : TextAdd
 
     protected virtual bool ExecuteGenLibrary(ModuleRef moduleRef)
     {
-        this.LibraryGen.ModuleRef = moduleRef;
-        this.LibraryGen.ModulePort = this.ModulePort;
-        this.LibraryGen.BinaryRead = this.BinaryRead;
-        this.LibraryGen.ClassPath = this.ClassPath;
+        this.LibraryMake.ModuleRef = moduleRef;
+        this.LibraryMake.ModulePort = this.ModulePort;
+        this.LibraryMake.BinaryRead = this.BinaryRead;
+        this.LibraryMake.ClassPath = this.ClassPath;
 
         bool b;
-        b = this.LibraryGen.Execute();
+        b = this.LibraryMake.Execute();
 
-        this.LibraryGen.ClassPath = null;
-        this.LibraryGen.BinaryRead = null;
-        this.LibraryGen.ModulePort = null;
-        this.LibraryGen.ModuleRef = null;
+        this.LibraryMake.ClassPath = null;
+        this.LibraryMake.BinaryRead = null;
+        this.LibraryMake.ModulePort = null;
+        this.LibraryMake.ModuleRef = null;
 
         if (!b)
         {
-            this.Status = 6000 + this.LibraryGen.Status;
+            this.Status = 6000 + this.LibraryMake.Status;
             return false;
         }
         return true;
