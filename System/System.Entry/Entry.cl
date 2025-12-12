@@ -46,6 +46,10 @@ class Entry : Any
 
         this.ArrayArg();
 
+        this.StringComp : share StringComp;
+
+        this.StorageInfra : share StorageInfra;
+
         this.MainBeforeConsole();
         return true;
     }
