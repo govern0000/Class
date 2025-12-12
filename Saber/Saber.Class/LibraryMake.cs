@@ -10,7 +10,7 @@ public class LibraryMake : TextAdd
         this.ClassInfra = ClassInfra.This;
         this.StorageComp = StorageComp.This;
 
-        this.MakeLoad = this.CreateLibraryMakeLoad();
+        this.MakeLoad = this.CreateMakeLoad();
         this.InitGen = this.CreateLibraryInitGen();
         this.BaseGen = this.CreateLibraryBaseGen();
         this.CompGen = this.CreateLibraryCompGen();
@@ -28,7 +28,7 @@ public class LibraryMake : TextAdd
         return true;
     }
 
-    protected virtual LibraryMakeLoad CreateLibraryMakeLoad()
+    protected virtual LibraryMakeLoad CreateMakeLoad()
     {
         LibraryMakeLoad a;
         a = new LibraryMakeLoad();
