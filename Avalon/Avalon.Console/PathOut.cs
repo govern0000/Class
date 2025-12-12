@@ -1,6 +1,6 @@
 namespace Avalon.Console;
 
-class InternOut : StringOut
+class PathOut : StringOut
 {
     public override bool Write(String value)
     {
