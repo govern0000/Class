@@ -1,13 +1,13 @@
 namespace Avalon.Console;
 
-class Intern : Any
+class PathIntern : Any
 {
-    public static Intern This { get; } = ShareCreate();
+    public static PathIntern This { get; } = ShareCreate();
 
-    private static Intern ShareCreate()
+    private static PathIntern ShareCreate()
     {
-        Intern share;
-        share = new Intern();
+        PathIntern share;
+        share = new PathIntern();
         Any a;
         a = share;
         a.Init();
