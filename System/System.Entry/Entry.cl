@@ -111,7 +111,7 @@ class Entry : Any
 
             inf (innString = null)
             {
-                Extern.Environ_Exit(193);
+                extern.Environ_Exit(193);
             }
 
             var PathInn inn;
