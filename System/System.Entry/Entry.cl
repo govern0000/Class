@@ -140,7 +140,7 @@ class Entry : Any
         inf (~(this.InternInfra.ConsoleOutPath = null))
         {
             var StringOut stringOut;
-            stringOut : this.InternInfra.ConsoleOut as StringOut;
+            stringOut : cast StringOut(this.InternInfra.ConsoleOut);
 
             var String outText;
             outText : stringOut.Result();
@@ -157,7 +157,7 @@ class Entry : Any
         inf (~(this.InternInfra.ConsoleErrPath = null))
         {
             var StringOut stringErr;
-            stringErr : this.InternInfra.ConsoleErr as StringOut;
+            stringErr : cast StringOut(this.InternInfra.ConsoleErr);
 
             var String errText;
             errText : stringErr.Result();
