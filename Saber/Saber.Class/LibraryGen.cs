@@ -204,7 +204,7 @@ public partial class LibraryGen : TextAdd
     public virtual Array StringArray { get; set; }
     public virtual String Result { get; set; }
     public virtual LibraryGenArg Arg { get; set; }
-    public virtual ClassGenOperate Operate { get; set; }
+    public virtual LibraryGenOperate Operate { get; set; }
     public virtual ClassGenCountOperate CountOperate { get; set; }
     public virtual ClassGenSetOperate SetOperate { get; set; }
     public virtual Array ClassArray { get; set; }

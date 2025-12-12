@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class ClassGenOperate : Any
+public class LibraryGenOperate : Any
 {
     public virtual LibraryGen Gen { get; set; }
 
