@@ -150,18 +150,18 @@ class Entry : Any
 
         inf (~(this.InternInfra.ConsoleErrPath = null))
         {
-            StringOut stringErr;
+            var StringOut stringErr;
             stringErr : this.InternInfra.ConsoleErr as StringOut;
 
-            String errText;
+            var String errText;
             errText : stringErr.Result();
 
-            bool bb;
+            var Bool bb;
             bb : this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
 
             inf (~bb)
             {
-                Extern.Environ_Exit(192);
+                extern.Environ_Exit(192);
             }
         }
 
