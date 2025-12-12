@@ -15,7 +15,7 @@ public class LibraryMake : TextAdd
         this.BaseGen = this.CreateLibraryBaseGen();
         this.CompGen = this.CreateLibraryCompGen();
         this.StringGen = this.CreateLibraryStringGen();
-        this.LibraryGen = this.CreateLibraryGen();
+        this.Gen = this.CreateLibraryGen();
         this.ModuleRefGen = this.CreateModuleRefGen();
         this.TModuleRef = this.CreateModuleRef();
 
@@ -103,7 +103,7 @@ public class LibraryMake : TextAdd
     protected virtual LibraryBaseGen BaseGen { get; set; }
     protected virtual LibraryCompGen CompGen { get; set; }
     protected virtual LibraryStringGen StringGen { get; set; }
-    protected virtual LibraryGen LibraryGen { get; set; }
+    protected virtual LibraryGen Gen { get; set; }
     protected virtual LibraryModuleRefGen ModuleRefGen { get; set; }
     protected virtual ClassModule SystemInfraModule { get; set; }
     protected virtual SystemClass System { get; set; }
@@ -490,31 +490,31 @@ public class LibraryMake : TextAdd
             i = i + 1;
         }
 
-        this.LibraryGen.Module = this.Module;
-        this.LibraryGen.Binary = this.Binary;
-        this.LibraryGen.ModuleCount = this.ModuleTable.Count;
-        this.LibraryGen.SystemInfraModule = this.SystemInfraModule;
-        this.LibraryGen.System = this.System;
-        this.LibraryGen.InitArray = this.InitArray;
-        this.LibraryGen.BaseArray = this.BaseArray;
-        this.LibraryGen.CompArray = this.CompArray;
-        this.LibraryGen.StringArray = this.StringArray;
+        this.Gen.Module = this.Module;
+        this.Gen.Binary = this.Binary;
+        this.Gen.ModuleCount = this.ModuleTable.Count;
+        this.Gen.SystemInfraModule = this.SystemInfraModule;
+        this.Gen.System = this.System;
+        this.Gen.InitArray = this.InitArray;
+        this.Gen.BaseArray = this.BaseArray;
+        this.Gen.CompArray = this.CompArray;
+        this.Gen.StringArray = this.StringArray;
 
-        this.LibraryGen.Execute();
+        this.Gen.Execute();
 
         String k;
-        k = this.LibraryGen.Result;
+        k = this.Gen.Result;
 
-        this.LibraryGen.Result = null;
-        this.LibraryGen.StringArray = null;
-        this.LibraryGen.CompArray = null;
-        this.LibraryGen.BaseArray = null;
-        this.LibraryGen.InitArray = null;
-        this.LibraryGen.System = null;
-        this.LibraryGen.SystemInfraModule = null;
-        this.LibraryGen.ModuleCount = 0;
-        this.LibraryGen.Binary = null;
-        this.LibraryGen.Module = null;
+        this.Gen.Result = null;
+        this.Gen.StringArray = null;
+        this.Gen.CompArray = null;
+        this.Gen.BaseArray = null;
+        this.Gen.InitArray = null;
+        this.Gen.System = null;
+        this.Gen.SystemInfraModule = null;
+        this.Gen.ModuleCount = 0;
+        this.Gen.Binary = null;
+        this.Gen.Module = null;
 
         String fileName;
         fileName = this.AddClear().Add(this.SModule).Add(this.ClassInfra.TextDot).Add(this.SC).AddResult();
@@ -620,7 +620,7 @@ public class LibraryMake : TextAdd
 
     protected virtual bool ExecuteModuleRefString()
     {
-        this.ModuleRefGen.Gen = this.LibraryGen;
+        this.ModuleRefGen.Gen = this.Gen;
         this.ModuleRefGen.Module = this.Module;
 
         this.ModuleRefGen.Execute();
