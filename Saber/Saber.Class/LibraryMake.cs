@@ -13,7 +13,7 @@ public class LibraryMake : TextAdd
         this.MakeLoad = this.CreateLibraryMakeLoad();
         this.InitGen = this.CreateLibraryInitGen();
         this.BaseGen = this.CreateLibraryBaseGen();
-        this.LibraryCompGen = this.CreateLibraryCompGen();
+        this.CompGen = this.CreateLibraryCompGen();
         this.LibraryStringGen = this.CreateLibraryStringGen();
         this.LibraryGen = this.CreateLibraryGen();
         this.ModuleRefGen = this.CreateModuleRefGen();
@@ -101,7 +101,7 @@ public class LibraryMake : TextAdd
     protected virtual LibraryMakeLoad MakeLoad { get; set; }
     protected virtual LibraryInitGen InitGen { get; set; }
     protected virtual LibraryBaseGen BaseGen { get; set; }
-    protected virtual LibraryCompGen LibraryCompGen { get; set; }
+    protected virtual LibraryCompGen CompGen { get; set; }
     protected virtual LibraryStringGen LibraryStringGen { get; set; }
     protected virtual LibraryGen LibraryGen { get; set; }
     protected virtual LibraryModuleRefGen ModuleRefGen { get; set; }
@@ -422,17 +422,17 @@ public class LibraryMake : TextAdd
             Array baseArray;
             baseArray = this.BaseArray.GetAt(i) as Array;
 
-            this.LibraryCompGen.Class = varClass;
-            this.LibraryCompGen.BaseArray = baseArray;
+            this.CompGen.Class = varClass;
+            this.CompGen.BaseArray = baseArray;
 
-            this.LibraryCompGen.Execute();
+            this.CompGen.Execute();
 
             LibraryComp a;
-            a = this.LibraryCompGen.Result;
+            a = this.CompGen.Result;
 
-            this.LibraryCompGen.Result = null;
-            this.LibraryCompGen.BaseArray = null;
-            this.LibraryCompGen.Class = null;
+            this.CompGen.Result = null;
+            this.CompGen.BaseArray = null;
+            this.CompGen.Class = null;
 
             array.SetAt(i, a);
 
