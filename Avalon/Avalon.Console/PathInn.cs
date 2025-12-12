@@ -4,12 +4,12 @@ class PathInn : StringInn
 {
     public override String Read()
     {
-        Intern.This.Phore.Open();
+        PathIntern.This.Phore.Open();
 
         String k;
         k = base.Read();
 
-        Intern.This.Phore.Close();
+        PathIntern.This.Phore.Close();
 
         return k;
     }
