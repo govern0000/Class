@@ -153,8 +153,8 @@ public class Entry : Any
                 Extern.Environ_Exit(193);
             }
 
-            StringInn inn;
-            inn = new StringInn();
+            PathInn inn;
+            inn = new PathInn();
             inn.Init();
 
             inn.String = innString;
