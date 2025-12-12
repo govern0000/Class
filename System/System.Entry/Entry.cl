@@ -23,7 +23,7 @@ class Entry : Any
 
     field prusate Array Arg { get { return data; } set { data : value; } }
     field private Intern InternIntern { get { return data; } set { data : value; } }
-    field private Extern Extren { get { return data; } set { data : value; } }
+    field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field private StorageComp StorageComp { get { return data; } set { data : value; } }
 
