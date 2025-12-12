@@ -16,7 +16,7 @@ public class LibraryMake : TextAdd
         this.LibraryCompGen = this.CreateLibraryCompGen();
         this.LibraryStringGen = this.CreateLibraryStringGen();
         this.LibraryGen = this.CreateLibraryGen();
-        this.ModuleRefStringGen = this.CreateModuleRefStringGen();
+        this.ModuleRefGen = this.CreateModuleRefStringGen();
         this.TModuleRef = this.CreateModuleRef();
 
         this.SSystemDotInfra = this.S("System.Infra");
@@ -104,7 +104,7 @@ public class LibraryMake : TextAdd
     protected virtual LibraryCompGen LibraryCompGen { get; set; }
     protected virtual LibraryStringGen LibraryStringGen { get; set; }
     protected virtual LibraryGen LibraryGen { get; set; }
-    protected virtual LibraryModuleRefGen ModuleRefStringGen { get; set; }
+    protected virtual LibraryModuleRefGen ModuleRefGen { get; set; }
     protected virtual ClassModule SystemInfraModule { get; set; }
     protected virtual SystemClass System { get; set; }
     protected virtual String ModuleRefString { get; set; }
@@ -620,16 +620,16 @@ public class LibraryMake : TextAdd
 
     protected virtual bool ExecuteModuleRefString()
     {
-        this.ModuleRefStringGen.Gen = this.LibraryGen;
-        this.ModuleRefStringGen.Module = this.Module;
+        this.ModuleRefGen.Gen = this.LibraryGen;
+        this.ModuleRefGen.Module = this.Module;
 
-        this.ModuleRefStringGen.Execute();
+        this.ModuleRefGen.Execute();
 
-        this.ModuleExeString = this.ModuleRefStringGen.Result;
+        this.ModuleExeString = this.ModuleRefGen.Result;
 
-        this.ModuleRefStringGen.Result = null;
-        this.ModuleRefStringGen.Module = null;
-        this.ModuleRefStringGen.Gen = null;
+        this.ModuleRefGen.Result = null;
+        this.ModuleRefGen.Module = null;
+        this.ModuleRefGen.Gen = null;
 
         return true;
     }
