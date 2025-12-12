@@ -14,7 +14,7 @@ public class LibraryMake : TextAdd
         this.LibraryInitGen = this.CreateLibraryInitGen();
         this.LibraryBaseGen = this.CreateLibraryBaseGen();
         this.LibraryCompGen = this.CreateLibraryCompGen();
-        this.LibraryStringGen = this.CreateClassStringGen();
+        this.LibraryStringGen = this.CreateLibraryStringGen();
         this.LibraryGen = this.CreateLibraryGen();
         this.ModuleRefStringGen = this.CreateModuleRefStringGen();
         this.TModuleRef = this.CreateModuleRef();
@@ -60,7 +60,7 @@ public class LibraryMake : TextAdd
         return a;
     }
 
-    protected virtual LibraryStringGen CreateClassStringGen()
+    protected virtual LibraryStringGen CreateLibraryStringGen()
     {
         LibraryStringGen a;
         a = new LibraryStringGen();
