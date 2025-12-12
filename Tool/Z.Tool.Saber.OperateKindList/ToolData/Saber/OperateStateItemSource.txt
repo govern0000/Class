@@ -1,4 +1,4 @@
-public class #Name#ClassGenOperateState : ClassGenOperateState
+public class #Name#LibraryGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
