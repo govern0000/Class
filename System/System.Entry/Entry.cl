@@ -85,24 +85,24 @@ class Entry : Any
 
     private bool MainBeforeConsole()
     {
-        this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
-        this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
-        this.InternInfra.ConsoleInnPath = this.ConsolePath(Extern.Environ_InnPath());
+        this.InternInfra.ConsoleOutPath : this.ConsolePath(Extern.Environ_OutPath());
+        this.InternInfra.ConsoleErrPath : this.ConsolePath(Extern.Environ_ErrPath());
+        this.InternInfra.ConsoleInnPath : this.ConsolePath(Extern.Environ_InnPath());
 
         if (!(this.InternInfra.ConsoleOutPath == null))
         {
-            this.InternInfra.ConsoleOut = this.CreateStringOut();
+            this.InternInfra.ConsoleOut : this.CreateStringOut();
         }
 
         if (!(this.InternInfra.ConsoleErrPath == null))
         {
-            this.InternInfra.ConsoleErr = this.CreateStringOut();
+            this.InternInfra.ConsoleErr : this.CreateStringOut();
         }
 
         if (!(this.InternInfra.ConsoleInnPath == null))
         {
             String innString;
-            innString = this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
+            innString : this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
 
             if (innString == null)
             {
@@ -110,13 +110,13 @@ class Entry : Any
             }
 
             StringInn inn;
-            inn = new StringInn();
+            inn : new StringInn();
             inn.Init();
 
-            inn.String = innString;
-            inn.Index = 0;
+            inn.String : innString;
+            inn.Index : 0;
 
-            this.InternInfra.ConsoleInn = inn;
+            this.InternInfra.ConsoleInn : inn;
         }
         return true;
     }
@@ -126,13 +126,13 @@ class Entry : Any
         if (!(this.InternInfra.ConsoleOutPath == null))
         {
             StringOut stringOut;
-            stringOut = this.InternInfra.ConsoleOut as StringOut;
+            stringOut : this.InternInfra.ConsoleOut as StringOut;
 
             String outText;
-            outText = stringOut.Result();
+            outText : stringOut.Result();
 
             bool ba;
-            ba = this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
+            ba : this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
 
             if (!ba)
             {
@@ -143,13 +143,13 @@ class Entry : Any
         if (!(this.InternInfra.ConsoleErrPath == null))
         {
             StringOut stringErr;
-            stringErr = this.InternInfra.ConsoleErr as StringOut;
+            stringErr : this.InternInfra.ConsoleErr as StringOut;
 
             String errText;
-            errText = stringErr.Result();
+            errText : stringErr.Result();
 
             bool bb;
-            bb = this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
+            bb : this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
 
             if (!bb)
             {
@@ -163,7 +163,7 @@ class Entry : Any
     private StringOut CreateStringOut()
     {
         StringOut a;
-        a = new StringOut();
+        a : new StringOut();
         a.Init();
         return a;
     }
@@ -171,15 +171,15 @@ class Entry : Any
     private String ConsolePath(ulong k)
     {
         String kk;
-        kk = this.InternInfra.StringCreateIntern(k);
+        kk : this.InternInfra.StringCreateIntern(k);
 
         if (this.StringComp.Count(kk) == 0)
         {
-            kk = null;
+            kk : null;
         }
 
         String a;
-        a = kk;
+        a : kk;
         return a;
     }
 }
