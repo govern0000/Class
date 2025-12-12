@@ -41,11 +41,14 @@ class Entry : Any
         this.StorageComp.ModuleFoldPath : k;
 
         this.ArrayArg();
+
+        this.MainBeforeConsole();
         return true;
     }
 
     maide precate Bool MainAfter()
     {
+        this.MainAfterConsole();
         return true;
     }
 
