@@ -93,12 +93,12 @@ class Entry : Any
 
         if (~(this.InternInfra.ConsoleOutPath = null))
         {
-            this.InternInfra.ConsoleOut : this.CreateStringOut();
+            this.InternInfra.ConsoleOut : this.CreatePathOut();
         }
 
         if (~(this.InternInfra.ConsoleErrPath = null))
         {
-            this.InternInfra.ConsoleErr : this.CreateStringOut();
+            this.InternInfra.ConsoleErr : this.CreatePathOut();
         }
 
         if (~(this.InternInfra.ConsoleInnPath = null))
@@ -111,8 +111,8 @@ class Entry : Any
                 Extern.Environ_Exit(193);
             }
 
-            StringInn inn;
-            inn : new StringInn();
+            PathInn inn;
+            inn : new PathInn();
             inn.Init();
 
             inn.String : innString;
@@ -162,10 +162,10 @@ class Entry : Any
         return true;
     }
 
-    private StringOut CreateStringOut()
+    private PathOut CreatePathOut()
     {
-        StringOut a;
-        a : new StringOut();
+        PathOut a;
+        a : new PathOut();
         a.Init();
         return a;
     }
