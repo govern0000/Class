@@ -145,10 +145,10 @@ public partial class LibraryGen : TextAdd
         return true;
     }
 
-    public virtual ClassGenCountOperate CreateCountOperate()
+    public virtual LibraryGenCountOperate CreateCountOperate()
     {
-        ClassGenCountOperate a;
-        a = new ClassGenCountOperate();
+        LibraryGenCountOperate a;
+        a = new LibraryGenCountOperate();
         a.Gen = this;
         a.Init();
         return a;
@@ -205,7 +205,7 @@ public partial class LibraryGen : TextAdd
     public virtual String Result { get; set; }
     public virtual LibraryGenArg Arg { get; set; }
     public virtual LibraryGenOperate Operate { get; set; }
-    public virtual ClassGenCountOperate CountOperate { get; set; }
+    public virtual LibraryGenCountOperate CountOperate { get; set; }
     public virtual ClassGenSetOperate SetOperate { get; set; }
     public virtual Array ClassArray { get; set; }
     public virtual Array ImportArray { get; set; }
