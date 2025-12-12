@@ -104,10 +104,10 @@ public class Console : TextAdd
         return a;
     }
 
-    protected virtual LibraryGen CreateLibraryGen()
+    protected virtual LibraryMake CreateLibraryGen()
     {
-        LibraryGen a;
-        a = new LibraryGen();
+        LibraryMake a;
+        a = new LibraryMake();
         a.Init();
         return a;
     }
@@ -185,7 +185,7 @@ public class Console : TextAdd
     protected virtual PortRead PortRead { get; set; }
     protected virtual PortLoad PortLoad { get; set; }
     protected virtual BinaryGen BinaryGen { get; set; }
-    protected virtual LibraryGen LibraryGen { get; set; }
+    protected virtual LibraryMake LibraryGen { get; set; }
     protected virtual StorageGen StorageGen { get; set; }
     protected virtual ErrorString ErrorString { get; set; }
     protected virtual NameValid NameValid { get; set; }
