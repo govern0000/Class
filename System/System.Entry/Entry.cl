@@ -168,10 +168,10 @@ class Entry : Any
         return true;
     }
 
-    private PathOut CreatePathOut()
+    maide private PathOut CreatePathOut()
     {
-        PathOut a;
-        a : new PathOut();
+        var PathOut a;
+        a : new PathOut;
         a.Init();
         return a;
     }
