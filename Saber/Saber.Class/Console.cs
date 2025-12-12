@@ -371,7 +371,7 @@ public class Console : TextAdd
             }
 
             bool bba;
-            bba = this.ExecuteGenLibrary(moduleRef);
+            bba = this.ExecuteLibraryMake(moduleRef);
 
             if (!bba)
             {
@@ -689,7 +689,7 @@ public class Console : TextAdd
         return true;
     }
 
-    protected virtual bool ExecuteGenLibrary(ModuleRef moduleRef)
+    protected virtual bool ExecuteLibraryMake(ModuleRef moduleRef)
     {
         this.LibraryMake.ModuleRef = moduleRef;
         this.LibraryMake.ModulePort = this.ModulePort;
