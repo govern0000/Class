@@ -82,4 +82,104 @@ class Entry : Any
         this.Arg : array;
         return true;
     }
+
+    private bool MainBeforeConsole()
+    {
+        this.InternInfra.ConsoleOutPath = this.ConsolePath(Extern.Environ_OutPath());
+        this.InternInfra.ConsoleErrPath = this.ConsolePath(Extern.Environ_ErrPath());
+        this.InternInfra.ConsoleInnPath = this.ConsolePath(Extern.Environ_InnPath());
+
+        if (!(this.InternInfra.ConsoleOutPath == null))
+        {
+            this.InternInfra.ConsoleOut = this.CreateStringOut();
+        }
+
+        if (!(this.InternInfra.ConsoleErrPath == null))
+        {
+            this.InternInfra.ConsoleErr = this.CreateStringOut();
+        }
+
+        if (!(this.InternInfra.ConsoleInnPath == null))
+        {
+            String innString;
+            innString = this.StorageInfra.TextRead(this.InternInfra.ConsoleInnPath);
+
+            if (innString == null)
+            {
+                Extern.Environ_Exit(193);
+            }
+
+            StringInn inn;
+            inn = new StringInn();
+            inn.Init();
+
+            inn.String = innString;
+            inn.Index = 0;
+
+            this.InternInfra.ConsoleInn = inn;
+        }
+        return true;
+    }
+
+    private bool MainAfterConsole()
+    {
+        if (!(this.InternInfra.ConsoleOutPath == null))
+        {
+            StringOut stringOut;
+            stringOut = this.InternInfra.ConsoleOut as StringOut;
+
+            String outText;
+            outText = stringOut.Result();
+
+            bool ba;
+            ba = this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
+
+            if (!ba)
+            {
+                Extern.Environ_Exit(191);
+            }
+        }
+
+        if (!(this.InternInfra.ConsoleErrPath == null))
+        {
+            StringOut stringErr;
+            stringErr = this.InternInfra.ConsoleErr as StringOut;
+
+            String errText;
+            errText = stringErr.Result();
+
+            bool bb;
+            bb = this.StorageInfra.TextWrite(this.InternInfra.ConsoleErrPath, errText);
+
+            if (!bb)
+            {
+                Extern.Environ_Exit(192);
+            }
+        }
+
+        return true;
+    }
+
+    private StringOut CreateStringOut()
+    {
+        StringOut a;
+        a = new StringOut();
+        a.Init();
+        return a;
+    }
+
+    private String ConsolePath(ulong k)
+    {
+        String kk;
+        kk = this.InternInfra.StringCreateIntern(k);
+
+        if (this.StringComp.Count(kk) == 0)
+        {
+            kk = null;
+        }
+
+        String a;
+        a = kk;
+        return a;
+    }
 }
