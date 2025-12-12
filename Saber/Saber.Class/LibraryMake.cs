@@ -427,7 +427,7 @@ public class LibraryMake : TextAdd
 
             this.ClassCompGen.Execute();
 
-            ClassComp a;
+            LibraryComp a;
             a = this.ClassCompGen.Result;
 
             this.ClassCompGen.Result = null;

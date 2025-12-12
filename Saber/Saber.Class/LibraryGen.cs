@@ -213,7 +213,7 @@ public partial class LibraryGen : TextAdd
     public virtual ClassClass InternClass { get; set; }
     public virtual ClassClass ExternClass { get; set; }
     public virtual Array Base { get; set; }
-    public virtual ClassComp Comp { get; set; }
+    public virtual LibraryComp Comp { get; set; }
     public virtual Field ThisField { get; set; }
     public virtual TableIter ClassIter { get; set; }
     public virtual TableIter TableIter { get; set; }
@@ -510,7 +510,7 @@ public partial class LibraryGen : TextAdd
             this.Class = k;
 
             this.Base = this.BaseArray.GetAt(i) as Array;
-            this.Comp = this.CompArray.GetAt(i) as ClassComp;
+            this.Comp = this.CompArray.GetAt(i) as LibraryComp;
 
             this.ExecuteReferClass();
 

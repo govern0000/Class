@@ -21,7 +21,7 @@ public class ClassCompGen : Any
 
     public virtual ClassClass Class { get; set; }
     public virtual Array BaseArray { get; set; }
-    public virtual ClassComp Result { get; set; }
+    public virtual LibraryComp Result { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual TableIter TableIter { get; set; }
 
@@ -32,8 +32,8 @@ public class ClassCompGen : Any
         long maideCount;
         maideCount = this.Class.MaideStart + this.Class.Maide.Count;
 
-        ClassComp k;
-        k = new ClassComp();
+        LibraryComp k;
+        k = new LibraryComp();
         k.Init();
         this.Result = k;
 
@@ -61,7 +61,7 @@ public class ClassCompGen : Any
         return true;
     }
 
-    public virtual bool ExecuteSetClass(ClassComp classComp, ClassClass varClass)
+    public virtual bool ExecuteSetClass(LibraryComp classComp, ClassClass varClass)
     {
         this.ExecuteSetClassField(classComp.Field, varClass);
 
