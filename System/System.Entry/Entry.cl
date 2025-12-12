@@ -128,6 +128,9 @@ class Entry : Any
 
     maide private Bool MainAfterConsole()
     {
+        var Extern extern;
+        extern : this.Extern;
+
         inf (~(this.InternInfra.ConsoleOutPath = null))
         {
             var StringOut stringOut;
