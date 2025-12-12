@@ -2,14 +2,23 @@ namespace Avalon.Console;
 
 class PathInn : StringInn
 {
+    public override bool Init()
+    {
+        base.Init();
+        this.PathIntern = PathIntern.This;
+        return true;
+    }
+
+    private PathIntern PathIntern { get; set; }
+
     public override String Read()
     {
-        PathIntern.This.Phore.Open();
+        this.PathIntern.Phore.Open();
 
         String k;
         k = base.Read();
 
-        PathIntern.This.Phore.Close();
+        this.PathIntern.Phore.Close();
 
         return k;
     }
