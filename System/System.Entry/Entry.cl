@@ -87,9 +87,12 @@ class Entry : Any
 
     maide private Bool MainBeforeConsole()
     {
-        this.InternInfra.ConsoleOutPath : this.ConsolePath(Extern.Environ_OutPath());
-        this.InternInfra.ConsoleErrPath : this.ConsolePath(Extern.Environ_ErrPath());
-        this.InternInfra.ConsoleInnPath : this.ConsolePath(Extern.Environ_InnPath());
+        var Extern extern;
+        extern : this.Extern;
+
+        this.InternInfra.ConsoleOutPath : this.ConsolePath(extern.Environ_OutPath());
+        this.InternInfra.ConsoleErrPath : this.ConsolePath(extern.Environ_ErrPath());
+        this.InternInfra.ConsoleInnPath : this.ConsolePath(extern.Environ_InnPath());
 
         inf (~(this.InternInfra.ConsoleOutPath = null))
         {
@@ -123,22 +126,22 @@ class Entry : Any
         return true;
     }
 
-    private bool MainAfterConsole()
+    maide private Bool MainAfterConsole()
     {
         inf (~(this.InternInfra.ConsoleOutPath = null))
         {
-            StringOut stringOut;
+            var StringOut stringOut;
             stringOut : this.InternInfra.ConsoleOut as StringOut;
 
-            String outText;
+            var String outText;
             outText : stringOut.Result();
 
-            bool ba;
+            var Bool ba;
             ba : this.StorageInfra.TextWrite(this.InternInfra.ConsoleOutPath, outText);
 
             inf (~ba)
             {
-                Extern.Environ_Exit(191);
+                extern.Environ_Exit(191);
             }
         }
 
