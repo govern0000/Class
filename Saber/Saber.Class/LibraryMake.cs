@@ -12,7 +12,7 @@ public class LibraryMake : TextAdd
 
         this.LibraryMakeLoad = this.CreateLibraryMakeLoad();
         this.ClassInitGen = this.CreateClassInitGen();
-        this.ClassBaseGen = this.CreateClassBaseGen();
+        this.LibraryBaseGen = this.CreateClassBaseGen();
         this.ClassCompGen = this.CreateClassCompGen();
         this.ClassStringGen = this.CreateClassStringGen();
         this.LibraryGen = this.CreateLibraryGen();
@@ -100,7 +100,7 @@ public class LibraryMake : TextAdd
     protected virtual StorageComp StorageComp { get; set; }
     protected virtual LibraryMakeLoad LibraryMakeLoad { get; set; }
     protected virtual ClassInitGen ClassInitGen { get; set; }
-    protected virtual LibraryBaseGen ClassBaseGen { get; set; }
+    protected virtual LibraryBaseGen LibraryBaseGen { get; set; }
     protected virtual ClassCompGen ClassCompGen { get; set; }
     protected virtual ClassStringGen ClassStringGen { get; set; }
     protected virtual LibraryGen LibraryGen { get; set; }
@@ -377,15 +377,15 @@ public class LibraryMake : TextAdd
             ClassClass varClass;
             varClass = iter.Value as ClassClass;
 
-            this.ClassBaseGen.Class = varClass;
+            this.LibraryBaseGen.Class = varClass;
 
-            this.ClassBaseGen.Execute();
+            this.LibraryBaseGen.Execute();
 
             Array a;
-            a = this.ClassBaseGen.Result;
+            a = this.LibraryBaseGen.Result;
 
-            this.ClassBaseGen.Result = null;
-            this.ClassBaseGen.Class = null;
+            this.LibraryBaseGen.Result = null;
+            this.LibraryBaseGen.Class = null;
 
             array.SetAt(i, a);
 
