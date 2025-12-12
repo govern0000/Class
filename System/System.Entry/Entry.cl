@@ -85,7 +85,7 @@ class Entry : Any
         return true;
     }
 
-    private bool MainBeforeConsole()
+    maide private Bool MainBeforeConsole()
     {
         this.InternInfra.ConsoleOutPath : this.ConsolePath(Extern.Environ_OutPath());
         this.InternInfra.ConsoleErrPath : this.ConsolePath(Extern.Environ_ErrPath());
