@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class LibraryGenLoad : TextAdd
+public class LibraryMakeLoad : TextAdd
 {
     public override bool Init()
     {

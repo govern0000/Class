@@ -28,10 +28,10 @@ public class LibraryMake : TextAdd
         return true;
     }
 
-    protected virtual LibraryGenLoad CreateLibraryGenLoad()
+    protected virtual LibraryMakeLoad CreateLibraryGenLoad()
     {
-        LibraryGenLoad a;
-        a = new LibraryGenLoad();
+        LibraryMakeLoad a;
+        a = new LibraryMakeLoad();
         a.Init();
         return a;
     }
@@ -98,7 +98,7 @@ public class LibraryMake : TextAdd
     protected virtual StorageInfra StorageInfra { get; set; }
     protected virtual ClassInfra ClassInfra { get; set; }
     protected virtual StorageComp StorageComp { get; set; }
-    protected virtual LibraryGenLoad LibraryGenLoad { get; set; }
+    protected virtual LibraryMakeLoad LibraryGenLoad { get; set; }
     protected virtual ClassInitGen ClassInitGen { get; set; }
     protected virtual ClassBaseGen ClassBaseGen { get; set; }
     protected virtual ClassCompGen ClassCompGen { get; set; }
