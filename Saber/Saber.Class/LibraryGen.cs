@@ -203,7 +203,7 @@ public partial class LibraryGen : TextAdd
     public virtual Array CompArray { get; set; }
     public virtual Array StringArray { get; set; }
     public virtual String Result { get; set; }
-    public virtual ClassGenArg Arg { get; set; }
+    public virtual LibraryGenArg Arg { get; set; }
     public virtual ClassGenOperate Operate { get; set; }
     public virtual ClassGenCountOperate CountOperate { get; set; }
     public virtual ClassGenSetOperate SetOperate { get; set; }
@@ -359,7 +359,7 @@ public partial class LibraryGen : TextAdd
         this.ImportArraySet();
         this.InternExternClassSet();
 
-        this.Arg = new ClassGenArg();
+        this.Arg = new LibraryGenArg();
         this.Arg.Init();
 
         this.Operate = this.CountOperate;

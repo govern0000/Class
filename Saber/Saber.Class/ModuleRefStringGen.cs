@@ -11,7 +11,7 @@ public class ModuleRefStringGen : TextAdd
         LibraryGen gen;
         gen = this.Gen;
 
-        gen.Arg = new ClassGenArg();
+        gen.Arg = new LibraryGenArg();
         gen.Arg.Init();
 
         gen.Operate = gen.CountOperate;
