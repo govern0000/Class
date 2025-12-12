@@ -2,13 +2,22 @@ namespace Avalon.Console;
 
 class PathOut : StringOut
 {
+    public override bool Init()
+    {
+        base.Init();
+        this.PathIntern = PathIntern.This;
+        return true;
+    }
+
+    private PathIntern PathIntern { get; set; }
+
     public override bool Write(String value)
     {
-        Intern.This.Phore.Open();
+        this.PathIntern.Phore.Open();
 
         base.Write(value);
 
-        Intern.This.Phore.Close();
+        this.PathIntern.Phore.Close();
         return true;
     }
 }
