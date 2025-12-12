@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class ModuleRefStringGen : TextAdd
+public class LibraryModuleRefGen : TextAdd
 {
     public virtual LibraryGen Gen { get; set; }
     public virtual ClassModule Module { get; set; }
