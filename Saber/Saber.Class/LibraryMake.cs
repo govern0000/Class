@@ -13,7 +13,7 @@ public class LibraryMake : TextAdd
         this.LibraryMakeLoad = this.CreateLibraryMakeLoad();
         this.LibraryInitGen = this.CreateLibraryInitGen();
         this.LibraryBaseGen = this.CreateLibraryBaseGen();
-        this.LibraryCompGen = this.CreateClassCompGen();
+        this.LibraryCompGen = this.CreateLibraryCompGen();
         this.ClassStringGen = this.CreateClassStringGen();
         this.LibraryGen = this.CreateLibraryGen();
         this.ModuleRefStringGen = this.CreateModuleRefStringGen();
@@ -52,7 +52,7 @@ public class LibraryMake : TextAdd
         return a;
     }
 
-    protected virtual LibraryCompGen CreateClassCompGen()
+    protected virtual LibraryCompGen CreateLibraryCompGen()
     {
         LibraryCompGen a;
         a = new LibraryCompGen();
