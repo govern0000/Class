@@ -25,6 +25,7 @@ class Entry : Any
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
+    field private StringComp StringComp { get { return data; } set { data : value; } }
     field private StorageComp StorageComp { get { return data; } set { data : value; } }
 
     maide precate Bool MainBefore()
