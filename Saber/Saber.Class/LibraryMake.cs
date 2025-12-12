@@ -16,7 +16,7 @@ public class LibraryMake : TextAdd
         this.LibraryCompGen = this.CreateLibraryCompGen();
         this.LibraryStringGen = this.CreateLibraryStringGen();
         this.LibraryGen = this.CreateLibraryGen();
-        this.ModuleRefGen = this.CreateModuleRefStringGen();
+        this.ModuleRefGen = this.CreateModuleRefGen();
         this.TModuleRef = this.CreateModuleRef();
 
         this.SSystemDotInfra = this.S("System.Infra");
@@ -76,7 +76,7 @@ public class LibraryMake : TextAdd
         return a;
     }
 
-    protected virtual LibraryModuleRefGen CreateModuleRefStringGen()
+    protected virtual LibraryModuleRefGen CreateModuleRefGen()
     {
         LibraryModuleRefGen a;
         a = new LibraryModuleRefGen();
