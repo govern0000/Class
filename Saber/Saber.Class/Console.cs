@@ -20,7 +20,7 @@ public class Console : TextAdd
         this.PortLoad = this.CreatePortLoad();
         this.BinaryGen = this.CreateBinaryGen();
         this.StorageGen = this.CreateStorageGen();
-        this.LibraryGen = this.CreateLibraryGen();
+        this.LibraryGen = this.CreateLibraryMake();
         this.ErrorString = this.CreateErrorString();
         this.InfoToken = this.CreateInfoToken();
         this.InfoTravel = this.CreateInfoTravel();
@@ -104,7 +104,7 @@ public class Console : TextAdd
         return a;
     }
 
-    protected virtual LibraryMake CreateLibraryGen()
+    protected virtual LibraryMake CreateLibraryMake()
     {
         LibraryMake a;
         a = new LibraryMake();
