@@ -23,5 +23,12 @@ class PathIntern : Any
         return true;
     }
 
+    public virtual bool Final()
+    {
+        this.Phore.Final();
+        this.Phore = null;
+        return true;
+    }
+
     public virtual Phore Phore { get; set; }
 }
