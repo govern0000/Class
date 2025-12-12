@@ -10,7 +10,7 @@ public class LibraryMake : TextAdd
         this.ClassInfra = ClassInfra.This;
         this.StorageComp = StorageComp.This;
 
-        this.LibraryGenLoad = this.CreateLibraryMakeLoad();
+        this.LibraryMakeLoad = this.CreateLibraryMakeLoad();
         this.ClassInitGen = this.CreateClassInitGen();
         this.ClassBaseGen = this.CreateClassBaseGen();
         this.ClassCompGen = this.CreateClassCompGen();
@@ -98,7 +98,7 @@ public class LibraryMake : TextAdd
     protected virtual StorageInfra StorageInfra { get; set; }
     protected virtual ClassInfra ClassInfra { get; set; }
     protected virtual StorageComp StorageComp { get; set; }
-    protected virtual LibraryMakeLoad LibraryGenLoad { get; set; }
+    protected virtual LibraryMakeLoad LibraryMakeLoad { get; set; }
     protected virtual ClassInitGen ClassInitGen { get; set; }
     protected virtual ClassBaseGen ClassBaseGen { get; set; }
     protected virtual ClassCompGen ClassCompGen { get; set; }
@@ -276,26 +276,26 @@ public class LibraryMake : TextAdd
     {
         bool b;
 
-        this.LibraryGenLoad.ModuleRef = this.ModuleRef;
-        this.LibraryGenLoad.ModulePort = this.ModulePort;
-        this.LibraryGenLoad.BinaryRead = this.BinaryRead;
-        this.LibraryGenLoad.ClassPath = this.ClassPath;
+        this.LibraryMakeLoad.ModuleRef = this.ModuleRef;
+        this.LibraryMakeLoad.ModulePort = this.ModulePort;
+        this.LibraryMakeLoad.BinaryRead = this.BinaryRead;
+        this.LibraryMakeLoad.ClassPath = this.ClassPath;
 
-        b = this.LibraryGenLoad.Execute();
+        b = this.LibraryMakeLoad.Execute();
 
         long k;
-        k = this.LibraryGenLoad.Status;
+        k = this.LibraryMakeLoad.Status;
 
-        this.BinaryTable = this.LibraryGenLoad.BinaryTable;
-        this.ModuleTable = this.LibraryGenLoad.ModuleTable;
+        this.BinaryTable = this.LibraryMakeLoad.BinaryTable;
+        this.ModuleTable = this.LibraryMakeLoad.ModuleTable;
 
-        this.LibraryGenLoad.ModuleTable = null;
-        this.LibraryGenLoad.BinaryTable = null;
-        this.LibraryGenLoad.Status = 0;
-        this.LibraryGenLoad.ClassPath = null;
-        this.LibraryGenLoad.BinaryRead = null;
-        this.LibraryGenLoad.ModulePort = null;
-        this.LibraryGenLoad.ModuleRef = null;
+        this.LibraryMakeLoad.ModuleTable = null;
+        this.LibraryMakeLoad.BinaryTable = null;
+        this.LibraryMakeLoad.Status = 0;
+        this.LibraryMakeLoad.ClassPath = null;
+        this.LibraryMakeLoad.BinaryRead = null;
+        this.LibraryMakeLoad.ModulePort = null;
+        this.LibraryMakeLoad.ModuleRef = null;
 
         if (!b)
         {
