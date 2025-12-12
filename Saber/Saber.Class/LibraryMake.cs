@@ -14,7 +14,7 @@ public class LibraryMake : TextAdd
         this.InitGen = this.CreateLibraryInitGen();
         this.BaseGen = this.CreateLibraryBaseGen();
         this.CompGen = this.CreateLibraryCompGen();
-        this.LibraryStringGen = this.CreateLibraryStringGen();
+        this.StringGen = this.CreateLibraryStringGen();
         this.LibraryGen = this.CreateLibraryGen();
         this.ModuleRefGen = this.CreateModuleRefGen();
         this.TModuleRef = this.CreateModuleRef();
@@ -102,7 +102,7 @@ public class LibraryMake : TextAdd
     protected virtual LibraryInitGen InitGen { get; set; }
     protected virtual LibraryBaseGen BaseGen { get; set; }
     protected virtual LibraryCompGen CompGen { get; set; }
-    protected virtual LibraryStringGen LibraryStringGen { get; set; }
+    protected virtual LibraryStringGen StringGen { get; set; }
     protected virtual LibraryGen LibraryGen { get; set; }
     protected virtual LibraryModuleRefGen ModuleRefGen { get; set; }
     protected virtual ClassModule SystemInfraModule { get; set; }
@@ -444,14 +444,14 @@ public class LibraryMake : TextAdd
 
     protected virtual bool ExecuteString()
     {
-        this.LibraryStringGen.State = this.Binary.State;
+        this.StringGen.State = this.Binary.State;
 
-        this.LibraryStringGen.Execute();
+        this.StringGen.Execute();
 
-        this.StringArray = this.LibraryStringGen.Result;
+        this.StringArray = this.StringGen.Result;
 
-        this.LibraryStringGen.Result = null;
-        this.LibraryStringGen.State = null;
+        this.StringGen.Result = null;
+        this.StringGen.State = null;
 
         return true;
     }
