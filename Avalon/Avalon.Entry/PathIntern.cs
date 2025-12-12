@@ -1,4 +1,4 @@
-namespace Avalon.Console;
+namespace Avalon.Entry;
 
 class PathIntern : Any
 {

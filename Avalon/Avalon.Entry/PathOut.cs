@@ -1,6 +1,6 @@
-namespace Avalon.Console;
+namespace Avalon.Entry;
 
-public class PathOut : StringOut
+class PathOut : StringOut
 {
     public override bool Init()
     {
