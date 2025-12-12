@@ -5,7 +5,7 @@ public class InitGen : ToolBase
     public override bool Init()
     {
         base.Init();
-        this.PathEffect = this.S("../../Saber/Saber.Class/ClassGen_Part.cs");
+        this.PathEffect = this.S("../../Saber/Saber.Class/LibraryGen_Part.cs");
         this.PathStateSource = this.S("ToolData/Saber/OperateStateInitSource.txt");
         this.PathStateItemSource = this.S("ToolData/Saber/OperateStateInitItemSource.txt");
         return true;
