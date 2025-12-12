@@ -1,6 +1,6 @@
 namespace Avalon.Console;
 
-class PathInn : StringInn
+public class PathInn : StringInn
 {
     public override bool Init()
     {
