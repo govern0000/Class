@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class ClassGenSetOperate : LibraryGenOperate
+public class LibraryGenSetOperate : LibraryGenOperate
 {
     public override bool Init()
     {
