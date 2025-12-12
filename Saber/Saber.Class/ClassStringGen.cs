@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class ClassStringGen : Any
+public class LibraryStringGen : Any
 {
     public override bool Init()
     {

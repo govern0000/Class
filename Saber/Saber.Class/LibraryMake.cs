@@ -60,10 +60,10 @@ public class LibraryMake : TextAdd
         return a;
     }
 
-    protected virtual ClassStringGen CreateClassStringGen()
+    protected virtual LibraryStringGen CreateClassStringGen()
     {
-        ClassStringGen a;
-        a = new ClassStringGen();
+        LibraryStringGen a;
+        a = new LibraryStringGen();
         a.Init();
         return a;
     }
@@ -102,7 +102,7 @@ public class LibraryMake : TextAdd
     protected virtual LibraryInitGen LibraryInitGen { get; set; }
     protected virtual LibraryBaseGen LibraryBaseGen { get; set; }
     protected virtual LibraryCompGen LibraryCompGen { get; set; }
-    protected virtual ClassStringGen ClassStringGen { get; set; }
+    protected virtual LibraryStringGen ClassStringGen { get; set; }
     protected virtual LibraryGen LibraryGen { get; set; }
     protected virtual ModuleRefStringGen ModuleRefStringGen { get; set; }
     protected virtual ClassModule SystemInfraModule { get; set; }
