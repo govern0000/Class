@@ -11,3 +11,4 @@ global using ListInfra = Avalon.List.Infra;
 global using StringComp = Avalon.Text.StringComp;
 global using StringAdd = Avalon.Text.StringAdd;
 global using TextInfra = Avalon.Text.Infra;
+global using Phore = Avalon.Thread.Phore;
