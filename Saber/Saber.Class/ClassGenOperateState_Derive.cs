@@ -1,6 +1,6 @@
 namespace Saber.Class;
 
-public class EndClassGenOperateState : ClassGenOperateState
+public class EndClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -9,7 +9,7 @@ public class EndClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class RetClassGenOperateState : ClassGenOperateState
+public class RetClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -18,7 +18,7 @@ public class RetClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class ReferClassGenOperateState : ClassGenOperateState
+public class ReferClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -27,7 +27,7 @@ public class ReferClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class AreClassGenOperateState : ClassGenOperateState
+public class AreClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -36,7 +36,7 @@ public class AreClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class InfStartClassGenOperateState : ClassGenOperateState
+public class InfStartClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -45,7 +45,7 @@ public class InfStartClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class InfEndClassGenOperateState : ClassGenOperateState
+public class InfEndClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -54,7 +54,7 @@ public class InfEndClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class WhileStartClassGenOperateState : ClassGenOperateState
+public class WhileStartClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -63,7 +63,7 @@ public class WhileStartClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class WhileClassGenOperateState : ClassGenOperateState
+public class WhileClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -72,7 +72,7 @@ public class WhileClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class WhileEndClassGenOperateState : ClassGenOperateState
+public class WhileEndClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -81,7 +81,7 @@ public class WhileEndClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class GetClassGenOperateState : ClassGenOperateState
+public class GetClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -90,7 +90,7 @@ public class GetClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SetClassGenOperateState : ClassGenOperateState
+public class SetClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -99,7 +99,7 @@ public class SetClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class CallClassGenOperateState : ClassGenOperateState
+public class CallClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -108,7 +108,7 @@ public class CallClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class VarClassGenOperateState : ClassGenOperateState
+public class VarClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -117,7 +117,7 @@ public class VarClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class VarMarkClassGenOperateState : ClassGenOperateState
+public class VarMarkClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -126,7 +126,7 @@ public class VarMarkClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class NewClassGenOperateState : ClassGenOperateState
+public class NewClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -135,7 +135,7 @@ public class NewClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class ShareClassGenOperateState : ClassGenOperateState
+public class ShareClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -144,7 +144,7 @@ public class ShareClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class CastClassGenOperateState : ClassGenOperateState
+public class CastClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -153,7 +153,7 @@ public class CastClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class ThisClassGenOperateState : ClassGenOperateState
+public class ThisClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -162,7 +162,7 @@ public class ThisClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BaseClassGenOperateState : ClassGenOperateState
+public class BaseClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -171,7 +171,7 @@ public class BaseClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class NullClassGenOperateState : ClassGenOperateState
+public class NullClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -180,7 +180,7 @@ public class NullClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SameClassGenOperateState : ClassGenOperateState
+public class SameClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -189,7 +189,7 @@ public class SameClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class LessClassGenOperateState : ClassGenOperateState
+public class LessClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -198,7 +198,7 @@ public class LessClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class AndClassGenOperateState : ClassGenOperateState
+public class AndClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -207,7 +207,7 @@ public class AndClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class OrnClassGenOperateState : ClassGenOperateState
+public class OrnClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -216,7 +216,7 @@ public class OrnClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class NotClassGenOperateState : ClassGenOperateState
+public class NotClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -225,7 +225,7 @@ public class NotClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class AddClassGenOperateState : ClassGenOperateState
+public class AddClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -234,7 +234,7 @@ public class AddClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SubClassGenOperateState : ClassGenOperateState
+public class SubClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -243,7 +243,7 @@ public class SubClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class MulClassGenOperateState : ClassGenOperateState
+public class MulClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -252,7 +252,7 @@ public class MulClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class DivClassGenOperateState : ClassGenOperateState
+public class DivClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -261,7 +261,7 @@ public class DivClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SignLessClassGenOperateState : ClassGenOperateState
+public class SignLessClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -270,7 +270,7 @@ public class SignLessClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SignMulClassGenOperateState : ClassGenOperateState
+public class SignMulClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -279,7 +279,7 @@ public class SignMulClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class SignDivClassGenOperateState : ClassGenOperateState
+public class SignDivClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -288,7 +288,7 @@ public class SignDivClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitAndClassGenOperateState : ClassGenOperateState
+public class BitAndClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -297,7 +297,7 @@ public class BitAndClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitOrnClassGenOperateState : ClassGenOperateState
+public class BitOrnClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -306,7 +306,7 @@ public class BitOrnClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitNotClassGenOperateState : ClassGenOperateState
+public class BitNotClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -315,7 +315,7 @@ public class BitNotClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitLiteClassGenOperateState : ClassGenOperateState
+public class BitLiteClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -324,7 +324,7 @@ public class BitLiteClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitRiteClassGenOperateState : ClassGenOperateState
+public class BitRiteClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -333,7 +333,7 @@ public class BitRiteClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BitSignRiteClassGenOperateState : ClassGenOperateState
+public class BitSignRiteClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -342,7 +342,7 @@ public class BitSignRiteClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class BoolValueClassGenOperateState : ClassGenOperateState
+public class BoolValueClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -351,7 +351,7 @@ public class BoolValueClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class IntValueClassGenOperateState : ClassGenOperateState
+public class IntValueClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {
@@ -360,7 +360,7 @@ public class IntValueClassGenOperateState : ClassGenOperateState
     }
 }
 
-public class StringValueClassGenOperateState : ClassGenOperateState
+public class StringValueClassGenOperateState : LibraryGenOperateState
 {
     public override bool Execute()
     {

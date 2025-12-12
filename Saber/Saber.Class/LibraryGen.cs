@@ -186,7 +186,7 @@ public partial class LibraryGen : TextAdd
         return this.AddClear().Add(this.IntValueHexPre).Add(kindHexDigit).AddS("000000000000000").AddResult();
     }
 
-    public virtual ClassGenOperateState InitOperateState(ClassGenOperateState state)
+    public virtual LibraryGenOperateState InitOperateState(LibraryGenOperateState state)
     {
         state.Gen = this;
         state.Init();
@@ -1753,8 +1753,8 @@ public partial class LibraryGen : TextAdd
         BinaryOperateKind kind;
         kind = this.OperateKindList.Get(kindIndex);
 
-        ClassGenOperateState state;
-        state = kind.Any as ClassGenOperateState;
+        LibraryGenOperateState state;
+        state = kind.Any as LibraryGenOperateState;
 
         state.Execute();
         return true;
