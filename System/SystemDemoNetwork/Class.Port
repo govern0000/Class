@@ -3,6 +3,7 @@ SystemDemoNetwork:0.00.00
 
 [Import]
 System.Infra
+    Any Any
     Int Int
 System.Console
     Console Console
