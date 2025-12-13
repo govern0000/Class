@@ -1511,13 +1511,22 @@ class Demo : Add
         list : new List;
         list.Init();
 
+        var Table environ;
+        environ : new Table;
+        environ.Less : this.SLess;
+        environ.Init();
+
+        this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.S("DemoNetworkOut.txt"));
+        this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.S("DemoNetworkErr.txt"));
+        this.ListInfra.TableAdd(environ, "INFRA_INN_PATH", this.S("DemoData/ProgramInn.txt"));
+
         var Program program;
         program : new Program;
         program.Init();
         program.Name : "../Library/SystemDemoNetwork-0.00.00.exe";
         program.Argue : list;
         program.WorkFold : null;
-        program.Environ : null;
+        program.Environ : environ;
 
         program.Execute();
 
