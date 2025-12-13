@@ -8,6 +8,7 @@ System.Infra
     Int Int
     String String
     Intern Intern
+    Extern Extern
     InternInfra InternInfra
 System.List
     Array Array
@@ -18,6 +19,9 @@ System.Thread
 System.Storage
     StorageComp Comp
     StorageInfra Infra
+System.Console
+    StringOut StringOut
+    StringInn StringInn
 
 [Export]
 Entry
