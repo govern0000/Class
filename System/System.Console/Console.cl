@@ -3,9 +3,14 @@ class Console : Any
     maide prusate Bool Init()
     {
         base.Init();
+        this.InternInfra : share InternInfra;
 
         this.Intern : new ConsoleIntern;
         this.Intern.Init();
+
+        this.Out : cast Out(this.InternInfra.ConsoleOut);
+        this.Err : cast Out(this.InternInfra.ConsoleErr);
+        this.Inn : cast Inn(this.InternInfra.ConsoleInn);
 
         var ConsoleOut ka;
         ka : new ConsoleOut;
@@ -33,5 +38,6 @@ class Console : Any
     field prusate Out Out { get { return data; } set { data : value; } }
     field prusate Out Err { get { return data; } set { data : value; } }
     field prusate Inn Inn { get { return data; } set { data : value; } }
+    field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field private ConsoleIntern Intern { get { return data; } set { data : value; } }
 }
