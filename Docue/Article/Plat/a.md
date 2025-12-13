@@ -20,7 +20,7 @@ Class Plat layer on top of Infra Plat.
 Shell Plat layer on top of Class Plat.
 
 Business Gene Plat including Secure module list and
-Info module list layer on top of Shell Plat.
+Info module list and Test module list layer on top of Shell Plat.
 
 Tool Plat layer on top of Business Gene Plat.
 
