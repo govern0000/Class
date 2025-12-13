@@ -2,11 +2,11 @@ class Entry : ModuleEntry
 {
     maide precate Int ExecuteMain()
     {
-        var NetworkState state;
-        state : new NetworkState;
-        state.Init();
+        var Demo demo;
+        demo : new Demo;
+        demo.Init();
 
-        state.Execute();
+        demo.Execute();
         return 0;
     }
 }
