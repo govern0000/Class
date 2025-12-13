@@ -16,6 +16,7 @@ System.Text
     StringComp StringComp
 System.Thread
     Thread Thread
+    Phore Phore
 System.Storage
     StorageComp Comp
     StorageInfra Infra
