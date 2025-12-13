@@ -20,7 +20,7 @@ class Demo : Any
     maide private Bool WriteInn()
     {
         var String k;
-        k : Console.This.Inn.Read();
+        k : share Console.Inn.Read();
 
         share Console.Out.Write("Inn Start\n");
         share Console.Out.Write(k);
