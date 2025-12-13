@@ -1516,9 +1516,15 @@ class Demo : Add
         environ.Less : this.SLess;
         environ.Init();
 
-        this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.S("DemoNetworkOut.txt"));
-        this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.S("DemoNetworkErr.txt"));
-        this.ListInfra.TableAdd(environ, "INFRA_INN_PATH", this.S("DemoData/ProgramInn.txt"));
+        var String combine;
+        combine : this.TextInfra.PathCombine;
+
+        var String dataPath;
+        dataPath : "SystemDemo-96207.08.47/Data";
+
+        this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkOut.txt");
+        this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkErr.txt");
+        this.ListInfra.TableAdd(environ, "INFRA_INN_PATH", this.AddClear().Add(dataPath).Add(combine).Add("Fold/ProgramInn.txt");
 
         var Program program;
         program : new Program;
