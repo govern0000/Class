@@ -9,6 +9,12 @@ class InternInfra : Any
     }
 
     field prusate String ModuleFoldPath { get { return data; } set { data : value; } }
+    field prusate String ConsoleOutPath { get { return data; } set { data : value; } }
+    field prusate String ConsoleErrPath { get { return data; } set { data : value; } }
+    field prusate String ConsoleInnPath { get { return data; } set { data : value; } }
+    field prusate Any ConsoleOut { get { return data; } set { data : value; } }
+    field prusate Any ConsoleErr { get { return data; } set { data : value; } }
+    field prusate Any ConsoleInn { get { return data; } set { data : value; } }
     field precate Intern InternIntern { get { return data; } set { data : value; } }
     field precate Extern Extern { get { return data; } set { data : value; } }
 
