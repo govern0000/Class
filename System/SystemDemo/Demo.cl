@@ -1522,9 +1522,9 @@ class Demo : Add
         var String dataPath;
         dataPath : "SystemDemo-96207.08.47/Data";
 
-        this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkOut.txt");
-        this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkErr.txt");
-        this.ListInfra.TableAdd(environ, "INFRA_INN_PATH", this.AddClear().Add(dataPath).Add(combine).Add("Fold/ProgramInn.txt");
+        this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkOut.txt").AddResult();
+        this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkErr.txt").AddResult();
+        this.ListInfra.TableAdd(environ, "INFRA_INN_PATH", this.AddClear().Add(dataPath).Add(combine).Add("Fold/ProgramInn.txt").AddResult();
 
         var Program program;
         program : new Program;
