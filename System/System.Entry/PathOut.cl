@@ -1,17 +1,15 @@
-namespace Avalon.Entry;
-
 class PathOut : StringOut
 {
-    public override bool Init()
+    maide prusate Bool Init()
     {
         base.Init();
-        this.PathIntern = PathIntern.This;
+        this.PathIntern : share PathIntern;
         return true;
     }
 
-    private PathIntern PathIntern { get; set; }
+    field private PathIntern PathIntern { get { return data; } set { data : value; } }
 
-    public override bool Write(String value)
+    maide prusate Bool Write(var String value)
     {
         this.PathIntern.Phore.Open();
 
