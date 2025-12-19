@@ -370,7 +370,7 @@ Word "trim" has meaning that is wanted char.
 
 Word "center" has meaning that is center entity.
 
-Word "model" has meaning that is model any.
+Word "mode" has meaning that is model any.
 
 Word "struct" has meaning that is structure.
 
@@ -647,8 +647,6 @@ Word "post" has meaning that is queued event.
 Word "elapse" has meaning that is pass duration. 
 
 Word "path" has meaning that is way.
-
-Word "mode" has meaning that is configed way.
 
 Word "relate" has meaning that is relative.
 
