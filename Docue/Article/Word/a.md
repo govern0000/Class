@@ -536,6 +536,8 @@ Word "start" has meaning that is first at sequence.
 
 Word "end" has meaning that is one after last at sequence.
 
+Word "sta" has meaning that is gen of start.
+
 Word "first" has meaning that is start index.
 
 Word "last" has meaning that is end index.
