@@ -51,7 +51,7 @@ public class Create : Any
         TaskKind kind;
         kind = this.Console.Task.Kind;
     
-        if (kind == kindList.Console | 
+        if (kind == kindList.Class | 
             kind == kindList.Module |
             kind == kindList.Node |
             kind == kindList.Token
@@ -60,7 +60,7 @@ public class Create : Any
             this.ExecuteToken();
         }
 
-        if (kind == kindList.Console |
+        if (kind == kindList.Class |
             kind == kindList.Module |
             kind == kindList.Node
         )
@@ -68,7 +68,7 @@ public class Create : Any
             this.ExecuteNode();
         }
 
-        if (kind == kindList.Console |
+        if (kind == kindList.Class |
             kind == kindList.Module)
         {
             this.ExecuteModule();
