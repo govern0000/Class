@@ -285,7 +285,7 @@ public class Console : TextAdd
             Task task;
             task = new Task();
             task.Init();
-            task.Kind = this.TaskKind.Console;
+            task.Kind = this.TaskKind.Class;
             task.Source = sourceFold;
             task.ArgBool = systemModule;
             task.Node = this.SClass;
@@ -353,7 +353,7 @@ public class Console : TextAdd
         kind = this.Task.Kind;
 
         bool b;
-        b = (kind == kindList.Console | kind == kindList.Module);
+        b = (kind == kindList.Class | kind == kindList.Module);
         bool ba;
         ba = (kind == kindList.Token | kind == kindList.Node);
         bool bb;
@@ -456,7 +456,7 @@ public class Console : TextAdd
 
         this.ErrorString.SourceArray = this.Source;
 
-        if (kind == kindList.Console)
+        if (kind == kindList.Class)
         {
             if (this.CanGen())
             {
@@ -480,7 +480,7 @@ public class Console : TextAdd
             {
                 this.PrintTokenResult();
             }
-            if (kind == kindList.Node | kind == kindList.Console)
+            if (kind == kindList.Node | kind == kindList.Class)
             {
                 this.PrintNodeResult();
             }
@@ -870,7 +870,7 @@ public class Console : TextAdd
         kind = this.Task.Kind;
 
         bool kindConsole;
-        kindConsole = (kind == kindList.Console);
+        kindConsole = (kind == kindList.Class);
 
         if (kindConsole | (kind == kindList.Token))
         {
