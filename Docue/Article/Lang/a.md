@@ -36,5 +36,7 @@ Class Lang is applicable to do any develop.
 Class Lang is applicable to make any abstract unit.
 
 Class Lang is applicable to do any package.
+Any package can be drive by mode, view, and plat.
+Class Lang can do any mode, any view, any plat.
 
 Class Lang is applicable to do any inner processing.
