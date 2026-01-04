@@ -19,7 +19,7 @@ protected:
     void paintEvent(QPaintEvent* ev) override;
     void keyPressEvent(QKeyEvent* ev) override;
     void keyReleaseEvent(QKeyEvent* ev) override;
-    void changedEvent(QEvent* ev) override;
+    void changeEvent(QEvent* ev) override;
     void resizeEvent(QResizeEvent* ev) override;
 
 private:
