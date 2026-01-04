@@ -34,6 +34,8 @@ typedef struct
     Int Var;
     Int Data[5];
     Int BaseItem[4];
+    Int NameValue;
+    Int NameCount;
 }
 Intern_Class;
 
