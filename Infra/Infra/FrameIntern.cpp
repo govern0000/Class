@@ -50,20 +50,20 @@ Int FrameIntern::DrawEventHandle()
     return true;
 }
 
-Int FrameIntern::CaseEventHandle()
-{
-    Int frame;
-    frame = this->Frame;
-
-    Frame_CaseEvent(frame);
-    return true;
-}
-
 Int FrameIntern::SizeEventHandle()
 {
     Int frame;
     frame = this->Frame;
 
     Frame_SizeEvent(frame);
+    return true;
+}
+
+Int FrameIntern::CaseEventHandle()
+{
+    Int frame;
+    frame = this->Frame;
+
+    Frame_CaseEvent(frame);
     return true;
 }
