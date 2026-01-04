@@ -284,10 +284,13 @@ Int Intern_EntryInit(Int entryModule, Int entry)
         Intern_Class* a;
         a = &(array[i]);
 
+        Bool bd;
+        bd = a->Entry;
+
         Int nameCount;
         nameCount = a->NameCount;
 
-        if (nameCount == countK)
+        if (bd & (nameCount == countK))
         {
             Bool ba;
             ba = false;
