@@ -30,7 +30,16 @@ void FrameIntern::changeEvent(QEvent* ev)
 {
     if (ev->type() == QEvent::WindowStateChange)
     {
-        this->CaseEventHandle();
+        QWindowStateChangeEvent* ka;
+        ka = static_cast<QWindowStateChangeEvent*>(ev);
+
+        unsigned int kd;
+        kd = ka->oldState().toInt();
+
+        Int k;
+        k = kd;
+
+        this->CaseEventHandle(k);
     }
 }
 
@@ -61,11 +70,11 @@ Int FrameIntern::SizeEventHandle()
     return true;
 }
 
-Int FrameIntern::CaseEventHandle()
+Int FrameIntern::CaseEventHandle(Int prev)
 {
     Int frame;
     frame = this->Frame;
 
-    Frame_CaseEvent(frame);
+    Frame_CaseEvent(frame, prev);
     return true;
 }

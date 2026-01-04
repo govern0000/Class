@@ -27,5 +27,5 @@ private:
     Int TypeEventHandle(Int index, Int value);
     Int DrawEventHandle();
     Int SizeEventHandle();
-    Int CaseEventHandle();
+    Int CaseEventHandle(Int prev);
 };
