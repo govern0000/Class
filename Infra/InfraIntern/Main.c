@@ -36,6 +36,8 @@ Int Intern_Init(Int entryModule, Int entryClassIndex, Int entryModuleInit, Int m
 
     moduleInit();
 
+    entryClassIndex = Intern_EntryInit(entryModule, entryClassIndex);
+
     Intern_Module* pModule;
     pModule = CastPointer(entryModule);
 
@@ -230,6 +232,56 @@ Bool Intern_ArgInit()
 
     ArgCount = count;
     return true;
+}
+
+Int Intern_EntryInit(Int entryModule, Int entry)
+{
+    Int argArray;
+    argArray = Main_Arg();
+
+    Int arg;
+    arg = Array_ItemGet(argArray, 0);
+
+    Int valueK;
+    valueK = String_ValueGet(arg);
+
+    Int countK;
+    countK = String_CountGet(arg);
+
+    Char* p;
+    p = CastPointer(valueK);
+
+    if (countK == 1)
+    {
+        Char kea;
+        kea = '-';
+
+        if (p[0] == kea)
+        {
+            return entry;
+        }
+    }
+
+    Intern_Module* module;
+    module = CastPointer(entryModule);
+
+    Intern_Class* array;
+    array = module->Class;
+
+    Int count;
+    count = module->Count;
+
+    Int i;
+    i = 0;
+    while (i < count)
+    {
+        Intern_Class* a;
+        a = &(array[i]);
+
+        Int nameCount;
+        nameCount = a->NameCount;
+    }
+    return entry;
 }
 
 Int Intern_Base_Set(Intern_Class* varClass, Intern_Class* baseClass, Int count)
