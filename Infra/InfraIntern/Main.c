@@ -325,6 +325,12 @@ Int Intern_EntryInit(Int entryModule, Int entry)
         i = i + 1;
     }
 
+    if (!b)
+    {
+        Console_ErrWrite(0, String_ConstantCreate(CastInt("Entry Arg Unvalid\n")));
+        Environ_Exit(1);
+    }
+
     Int a;
     a = k;
     return a;
