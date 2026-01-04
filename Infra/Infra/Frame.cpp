@@ -11,7 +11,7 @@ Int Frame_Init(Int o)
     a = new FrameIntern;
     a->Frame = o;
     a->Init();
-    a->setWindowState(Qt::WindowFullScreen);
+    a->setWindowState(Qt::WindowMaximized);
     a->setCursor(Qt::BlankCursor);
     m->Intern = a;
 
