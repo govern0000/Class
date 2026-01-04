@@ -4,6 +4,7 @@
 #include <QEvent>
 #include <QPaintEvent>
 #include <QPainter>
+#include <QWindowStateChangeEvent>
 
 #include "Pronate.hpp"
 
