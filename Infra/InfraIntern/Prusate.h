@@ -36,6 +36,7 @@ typedef struct
     Int BaseItem[4];
     Int NameValue;
     Int NameCount;
+    Int Entry;
 }
 Intern_Class;
 
