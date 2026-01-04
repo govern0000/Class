@@ -19,12 +19,12 @@ protected:
     void paintEvent(QPaintEvent* ev) override;
     void keyPressEvent(QKeyEvent* ev) override;
     void keyReleaseEvent(QKeyEvent* ev) override;
-    void changeEvent(QEvent* ev) override;
     void resizeEvent(QResizeEvent* ev) override;
+    void changeEvent(QEvent* ev) override;
 
 private:
     Int TypeEventHandle(Int press, QKeyEvent* ev);
     Int DrawEventHandle();
-    Int CaseEventHandle();
     Int SizeEventHandle();
+    Int CaseEventHandle();
 };
