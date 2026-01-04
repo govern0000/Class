@@ -9,3 +9,5 @@ Bool Intern_ClassSharePhoreInitModule(Int module);
 Bool Intern_NewInit();
 
 Bool Intern_ArgInit();
+
+Bool Intern_EntryInit();
