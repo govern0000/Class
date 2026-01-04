@@ -10,4 +10,4 @@ Bool Intern_NewInit();
 
 Bool Intern_ArgInit();
 
-Bool Intern_EntryInit();
+Int Intern_EntryInit(Int entry);
