@@ -20,13 +20,16 @@ void FrameIntern::paintEvent(QPaintEvent* ev)
     this->DrawEventHandle();
 }
 
+void FrameIntern::changedEvent(QEvent* ev)
+{
+    if (ev->type() == QEvent::WindowStateChange)
+    {
+        this->CaseEventHandle();
+    }
+}
+
 Int FrameIntern::TypeEventHandle(Int press, QKeyEvent* ev)
 {
-    if (ev->isAutoRepeat())
-    {
-        return true;
-    }
-
     Int frame;
     frame = this->Frame;
     Int index;
@@ -44,5 +47,23 @@ Int FrameIntern::DrawEventHandle()
     frame = this->Frame;
 
     Frame_DrawEvent(frame);
+    return true;
+}
+
+Int FrameIntern::CaseEventHandle()
+{
+    Int frame;
+    frame = this->Frame;
+
+    Frame_CaseEvent(frame);
+    return true;
+}
+
+Int FrameIntern::SizeEventHandle()
+{
+    Int frame;
+    frame = this->Frame;
+
+    Frame_SizeEvent(frame);
     return true;
 }
