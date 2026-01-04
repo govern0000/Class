@@ -20,6 +20,7 @@ protected:
     void keyPressEvent(QKeyEvent* ev) override;
     void keyReleaseEvent(QKeyEvent* ev) override;
     void changedEvent(QEvent* ev) override;
+    void resizeEvent(QResizeEvent* ev) override;
 
 private:
     Int TypeEventHandle(Int press, QKeyEvent* ev);
