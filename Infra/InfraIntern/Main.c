@@ -280,6 +280,8 @@ Int Intern_EntryInit(Int entryModule, Int entry)
 
         Int nameCount;
         nameCount = a->NameCount;
+
+        i = i + 1;
     }
     return entry;
 }
