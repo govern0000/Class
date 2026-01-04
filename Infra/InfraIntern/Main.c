@@ -271,9 +271,15 @@ Int Intern_EntryInit(Int entryModule, Int entry)
     Int count;
     count = module->Count;
 
+    Int k;
+    k = entry;
+
+    Bool b;
+    b = false;
+
     Int i;
     i = 0;
-    while (i < count)
+    while ((!b) & (i < count))
     {
         Intern_Class* a;
         a = &(array[i]);
@@ -281,9 +287,47 @@ Int Intern_EntryInit(Int entryModule, Int entry)
         Int nameCount;
         nameCount = a->NameCount;
 
+        if (nameCount == countK)
+        {
+            Bool ba;
+            ba = false;
+
+            const char* pA;
+            pA = (const char*)a->NameValue;
+
+            Int countA;
+            countA = nameCount;
+
+            Int iA;
+            iA = 0;
+            while (iA < countA)
+            {
+                Int kaa;
+                Int kab;
+                kaa = pA[iA];
+                kab = p[iA];
+
+                if (!(kaa == kab))
+                {
+                    ba = true;
+                }
+
+                iA = iA + 1;
+            }
+
+            if (!ba)
+            {
+                k = i;
+                b = true;
+            }
+        }
+
         i = i + 1;
     }
-    return entry;
+
+    Int a;
+    a = k;
+    return a;
 }
 
 Int Intern_Base_Set(Intern_Class* varClass, Intern_Class* baseClass, Int count)
