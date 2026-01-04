@@ -31,8 +31,6 @@ Int Execute(Int argc, Int argv)
 
     Intern_Final(eval);
 
-    a = Intern_StatusWrite(a);
-
     Main_Final();
 
     return a;
