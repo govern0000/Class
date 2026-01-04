@@ -293,7 +293,7 @@ Int Intern_EntryInit(Int entryModule, Int entry)
             ba = false;
 
             const char* pA;
-            pA = (const char*)a->NameValue;
+            pA = (const char*)(a->NameValue);
 
             Int countA;
             countA = nameCount;
