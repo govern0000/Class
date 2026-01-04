@@ -49,7 +49,7 @@ Int PolateStop_Intern(Int o);
 
 Int Frame_TypeEvent(Int o, Int index, Int field);
 Int Frame_DrawEvent(Int o);
-Int Frame_CaseEvent(Int o);
+Int Frame_CaseEvent(Int o, Int prev);
 Int Frame_SizeEvent(Int o);
 
 Int VideoOut_Intern(Int o);
