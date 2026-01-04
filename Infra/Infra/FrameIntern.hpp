@@ -23,7 +23,7 @@ protected:
     void changeEvent(QEvent* ev) override;
 
 private:
-    Int TypeEventHandle(Int press, QKeyEvent* ev);
+    Int TypeEventHandle(Int index, Int value);
     Int DrawEventHandle();
     Int SizeEventHandle();
     Int CaseEventHandle();

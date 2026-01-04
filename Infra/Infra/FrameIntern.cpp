@@ -7,12 +7,18 @@ Bool FrameIntern::Init()
 
 void FrameIntern::keyPressEvent(QKeyEvent* ev)
 {
-    this->TypeEventHandle(true, ev);
+    Int index;
+    index = ev->key();
+
+    this->TypeEventHandle(index, true);
 }
 
 void FrameIntern::keyReleaseEvent(QKeyEvent* ev)
 {
-    this->TypeEventHandle(false, ev);
+    Int index;
+    index = ev->key();
+
+    this->TypeEventHandle(index, false);
 }
 
 void FrameIntern::paintEvent(QPaintEvent* ev)
@@ -20,7 +26,7 @@ void FrameIntern::paintEvent(QPaintEvent* ev)
     this->DrawEventHandle();
 }
 
-void FrameIntern::changedEvent(QEvent* ev)
+void FrameIntern::changeEvent(QEvent* ev)
 {
     if (ev->type() == QEvent::WindowStateChange)
     {
@@ -28,14 +34,10 @@ void FrameIntern::changedEvent(QEvent* ev)
     }
 }
 
-Int FrameIntern::TypeEventHandle(Int press, QKeyEvent* ev)
+Int FrameIntern::TypeEventHandle(Int index, Int value)
 {
     Int frame;
     frame = this->Frame;
-    Int index;
-    index = ev->key();
-    Int value;
-    value = press;
 
     Frame_TypeEvent(frame, index, value);
     return true;
