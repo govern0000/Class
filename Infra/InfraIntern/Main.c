@@ -11,7 +11,14 @@ Int ArgCount;
 
 Int Intern_Init(Int entryModule, Int entryClassIndex, Int entryModuleInit, Int moduleCount)
 {
-    Intern_ArgInit();
+    Bool b;
+    b = Intern_ArgInit();
+
+    if (!b)
+    {
+        Console_ErrWrite(0, String_ConstantCreate(CastInt("Entry Arg Unvalid\n")));
+        Environ_Exit(1);
+    }
 
     Intern_NewInit();
 
