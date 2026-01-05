@@ -332,6 +332,8 @@ public class LibraryMake : TextAdd
 
     protected virtual bool EntryClassSet()
     {
+        this.EntryClass = null;
+
         this.TModuleRef.Name = this.S("System.Entry");
         this.TModuleRef.Ver = 0;
 
