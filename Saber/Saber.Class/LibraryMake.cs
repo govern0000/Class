@@ -151,6 +151,8 @@ public class LibraryMake : TextAdd
         this.TModuleRef.Name = null;
         this.SystemInfraModule = null;
         this.System = null;
+        this.EntryClass = null;
+        this.NullClass = null;
         this.Binary = null;
         this.Module = null;
         this.BinaryTable = null;
@@ -332,8 +334,6 @@ public class LibraryMake : TextAdd
 
     protected virtual bool EntryClassSet()
     {
-        this.EntryClass = null;
-
         this.TModuleRef.Name = this.S("System.Entry");
         this.TModuleRef.Ver = 0;
 
