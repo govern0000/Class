@@ -199,6 +199,7 @@ public partial class LibraryGen : TextAdd
     public virtual BinaryBinary Binary { get; set; }
     public virtual long ModuleCount { get; set; }
     public virtual ClassModule SystemInfraModule { get; set; }
+    public virtual ClassClass EntryClass { get; set; }
     public virtual SystemClass System { get; set; }
     public virtual Array InitArray { get; set; }
     public virtual Array BaseArray { get; set; }
