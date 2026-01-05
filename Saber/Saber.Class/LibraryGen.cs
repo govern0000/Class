@@ -1336,6 +1336,25 @@ public partial class LibraryGen : TextAdd
         return true;
     }
 
+    public virtual bool ExecuteEntrySet()
+    {
+        this.TextIndent();
+        this.Text(this.VarKWord);
+        this.Text(this.LimitDotPointer);
+        this.Text(this.NameWord);
+        this.Text(this.ValueWord);
+
+        this.Text(this.Space);
+        this.Text(this.LimitAre);
+        this.Text(this.Space);
+
+        this.Text(this.CastInt);
+
+        this.Text(this.LimitSemicolon);
+        this.Text(this.NewLine);
+        return true;
+    }
+
     public virtual bool ExecuteBaseArraySet()
     {
         long count;
@@ -1410,17 +1429,6 @@ public partial class LibraryGen : TextAdd
         this.Text(this.LimitBraceRoundLite);
         this.CompListName(this.Class, stateKind);
         this.Text(this.LimitBraceRoundRite);
-
-        this.Text(this.LimitSemicolon);
-        this.Text(this.NewLine);
-        return true;
-    }
-
-    public virtual bool ExecuteEntrySet()
-    {
-        this.TextIndent();
-        this.Text(this.VarKWord);
-        this.Text(this.LimitDotPointer);
 
         this.Text(this.LimitSemicolon);
         this.Text(this.NewLine);
