@@ -1314,11 +1314,11 @@ public partial class LibraryGen : TextAdd
         this.Text(this.LimitSemicolon);
         this.Text(this.NewLine);
 
+        this.ExecuteEntrySet();
+
         this.ExecuteBaseArraySet();
 
         this.ExecuteBaseItemSet();
-
-        this.ExecuteEntrySet();
 
         this.ExecuteCompListSet();
 
