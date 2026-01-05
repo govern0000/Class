@@ -93,6 +93,8 @@ public partial class LibraryGen : TextAdd
         this.StringWord = this.S("String");
         this.DataWord = this.S("Data");
         this.EntryWord = this.S("Entry");
+        this.NameWord = this.S("Name");
+        this.ValueWord = this.S("Value");
         this.VarOWord = this.S("o");
         this.VarKWord = this.S("k");
         this.VarMWord = this.S("m");
@@ -303,6 +305,8 @@ public partial class LibraryGen : TextAdd
     public virtual String StringWord { get; set; }
     public virtual String DataWord { get; set; }
     public virtual String EntryWord { get; set; }
+    public virtual String NameWord { get; set; }
+    public virtual String ValueWord { get; set; }
     public virtual String VarOWord { get; set; }
     public virtual String VarKWord { get; set; }
     public virtual String VarMWord { get; set; }
@@ -1314,6 +1318,8 @@ public partial class LibraryGen : TextAdd
 
         this.ExecuteBaseItemSet();
 
+        this.ExecuteEntrySet();
+
         this.ExecuteCompListSet();
 
         this.TextIndent();
@@ -1404,6 +1410,17 @@ public partial class LibraryGen : TextAdd
         this.Text(this.LimitBraceRoundLite);
         this.CompListName(this.Class, stateKind);
         this.Text(this.LimitBraceRoundRite);
+
+        this.Text(this.LimitSemicolon);
+        this.Text(this.NewLine);
+        return true;
+    }
+
+    public virtual bool ExecuteEntrySet()
+    {
+        this.TextIndent();
+        this.Text(this.VarKWord);
+        this.Text(this.LimitDotPointer);
 
         this.Text(this.LimitSemicolon);
         this.Text(this.NewLine);
