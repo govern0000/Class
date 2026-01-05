@@ -328,6 +328,21 @@ public class LibraryMake : TextAdd
         return true;
     }
 
+    protected virtual bool EntryClassSet()
+    {
+        this.TModuleRef.Name = this.S("System.Entry");
+        this.TModuleRef.Ver = 0;
+
+        ClassModule entryModule;
+        entryModule = this.ModuleTable.Get(this.TModuleRef) as ClassModule;
+
+        if (!(entryModule == null))
+        {
+            this.EntryClass = entryModule.Class.Get(this.S("Entry")) as ClassClass;
+        }
+        return true;
+    }
+
     protected virtual bool BinarySet()
     {
         this.Binary = this.BinaryTable.Get(this.ModuleRef) as BinaryBinary;
