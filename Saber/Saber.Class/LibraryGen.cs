@@ -1349,7 +1349,27 @@ public partial class LibraryGen : TextAdd
         this.Text(this.Space);
 
         this.Text(this.CastInt);
+        this.Text(this.LimitBraceRoundLite);
 
+        this.ExecuteChar('\"');
+        this.Text(this.Class.Name);
+        this.ExecuteChar('\"');
+
+        this.Text(this.LimitBraceRoundRite);
+        this.Text(this.LimitSemicolon);
+        this.Text(this.NewLine);
+
+        this.TextIndent();
+        this.Text(this.VarKWord);
+        this.Text(this.LimitDotPointer);
+        this.Text(this.NameWord);
+        this.Text(this.CountWord);
+
+        this.Text(this.Space);
+        this.Text(this.LimitAre);
+        this.Text(this.Space);
+
+        this.TextInt(this.Class.Name.Count);
         this.Text(this.LimitSemicolon);
         this.Text(this.NewLine);
         return true;
