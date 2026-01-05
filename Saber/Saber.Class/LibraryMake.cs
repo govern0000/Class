@@ -343,6 +343,14 @@ public class LibraryMake : TextAdd
         return true;
     }
 
+    protected virtual bool NullClassSet()
+    {
+        this.NullClass = new ClassClass();
+        this.NullClass.Init();
+        this.NullClass.Name = this.S("_");
+        return true;
+    }
+
     protected virtual bool BinarySet()
     {
         this.Binary = this.BinaryTable.Get(this.ModuleRef) as BinaryBinary;
