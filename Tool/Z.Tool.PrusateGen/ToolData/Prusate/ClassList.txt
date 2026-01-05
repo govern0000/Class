@@ -101,14 +101,22 @@ Screen
 Frame
     Title
     Shown
+    Size
+    Case
     TitleThisSet()
+    SizeThisSet()
+    CaseThisSet()
     Out()
     TypeState
     DrawState
+    CaseState
+    SizeState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
+    Case(frame, arg, oldValue) --
+    Size(frame, arg, oldWidth, oldHegth) --
 
 Draw
     Size
