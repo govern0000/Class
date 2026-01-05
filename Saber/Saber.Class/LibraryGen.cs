@@ -7,6 +7,7 @@ public partial class LibraryGen : TextAdd
         base.Init();
         this.InfraInfra = InfraInfra.This;
         this.ListInfra = ListInfra.This;
+        this.ClassInfra = ClassInfra.This;
         this.OperateKindList = BinaryOperateKindList.This;
 
         this.CountOperate = this.CreateCountOperate();
@@ -354,6 +355,7 @@ public partial class LibraryGen : TextAdd
     public virtual String LimitBitRite { get; set; }
     public virtual InfraInfra InfraInfra { get; set; }
     public virtual ListInfra ListInfra { get; set; }
+    public virtual ClassInfra ClassInfra { get; set; }
     public virtual BinaryOperateKindList OperateKindList { get; set; }
     public virtual String SIntern { get; set; }
     public virtual String SExtern { get; set; }
