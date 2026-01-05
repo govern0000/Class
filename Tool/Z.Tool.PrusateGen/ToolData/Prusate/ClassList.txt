@@ -101,11 +101,11 @@ Screen
 Frame
     Title
     Shown
-    Size
     Case
+    Size
     TitleThisSet()
-    SizeThisSet()
     CaseThisSet()
+    SizeThisSet()
     Out()
     TypeState
     DrawState
