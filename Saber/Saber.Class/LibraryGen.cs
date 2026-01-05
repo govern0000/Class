@@ -202,6 +202,7 @@ public partial class LibraryGen : TextAdd
     public virtual ClassModule SystemInfraModule { get; set; }
     public virtual SystemClass System { get; set; }
     public virtual ClassClass EntryClass { get; set; }
+    public virtual ClassClass NullClass { get; set; }
     public virtual Array InitArray { get; set; }
     public virtual Array BaseArray { get; set; }
     public virtual Array CompArray { get; set; }
@@ -1341,6 +1342,35 @@ public partial class LibraryGen : TextAdd
 
     public virtual bool ExecuteEntrySet()
     {
+        bool b;
+        b = false;
+
+        if (!(this.EntryClass == null))
+        {
+            b = this.ClassInfra.ValidClass(this.Class, this.EntryClass, this.System.Any, this.NullClass);
+        }
+
+        long k;
+        k = 0;
+
+        if (b)
+        {
+            k = 1;
+        }
+
+        this.TextIndent();
+        this.Text(this.VarKWord);
+        this.Text(this.LimitDotPointer);
+        this.Text(this.EntryWord);
+
+        this.Text(this.Space);
+        this.Text(this.LimitAre);
+        this.Text(this.Space);
+
+        this.TextInt(k);
+        this.Text(this.LimitSemicolon);
+        this.Text(this.NewLine);
+
         this.TextIndent();
         this.Text(this.VarKWord);
         this.Text(this.LimitDotPointer);
