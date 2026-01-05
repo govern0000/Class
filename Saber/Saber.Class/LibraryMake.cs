@@ -108,6 +108,7 @@ public class LibraryMake : TextAdd
     protected virtual ClassModule SystemInfraModule { get; set; }
     protected virtual SystemClass System { get; set; }
     protected virtual ClassClass EntryClass { get; set; }
+    protected virtual ClassClass NullClass { get; set; }
     protected virtual String ModuleRefString { get; set; }
     protected virtual BinaryBinary Binary { get; set; }
     protected virtual ClassModule Module { get; set; }
