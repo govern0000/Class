@@ -522,6 +522,8 @@ public class LibraryMake : TextAdd
         this.Gen.ModuleCount = this.ModuleTable.Count;
         this.Gen.SystemInfraModule = this.SystemInfraModule;
         this.Gen.System = this.System;
+        this.Gen.EntryClass = this.EntryClass;
+        this.Gen.NullClass = this.NullClass;
         this.Gen.InitArray = this.InitArray;
         this.Gen.BaseArray = this.BaseArray;
         this.Gen.CompArray = this.CompArray;
@@ -537,6 +539,8 @@ public class LibraryMake : TextAdd
         this.Gen.CompArray = null;
         this.Gen.BaseArray = null;
         this.Gen.InitArray = null;
+        this.Gen.NullClass = null;
+        this.Gen.EntryClass = null;
         this.Gen.System = null;
         this.Gen.SystemInfraModule = null;
         this.Gen.ModuleCount = 0;
