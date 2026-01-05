@@ -180,6 +180,8 @@ public class LibraryMake : TextAdd
 
         this.SystemInfraModuleSet();
         this.SystemSet();
+        this.EntryClassSet();
+        this.NullClassSet();
         this.BinarySet();
         this.ModuleSet();
 
