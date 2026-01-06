@@ -103,8 +103,10 @@ Frame
     TitleThisSet()
     Shown
     Case
+    CaseThisGet()
     CaseThisSet()
     Size
+    SizeThisGet()
     SizeThisSet()
     Activate()
     Out()
