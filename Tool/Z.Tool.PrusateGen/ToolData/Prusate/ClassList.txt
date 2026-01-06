@@ -103,9 +103,9 @@ Frame
     TitleThisSet()
     Shown
     Case
+    CaseThisSet()
     Size
     SizeThisSet()
-    Active
     Activate()
     Out()
     TypeState
