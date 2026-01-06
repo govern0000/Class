@@ -100,12 +100,14 @@ Screen
 
 Frame
     Title
+    TitleThisSet()
     Shown
     Case
-    Size
-    TitleThisSet()
     CaseThisSet()
+    Size
     SizeThisSet()
+    Active
+    Activate()
     Out()
     TypeState
     DrawState
