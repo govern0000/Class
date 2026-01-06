@@ -106,8 +106,6 @@ Frame
     PosThisGet()
     PosThisSet()
     Case
-    CaseThisGet()
-    CaseThisSet()
     Size
     SizeThisGet()
     SizeThisSet()
