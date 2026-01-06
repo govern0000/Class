@@ -102,6 +102,9 @@ Frame
     Title
     TitleThisSet()
     Shown
+    Pos
+    PosThisGet()
+    PosThisSet()
     Case
     CaseThisGet()
     CaseThisSet()
