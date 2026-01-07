@@ -36,7 +36,7 @@ void FrameIntern::mousePressEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointerEventHandle(1, index, valueA, valueB, 0, 0);
+    this->PointEventHandle(1, index, valueA, valueB, 0, 0);
 
     ev->accept();
 }
@@ -51,7 +51,7 @@ void FrameIntern::mouseReleaseEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointerEventHandle(2, index, valueA, valueB, 0, 0);
+    this->PointEventHandle(2, index, valueA, valueB, 0, 0);
 
     ev->accept();
 }
@@ -66,7 +66,7 @@ void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointerEventHandle(3, index, valueA, valueB, 0, 0);
+    this->PointEventHandle(3, index, valueA, valueB, 0, 0);
 
     ev->accept();
 }
@@ -81,7 +81,7 @@ void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointerEventHandle(4, index, valueA, valueB, 0, 0);
+    this->PointEventHandle(4, index, valueA, valueB, 0, 0);
 
     ev->accept();
 }
@@ -96,7 +96,7 @@ void FrameIntern::wheelEvent(QWheelEvent* ev)
     valueC = ev->angleDelta().x();
     valueD = ev->angleDelta().y();
 
-    this->PointerEventHandle(5, index, 0, 0, valueC, valueD);
+    this->PointEventHandle(5, index, 0, 0, valueC, valueD);
 
     ev->accept();
 }
@@ -119,7 +119,7 @@ Int FrameIntern::DrawEventHandle()
     return true;
 }
 
-Int FrameIntern::PointerEventHandle(Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
+Int FrameIntern::PointEventHandle(Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
 {
     return true;
 }
