@@ -102,26 +102,13 @@ Frame
     Title
     TitleThisSet()
     Shown
-    Mode
-    Pos
-    PosThisGet()
-    PosThisSet()
-    Size
-    SizeThisGet()
-    SizeThisSet()
-    Focus
-    Actane()
     Out()
     TypeState
     DrawState
-    ModeState
-    SizeState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
-    Mode(frame, arg, oldValue) --
-    Size(frame, arg, oldWidth, oldHegth) --
 
 Draw
     Size
