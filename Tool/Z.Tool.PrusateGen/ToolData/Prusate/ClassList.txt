@@ -105,10 +105,10 @@ Frame
     TitleThisSet()
     Shown
     Out()
-    Cursor
     TypeState
     DrawState
     PointerState
+    Cursor
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
