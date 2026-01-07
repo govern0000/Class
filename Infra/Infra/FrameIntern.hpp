@@ -1,10 +1,8 @@
 #pragma once
 
 #include <QWidget>
-#include <QEvent>
 #include <QPaintEvent>
 #include <QPainter>
-#include <QWindowStateChangeEvent>
 
 #include "Pronate.hpp"
 
@@ -20,12 +18,8 @@ protected:
     void paintEvent(QPaintEvent* ev) override;
     void keyPressEvent(QKeyEvent* ev) override;
     void keyReleaseEvent(QKeyEvent* ev) override;
-    void resizeEvent(QResizeEvent* ev) override;
-    void changeEvent(QEvent* ev) override;
 
 private:
-    Int TypeEventHandle(Int index, Int value);
+    Int TypeEventHandle(Int press, QKeyEvent* ev);
     Int DrawEventHandle();
-    Int SizeEventHandle();
-    Int CaseEventHandle(Int prev);
 };
