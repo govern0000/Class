@@ -109,8 +109,8 @@ Frame
     Size
     SizeThisGet()
     SizeThisSet()
-    Active
-    Activate()
+    Focus
+    FocusIn
     Out()
     TypeState
     DrawState
