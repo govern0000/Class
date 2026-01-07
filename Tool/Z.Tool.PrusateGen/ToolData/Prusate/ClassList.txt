@@ -102,10 +102,10 @@ Frame
     Title
     TitleThisSet()
     Shown
+    Mode
     Pos
     PosThisGet()
     PosThisSet()
-    Mode
     Size
     SizeThisGet()
     SizeThisSet()
