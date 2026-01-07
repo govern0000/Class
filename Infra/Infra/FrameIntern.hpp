@@ -20,6 +20,6 @@ protected:
     void keyReleaseEvent(QKeyEvent* ev) override;
 
 private:
-    Int TypeEventHandle(Int press, QKeyEvent* ev);
+    Int TypeEventHandle(Int index, Int value);
     Int DrawEventHandle();
 };
