@@ -88,7 +88,15 @@ void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
 
 void FrameIntern::wheelEvent(QWheelEvent* ev)
 {
+    Int index;
+    index = ev->buttons().toInt();
 
+    Int valueA;
+    Int valueB;
+    valueA = ev->angleDelta().x();
+    valueB = ev->angleDelta().y();
+
+    this->PointerEventHandle(5, index, valueA, valueB);
 }
 
 Int FrameIntern::TypeEventHandle(Int index, Int value)
