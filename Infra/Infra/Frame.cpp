@@ -13,6 +13,7 @@ Int Frame_Init(Int o)
     a->Init();
     a->setWindowState(Qt::WindowFullScreen);
     a->setCursor(Qt::BlankCursor);
+    a->setMouseTracking(true);
     m->Intern = a;
 
     return true;
