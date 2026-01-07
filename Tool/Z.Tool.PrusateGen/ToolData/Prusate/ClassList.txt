@@ -113,7 +113,7 @@ Frame
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
-    Pointer(frame, arg, kind, index, valueA, valueB) --
+    Pointer(frame, arg, kind, index, valueA, valueB, valueC, valueD) --
 
 Draw
     Size
