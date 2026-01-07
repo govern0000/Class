@@ -29,4 +29,5 @@ protected:
 private:
     Int TypeEventHandle(Int index, Int value);
     Int DrawEventHandle();
+    Int PointerEventHandle(Int kind, Int index, Int valueA, Int valueB);
 };

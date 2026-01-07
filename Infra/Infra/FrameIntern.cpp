@@ -28,22 +28,22 @@ void FrameIntern::paintEvent(QPaintEvent* ev)
 
 void FrameIntern::mousePressEvent(QMouseEvent* ev)
 {
-
+    ev->accept();
 }
 
 void FrameIntern::mouseReleaseEvent(QMouseEvent* ev)
 {
-
+    ev->accept();
 }
 
 void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
 {
-
+    ev->accept();
 }
 
 void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
 {
-
+    ev->accept();
 }
 
 void FrameIntern::wheelEvent(QWheelEvent* ev)
@@ -66,5 +66,10 @@ Int FrameIntern::DrawEventHandle()
     frame = this->Frame;
 
     Frame_DrawEvent(frame);
+    return true;
+}
+
+Int FrameIntern::PointerEventHandle(Int kind, Int index, Int valueA, Int valueB)
+{
     return true;
 }
