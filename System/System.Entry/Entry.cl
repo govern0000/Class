@@ -104,7 +104,45 @@ class Entry : Any
             ka : new ConsoleConsole;
             ka.Init();
 
-            ka.Err.Write(TextCreate.This.Add().AddS("Status: ").AddInt(k).AddLine().AddResult());
+            var Format format;
+            format : new Format;
+            format.Init();
+
+            var FormatArg arg;
+            arg : new FormatArg;
+            arg.Init();
+
+            arg.Kind : 1;
+            arg.Value : k;
+            arg.Base : 10;
+            arg.AlignLeft : false;
+            arg.FieldWidth : 0;
+            arg.MaxWidth : null;
+            arg.FillChar : 0;
+            arg.Form : null;
+
+            format.ExecuteArgCount(arg);
+
+            var Text kd;
+            kd : this.TextInfra.TextCreate(arg.Count);
+
+            format.ExecuteArgResult(arg, kd);
+
+            var String kb;
+            kb : this.TextInfra.StringCreate(kd);
+
+            var StringAdd add;
+            add : new StringAdd;
+            add.Init();
+
+            this.TextInfra.AddString(add, "Status: ");
+            this.TextInfra.AddString(add, kb);
+            this.TextInfra.AddString(add, this.TextInfra.NewLine);
+
+            var String kk;
+            kk : add.Result();
+
+            ka.Err.Write(kk);
 
             k : 1;
         }
