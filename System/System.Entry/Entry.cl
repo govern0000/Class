@@ -100,9 +100,9 @@ class Entry : Any
 
         inf (~(k = 0))
         {
-            var ConsoleConsole ka;
-            ka : new ConsoleConsole;
-            ka.Init();
+            var Console console;
+            console : new Console;
+            console.Init();
 
             var Format format;
             format : new Format;
@@ -123,26 +123,26 @@ class Entry : Any
 
             format.ExecuteArgCount(arg);
 
-            var Text kd;
-            kd : this.TextInfra.TextCreate(arg.Count);
+            var Text ka;
+            ka : this.TextInfra.TextCreate(arg.Count);
 
-            format.ExecuteArgResult(arg, kd);
+            format.ExecuteArgResult(arg, ka);
 
-            var String kb;
-            kb : this.TextInfra.StringCreate(kd);
+            var String ke;
+            ke : this.TextInfra.StringCreate(ka);
 
             var StringAdd add;
             add : new StringAdd;
             add.Init();
 
             this.TextInfra.AddString(add, "Status: ");
-            this.TextInfra.AddString(add, kb);
+            this.TextInfra.AddString(add, ke);
             this.TextInfra.AddString(add, this.TextInfra.NewLine);
 
             var String kk;
             kk : add.Result();
 
-            ka.Err.Write(kk);
+            console.Err.Write(kk);
 
             k : 1;
         }
