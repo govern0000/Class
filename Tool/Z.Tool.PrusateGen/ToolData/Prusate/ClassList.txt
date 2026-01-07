@@ -116,14 +116,12 @@ Frame
     DrawState
     CaseState
     SizeState
-    ActiveState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
     Case(frame, arg, oldValue) --
     Size(frame, arg, oldWidth, oldHegth) --
-    Active(frame, arg) --
 
 Draw
     Size
