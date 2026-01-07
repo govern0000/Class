@@ -7,6 +7,8 @@ class Entry : Any
         var Int a;
         a : this.ExecuteMain();
 
+        a : this.StatusWrite(a);
+
         this.MainAfter();
 
         return a;
