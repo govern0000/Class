@@ -119,7 +119,7 @@ Int FrameIntern::DrawEventHandle()
     return true;
 }
 
-Int FrameIntern::PointerEventHandle(Int kind, Int index, Int valueA, Int valueB)
+Int FrameIntern::PointerEventHandle(Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
 {
     return true;
 }
