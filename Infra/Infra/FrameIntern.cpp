@@ -97,6 +97,8 @@ void FrameIntern::wheelEvent(QWheelEvent* ev)
     valueB = ev->angleDelta().y();
 
     this->PointerEventHandle(5, index, valueA, valueB);
+
+    ev->accept();
 }
 
 Int FrameIntern::TypeEventHandle(Int index, Int value)
