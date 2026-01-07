@@ -93,7 +93,7 @@ class Entry : Any
         return true;
     }
 
-    maide private Ints StatusWrite(var Int value)
+    maide private Int StatusWrite(var Int value)
     {
         var Int k;
         k : value;
