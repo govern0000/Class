@@ -28,21 +28,61 @@ void FrameIntern::paintEvent(QPaintEvent* ev)
 
 void FrameIntern::mousePressEvent(QMouseEvent* ev)
 {
+    Int index;
+    index = ev->buttons().toInt();
+
+    Int valueA;
+    Int valueB;
+    valueA = ev->pos().x();
+    valueB = ev->pos().y();
+
+    this->PointerEventHandle(1, index, valueA, valueB);
+
     ev->accept();
 }
 
 void FrameIntern::mouseReleaseEvent(QMouseEvent* ev)
 {
+    Int index;
+    index = ev->buttons().toInt();
+
+    Int valueA;
+    Int valueB;
+    valueA = ev->pos().x();
+    valueB = ev->pos().y();
+
+    this->PointerEventHandle(2, index, valueA, valueB);
+
     ev->accept();
 }
 
 void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
 {
+    Int index;
+    index = ev->buttons().toInt();
+
+    Int valueA;
+    Int valueB;
+    valueA = ev->pos().x();
+    valueB = ev->pos().y();
+
+    this->PointerEventHandle(3, index, valueA, valueB);
+
     ev->accept();
 }
 
 void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
 {
+    Int index;
+    index = ev->buttons().toInt();
+
+    Int valueA;
+    Int valueB;
+    valueA = ev->pos().x();
+    valueB = ev->pos().y();
+
+    this->PointerEventHandle(4, index, valueA, valueB);
+
     ev->accept();
 }
 
