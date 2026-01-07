@@ -130,5 +130,9 @@ Int FrameIntern::DualEventHandle(Int kind, Int index, Int valueA, Int valueB, In
 
 Int FrameIntern::PointEventHandle(Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
 {
+    Int frame;
+    frame = this->Frame;
+
+    Frame_PointEvent(frame, kind, index, valueA, valueB, valueC, valueD);
     return true;
 }
