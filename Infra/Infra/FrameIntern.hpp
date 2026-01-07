@@ -3,6 +3,8 @@
 #include <QWidget>
 #include <QPaintEvent>
 #include <QPainter>
+#include <QMouseEvent>
+#include <QWheelEvent>
 
 #include "Pronate.hpp"
 
@@ -18,6 +20,11 @@ protected:
     void paintEvent(QPaintEvent* ev) override;
     void keyPressEvent(QKeyEvent* ev) override;
     void keyReleaseEvent(QKeyEvent* ev) override;
+    void mousePressEvent(QMouseEvent* ev) override;
+    void mouseReleaseEvent(QMouseEvent* ev) override;
+    void mouseMoveEvent(QMouseEvent* ev) override;
+    void mouseDoubleClickEvent(QMouseEvent* ev) override;
+    void wheelEvent(QWheelEvent* ev) override;
 
 private:
     Int TypeEventHandle(Int index, Int value);
