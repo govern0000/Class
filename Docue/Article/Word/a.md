@@ -706,6 +706,8 @@ Word "parent" has meaning that is super entity.
 
 Word "frame" has meaning that is root view.
 
+Word "actane" has meaning that is activate.
+
 Word "grid" has meaning that is table area.
 
 Word "layout" has meaning that is structure layout.
