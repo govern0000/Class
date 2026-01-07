@@ -97,6 +97,8 @@ Main -
 Screen
     Size
     Dimend
+    SizeState
+    Size(screen, arg, oldWidth, oldHegth) --
 
 Frame
     Title
