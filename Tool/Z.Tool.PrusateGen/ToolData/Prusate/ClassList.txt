@@ -110,7 +110,7 @@ Frame
     SizeThisGet()
     SizeThisSet()
     Focus
-    FocusIn
+    Actane()
     Out()
     TypeState
     DrawState
