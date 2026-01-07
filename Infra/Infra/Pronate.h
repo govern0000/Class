@@ -49,7 +49,8 @@ Int PolateStop_Intern(Int o);
 
 Int Frame_TypeEvent(Int o, Int index, Int field);
 Int Frame_DrawEvent(Int o);
-Int Frame_PointerEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
+Int Frame_DualEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
+Int Frame_PointEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
 
 Int VideoOut_Intern(Int o);
 Int VideoOut_FrameEvent(Int o);
