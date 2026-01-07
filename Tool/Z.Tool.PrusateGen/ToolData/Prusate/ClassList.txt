@@ -105,7 +105,7 @@ Frame
     Pos
     PosThisGet()
     PosThisSet()
-    Case
+    Mode
     Size
     SizeThisGet()
     SizeThisSet()
@@ -114,13 +114,13 @@ Frame
     Out()
     TypeState
     DrawState
-    CaseState
+    ModeState
     SizeState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
-    Case(frame, arg, oldValue) --
+    Mode(frame, arg, oldValue) --
     Size(frame, arg, oldWidth, oldHegth) --
 
 Draw
