@@ -93,6 +93,25 @@ class Entry : Any
         return true;
     }
 
+    maide private Ints StatusWrite(var Int value)
+    {
+        var Int k;
+        k : value;
+
+        inf (~(k = 0))
+        {
+            var ConsoleConsole ka;
+            ka : new ConsoleConsole;
+            ka.Init();
+
+            ka.Err.Write(TextCreate.This.Add().AddS("Status: ").AddInt(k).AddLine().AddResult());
+
+            k : 1;
+        }
+
+        return k;
+    }
+
     maide private Bool MainBeforeConsole()
     {
         var Extern extern;
