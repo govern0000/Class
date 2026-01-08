@@ -44,7 +44,7 @@ Int Main_Init(Int argc, Int argv)
     QScreen* k;
     k = (QScreen*)screen;
 
-    QObject::connect(k, &QScreen::physicalSizeChanged, null, &Main_DimendHandle);
+    QObject::connect(k, &QScreen::physicalSizeChanged, &Main_DimendHandle);
 
     Main_InitArg();
 
