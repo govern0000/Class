@@ -34,7 +34,7 @@ Int Screen_Init(Int o)
     m->Dimend = Size_New();
     Size_Init(m->Dimend);
 
-    Screen_Dimend();
+    Screen_Dimend(o);
 
     return true;
 }
