@@ -53,7 +53,7 @@ Int Screen_DimendStateSet(Int o, Int value)
     return true;
 }
 
-Int Screen_DimendEvent(Int o, Int oldWidth, Int oldHegth)
+Int Screen_DimendEvent(Int o)
 {
     Int state;
     state = Screen_Var_DimendState;
@@ -76,7 +76,7 @@ Int Screen_DimendEvent(Int o, Int oldWidth, Int oldHegth)
     Screen_Dimend_Maide maide;
     maide = (Screen_Dimend_Maide)aa;
 
-    maide(o, arg, oldWidth, oldHegth);
+    maide(o, arg);
 
     return true;
 }

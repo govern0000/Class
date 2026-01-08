@@ -184,7 +184,7 @@ Int Main_Screen()
 
 void Main_ScreenDimendHandle(const QSizeF &size)
 {
-
+    Screen_DimendEvent(0);
 }
 
 Int Main_TerminateStateGet()
