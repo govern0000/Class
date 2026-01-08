@@ -44,7 +44,7 @@ Int Main_Init(Int argc, Int argv)
     QScreen* k;
     k = (QScreen*)screen;
 
-    QObject::connect(k, &QScreen::physicalSizeChanged, &Main_DimendHandle);
+    QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
     Main_InitArg();
 
@@ -180,6 +180,11 @@ Int Main_Screen()
     Int a;
     a = CastInt(k);
     return a;
+}
+
+void Main_ScreenDimendHandle(const QSizeF &size)
+{
+
 }
 
 Int Main_TerminateStateGet()
