@@ -61,14 +61,6 @@ Int Main_Final()
     Main* m;
     m = &D_Var;
 
-    Int screen;
-    screen = Main_ScreenIntern();
-
-    QScreen* k;
-    k = (QScreen*)screen;
-
-    QObject::disconnect(k, &QScreen::physicalSizeChanged, nullptr, nullptr);
-
     Screen_Final(m->Screen);
     Screen_Delete(m->Screen);
 
