@@ -1,5 +1,7 @@
 #include "Screen.hpp"
 
+Int Screen_Var_DimendState;
+
 CppClassNew(Screen)
 
 Int Screen_Init(Int o)
@@ -40,4 +42,18 @@ Int Screen_DimendGet(Int o)
 
 FieldDefaultSet(Screen, Dimend)
 
-CppField(Screen, DimendState)
+Int Screen_DimendStateGet(Int o)
+{
+    return Screen_Var_DimendState;
+}
+
+Int Screen_DimendStateSet(Int o, Int value)
+{
+    Screen_Var_DimendState = value;
+    return true;
+}
+
+Int Screen_DimendEvent(Int o, Int oldWidth, Int oldHegth)
+{
+    return true;
+}
