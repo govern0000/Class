@@ -38,6 +38,14 @@ Int Main_Init(Int argc, Int argv)
 
     m->Compute = b;
 
+    Int screen;
+    screen = Main_Screen();
+
+    QScreen* k;
+    k = (QScreen*)screen;
+
+    QObject::connect(k, &QScreen::physicalSizeChanged, null, &Main_DimendHandle);
+
     Main_InitArg();
 
     Environ_VarInit();

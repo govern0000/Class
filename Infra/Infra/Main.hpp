@@ -27,3 +27,5 @@ Int Main_InitArg();
 Int Main_FinalArg();
 
 void Main_SignalHandle(int signo);
+
+void Main_DimendHandle(const QSizeF &size);
