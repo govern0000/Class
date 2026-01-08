@@ -92,7 +92,7 @@ void FrameIntern::wheelEvent(QWheelEvent* ev)
     index = ev->buttons().toInt();
 
     QPoint ka;
-    ka = QCursor::pos();
+    ka = QCursor::pos(null);
 
     Int valueA;
     Int valueB;
