@@ -38,6 +38,10 @@ Int Main_Init(Int argc, Int argv)
 
     m->Compute = b;
 
+    Main_InitArg();
+
+    Environ_VarInit();
+
     Int screen;
     screen = Main_Screen();
 
@@ -46,9 +50,7 @@ Int Main_Init(Int argc, Int argv)
 
     QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
-    Main_InitArg();
-
-    Environ_VarInit();
+    Main_ScreenDimend();
 
     return true;
 }
