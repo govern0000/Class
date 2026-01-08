@@ -43,14 +43,14 @@ Int Main_Init(Int argc, Int argv)
     Environ_VarInit();
 
     Int screen;
-    screen = Main_Screen();
+    screen = Main_ScreenIntern();
 
     QScreen* k;
     k = (QScreen*)screen;
 
     QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
-    Main_ScreenDimend();
+    
 
     return true;
 }
@@ -175,6 +175,13 @@ Int Main_Screen()
 {
     Main* m;
     m = &D_Var;
+    return m->Screen;
+}
+
+Int Main_ScreenIntern()
+{
+    Main* m;
+    m = &D_Var;
 
     QScreen* k;
     k = m->Intern->primaryScreen();
@@ -186,41 +193,12 @@ Int Main_Screen()
 
 void Main_ScreenDimendHandle(const QSizeF &size)
 {
-    Main_ScreenDimend();
-
-    Screen_DimendEvent(0);
-}
-
-Int Main_ScreenDimend()
-{
     Int screen;
     screen = Main_Screen();
 
-    QScreen* k;
-    k = (QScreen*)screen;
+    Screen_Dimend(screen);
 
-    QSizeF ka;
-    ka = k->physicalSize();
-
-    qreal width;
-    qreal hegth;
-    width = ka.width();
-    hegth = ka.height();
-
-    ValueFromInternValue(width);
-    ValueFromInternValue(hegth);
-
-    Int share;
-    share = Infra_Share();
-    Int stat;
-    stat = Share_Stat(share);
-
-    Int dimend;
-    dimend = Stat_ScreenDimend(stat);
-
-    Size_WidthSet(dimend, widthA);
-    Size_HegthSet(dimend, hegthA);
-    return true;
+    Screen_DimendEvent(screen);
 }
 
 Int Main_TerminateStateGet()

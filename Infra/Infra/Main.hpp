@@ -16,6 +16,7 @@ struct Main
     Int ArgC;
     Int ArgV;
     Int Compute;
+    Int Screen;
     int Argc;
     char* Argv[2];
     Int TerminateState;
@@ -25,8 +26,6 @@ struct Main
 
 Int Main_InitArg();
 Int Main_FinalArg();
-
-Int Main_ScreenDimend();
 
 void Main_SignalHandle(int signo);
 
