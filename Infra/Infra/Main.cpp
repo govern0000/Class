@@ -67,14 +67,6 @@ Int Main_Final()
     return true;
 }
 
-Int Main_IsCSharpSet(Int value)
-{
-    Main* m;
-    m = &D_Var;
-    m->IsCSharp = value;
-    return true;
-}
-
 Int Main_Arg()
 {
     Main* m;
@@ -194,18 +186,6 @@ Int Main_TerminateStateSet(Int value)
     Main* m;
     m = &D_Var;
     m->TerminateState = value;
-    return true;
-}
-
-Int Main_CurrentThreadSignalHandleSet()
-{
-    // Main* m;
-    // m = &D_Var;
-
-    // if (!(m->IsCSharp))
-    // {
-    //     signal(SIGSEGV, Main_SignalHandle);
-    // }
     return true;
 }
 
