@@ -39,3 +39,5 @@ Int Screen_DimendGet(Int o)
 }
 
 FieldDefaultSet(Screen, Dimend)
+
+CppField(Screen, DimendState)

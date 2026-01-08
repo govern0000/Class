@@ -6,6 +6,7 @@
 
 struct Screen
 {
+    Int DimendState;
 };
 
 #define CP(a) ((Screen*)(a))
