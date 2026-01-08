@@ -1,12 +1,12 @@
 #include "Stat.hpp"
 
-Int Stat_Var_TextAlignStart = 1;
+Int Stat_Var_TextAlignSta = 1;
 Int Stat_Var_TextAlignMid = 2;
 Int Stat_Var_TextAlignEnd = 3;
 
 Int Stat_TextAlignStart(Int o)
 {
-    return Stat_Var_TextAlignStart;
+    return Stat_Var_TextAlignSta;
 }
 Int Stat_TextAlignMid(Int o)
 {
