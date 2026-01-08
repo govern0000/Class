@@ -411,6 +411,6 @@ Share -
 
 Stat -
     PointDataCount()
-    TextAlignStart()
+    TextAlignSta()
     TextAlignMid()
     TextAlignEnd()
