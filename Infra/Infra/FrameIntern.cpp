@@ -91,12 +91,19 @@ void FrameIntern::wheelEvent(QWheelEvent* ev)
     Int index;
     index = ev->buttons().toInt();
 
+    QPoint ka;
+    ka = QCursor::pos();
+
+    Int valueA;
+    Int valueB;
     Int valueC;
     Int valueD;
+    valueA = ka.x();
+    valueB = ka.y();
     valueC = ev->angleDelta().x();
     valueD = ev->angleDelta().y();
 
-    this->PointEventHandle(5, index, 0, 0, valueC, valueD);
+    this->PointEventHandle(5, index, valueA, valueB, valueC, valueD);
 
     ev->accept();
 }
