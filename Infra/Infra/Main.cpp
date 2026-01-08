@@ -184,7 +184,41 @@ Int Main_Screen()
 
 void Main_ScreenDimendHandle(const QSizeF &size)
 {
+    Main_ScreenDimend();
+
     Screen_DimendEvent(0);
+}
+
+Int Main_ScreenDimend()
+{
+    Int screen;
+    screen = Main_Screen();
+
+    QScreen* k;
+    k = (QScreen*)screen;
+
+    QSizeF ka;
+    ka = k->physicalSize();
+
+    qreal width;
+    qreal hegth;
+    width = ka.width();
+    hegth = ka.height();
+
+    ValueFromInternValue(width);
+    ValueFromInternValue(hegth);
+
+    Int share;
+    share = Infra_Share();
+    Int stat;
+    stat = Share_Stat(share);
+
+    Int dimend;
+    dimend = Stat_ScreenDimend(stat);
+
+    Size_WidthSet(dimend, widthA);
+    Size_HegthSet(dimend, hegthA);
+    return true;
 }
 
 Int Main_TerminateStateGet()
