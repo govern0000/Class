@@ -26,6 +26,8 @@ struct Main
 Int Main_InitArg();
 Int Main_FinalArg();
 
+Int Main_ScreenDimend();
+
 void Main_SignalHandle(int signo);
 
 void Main_ScreenDimendHandle(const QSizeF &size);
