@@ -23,9 +23,6 @@ Int Stat_Init(Int o)
     QSize ka;
     ka = k->size();
 
-    QSizeF kb;
-    kb = k->physicalSize();
-
     int widthA;
     int hegthA;
     widthA = ka.width();
@@ -41,18 +38,8 @@ Int Stat_Init(Int o)
     Size_WidthSet(m->ScreenSize, width);
     Size_HegthSet(m->ScreenSize, hegth);
 
-    qreal widthB;
-    qreal hegthB;
-    widthB = kb.width();
-    hegthB = kb.height();
-
-    ValueFromInternValue(widthB);
-    ValueFromInternValue(hegthB);
-
     m->ScreenDimend = Size_New();
     Size_Init(m->ScreenDimend);
-    Size_WidthSet(m->ScreenDimend, widthBA);
-    Size_HegthSet(m->ScreenDimend, hegthBA);
 
     return true;
 }

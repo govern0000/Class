@@ -30,14 +30,35 @@ FieldDefaultSet(Screen, Size)
 
 Int Screen_DimendGet(Int o)
 {
+    Int screen;
+    screen = Main_Screen();
+
+    QScreen* k;
+    k = (QScreen*)screen;
+
+    QSizeF ka;
+    ka = k->physicalSize();
+
+    qreal width;
+    qreal hegth;
+    width = ka.width();
+    hegth = ka.height();
+
+    ValueFromInternValue(width);
+    ValueFromInternValue(hegth);
+
     Int share;
     share = Infra_Share();
     Int stat;
     stat = Share_Stat(share);
 
-    Int a;
-    a = Stat_ScreenDimend(stat);
-    return a;
+    Int dimend;
+    dimend = Stat_ScreenDimend(stat);
+
+    Size_WidthSet(dimend, widthA);
+    Size_HegthSet(dimend, hegthA);
+
+    return dimend;
 }
 
 FieldDefaultSet(Screen, Dimend)
