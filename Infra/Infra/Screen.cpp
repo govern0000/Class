@@ -1,62 +1,72 @@
 #include "Screen.hpp"
 
-Int Screen_Var_DimendState;
-
 CppClassNew(Screen)
 
 Int Screen_Init(Int o)
 {
+    Screen* m;
+    m = CP(o);
+
+    Int screen;
+    screen = Main_Screen();
+
+    QScreen* k;
+    k = (QScreen*)screen;
+
+    QSize ka;
+    ka = k->size();
+
+    int widthA;
+    int hegthA;
+    widthA = ka.width();
+    hegthA = ka.height();
+
+    Int width;
+    Int hegth;
+    width = widthA;
+    hegth = hegthA;
+
+    m->Size = Size_New();
+    Size_Init(m->Size);
+    Size_WidthSet(m->Size, width);
+    Size_HegthSet(m->Size, hegth);
+
+    m->Dimend = Size_New();
+    Size_Init(m->Dimend);
+
     return true;
 }
 
 Int Screen_Final(Int o)
 {
+    Screen* m;
+    m = CP(o);
+
+    Size_Final(m->Dimend);
+    Size_Delete(m->Dimend);
+
+    Size_Final(m->Size);
+    Size_Delete(m->Size);
     return true;
 }
 
-Int Screen_SizeGet(Int o)
-{
-    Int share;
-    share = Infra_Share();
-    Int stat;
-    stat = Share_Stat(share);
-
-    Int a;
-    a = Stat_ScreenSize(stat);
-    return a;
-}
+CppFieldGet(Screen, Size)
 
 FieldDefaultSet(Screen, Size)
 
-Int Screen_DimendGet(Int o)
-{
-    Int share;
-    share = Infra_Share();
-    Int stat;
-    stat = Share_Stat(share);
-
-    Int a;
-    a = Stat_ScreenDimend(stat);
-    return a;
-}
+CppFieldGet(Screen, Dimend)
 
 FieldDefaultSet(Screen, Dimend)
 
-Int Screen_DimendStateGet(Int o)
-{
-    return Screen_Var_DimendState;
-}
-
-Int Screen_DimendStateSet(Int o, Int value)
-{
-    Screen_Var_DimendState = value;
-    return true;
-}
+CppField(Screen, DimendState)
 
 Int Screen_DimendEvent(Int o)
 {
+    Screen* m;
+    m = CP(o);
+
     Int state;
-    state = Screen_Var_DimendState;
+    state = m->DimendState;
 
     if (state == null)
     {

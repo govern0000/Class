@@ -14,33 +14,6 @@ Int Stat_Init(Int o)
     Phore_Init(aa);
     m->ConsolePhore = aa;
 
-    Int screen;
-    screen = Main_Screen();
-
-    QScreen* k;
-    k = (QScreen*)screen;
-
-    QSize ka;
-    ka = k->size();
-
-    int widthA;
-    int hegthA;
-    widthA = ka.width();
-    hegthA = ka.height();
-
-    Int width;
-    Int hegth;
-    width = widthA;
-    hegth = hegthA;
-
-    m->ScreenSize = Size_New();
-    Size_Init(m->ScreenSize);
-    Size_WidthSet(m->ScreenSize, width);
-    Size_HegthSet(m->ScreenSize, hegth);
-
-    m->ScreenDimend = Size_New();
-    Size_Init(m->ScreenDimend);
-
     return true;
 }
 
@@ -48,12 +21,6 @@ Int Stat_Final(Int o)
 {
     Stat* m;
     m = CP(o);
-
-    Size_Final(m->ScreenDimend);
-    Size_Delete(m->ScreenDimend);
-
-    Size_Final(m->ScreenSize);
-    Size_Delete(m->ScreenSize);
 
     Phore_Final(m->ConsolePhore);
     Phore_Delete(m->ConsolePhore);
@@ -106,18 +73,4 @@ Int Stat_ConsolePhore(Int o)
     Stat* m;
     m = CP(o);
     return m->ConsolePhore;
-}
-
-Int Stat_ScreenSize(Int o)
-{
-    Stat* m;
-    m = CP(o);
-    return m->ScreenSize;
-}
-
-Int Stat_ScreenDimend(Int o)
-{
-    Stat* m;
-    m = CP(o);
-    return m->ScreenDimend;
 }
