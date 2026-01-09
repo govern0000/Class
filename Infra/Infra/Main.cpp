@@ -53,6 +53,8 @@ Int Main_Init(Int argc, Int argv)
 
     QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
+    QObject::connect(k, &QScreen::orientationChanged, &Main_ScreenOrientHandle);
+
     return true;
 }
 
