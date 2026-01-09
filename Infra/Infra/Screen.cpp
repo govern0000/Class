@@ -141,3 +141,34 @@ Int Screen_OrientGet(Int o)
 }
 
 FieldDefaultSet(Screen, Orient)
+
+Int Screen_OrientEvent(Int o)
+{
+    Screen* m;
+    m = CP(o);
+
+    Int state;
+    state = m->OrientState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Screen_Orient_Maide maide;
+    maide = (Screen_Orient_Maide)aa;
+
+    maide(o, arg);
+
+    return true;
+}
