@@ -30,3 +30,5 @@ Int Main_FinalArg();
 void Main_SignalHandle(int signo);
 
 void Main_ScreenDimendHandle(const QSizeF &size);
+
+void Main_ScreenOrientHandle(Qt::ScreenOrientation orientation);
