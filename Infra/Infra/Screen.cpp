@@ -61,6 +61,7 @@ CppFieldGet(Screen, Dimend)
 FieldDefaultSet(Screen, Dimend)
 
 CppField(Screen, DimendState)
+CppField(Screen, OrientState)
 
 Int Screen_Dimend(Int o)
 {
