@@ -207,6 +207,16 @@ void Main_ScreenDimendHandle(const QSizeF &size)
     Screen_DimendEvent(screen);
 }
 
+void Main_ScreenOrientHandle(Qt::ScreenOrientation orientation)
+{
+    Int screen;
+    screen = Main_Screen();
+
+    Screen_Size(screen);
+
+    Screen_OrientEvent(screen);
+}
+
 Int Main_TerminateStateGet()
 {
     Main* m;
