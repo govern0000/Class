@@ -7,33 +7,13 @@ Int Screen_Init(Int o)
     Screen* m;
     m = CP(o);
 
-    Int screen;
-    screen = Main_ScreenIntern();
-
-    QScreen* k;
-    k = (QScreen*)screen;
-
-    QSize ka;
-    ka = k->size();
-
-    int widthA;
-    int hegthA;
-    widthA = ka.width();
-    hegthA = ka.height();
-
-    Int width;
-    Int hegth;
-    width = widthA;
-    hegth = hegthA;
-
     m->Size = Size_New();
     Size_Init(m->Size);
-    Size_WidthSet(m->Size, width);
-    Size_HegthSet(m->Size, hegth);
 
     m->Dimend = Size_New();
     Size_Init(m->Dimend);
 
+    Screen_Size(o);
     Screen_Dimend(o);
 
     return true;
@@ -62,6 +42,35 @@ FieldDefaultSet(Screen, Dimend)
 
 CppField(Screen, DimendState)
 CppField(Screen, OrientState)
+
+Int Screen_Size(Int o)
+{
+    Int screen;
+    screen = Main_ScreenIntern();
+
+    QScreen* k;
+    k = (QScreen*)screen;
+
+    QSize ka;
+    ka = k->size();
+
+    int widthA;
+    int hegthA;
+    widthA = ka.width();
+    hegthA = ka.height();
+
+    Int width;
+    Int hegth;
+    width = widthA;
+    hegth = hegthA;
+
+    Int size;
+    size = Screen_SizeGet(o);
+
+    Size_WidthSet(size, width);
+    Size_HegthSet(size, hegth);
+    return true;
+}
 
 Int Screen_Dimend(Int o)
 {
