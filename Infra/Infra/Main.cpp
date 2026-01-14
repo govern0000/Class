@@ -42,14 +42,15 @@ Int Main_Init(Int argc, Int argv)
 
     Environ_VarInit();
 
-    m->Screen = Screen_New();
-    Screen_Init(m->Screen);
+    QScreen* k;
+    k = m->Intern->primaryScreen();
 
     Int screen;
-    screen = Main_ScreenIntern();
+    screen = CastInt(k);
 
-    QScreen* k;
-    k = (QScreen*)screen;
+    m->Screen = Screen_New();
+    Screen_InternSet(m->Screen, screen);
+    Screen_Init(m->Screen);
 
     QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
@@ -182,19 +183,6 @@ Int Main_Screen()
     Main* m;
     m = &D_Var;
     return m->Screen;
-}
-
-Int Main_ScreenIntern()
-{
-    Main* m;
-    m = &D_Var;
-
-    QScreen* k;
-    k = m->Intern->primaryScreen();
-
-    Int a;
-    a = CastInt(k);
-    return a;
 }
 
 void Main_ScreenDimendHandle(const QSizeF &size)
