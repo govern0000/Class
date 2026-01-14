@@ -233,6 +233,7 @@ class Extern : Any
 
     maide prusate Int Frame_TitleThisSet(var Int o) { }
     maide prusate Int Frame_Out(var Int o) { }
+    maide prusate Int Frame_CursorThisSet(var Int o) { }
     maide prusate Int Frame_Update(var Int o, var Int rect) { }
     maide prusate Int Frame_Close(var Int o) { }
 
