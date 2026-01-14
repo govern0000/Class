@@ -95,8 +95,11 @@ Main -
 Screen
     Size
     Dimend
+    Orient
     DimendState
-    Dimend(screen, arg, oldWidth, oldHegth) --
+    OrientState
+    Dimend(screen, arg) --
+    Orient(screen, arg) --
 
 Frame
     Title
