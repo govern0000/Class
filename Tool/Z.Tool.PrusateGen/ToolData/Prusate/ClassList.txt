@@ -111,6 +111,7 @@ Frame
     DualState
     PointState
     Cursor
+    CursorThisSet()
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
