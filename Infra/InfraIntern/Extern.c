@@ -2292,30 +2292,6 @@ Int Intern_Extern_State_ArgSet(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Main_TerminateStateGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 0;
-
-    Int a;
-    a = Main_TerminateStateGet();
-
-    Return;
-}
-
-Int Intern_Extern_Main_TerminateStateSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Main_TerminateStateSet(a0);
-
-    Return;
-}
-
 Int Intern_Extern_Main_Init(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -2341,19 +2317,6 @@ Int Intern_Extern_Main_Final(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Main_IsCSharpSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Main_IsCSharpSet(a0);
-
-    Return;
-}
-
 Int Intern_Extern_Main_Arg(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -2361,6 +2324,17 @@ Int Intern_Extern_Main_Arg(Eval* eval, Int frame)
 
     Int a;
     a = Main_Arg();
+
+    Return;
+}
+
+Int Intern_Extern_Main_Screen(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 0;
+
+    Int a;
+    a = Main_Screen();
 
     Return;
 }
@@ -2465,6 +2439,87 @@ Int Intern_Extern_Screen_DimendSet(Eval* eval, Int frame)
 
     Int a;
     a = Screen_DimendSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_OrientGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Screen_OrientGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_OrientSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Screen_OrientSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_DimendStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Screen_DimendStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_DimendStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Screen_DimendStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_OrientStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Screen_OrientStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Screen_OrientStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Screen_OrientStateSet(a0, a1);
 
     Return;
 }
@@ -2623,6 +2678,87 @@ Int Intern_Extern_Frame_DrawStateSet(Eval* eval, Int frame)
 
     Int a;
     a = Frame_DrawStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_DualStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_DualStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_DualStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Frame_DualStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_PointStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_PointStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_PointStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Frame_PointStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_CursorGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_CursorGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_CursorSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Frame_CursorSet(a0, a1);
 
     Return;
 }
@@ -8708,7 +8844,7 @@ Int Intern_Extern_Stat_PointDataCount(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Stat_TextAlignStart(Eval* eval, Int frame)
+Int Intern_Extern_Stat_TextAlignSta(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -8716,7 +8852,7 @@ Int Intern_Extern_Stat_TextAlignStart(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Stat_TextAlignStart(a0);
+    a = Stat_TextAlignSta(a0);
 
     Return;
 }
