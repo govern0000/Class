@@ -55,9 +55,6 @@ public class Entry : Any
 
     protected virtual bool MainBefore()
     {
-        ulong ua;
-        ua = 1;
-        Extern.Main_IsCSharpSet(ua);
         Extern.Main_Init(1, 0);
 
         ThreadThread o;
