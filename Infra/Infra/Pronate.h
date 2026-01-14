@@ -88,7 +88,6 @@ Int Post_ExecuteHandle(Int o);
 Int Program_Start(Int o);
 Int Program_Finish(Int o);
 
-Int Main_ScreenIntern();
 Int Main_Compute();
 Int Main_ThreadStorage();
 
