@@ -47,6 +47,7 @@ Int PolateRadial_Intern(Int o);
 
 Int PolateStop_Intern(Int o);
 
+Int Screen_InternSet(Int o, Int value);
 Int Screen_Size(Int o);
 Int Screen_Dimend(Int o);
 Int Screen_DimendEvent(Int o);
