@@ -89,7 +89,6 @@ State
 Main -
     Init(argc, argv) -
     Final() -
-    IsCSharpSet(value) -
     Arg() -
     Screen() -
     TerminateState -
