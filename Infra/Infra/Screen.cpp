@@ -134,7 +134,7 @@ Int Screen_OrientGet(Int o)
 
     Int ka;
     ka = kd;
-    
+
     Int a;
     a = ka;
     return a;
