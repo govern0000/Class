@@ -113,13 +113,13 @@ Bool TypeHandle(Int frame, Int arg, Int index, Int value)
 
         if (index == 'X')
         {
-            Frame_CursorSet(Frame, 3);
+            Frame_CursorSet(Frame, 13);
             Frame_CursorThisSet(Frame);
         }
 
         if (index == 'C')
         {
-            Frame_CursorSet(Frame, 4);
+            Frame_CursorSet(Frame, 17);
             Frame_CursorThisSet(Frame);
         }
 
