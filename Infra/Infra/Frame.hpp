@@ -11,6 +11,7 @@ struct Frame
     Int DrawState;
     Int DualState;
     Int PointState;
+    Int Cursor;
     FrameIntern* Intern;
 };
 
