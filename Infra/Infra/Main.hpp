@@ -19,7 +19,6 @@ struct Main
     Int Screen;
     int Argc;
     char* Argv[2];
-    Int TerminateState;
     Int ThreadStorage;
     QApplication* Intern;
 };
