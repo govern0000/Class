@@ -71,14 +71,11 @@ Int Screen_Size(Int o)
 
 Int Screen_Dimend(Int o)
 {
-    Int screen;
-    screen = Main_ScreenIntern();
-
-    QScreen* k;
-    k = (QScreen*)screen;
+    Screen* m;
+    m = CP(o);
 
     QSizeF ka;
-    ka = k->physicalSize();
+    ka = m->Intern->physicalSize();
 
     qreal width;
     qreal hegth;
