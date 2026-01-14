@@ -217,3 +217,36 @@ Int Frame_DrawEvent(Int o)
 
     return true;
 }
+
+Int Frame_DualEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
+{
+    Frame* m;
+    m = CP(o);
+
+    Int state;
+    state = m->DualState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Frame_Dual_Maide maide;
+    maide = (Frame_Dual_Maide)aa;
+
+    maide(o, arg, kind, index, valueA, valueB, valueC, valueD);
+
+    return true;
+}
+
+Int Frame_PointEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
