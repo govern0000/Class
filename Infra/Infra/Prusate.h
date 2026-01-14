@@ -277,6 +277,7 @@ Infra_Api Int Frame_CursorSet(Int o, Int value);
 
 Infra_Api Int Frame_TitleThisSet(Int o);
 Infra_Api Int Frame_Out(Int o);
+Infra_Api Int Frame_CursorThisSet(Int o);
 Infra_Api Int Frame_Update(Int o, Int rect);
 Infra_Api Int Frame_Close(Int o);
 
