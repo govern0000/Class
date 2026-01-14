@@ -9,6 +9,8 @@ struct Frame
     Int Title;
     Int TypeState;
     Int DrawState;
+    Int DualState;
+    Int PointState;
     FrameIntern* Intern;
 };
 

@@ -71,6 +71,8 @@ Int Frame_ShownSet(Int o, Int value)
 
 CppField(Frame, DrawState)
 CppField(Frame, TypeState)
+CppField(Frame, DualState)
+CppField(Frame, PointState)
 
 Int Frame_Out(Int o)
 {
