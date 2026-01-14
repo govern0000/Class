@@ -91,8 +91,6 @@ Main -
     Final() -
     Arg() -
     Screen() -
-    TerminateState -
-    Terminate(arg) --
 
 Screen
     Size
