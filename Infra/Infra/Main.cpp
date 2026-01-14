@@ -205,39 +205,6 @@ void Main_ScreenOrientHandle(Qt::ScreenOrientation orientation)
     Screen_OrientEvent(screen);
 }
 
-Int Main_TerminateStateGet()
-{
-    Main* m;
-    m = &D_Var;
-    return m->TerminateState;
-}
-
-Int Main_TerminateStateSet(Int value)
-{
-    Main* m;
-    m = &D_Var;
-    m->TerminateState = value;
-    return true;
-}
-
-void Main_SignalHandle(int signo)
-{
-    Main* m;
-    m = &D_Var;
-    Int state;
-    state = m->TerminateState;
-    Int a;
-    a = State_MaideGet(state);
-    Int arg;
-    arg = State_ArgGet(state);
-    Main_Terminate_Maide maide;
-    maide = (Main_Terminate_Maide)a;
-    if (!(maide == null))
-    {
-        maide(arg);
-    }
-}
-
 Int Infra_Share()
 {
     Main* m;
