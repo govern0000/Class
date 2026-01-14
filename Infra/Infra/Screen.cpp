@@ -126,14 +126,11 @@ Int Screen_DimendEvent(Int o)
 
 Int Screen_OrientGet(Int o)
 {
-    Int screen;
-    screen = Main_ScreenIntern();
-
-    QScreen* k;
-    k = (QScreen*)screen;
+    Screen* m;
+    m = CP(o);
 
     Qt::ScreenOrientation kd;
-    kd = k->orientation();
+    kd = m->Intern->orientation();
 
     Int ka;
     ka = kd;
