@@ -32,6 +32,18 @@ Int Screen_Final(Int o)
     return true;
 }
 
+Int Screen_InternSet(Int o, Int value)
+{
+    Screen* m;
+    m = CP(o);
+
+    QScreen* screen;
+    screen = (QScreen*)value;
+
+    m->Intern = screen;
+    return true;
+}
+
 CppFieldGet(Screen, Size)
 
 FieldDefaultSet(Screen, Size)
