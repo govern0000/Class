@@ -235,6 +235,7 @@ Intern_Api Int Intern_Extern_Frame_CursorSet(Eval* e, Int f);
 
 Intern_Api Int Intern_Extern_Frame_TitleThisSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Out(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_CursorThisSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Update(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Close(Eval* e, Int f);
 
