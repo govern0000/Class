@@ -192,13 +192,10 @@ class Extern : Any
     maide prusate Int State_ArgGet(var Int o) { }
     maide prusate Int State_ArgSet(var Int o, var Int value) { }
 
-    maide prusate Int Main_TerminateStateGet() { }
-    maide prusate Int Main_TerminateStateSet(var Int value) { }
-
     maide prusate Int Main_Init(var Int argc, var Int argv) { }
     maide prusate Int Main_Final() { }
-    maide prusate Int Main_IsCSharpSet(var Int value) { }
     maide prusate Int Main_Arg() { }
+    maide prusate Int Main_Screen() { }
 
     maide prusate Int Screen_New() { }
     maide prusate Int Screen_Delete(var Int o) { }
@@ -208,6 +205,12 @@ class Extern : Any
     maide prusate Int Screen_SizeSet(var Int o, var Int value) { }
     maide prusate Int Screen_DimendGet(var Int o) { }
     maide prusate Int Screen_DimendSet(var Int o, var Int value) { }
+    maide prusate Int Screen_OrientGet(var Int o) { }
+    maide prusate Int Screen_OrientSet(var Int o, var Int value) { }
+    maide prusate Int Screen_DimendStateGet(var Int o) { }
+    maide prusate Int Screen_DimendStateSet(var Int o, var Int value) { }
+    maide prusate Int Screen_OrientStateGet(var Int o) { }
+    maide prusate Int Screen_OrientStateSet(var Int o, var Int value) { }
 
     maide prusate Int Frame_New() { }
     maide prusate Int Frame_Delete(var Int o) { }
@@ -221,6 +224,12 @@ class Extern : Any
     maide prusate Int Frame_TypeStateSet(var Int o, var Int value) { }
     maide prusate Int Frame_DrawStateGet(var Int o) { }
     maide prusate Int Frame_DrawStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_DualStateGet(var Int o) { }
+    maide prusate Int Frame_DualStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_PointStateGet(var Int o) { }
+    maide prusate Int Frame_PointStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_CursorGet(var Int o) { }
+    maide prusate Int Frame_CursorSet(var Int o, var Int value) { }
 
     maide prusate Int Frame_TitleThisSet(var Int o) { }
     maide prusate Int Frame_Out(var Int o) { }
@@ -734,7 +743,7 @@ class Extern : Any
     maide prusate Int Share_Stat(var Int o) { }
 
     maide prusate Int Stat_PointDataCount(var Int o) { }
-    maide prusate Int Stat_TextAlignStart(var Int o) { }
+    maide prusate Int Stat_TextAlignSta(var Int o) { }
     maide prusate Int Stat_TextAlignMid(var Int o) { }
     maide prusate Int Stat_TextAlignEnd(var Int o) { }
     maide prusate Int Stat_TextCodeKindUtf8(var Int o) { }
