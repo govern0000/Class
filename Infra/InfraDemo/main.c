@@ -1000,8 +1000,11 @@ int main(int argc, char* argv[])
     Frame_DrawStateSet(Frame, frameDrawState);
     Frame_TypeStateSet(Frame, frameTypeState);
 
+    Int screen;
+    screen = Main_Screen();
+
     Int screenSize;
-    screenSize = Screen_SizeGet(0);
+    screenSize = Screen_SizeGet(screen);
 
     Int videoOut;
     videoOut = Frame_Out(Frame);
