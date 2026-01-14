@@ -196,15 +196,10 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong State_ArgGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong State_ArgSet(ulong o, ulong value);
 
-    [DllImport(InfraLib)] public extern static ulong Main_TerminateStateGet();
-    [DllImport(InfraLib)] public extern static ulong Main_TerminateStateSet(ulong value);
-
     [DllImport(InfraLib)] public extern static ulong Main_Init(ulong argc, ulong argv);
     [DllImport(InfraLib)] public extern static ulong Main_Final();
-    [DllImport(InfraLib)] public extern static ulong Main_IsCSharpSet(ulong value);
     [DllImport(InfraLib)] public extern static ulong Main_Arg();
-
-    public delegate ulong Main_Terminate_Maide(ulong arg);
+    [DllImport(InfraLib)] public extern static ulong Main_Screen();
 
     [DllImport(InfraLib)] public extern static ulong Screen_New();
     [DllImport(InfraLib)] public extern static ulong Screen_Delete(ulong o);
@@ -214,6 +209,15 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Screen_SizeSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Screen_DimendGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Screen_DimendSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Screen_OrientGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Screen_OrientSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Screen_DimendStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Screen_DimendStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Screen_OrientStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Screen_OrientStateSet(ulong o, ulong value);
+
+    public delegate ulong Screen_Dimend_Maide(ulong screen, ulong arg);
+    public delegate ulong Screen_Orient_Maide(ulong screen, ulong arg);
 
     [DllImport(InfraLib)] public extern static ulong Frame_New();
     [DllImport(InfraLib)] public extern static ulong Frame_Delete(ulong o);
@@ -227,6 +231,12 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Frame_TypeStateSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Frame_DrawStateGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_DrawStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_DualStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_DualStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_PointStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_PointStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorSet(ulong o, ulong value);
 
     [DllImport(InfraLib)] public extern static ulong Frame_TitleThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_Out(ulong o);
@@ -235,6 +245,8 @@ public static class Extern
 
     public delegate ulong Frame_Type_Maide(ulong frame, ulong arg, ulong index, ulong value);
     public delegate ulong Frame_Draw_Maide(ulong frame, ulong arg);
+    public delegate ulong Frame_Dual_Maide(ulong frame, ulong arg, ulong kind, ulong index, ulong valueA, ulong valueB, ulong valueC, ulong valueD);
+    public delegate ulong Frame_Point_Maide(ulong frame, ulong arg, ulong kind, ulong index, ulong valueA, ulong valueB, ulong valueC, ulong valueD);
 
     [DllImport(InfraLib)] public extern static ulong Draw_New();
     [DllImport(InfraLib)] public extern static ulong Draw_Delete(ulong o);
@@ -756,7 +768,7 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Share_Stat(ulong o);
 
     [DllImport(InfraLib)] public extern static ulong Stat_PointDataCount(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Stat_TextAlignStart(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_TextAlignSta(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_TextAlignMid(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_TextAlignEnd(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_TextCodeKindUtf8(ulong o);
