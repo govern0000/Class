@@ -69,6 +69,37 @@ Int Frame_ShownSet(Int o, Int value)
     return true;
 }
 
+Int Frame_CursorGet(Int o)
+{
+    Frame* m;
+    m = CP(o);
+
+    QCursor cursor;
+    cursor = m->Intern->cursor();
+
+    Qt::CursorShape cursorShape;
+    cursorShape = cursor.shape();
+
+    Int a;
+    a = cursorShape;
+    return a;
+}
+
+Int Frame_CursorSet(Int o, Int value)
+{
+    Frame* m;
+    m = CP(o);
+
+    Qt::CursorShape cursorShape;
+    cursorShape = (Qt::CursorShape)value;
+
+    QCursor cursor;
+    cursor = m->Intern->cursor();
+
+    cursor.setShape(cursorShape);
+    return true;
+}
+
 CppField(Frame, DrawState)
 CppField(Frame, TypeState)
 CppField(Frame, DualState)
