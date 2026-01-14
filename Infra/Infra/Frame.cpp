@@ -69,34 +69,26 @@ Int Frame_ShownSet(Int o, Int value)
     return true;
 }
 
-Int Frame_CursorGet(Int o)
+CppField(Frame, Cursor)
+
+Int Frame_CursorThisSet(Int o)
 {
     Frame* m;
     m = CP(o);
 
-    QCursor cursor;
-    cursor = m->Intern->cursor();
+    Int cursor;
+    cursor = m->Cursor;
 
     Qt::CursorShape cursorShape;
-    cursorShape = cursor.shape();
+    cursorShape = (Qt::CursorShape)cursor;
 
-    Int a;
-    a = cursorShape;
-    return a;
-}
+    QCursor k;
+    k = m->Intern->cursor();
 
-Int Frame_CursorSet(Int o, Int value)
-{
-    Frame* m;
-    m = CP(o);
+    k.setShape(cursorShape);
 
-    Qt::CursorShape cursorShape;
-    cursorShape = (Qt::CursorShape)value;
+    m->Intern->setCursor(k);
 
-    QCursor cursor;
-    cursor = m->Intern->cursor();
-
-    cursor.setShape(cursorShape);
     return true;
 }
 
