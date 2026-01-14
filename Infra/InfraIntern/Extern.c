@@ -2789,6 +2789,19 @@ Int Intern_Extern_Frame_Out(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Frame_CursorThisSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_CursorThisSet(a0);
+
+    Return;
+}
+
 Int Intern_Extern_Frame_Update(Eval* eval, Int frame)
 {
     Int paramCount;
