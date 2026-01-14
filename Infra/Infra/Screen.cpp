@@ -45,14 +45,11 @@ CppField(Screen, OrientState)
 
 Int Screen_Size(Int o)
 {
-    Int screen;
-    screen = Main_ScreenIntern();
-
-    QScreen* k;
-    k = (QScreen*)screen;
+    Screen* m;
+    m = CP(o);
 
     QSize ka;
-    ka = k->size();
+    ka = m->Intern->size();
 
     int widthA;
     int hegthA;

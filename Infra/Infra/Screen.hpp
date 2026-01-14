@@ -10,6 +10,7 @@ struct Screen
     Int Dimend;
     Int DimendState;
     Int OrientState;
+    QScreen* Intern;
 };
 
 #define CP(a) ((Screen*)(a))
