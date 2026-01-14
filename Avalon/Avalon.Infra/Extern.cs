@@ -240,6 +240,7 @@ public static class Extern
 
     [DllImport(InfraLib)] public extern static ulong Frame_TitleThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_Out(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_Update(ulong o, ulong rect);
     [DllImport(InfraLib)] public extern static ulong Frame_Close(ulong o);
 
