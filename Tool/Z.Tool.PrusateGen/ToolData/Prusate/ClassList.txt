@@ -108,16 +108,10 @@ Frame
     Out()
     TypeState
     DrawState
-    DualState
-    PointState
-    Cursor
-    CursorThisSet()
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
-    Dual(frame, arg, kind, index, valueA, valueB, valueC, valueD) --
-    Point(frame, arg, kind, index, valueA, valueB, valueC, valueD) --
 
 Draw
     Size
