@@ -126,6 +126,8 @@ Word "edit" has meaning that is text edit.
 
 Word "factor" has meaning that is refactor.
 
+Word "typetab" has meaning that is type mapping table.
+
 Word "preview" has meaning that is view before entity.
 
 Word "title" has meaning that is head char list.
