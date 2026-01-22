@@ -99,7 +99,7 @@ public class ReadCountOperate : ReadOperate
 
     protected virtual ModuleRef CreateModuleRef()
     {
-        return this.ClassInfra.ModuleRefCreate(null, -1);
+        return this.ClassInfra.ModuleRefCreate(null, null, -1);
     }
 
     protected virtual String CreateString()
