@@ -3,9 +3,6 @@
 #include <QWidget>
 #include <QPaintEvent>
 #include <QPainter>
-#include <QMouseEvent>
-#include <QWheelEvent>
-#include <QCursor>
 
 #include "Pronate.hpp"
 
