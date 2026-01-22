@@ -52,6 +52,8 @@ class Intern : Any
 
     maide prusate Int StateNetworkHostNewPeer() { }
 
+    maide prusate Int StateScreenDimendEvent() { }
+
     maide prusate Int StateFrameTypeEvent() { }
 
     maide prusate Int StateFrameDrawEvent() { }
