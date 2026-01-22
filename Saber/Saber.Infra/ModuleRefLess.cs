@@ -26,6 +26,13 @@ public class ModuleRefLess : Less
         riteA = rite as ModuleRef;
 
         long a;
+        a = this.StringLess.Execute(liteA.Account, riteA.Account);
+
+        if (!(a == 0))
+        {
+            return a;
+        }
+
         a = this.StringLess.Execute(liteA.Name, riteA.Name);
 
         if (!(a == 0))
