@@ -13,7 +13,6 @@ Int Frame_Init(Int o)
     a->Init();
     a->setWindowState(Qt::WindowFullScreen);
     a->setCursor(Qt::BlankCursor);
-    a->setMouseTracking(true);
     m->Intern = a;
 
     return true;
@@ -69,33 +68,8 @@ Int Frame_ShownSet(Int o, Int value)
     return true;
 }
 
-CppField(Frame, Cursor)
-
-Int Frame_CursorThisSet(Int o)
-{
-    Frame* m;
-    m = CP(o);
-
-    Int cursor;
-    cursor = m->Cursor;
-
-    Qt::CursorShape cursorShape;
-    cursorShape = (Qt::CursorShape)cursor;
-
-    QCursor k;
-    k = m->Intern->cursor();
-
-    k.setShape(cursorShape);
-
-    m->Intern->setCursor(k);
-
-    return true;
-}
-
 CppField(Frame, DrawState)
 CppField(Frame, TypeState)
-CppField(Frame, DualState)
-CppField(Frame, PointState)
 
 Int Frame_Out(Int o)
 {
@@ -206,68 +180,6 @@ Int Frame_DrawEvent(Int o)
     maide = (Frame_Draw_Maide)aa;
 
     maide(o, arg);
-
-    return true;
-}
-
-Int Frame_DualEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
-{
-    Frame* m;
-    m = CP(o);
-
-    Int state;
-    state = m->DualState;
-
-    if (state == null)
-    {
-        return true;
-    }
-
-    Int aa;
-    aa = State_MaideGet(state);
-    Int arg;
-    arg = State_ArgGet(state);
-
-    if (aa == null)
-    {
-        return true;
-    }
-
-    Frame_Dual_Maide maide;
-    maide = (Frame_Dual_Maide)aa;
-
-    maide(o, arg, kind, index, valueA, valueB, valueC, valueD);
-
-    return true;
-}
-
-Int Frame_PointEvent(Int o, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD)
-{
-    Frame* m;
-    m = CP(o);
-
-    Int state;
-    state = m->PointState;
-
-    if (state == null)
-    {
-        return true;
-    }
-
-    Int aa;
-    aa = State_MaideGet(state);
-    Int arg;
-    arg = State_ArgGet(state);
-
-    if (aa == null)
-    {
-        return true;
-    }
-
-    Frame_Point_Maide maide;
-    maide = (Frame_Point_Maide)aa;
-
-    maide(o, arg, kind, index, valueA, valueB, valueC, valueD);
 
     return true;
 }
