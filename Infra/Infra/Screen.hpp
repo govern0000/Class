@@ -9,7 +9,6 @@ struct Screen
     Int Size;
     Int Dimend;
     Int DimendState;
-    Int OrientState;
     QScreen* Intern;
 };
 
