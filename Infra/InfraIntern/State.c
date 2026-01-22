@@ -101,6 +101,11 @@ Int Intern_State_NetworkHost_NewPeer(Int networkHost, Int arg)
     return Intern_State_Call(networkHost, arg, 1);
 }
 
+Int Intern_State_Screen_DimendEvent(Int screen, Int arg)
+{
+    return Intern_State_Call(screen, arg, 1);
+}
+
 Int Intern_State_Frame_TypeEvent(Int frame, Int arg, Int index, Int value)
 {
     Int k;
