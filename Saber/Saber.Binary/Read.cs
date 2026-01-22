@@ -369,7 +369,7 @@ public class Read : Any
         while (i < count)
         {
             ModuleRef k;
-            k = this.ClassInfra.ModuleRefCreate(null, -1);
+            k = this.ClassInfra.ModuleRefCreate(null, null, -1);
 
             array.SetAt(i, k);
 
