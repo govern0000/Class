@@ -249,15 +249,10 @@ Infra_Api Int Screen_SizeGet(Int o);
 Infra_Api Int Screen_SizeSet(Int o, Int value);
 Infra_Api Int Screen_DimendGet(Int o);
 Infra_Api Int Screen_DimendSet(Int o, Int value);
-Infra_Api Int Screen_OrientGet(Int o);
-Infra_Api Int Screen_OrientSet(Int o, Int value);
 Infra_Api Int Screen_DimendStateGet(Int o);
 Infra_Api Int Screen_DimendStateSet(Int o, Int value);
-Infra_Api Int Screen_OrientStateGet(Int o);
-Infra_Api Int Screen_OrientStateSet(Int o, Int value);
 
 typedef Int (*Screen_Dimend_Maide)(Int screen, Int arg);
-typedef Int (*Screen_Orient_Maide)(Int screen, Int arg);
 
 InfraApiNew(Frame)
 Infra_Api Int Frame_TitleGet(Int o);
@@ -268,23 +263,14 @@ Infra_Api Int Frame_TypeStateGet(Int o);
 Infra_Api Int Frame_TypeStateSet(Int o, Int value);
 Infra_Api Int Frame_DrawStateGet(Int o);
 Infra_Api Int Frame_DrawStateSet(Int o, Int value);
-Infra_Api Int Frame_DualStateGet(Int o);
-Infra_Api Int Frame_DualStateSet(Int o, Int value);
-Infra_Api Int Frame_PointStateGet(Int o);
-Infra_Api Int Frame_PointStateSet(Int o, Int value);
-Infra_Api Int Frame_CursorGet(Int o);
-Infra_Api Int Frame_CursorSet(Int o, Int value);
 
 Infra_Api Int Frame_TitleThisSet(Int o);
 Infra_Api Int Frame_Out(Int o);
-Infra_Api Int Frame_CursorThisSet(Int o);
 Infra_Api Int Frame_Update(Int o, Int rect);
 Infra_Api Int Frame_Close(Int o);
 
 typedef Int (*Frame_Type_Maide)(Int frame, Int arg, Int index, Int value);
 typedef Int (*Frame_Draw_Maide)(Int frame, Int arg);
-typedef Int (*Frame_Dual_Maide)(Int frame, Int arg, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
-typedef Int (*Frame_Point_Maide)(Int frame, Int arg, Int kind, Int index, Int valueA, Int valueB, Int valueC, Int valueD);
 
 InfraApiNew(Draw)
 Infra_Api Int Draw_SizeGet(Int o);
