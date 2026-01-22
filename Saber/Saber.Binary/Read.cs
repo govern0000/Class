@@ -1044,6 +1044,13 @@ public class Read : Any
 
     protected virtual ModuleRef ExecuteModuleRef()
     {
+        String account;
+        account = this.ExecuteName();
+        if (account == null)
+        {
+            return null;
+        }
+
         String name;
         name = this.ExecuteName();
         if (name == null)
@@ -1060,6 +1067,7 @@ public class Read : Any
 
         ModuleRef a;
         a = this.Operate.ExecuteModuleRef();
+        a.Account = account;
         a.Name = name;
         a.Ver = ver;
         return a;
