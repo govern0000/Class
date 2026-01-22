@@ -111,18 +111,6 @@ Bool TypeHandle(Int frame, Int arg, Int index, Int value)
             b = true;
         }
 
-        if (index == 'X')
-        {
-            Frame_CursorSet(Frame, 13);
-            Frame_CursorThisSet(Frame);
-        }
-
-        if (index == 'C')
-        {
-            Frame_CursorSet(Frame, 17);
-            Frame_CursorThisSet(Frame);
-        }
-
         if (index == 'E')
         {
             Play_Execute(PlayA);
