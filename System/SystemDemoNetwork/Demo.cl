@@ -22,7 +22,7 @@ class Demo : Any
         var String k;
         k : share Console.Inn.Read();
 
-        share Console.Out.Write("Inn Start\n");
+        share Console.Out.Write("Inn Sta\n");
         share Console.Out.Write(k);
         share Console.Out.Write("\nInn End\n");
 
