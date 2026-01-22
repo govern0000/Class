@@ -27,5 +27,3 @@ Int Main_InitArg();
 Int Main_FinalArg();
 
 void Main_ScreenDimendHandle(const QSizeF &size);
-
-void Main_ScreenOrientHandle(Qt::ScreenOrientation orientation);
