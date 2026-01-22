@@ -21,8 +21,8 @@ public class StringLess : InfraLess
 
         String liteString;
         String riteString;
-        liteString = (String)lite;
-        riteString = (String)rite;
+        liteString = lite as String;
+        riteString = rite as String;
 
         long liteCount;
         long riteCount;
