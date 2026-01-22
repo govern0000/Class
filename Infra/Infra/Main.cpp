@@ -54,8 +54,6 @@ Int Main_Init(Int argc, Int argv)
 
     QObject::connect(k, &QScreen::physicalSizeChanged, &Main_ScreenDimendHandle);
 
-    QObject::connect(k, &QScreen::orientationChanged, &Main_ScreenOrientHandle);
-
     return true;
 }
 
@@ -193,16 +191,6 @@ void Main_ScreenDimendHandle(const QSizeF &size)
     Screen_Dimend(screen);
 
     Screen_DimendEvent(screen);
-}
-
-void Main_ScreenOrientHandle(Qt::ScreenOrientation orientation)
-{
-    Int screen;
-    screen = Main_Screen();
-
-    Screen_Size(screen);
-
-    Screen_OrientEvent(screen);
 }
 
 Int Infra_Share()
