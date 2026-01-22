@@ -962,8 +962,10 @@ public class Read : TextAdd
         Range range;
         range = text.Range;
 
+        long accountCount;
         long nameCount;
         long ver;
+        accountCount = 0;
         nameCount = 0;
         ver = 0;
 
@@ -972,14 +974,16 @@ public class Read : TextAdd
 
         bool b;
         b = (kk == -1);
+
         if (b)
         {
+            accountCount = -1;
             nameCount = range.Count;
             ver = -1;
         }
         if (!b)
         {
-            nameCount = kk;
+            accountCount = kk;
 
             long ka;
             long kb;
@@ -991,6 +995,25 @@ public class Read : TextAdd
 
             range.Index = ka + kd;
             range.Count = kb - kd;
+
+            long kka;
+            kka = this.TextIndex(text, this.TA(this.SColon));
+
+            range.Index = ka;
+            range.Count = kb;
+
+            if (kka == -1)
+            {
+                return null;
+            }
+
+            nameCount = kka;
+
+            long kda;
+            kda = kka + 1;
+
+            range.Index = (ka + kd) + kda;
+            range.Count = (kb - kd) - kda;
 
             ver = this.ExecuteModuleVer(text);
 
@@ -1005,14 +1028,33 @@ public class Read : TextAdd
 
         Range rangeA;
         rangeA = this.TRangeA;
-        rangeA.Index = range.Index;
-        rangeA.Count = nameCount;
+
+        String account;
+        account = null;
+
+        if (b)
+        {
+            rangeA.Index = range.Index;
+            rangeA.Count = nameCount;
+        }
+
+        if (!b)
+        {
+            rangeA.Index = range.Index;
+            rangeA.Count = accountCount;
+
+            account = this.ExecuteString(row, rangeA);
+
+            rangeA.Index = range.Index + accountCount + 1;
+            rangeA.Count = nameCount;
+        }
 
         String name;
         name = this.ExecuteString(row, rangeA);
 
         ModuleRef a;
         a = this.Operate.ExecuteModuleRef();
+        a.Account = account;
         a.Name = name;
         a.Ver = ver;
         return a;
