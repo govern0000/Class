@@ -28,7 +28,7 @@ class Demo : Any
         String k;
         k = Console.This.Inn.Read();
 
-        Console.This.Out.Write(this.S("Inn Start\n"));
+        Console.This.Out.Write(this.S("Inn Sta\n"));
         Console.This.Out.Write(k);
         Console.This.Out.Write(this.S("\nInn End\n"));
 
