@@ -419,6 +419,11 @@ Int Intern_Intern_StateNetworkHostNewPeer(Eval* eval, Int frame)
     return Intern_Intern_State(eval, frame, InternState(NetworkHost_NewPeer));
 }
 
+Int Intern_Intern_StateScreenDimendEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Screen_DimendEvent));
+}
+
 Int Intern_Intern_StateFrameTypeEvent(Eval* eval, Int frame)
 {
     return Intern_Intern_State(eval, frame, InternState(Frame_TypeEvent));
