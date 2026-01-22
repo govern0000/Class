@@ -2443,33 +2443,6 @@ Int Intern_Extern_Screen_DimendSet(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Screen_OrientGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Screen_OrientGet(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Screen_OrientSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 2;
-
-    Param(0);
-    Param(1);
-
-    Int a;
-    a = Screen_OrientSet(a0, a1);
-
-    Return;
-}
-
 Int Intern_Extern_Screen_DimendStateGet(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -2493,33 +2466,6 @@ Int Intern_Extern_Screen_DimendStateSet(Eval* eval, Int frame)
 
     Int a;
     a = Screen_DimendStateSet(a0, a1);
-
-    Return;
-}
-
-Int Intern_Extern_Screen_OrientStateGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Screen_OrientStateGet(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Screen_OrientStateSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 2;
-
-    Param(0);
-    Param(1);
-
-    Int a;
-    a = Screen_OrientStateSet(a0, a1);
 
     Return;
 }
@@ -2682,87 +2628,6 @@ Int Intern_Extern_Frame_DrawStateSet(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Frame_DualStateGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Frame_DualStateGet(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_DualStateSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 2;
-
-    Param(0);
-    Param(1);
-
-    Int a;
-    a = Frame_DualStateSet(a0, a1);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_PointStateGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Frame_PointStateGet(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_PointStateSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 2;
-
-    Param(0);
-    Param(1);
-
-    Int a;
-    a = Frame_PointStateSet(a0, a1);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_CursorGet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Frame_CursorGet(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_CursorSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 2;
-
-    Param(0);
-    Param(1);
-
-    Int a;
-    a = Frame_CursorSet(a0, a1);
-
-    Return;
-}
-
 Int Intern_Extern_Frame_TitleThisSet(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -2785,19 +2650,6 @@ Int Intern_Extern_Frame_Out(Eval* eval, Int frame)
 
     Int a;
     a = Frame_Out(a0);
-
-    Return;
-}
-
-Int Intern_Extern_Frame_CursorThisSet(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 1;
-
-    Param(0);
-
-    Int a;
-    a = Frame_CursorThisSet(a0);
 
     Return;
 }
