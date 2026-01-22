@@ -1510,7 +1510,7 @@ class Demo : Add
         var List list;
         list : new List;
         list.Init();
-        list.Add("-");
+        list.Add("EntryA");
 
         var Table environ;
         environ : new Table;
