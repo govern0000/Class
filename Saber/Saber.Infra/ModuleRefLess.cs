@@ -22,8 +22,8 @@ public class ModuleRefLess : Less
     {
         ModuleRef liteA;
         ModuleRef riteA;
-        liteA = (ModuleRef)lite;
-        riteA = (ModuleRef)rite;
+        liteA = lite as ModuleRef;
+        riteA = rite as ModuleRef;
 
         long a;
         a = this.StringLess.Execute(liteA.Name, riteA.Name);
