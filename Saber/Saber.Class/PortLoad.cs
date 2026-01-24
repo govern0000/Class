@@ -17,6 +17,7 @@ public class PortLoad : TextAdd
         this.SystemModulePre = this.AddClear().Add(this.SystemModuleSingle).Add(this.ClassInfra.TextDot).AddResult();
 
         this.SModule = this.S("Module");
+        this.SSystem = this.S("System");
         return true;
     }
 
@@ -54,6 +55,7 @@ public class PortLoad : TextAdd
     protected virtual String SystemModuleSingle { get; set; }
     protected virtual String SystemModulePre { get; set; }
     protected virtual String SModule { get; set; }
+    protected virtual String SSystem { get; set; }
 
     public virtual bool Execute()
     {
@@ -167,10 +169,11 @@ public class PortLoad : TextAdd
         ka = this.Port.Module;
 
         ModuleRef k;
-        k = this.ClassInfra.ModuleRefCreate(ka.Name, ka.Ver);
+        k = this.ClassInfra.ModuleRefCreate(ka.Account, ka.Name, ka.Ver);
 
         if (this.SystemModule)
         {
+            k.Account = this.SSystem;
             k.Ver = 0;
         }
 
@@ -202,17 +205,24 @@ public class PortLoad : TextAdd
             ModuleRef k;
             k = ka.Module;
 
+            String account;
+            account = k.Account;
             String name;
             name = k.Name;
             long ver;
             ver = k.Ver;
+
+            if (account == null)
+            {
+                account = this.SSystem;
+            }
             if (ver == -1)
             {
                 ver = 0;
             }
 
             ModuleRef a;
-            a = this.ClassInfra.ModuleRefCreate(name, ver);
+            a = this.ClassInfra.ModuleRefCreate(account, name, ver);
 
             if (table.Valid(a))
             {
@@ -233,6 +243,8 @@ public class PortLoad : TextAdd
 
     protected virtual bool ValidModuleRef(ModuleRef module)
     {
+        String account;
+        account = module.Account;
         String name;
         name = module.Name;
         long ver;
@@ -246,15 +258,21 @@ public class PortLoad : TextAdd
 
         if (!this.SystemModule)
         {
-            if (ver == -1)
+            if (account == null)
             {
                 this.Status = 2;
                 return false;
             }
 
-            if (this.BuiltModuleRef(module))
+            if (ver == -1)
             {
                 this.Status = 3;
+                return false;
+            }
+
+            if (this.BuiltModuleRef(module))
+            {
+                this.Status = 4;
                 return false;
             }
         }
