@@ -1146,7 +1146,7 @@ class Demo : Add
         combine : this.TextInfra.PathCombine;
 
         var String dataPath;
-        dataPath : "SystemDemo-96207.08.47/Data";
+        dataPath : "System-SystemDemo-96207.08.47/Data";
 
         var String pathA;
         pathA : this.AddClear().Add(dataPath).Add(combine).Add("A.txt").AddResult();
@@ -1390,7 +1390,7 @@ class Demo : Add
         mode.Read : true;
         mode.Write : true;
 
-        storage.Path : "SystemDemo-96207.08.47/Data/StorageStream.txt";
+        storage.Path : "System-SystemDemo-96207.08.47/Data/StorageStream.txt";
         storage.Mode : mode;
 
         storage.Open();
@@ -1521,7 +1521,7 @@ class Demo : Add
         combine : this.TextInfra.PathCombine;
 
         var String dataPath;
-        dataPath : "SystemDemo-96207.08.47/Data";
+        dataPath : "System-SystemDemo-96207.08.47/Data";
 
         this.ListInfra.TableAdd(environ, "INFRA_OUT_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkOut.txt").AddResult());
         this.ListInfra.TableAdd(environ, "INFRA_ERR_PATH", this.AddClear().Add(dataPath).Add(combine).Add("DemoNetworkErr.txt").AddResult());
@@ -1530,7 +1530,7 @@ class Demo : Add
         var Program program;
         program : new Program;
         program.Init();
-        program.Name : "../Library/SystemDemoNetwork-0.00.00.exe";
+        program.Name : "../Library/System-SystemDemoNetwork-0.00.00.exe";
         program.Argue : list;
         program.WorkFold : null;
         program.Environ : environ;
