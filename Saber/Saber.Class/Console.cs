@@ -722,16 +722,34 @@ public class Console : TextAdd
             return null;
         }
 
+        String account;
+        account = this.StringCreateRange(value, 0, ka);
+
+        long nameVerIndex;
+        long nameVerCount;
+        nameVerIndex = ka + 1;
+        nameVerCount = this.StringCount(value) - nameVerIndex;
+
+        String nameVerString;
+        nameVerString = this.StringCreateRange(value, nameVerIndex, nameVerCount);
+
+        ka = this.TextIndex(this.TA(nameVerString), this.TB(this.ClassInfra.TextHyphen));
+
+        if (ka == -1)
+        {
+            return null;
+        }
+
         String name;
-        name = this.StringCreateRange(value, 0, ka);
+        name = this.StringCreateRange(nameVerString, 0, ka);
 
         long verIndex;
         long verCount;
         verIndex = ka + 1;
-        verCount = this.StringCount(value) - verIndex;
+        verCount = this.StringCount(nameVerString) - verIndex;
 
         String verString;
-        verString = this.StringCreateRange(value, verIndex, verCount);
+        verString = this.StringCreateRange(nameVerString, verIndex, verCount);
 
         String verMajorString;
         String verMinorString;
@@ -823,7 +841,7 @@ public class Console : TextAdd
         moduleVer = this.ClassInfra.VerValue(ver);
 
         ModuleRef a;
-        a = this.ClassInfra.ModuleRefCreate(name, moduleVer);
+        a = this.ClassInfra.ModuleRefCreate(account, name, moduleVer);
         return a;
     }
 
