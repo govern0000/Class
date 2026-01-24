@@ -316,6 +316,7 @@ public class LibraryMake : TextAdd
 
     protected virtual bool SystemInfraModuleSet()
     {
+        this.TModuleRef.Account = this.SSystem;
         this.TModuleRef.Name = this.SSystemDotInfra;
         this.TModuleRef.Ver = 0;
 
