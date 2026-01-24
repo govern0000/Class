@@ -86,7 +86,7 @@ public class LibraryMake : TextAdd
 
     protected virtual ModuleRef CreateModuleRef()
     {
-        return this.ClassInfra.ModuleRefCreate(null, 0);
+        return this.ClassInfra.ModuleRefCreate(null, null, 0);
     }
 
     public virtual ModuleRef ModuleRef { get; set; }
