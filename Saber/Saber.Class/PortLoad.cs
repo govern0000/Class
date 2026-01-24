@@ -305,6 +305,8 @@ public class PortLoad : TextAdd
 
     protected virtual bool ValidImportModuleRefOne(ModuleRef moduleRef)
     {
+        String account;
+        account = moduleRef.Account;
         String name;
         name = moduleRef.Name;
         long ver;
@@ -319,7 +321,9 @@ public class PortLoad : TextAdd
         built = this.BuiltModuleRef(moduleRef);
 
         bool b;
-        b = (ver == -1);
+        b = (account == null);
+
+        b = b | (ver == -1);
 
         bool a;
         a = (built == b);
