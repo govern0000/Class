@@ -150,6 +150,7 @@ public class LibraryMake : TextAdd
         bool b;
         b = this.ExecuteAll();
 
+        this.TModuleRef.Account = null;
         this.TModuleRef.Name = null;
         this.SystemInfraModule = null;
         this.System = null;
