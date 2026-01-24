@@ -320,13 +320,27 @@ public class PortLoad : TextAdd
         bool built;
         built = this.BuiltModuleRef(moduleRef);
 
-        bool b;
-        b = (account == null);
+        bool ba;
+        ba = (account == null);
 
-        b = b & (ver == -1);
+        bool bb;
+        bb = (ver == -1);
+
+        bool k;
+        k = false;
+
+        if (built)
+        {
+            k = ba & bb;
+        }
+
+        if (!built)
+        {
+            k = !ba & !bb;
+        }
 
         bool a;
-        a = (built == b);
+        a = k;
         return a;
     }
 
