@@ -41,7 +41,7 @@ public class ReadStringOperate : ReadOperate
 
     protected virtual ModuleRef CreateModuleRef()
     {
-        return this.ClassInfra.ModuleRefCreate(null, 0);
+        return this.ClassInfra.ModuleRefCreate(null, null, 0);
     }
 
     protected virtual Import CreateImport()
