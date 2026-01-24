@@ -20,6 +20,7 @@ public class Create : ClassCreate
 
         this.SourceIndex = -1;
 
+        this.SSystem = this.S("System");
         this.SSystemInfra = this.S("System.Infra");
         this.SAny = this.S("Any");
         this.SBool = this.S("Bool");
@@ -111,6 +112,7 @@ public class Create : ClassCreate
     protected virtual Table RangeTable { get; set; }
     protected virtual ModuleRef ModuleRef { get; set; }
     protected virtual bool SystemInfra { get; set; }
+    protected virtual String SSystem { get; set; }
     protected virtual String SSystemInfra { get; set; }
     protected virtual String SAny { get; set; }
     protected virtual String SBool { get; set; }
@@ -181,7 +183,15 @@ public class Create : ClassCreate
 
     protected virtual bool ModuleSystemInfra()
     {
-        return this.TextSame(this.TA(this.Module.Ref.Name), this.TB(this.SSystemInfra));
+        bool ba;
+        ba = this.TextSame(this.TA(this.Module.Ref.Account), this.TB(this.SSystem));
+
+        bool bb;
+        bb = this.TextSame(this.TA(this.Module.Ref.Name), this.TB(this.SSystemInfra));
+
+        bool b;
+        b = ba & bb;
+        return b;
     }
 
     protected virtual bool ExecuteInit()
