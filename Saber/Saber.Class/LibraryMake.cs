@@ -19,6 +19,7 @@ public class LibraryMake : TextAdd
         this.ModuleRefGen = this.CreateModuleRefGen();
         this.TModuleRef = this.CreateModuleRef();
 
+        this.SSystem = this.S("System");
         this.SSystemDotInfra = this.S("System.Infra");
         this.SLibrary = this.S("Library");
         this.SC = this.S("c");
@@ -124,6 +125,7 @@ public class LibraryMake : TextAdd
     protected virtual ModuleRef TModuleRef { get; set; }
     protected virtual String ModuleExeString { get; set; }
     protected virtual long Stage { get; set; }
+    protected virtual String SSystem { get; set; }
     protected virtual String SSystemDotInfra { get; set; }
     protected virtual String SLibrary { get; set; }
     protected virtual String SC { get; set; }
