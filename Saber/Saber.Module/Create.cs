@@ -157,7 +157,7 @@ public class Create : ClassCreate
         }
         if (!this.SystemInfra)
         {
-            k = this.ModuleGet(this.SSystemInfra);
+            k = this.ModuleGet(this.SSystem, this.SSystemInfra);
         }
 
         this.System.Any = this.ModuleClassGet(k, this.SAny);
@@ -167,9 +167,10 @@ public class Create : ClassCreate
         return true;
     }
 
-    protected virtual ClassModule ModuleGet(String moduleName)
+    protected virtual ClassModule ModuleGet(String account, String name)
     {
-        this.ModuleRef.Name = moduleName;
+        this.ModuleRef.Account = account;
+        this.ModuleRef.Name = name;
 
         ClassModule a;
         a = this.ModuleTable.Get(this.ModuleRef) as ClassModule;
@@ -772,7 +773,7 @@ public class Create : ClassCreate
 
         if (!b)
         {
-            ka = this.ModuleGet(this.SSystemEntry);
+            ka = this.ModuleGet(this.SSystem, this.SSystemEntry);
 
             if (ka == null)
             {
