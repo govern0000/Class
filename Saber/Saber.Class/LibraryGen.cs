@@ -4645,6 +4645,10 @@ public partial class LibraryGen : TextAdd
 
         this.Text(this.NameCombine);
 
+        this.NameSymbolString(moduleRef.Account);
+
+        this.Text(this.NameCombine);
+
         this.NameSymbolString(moduleRef.Name);
 
         this.Text(this.NameCombine);
