@@ -323,7 +323,7 @@ public class PortLoad : TextAdd
         bool b;
         b = (account == null);
 
-        b = b | (ver == -1);
+        b = b & (ver == -1);
 
         bool a;
         a = (built == b);
