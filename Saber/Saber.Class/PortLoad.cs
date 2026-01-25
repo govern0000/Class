@@ -318,6 +318,11 @@ public class PortLoad : TextAdd
         long ver;
         ver = moduleRef.Ver;
 
+        if (!this.NameValid.ModuleAccount(this.TA(account)))
+        {
+            return false;
+        }
+
         if (!this.NameValid.ModuleName(this.TA(name)))
         {
             return false;
