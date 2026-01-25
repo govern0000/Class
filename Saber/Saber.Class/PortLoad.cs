@@ -250,9 +250,15 @@ public class PortLoad : TextAdd
         long ver;
         ver = module.Ver;
 
-        if (!this.NameValid.ModuleName(this.TA(name)))
+        if (!this.NameValid.ModuleAccount(this.TA(account)))
         {
             this.Status = 1;
+            return false;
+        }
+
+        if (!this.NameValid.ModuleName(this.TA(name)))
+        {
+            this.Status = 2;
             return false;
         }
 
@@ -260,19 +266,19 @@ public class PortLoad : TextAdd
         {
             if (account == null)
             {
-                this.Status = 2;
+                this.Status = 3;
                 return false;
             }
 
             if (ver == -1)
             {
-                this.Status = 3;
+                this.Status = 4;
                 return false;
             }
 
             if (this.BuiltModuleRef(module))
             {
-                this.Status = 4;
+                this.Status = 5;
                 return false;
             }
         }
