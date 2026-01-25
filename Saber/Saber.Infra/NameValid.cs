@@ -91,11 +91,13 @@ public class NameValid : TextAdd
         return a;
     }
 
+    public virtual bool ModuleAccount(Text text)
+    {
+        return this.NamePart(text);
+    }
+
     public virtual bool ModuleName(Text text)
     {
-        TextInfra textInfra;
-        textInfra = this.TextInfra;
-
         Less less;
         less = this.TLess;
 
@@ -116,7 +118,7 @@ public class NameValid : TextAdd
         b = false;
 
         long kk;
-        kk = textInfra.Index(text, dot, less);
+        kk = this.TextInfra.Index(text, dot, less);
 
         long index;
         long count;
@@ -140,7 +142,7 @@ public class NameValid : TextAdd
                 range.Index = index;
                 range.Count = count;
 
-                kk = textInfra.Index(text, dot, less);
+                kk = this.TextInfra.Index(text, dot, less);
             }
         }
 
