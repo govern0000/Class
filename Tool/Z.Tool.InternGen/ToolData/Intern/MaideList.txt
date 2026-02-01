@@ -27,4 +27,7 @@ Int StateNetworkHostNewPeer|
 Int StateScreenDimendEvent|
 Int StateFrameTypeEvent|
 Int StateFrameDrawEvent|
+Int StatePlayStatusEvent|
+Int StatePlayCaseEvent|
+Int StatePlayPosEvent|
 Int StateVideoOutFrameEvent|
