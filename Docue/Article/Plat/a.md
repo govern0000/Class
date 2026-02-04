@@ -17,6 +17,10 @@ Infra Plat layer on top of System Plat.
 
 Class Plat layer on top of Infra Plat.
 
+Version Plat layer on top of Infra Plat.
+
+View Plat layer on top of Infra Plat.
+
 Business Gene Plat including Secure module list and Info module list and
 Test module list and Log module list and Shell module list layer on top of Infra Plat.
 
