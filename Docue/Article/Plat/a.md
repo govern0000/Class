@@ -17,8 +17,8 @@ Infra Plat layer on top of System Plat.
 
 Class Plat layer on top of Infra Plat.
 
-Business Gene Plat including Secure module list and
-Info module list and Test module list and Shell module list layer on top of Infra Plat.
+Business Gene Plat including Secure module list and Info module list and
+Test module list and Log module list and Shell module list layer on top of Infra Plat.
 
 In MARK, All Plat is Endgame Gene Plat except
 Business Gene Plat is Effecon Gene Plat.
