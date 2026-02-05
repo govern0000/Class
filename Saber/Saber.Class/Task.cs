@@ -8,6 +8,7 @@ public class Task : Any
     public virtual String Source { get; set; }
     public virtual String Dest { get; set; }
     public virtual bool ArgBool { get; set; }
+    public virtual String ArgString { get; set; }
     public virtual bool Print { get; set; }
     public virtual Out Out { get; set; }
     public virtual Out Err { get; set; }
