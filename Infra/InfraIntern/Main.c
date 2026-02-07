@@ -178,12 +178,12 @@ Bool Intern_ArgInit()
     Int count;
     count = Array_CountGet(array);
 
-    if (count < 1)
+    if (count < 2)
     {
         return false;
     }
 
-    count = count - 1;
+    count = count - 2;
 
     Int intCount;
     intCount = count * 2;
@@ -202,7 +202,7 @@ Bool Intern_ArgInit()
     while (i < count)
     {
         Int index;
-        index = i + 1;
+        index = i + 2;
 
         Int a;
         a = Array_ItemGet(array, index);
