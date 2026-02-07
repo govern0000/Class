@@ -1312,28 +1312,36 @@ class Demo : Add
         var String pathFA;
         pathFA : this.AddClear().Add(foldPath).Add(combine).Add("FoldRename").AddResult();
 
+        var String pathFAA;
+        pathFAA : this.AddClear().Add(pathFA).Add(combine).Add("K").AddResult();
+
+        var String pathFAAA;
+        pathFAAA : this.AddClear().Add(pathFAA).Add(combine).Add("H").AddResult();
+
         var String pathFB;
         pathFB : this.AddClear().Add(foldPath).Add(combine).Add("FoldRename1").AddResult();
 
-        var String pathFC;
-        pathFC : this.AddClear().Add(pathFB).Add(combine).Add("K").AddResult();
+        var String pathFBA;
+        pathFBA : this.AddClear().Add(pathFB).Add(combine).Add("K").AddResult();
 
-        var String pathFD;
-        pathFD : this.AddClear().Add(pathFC).Add(combine).Add("H").AddResult();
+        var String pathFBAA;
+        pathFBAA : this.AddClear().Add(pathFBA).Add(combine).Add("H").AddResult();
 
+        this.StorageComp.FoldDelete(pathFA);
         this.StorageComp.FoldDelete(pathFB);
+
+        this.StorageComp.FoldCreate(pathFAA);
+        this.StorageInfra.TextWrite(pathFAAA, "");
 
         b : true;
         b : b & this.StorageComp.Rename(pathFA, pathFB);
         b : b & ~this.StorageComp.Exist(pathFA);
         b : b & this.StorageComp.Exist(pathFB);
         b : b & this.StorageComp.Fold(pathFB);
-        b : b & this.StorageComp.Exist(pathFC);
-        b : b & this.StorageComp.Fold(pathFC);
-        b : b & this.StorageComp.Exist(pathFD);
-        b : b & ~this.StorageComp.Fold(pathFD);
-
-        this.StorageComp.Rename(pathFB, pathFA);
+        b : b & this.StorageComp.Exist(pathFBA);
+        b : b & this.StorageComp.Fold(pathFBA);
+        b : b & this.StorageComp.Exist(pathFBAA);
+        b : b & ~this.StorageComp.Fold(pathFBAA);
 
         this.Console.Out.Write(this.AddClear().Add("Storage Fold Rename ").Add(this.StatusString(b)).AddLine().AddResult());
 
