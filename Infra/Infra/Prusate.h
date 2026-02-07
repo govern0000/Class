@@ -239,7 +239,7 @@ Infra_Api Int State_MaideSet(Int o, Int value);
 Infra_Api Int State_ArgGet(Int o);
 Infra_Api Int State_ArgSet(Int o, Int value);
 
-Infra_Api Int Main_Init(Int argc, Int argv);
+Infra_Api Int Main_Init(Int path, Int argc, Int argv);
 Infra_Api Int Main_Final();
 Infra_Api Int Main_Arg();
 Infra_Api Int Main_Screen();
