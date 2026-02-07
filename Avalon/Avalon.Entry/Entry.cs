@@ -55,7 +55,7 @@ public class Entry : Any
 
     protected virtual bool MainBefore()
     {
-        Extern.Main_Init(1, 0);
+        Extern.Main_Init(0, 1, 0);
 
         ThreadThread o;
         o = new ThreadThread();
