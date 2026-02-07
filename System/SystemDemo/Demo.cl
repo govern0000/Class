@@ -1272,6 +1272,8 @@ class Demo : Add
         b : b & this.StorageComp.Exist(pathDF);
         b : b & ~this.StorageComp.Fold(pathDF);
 
+        this.StorageComp.FoldDelete(pathDB);
+
         this.Console.Out.Write(this.AddClear().Add("Storage Fold Copy ").Add(this.StatusString(b)).AddLine().AddResult());
 
         var String pathE;
