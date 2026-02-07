@@ -177,22 +177,22 @@ public class Console : TextAdd
     public virtual PortPort Port { get; set; }
     public virtual Array PortError { get; set; }
     public virtual bool ErrorWrite { get; set; }
+    public virtual BinaryRead BinaryRead { get; set; }
+    public virtual BinaryWrite BinaryWrite { get; set; }
+    public virtual ModulePort ModulePort { get; set; }
+    public virtual PortRead PortRead { get; set; }
+    public virtual PortLoad PortLoad { get; set; }
+    public virtual BinaryGen BinaryGen { get; set; }
+    public virtual StorageGen StorageGen { get; set; }
+    public virtual ErrorString ErrorString { get; set; }
+    public virtual NameValid NameValid { get; set; }
+    public virtual InfoToken InfoToken { get; set; }
+    public virtual InfoTravel InfoTravel { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual StorageInfra StorageInfra { get; set; }
     protected virtual ClassInfra ClassInfra { get; set; }
     protected virtual StorageComp StorageComp { get; set; }
-    protected virtual BinaryRead BinaryRead { get; set; }
-    protected virtual BinaryWrite BinaryWrite { get; set; }
-    protected virtual ModulePort ModulePort { get; set; }
-    protected virtual PortRead PortRead { get; set; }
-    protected virtual PortLoad PortLoad { get; set; }
-    protected virtual BinaryGen BinaryGen { get; set; }
     protected virtual LibraryMake LibraryMake { get; set; }
-    protected virtual StorageGen StorageGen { get; set; }
-    protected virtual ErrorString ErrorString { get; set; }
-    protected virtual NameValid NameValid { get; set; }
-    protected virtual InfoToken InfoToken { get; set; }
-    protected virtual InfoTravel InfoTravel { get; set; }
     protected virtual Out Out { get; set; }
     protected virtual Out Err { get; set; }
     protected virtual String ClassPath { get; set; }
