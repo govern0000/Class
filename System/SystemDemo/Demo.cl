@@ -1257,6 +1257,8 @@ class Demo : Add
         var String pathDF;
         pathDF : this.AddClear().Add(pathDB).Add(combine).Add("FileA").AddResult();
 
+        this.StorageComp.FoldDelete(pathD);
+
         this.StorageComp.FoldCreate(pathDC);
 
         this.StorageInfra.TextWrite(pathDD, "");
