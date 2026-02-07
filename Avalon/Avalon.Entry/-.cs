@@ -14,3 +14,4 @@ global using StorageInfra = Avalon.Storage.Infra;
 global using ConsoleConsole = Avalon.Console.Console;
 global using StringOut = Avalon.Console.StringOut;
 global using StringInn = Avalon.Console.StringInn;
+global using Marshal = System.Runtime.InteropServices.Marshal;

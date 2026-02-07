@@ -55,7 +55,21 @@ public class Entry : Any
 
     protected virtual bool MainBefore()
     {
-        Extern.Main_Init(0, 1, 0);
+        string libraryPath;
+        libraryPath = "./Infra";
+
+        nint libraryPathPtr;
+        libraryPathPtr = Marshal.StringToCoTaskMemUTF8(libraryPath);
+
+        nuint kaa;
+        kaa = (nuint)libraryPathPtr;
+
+        ulong kad;
+        kad = (ulong)kaa;
+
+        Extern.Main_Init(kad, 1, 0);
+
+        Marshal.FreeCoTaskMem(libraryPathPtr);
 
         ThreadThread o;
         o = new ThreadThread();
