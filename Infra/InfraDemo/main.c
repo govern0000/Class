@@ -377,10 +377,12 @@ int main(int argc, char* argv[])
 {
     Int kaaa;
     Int kaab;
-    kaaa = argc;
-    kaab = CastInt(argv);
+    Int kaac;
+    kaaa = CastInt("./Out/InfraDeploy");
+    kaab = argc;
+    kaac = CastInt(argv);
 
-    Main_Init(kaaa, kaab);
+    Main_Init(kaaa, kaab, kaac);
 
     Console = Console_New();
 
