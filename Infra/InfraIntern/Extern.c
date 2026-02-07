@@ -2295,13 +2295,14 @@ Int Intern_Extern_State_ArgSet(Eval* eval, Int frame)
 Int Intern_Extern_Main_Init(Eval* eval, Int frame)
 {
     Int paramCount;
-    paramCount = 2;
+    paramCount = 3;
 
     Param(0);
     Param(1);
+    Param(2);
 
     Int a;
-    a = Main_Init(a0, a1);
+    a = Main_Init(a0, a1, a2);
 
     Return;
 }
