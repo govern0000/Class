@@ -23,6 +23,3 @@ This is enough element to do any process module making.
 Class compiler has task kind to generate machine code library module
 for module binary.
 Module binary is executed by execute the library module on operating system.
-
-Class compiler has compile arg for account of the compiled module.
-The imported module list account list are set in Class.Port .
