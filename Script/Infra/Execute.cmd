@@ -5,6 +5,6 @@ set InfraDeployFold=.\Out\InfraDeploy
 set WorkFold=%cd%
 
 setlocal
-set "QT_PLUGIN_PATH=%WorkFold%\%InfraDeployFold%" && set "PATH=%WorkFold%\%InfraDeployFold%;%PATH%" && %InfraDemoOutFold%\release\InfraDemo
+set "PATH=%WorkFold%\%InfraDeployFold%;%PATH%" && %InfraDemoOutFold%\release\InfraDemo
 echo Status: %errorlevel%
 endlocal
