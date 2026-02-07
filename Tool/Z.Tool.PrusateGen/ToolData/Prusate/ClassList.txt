@@ -87,9 +87,8 @@ State
     Arg
 
 Main -
-    Init(argc, argv) -
+    Init(path, argc, argv) -
     Final() -
-    Path(value) -
     Arg() -
     Screen() -
 
