@@ -2,7 +2,7 @@
 
 Main D_Var;
 
-Int Main_Init(Int argc, Int argv)
+Int Main_Init(Int path, Int argc, Int argv)
 {
     Main* m;
     m = &D_Var;
@@ -16,7 +16,18 @@ Int Main_Init(Int argc, Int argv)
 
     m->Argv[0] = (char*)"Application";
 
-    QCoreApplication::addLibraryPath(".");
+    const char* kd;
+    kd = ".";
+
+    if (!(path == null))
+    {
+        kd = (const char*)path;
+    }
+
+    QString libraryPath;
+    libraryPath = QString(kd);
+
+    QCoreApplication::addLibraryPath(libraryPath);
 
     m->Intern = new QApplication(m->Argc, m->Argv);
 
