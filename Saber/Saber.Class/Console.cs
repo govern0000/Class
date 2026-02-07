@@ -188,11 +188,11 @@ public class Console : TextAdd
     public virtual NameValid NameValid { get; set; }
     public virtual InfoToken InfoToken { get; set; }
     public virtual InfoTravel InfoTravel { get; set; }
+    public virtual LibraryMake LibraryMake { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual StorageInfra StorageInfra { get; set; }
     protected virtual ClassInfra ClassInfra { get; set; }
     protected virtual StorageComp StorageComp { get; set; }
-    protected virtual LibraryMake LibraryMake { get; set; }
     protected virtual Out Out { get; set; }
     protected virtual Out Err { get; set; }
     protected virtual String ClassPath { get; set; }
