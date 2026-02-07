@@ -174,6 +174,8 @@ public class Console : TextAdd
     public virtual TaskKindList TaskKind { get; set; }
     public virtual Table ModuleTable { get; set; }
     public virtual Table ImportClass { get; set; }
+    public virtual PortPort Port { get; set; }
+    public virtual Array PortError { get; set; }
     public virtual bool ErrorWrite { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual StorageInfra StorageInfra { get; set; }
@@ -194,8 +196,6 @@ public class Console : TextAdd
     protected virtual Out Out { get; set; }
     protected virtual Out Err { get; set; }
     protected virtual String ClassPath { get; set; }
-    protected virtual PortPort Port { get; set; }
-    protected virtual Array PortError { get; set; }
     protected virtual bool MakeSystem { get; set; }
     protected virtual ModuleRefLess ModuleRefLess { get; set; }
     protected virtual TextLess StorageNameLess { get; set; }
