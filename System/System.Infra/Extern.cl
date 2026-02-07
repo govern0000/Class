@@ -192,7 +192,7 @@ class Extern : Any
     maide prusate Int State_ArgGet(var Int o) { }
     maide prusate Int State_ArgSet(var Int o, var Int value) { }
 
-    maide prusate Int Main_Init(var Int argc, var Int argv) { }
+    maide prusate Int Main_Init(var Int path, var Int argc, var Int argv) { }
     maide prusate Int Main_Final() { }
     maide prusate Int Main_Arg() { }
     maide prusate Int Main_Screen() { }
