@@ -1351,15 +1351,16 @@ class Demo : Add
         var String pathFF;
         pathFF : this.AddClear().Add(foldPath).Add(combine).Add("FileRename1").AddResult();
 
+        this.StorageComp.FileDelete(pathFE);
         this.StorageComp.FileDelete(pathFF);
+
+        this.StorageInfra.TextWrite(pathFE, "");
 
         b : true;
         b : b & this.StorageComp.Rename(pathFE, pathFF);
         b : b & ~this.StorageComp.Exist(pathFE);
         b : b & this.StorageComp.Exist(pathFF);
         b : b & ~this.StorageComp.Fold(pathFF);
-
-        this.StorageComp.Rename(pathFF, pathFE);
 
         this.Console.Out.Write(this.AddClear().Add("Storage File Rename ").Add(this.StatusString(b)).AddLine().AddResult());
 
