@@ -240,7 +240,7 @@ Int Intern_EntryInit(Int entryModule, Int entry)
     argArray = Main_Arg();
 
     Int arg;
-    arg = Array_ItemGet(argArray, 0);
+    arg = Array_ItemGet(argArray, 1);
 
     Int valueK;
     valueK = String_ValueGet(arg);
