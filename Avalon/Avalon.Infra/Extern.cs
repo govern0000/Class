@@ -196,7 +196,7 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong State_ArgGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong State_ArgSet(ulong o, ulong value);
 
-    [DllImport(InfraLib)] public extern static ulong Main_Init(ulong argc, ulong argv);
+    [DllImport(InfraLib)] public extern static ulong Main_Init(ulong path, ulong argc, ulong argv);
     [DllImport(InfraLib)] public extern static ulong Main_Final();
     [DllImport(InfraLib)] public extern static ulong Main_Arg();
     [DllImport(InfraLib)] public extern static ulong Main_Screen();
