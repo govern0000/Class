@@ -256,23 +256,32 @@ public class PortLoad : TextAdd
             return false;
         }
 
-        if (!this.SystemModule)
+        if (!(account == null))
         {
-            if (account == null)
+            if (!this.NameValid.ModuleAccount(this.TA(account)))
             {
                 this.Status = 2;
                 return false;
             }
+        }
 
-            if (ver == -1)
+        if (!this.SystemModule)
+        {
+            if (account == null)
             {
                 this.Status = 3;
                 return false;
             }
 
-            if (this.BuiltModuleRef(module))
+            if (ver == -1)
             {
                 this.Status = 4;
+                return false;
+            }
+
+            if (this.BuiltModuleRef(module))
+            {
+                this.Status = 5;
                 return false;
             }
         }
