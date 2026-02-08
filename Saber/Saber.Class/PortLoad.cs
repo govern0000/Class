@@ -326,6 +326,14 @@ public class PortLoad : TextAdd
             return false;
         }
 
+        if (!(account == null))
+        {
+            if (!this.NameValid.ModuleAccount(this.TA(account)))
+            {
+                return false;
+            }
+        }
+
         bool built;
         built = this.BuiltModuleRef(moduleRef);
 
