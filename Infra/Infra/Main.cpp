@@ -31,8 +31,6 @@ Int Main_Init(Int path, Int argc, Int argv)
 
     m->Intern = new QApplication(m->Argc, m->Argv);
 
-    m->Intern->setQuitOnLastWindowClosed(false);
-
     m->Share = Share_New();
     Share_Init(m->Share);
 
