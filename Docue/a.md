@@ -45,6 +45,8 @@ Class modules can abstract any effect. It is best to abstract any effect.
 
 Class is a tool to humans.
 
+Class is feature complete.
+
 Class is tool class.
 
 Class is Tier 3 Class.
