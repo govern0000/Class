@@ -45,6 +45,10 @@ Class modules can abstract any effect. It is best to abstract any effect.
 
 Class is a tool to humans.
 
+Class is not form specific.
+
+Class is not domain specific.
+
 Class is feature complete.
 
 Class is tool class.
