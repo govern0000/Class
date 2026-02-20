@@ -5531,6 +5531,33 @@ Int Intern_Extern_Play_CaseSet(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Play_RateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_RateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_RateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_RateSet(a0, a1);
+
+    Return;
+}
+
 Int Intern_Extern_Play_SeekGet(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -5662,6 +5689,33 @@ Int Intern_Extern_Play_CaseEventStateSet(Eval* eval, Int frame)
 
     Int a;
     a = Play_CaseEventStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_RateEventStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_RateEventStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_RateEventStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_RateEventStateSet(a0, a1);
 
     Return;
 }
