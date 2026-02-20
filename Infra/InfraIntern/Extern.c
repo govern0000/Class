@@ -5477,6 +5477,87 @@ Int Intern_Extern_Play_AudioOutSet(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Play_StatusGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_StatusGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_StatusSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_StatusSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_CaseGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_CaseGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_CaseSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_CaseSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_SeekGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_SeekGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_SeekSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_SeekSet(a0, a1);
+
+    Return;
+}
+
 Int Intern_Extern_Play_TimeGet(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -5527,6 +5608,87 @@ Int Intern_Extern_Play_PosSet(Eval* eval, Int frame)
 
     Int a;
     a = Play_PosSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_StatusEventStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_StatusEventStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_StatusEventStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_StatusEventStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_CaseEventStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_CaseEventStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_CaseEventStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_CaseEventStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Play_PosEventStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Play_PosEventStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Play_PosEventStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Play_PosEventStateSet(a0, a1);
 
     Return;
 }
