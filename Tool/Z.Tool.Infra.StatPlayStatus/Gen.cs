@@ -1,4 +1,4 @@
-namespace Z.Tool.Infra.StatNetworkStatus;
+namespace Z.Tool.Infra.StatPlayStatus;
 
 class Gen : StatGen
 {
@@ -20,7 +20,7 @@ class Gen : StatGen
             ka = this.S("Int Stat_Var_NetworkStatus#ItemName# = QAbstractSocket::UnknownSocketError + 1;\n");
 
             String itemName;
-            itemName = (String)iter.Index;
+            itemName = iter.Index as String;
 
             Text k;
             k = this.TextCreate(ka);
