@@ -246,6 +246,12 @@ Play
     Execute()
     Pause()
     Stop()
+    StatusEventState
+    CaseEventState
+    PosEventState
+    StatusEvent(play, arg) --
+    CaseEvent(play, arg) --
+    PosEvent(play, arg) --
 
 Stream
     Kind
