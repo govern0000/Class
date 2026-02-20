@@ -32,6 +32,7 @@ HEADERS += \
     NetworkPort.hpp \
     Phore.hpp \
     Play.hpp \
+    PlayIntern.hpp \
     PointData.hpp \
     Polate.hpp \
     PolateLinear.hpp \
@@ -96,6 +97,7 @@ SOURCES += \
     NetworkPort.cpp \
     Phore.cpp \
     Play.cpp \
+    PlayIntern.cpp \
     PointData.cpp \
     Polate.cpp \
     PolateLinear.cpp \
