@@ -130,6 +130,7 @@ SOURCES += \
     Stat_Comp.cpp \
     Stat_ImageFormat.cpp \
     Stat_PlayCase.cpp \
+    Stat_PlayStatus.cpp \
     State.c \
     Storage.cpp \
     StorageComp.cpp \
