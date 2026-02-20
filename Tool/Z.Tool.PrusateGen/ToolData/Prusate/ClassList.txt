@@ -241,6 +241,9 @@ Play
     HasAudio()
     VideoOut
     AudioOut
+    Status
+    Case
+    Seek
     Time
     Pos
     Execute()
