@@ -103,6 +103,8 @@ Frame
     TitleThisSet()
     Shown
     Out()
+    Cursor
+    CursorThisSet()
     TypeState
     PointerState
     DrawState
