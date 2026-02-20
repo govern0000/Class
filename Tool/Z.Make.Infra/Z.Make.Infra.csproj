@@ -22,6 +22,8 @@
         <ProjectReference Include="../Z.Tool.Infra.StatPolateKind/Z.Tool.Infra.StatPolateKind.csproj" />
         <ProjectReference Include="../Z.Tool.Infra.StatPolateSpread/Z.Tool.Infra.StatPolateSpread.csproj" />
         <ProjectReference Include="../Z.Tool.Infra.StatImageFormat/Z.Tool.Infra.StatImageFormat.csproj" />
+        <ProjectReference Include="../Z.Tool.Infra.StatPlayCase/Z.Tool.Infra.StatPlayCase.csproj" />
+        <ProjectReference Include="../Z.Tool.Infra.StatPlayStatus/Z.Tool.Infra.StatPlayStatus.csproj" />
     </ItemGroup>
 
 </Project>
