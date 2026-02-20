@@ -104,10 +104,12 @@ Frame
     Shown
     Out()
     TypeState
+    PointerState
     DrawState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
+    Pointer(frame, arg, index, value) --
     Draw(frame, arg) --
 
 Draw
