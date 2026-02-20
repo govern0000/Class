@@ -129,6 +129,7 @@ SOURCES += \
     Stat_PolateSpread.cpp \
     Stat_Comp.cpp \
     Stat_ImageFormat.cpp \
+    Stat_PlayCase.cpp \
     State.c \
     Storage.cpp \
     StorageComp.cpp \
