@@ -1,7 +1,3 @@
-Unconnected
-HostLookup
-Connecting
-Connected
-Bound
-Listening
-Closing
+Stopped
+Playing
+Paused
