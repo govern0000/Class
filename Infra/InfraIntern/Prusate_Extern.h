@@ -465,6 +465,8 @@ Intern_Api Int Intern_Extern_Play_StatusGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_StatusSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_CaseGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_CaseSet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Play_RateGet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Play_RateSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_SeekGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_SeekSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_TimeGet(Eval* e, Int f);
@@ -475,6 +477,8 @@ Intern_Api Int Intern_Extern_Play_StatusEventStateGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_StatusEventStateSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_CaseEventStateGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_CaseEventStateSet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Play_RateEventStateGet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Play_RateEventStateSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_PosEventStateGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Play_PosEventStateSet(Eval* e, Int f);
 
