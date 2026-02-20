@@ -4,33 +4,11 @@ class Gen : StatGen
 {
     public override long Execute()
     {
-        this.ClassName = this.S("NetworkStatus");
-        this.ScopeName = this.S("QAbstractSocket");
+        this.ClassName = this.S("PlayStatus");
+        this.ScopeName = this.S("QMediaPlayer");
         this.ValueOffset = this.S(" + 1");
-        this.ItemListFileName = this.S("ToolData/Infra/ItemListNetworkStatus.txt");
+        this.ItemListFileName = this.S("ToolData/Infra/ItemListPlayStatus.txt");
 
         return base.Execute();
-    }
-
-    protected override String GetItemShareVar(String shareVar, Iter iter, long index)
-    {
-        if (index == 0)
-        {
-            String ka;
-            ka = this.S("Int Stat_Var_PlayStatus#ItemName# = QAbstractSocket::UnknownSocketError + 1;\n");
-
-            String itemName;
-            itemName = iter.Index as String;
-
-            Text k;
-            k = this.TextCreate(ka);
-            k = this.Place(k, "#ItemName#", itemName);
-
-            String a;
-            a = this.StringCreate(k);
-            return a;
-        }
-
-        return base.GetItemShareVar(shareVar, iter, index);
     }
 }
