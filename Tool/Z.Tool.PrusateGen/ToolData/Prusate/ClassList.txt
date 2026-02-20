@@ -243,6 +243,7 @@ Play
     AudioOut
     Status
     Case
+    Rate
     Seek
     Time
     Pos
@@ -251,9 +252,11 @@ Play
     Stop()
     StatusEventState
     CaseEventState
+    RateEventState
     PosEventState
     StatusEvent(play, arg) --
     CaseEvent(play, arg) --
+    RateEvent(play, arg) --
     PosEvent(play, arg) --
 
 Stream
