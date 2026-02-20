@@ -463,6 +463,8 @@ class Extern : Any
     maide prusate Int Play_StatusSet(var Int o, var Int value) { }
     maide prusate Int Play_CaseGet(var Int o) { }
     maide prusate Int Play_CaseSet(var Int o, var Int value) { }
+    maide prusate Int Play_RateGet(var Int o) { }
+    maide prusate Int Play_RateSet(var Int o, var Int value) { }
     maide prusate Int Play_SeekGet(var Int o) { }
     maide prusate Int Play_SeekSet(var Int o, var Int value) { }
     maide prusate Int Play_TimeGet(var Int o) { }
@@ -473,6 +475,8 @@ class Extern : Any
     maide prusate Int Play_StatusEventStateSet(var Int o, var Int value) { }
     maide prusate Int Play_CaseEventStateGet(var Int o) { }
     maide prusate Int Play_CaseEventStateSet(var Int o, var Int value) { }
+    maide prusate Int Play_RateEventStateGet(var Int o) { }
+    maide prusate Int Play_RateEventStateSet(var Int o, var Int value) { }
     maide prusate Int Play_PosEventStateGet(var Int o) { }
     maide prusate Int Play_PosEventStateSet(var Int o, var Int value) { }
 
