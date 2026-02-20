@@ -457,10 +457,22 @@ Infra_Api Int Play_VideoOutGet(Int o);
 Infra_Api Int Play_VideoOutSet(Int o, Int value);
 Infra_Api Int Play_AudioOutGet(Int o);
 Infra_Api Int Play_AudioOutSet(Int o, Int value);
+Infra_Api Int Play_StatusGet(Int o);
+Infra_Api Int Play_StatusSet(Int o, Int value);
+Infra_Api Int Play_CaseGet(Int o);
+Infra_Api Int Play_CaseSet(Int o, Int value);
+Infra_Api Int Play_SeekGet(Int o);
+Infra_Api Int Play_SeekSet(Int o, Int value);
 Infra_Api Int Play_TimeGet(Int o);
 Infra_Api Int Play_TimeSet(Int o, Int value);
 Infra_Api Int Play_PosGet(Int o);
 Infra_Api Int Play_PosSet(Int o, Int value);
+Infra_Api Int Play_StatusEventStateGet(Int o);
+Infra_Api Int Play_StatusEventStateSet(Int o, Int value);
+Infra_Api Int Play_CaseEventStateGet(Int o);
+Infra_Api Int Play_CaseEventStateSet(Int o, Int value);
+Infra_Api Int Play_PosEventStateGet(Int o);
+Infra_Api Int Play_PosEventStateSet(Int o, Int value);
 
 Infra_Api Int Play_SourceThisSet(Int o);
 Infra_Api Int Play_HasVideo(Int o);
@@ -468,6 +480,10 @@ Infra_Api Int Play_HasAudio(Int o);
 Infra_Api Int Play_Execute(Int o);
 Infra_Api Int Play_Pause(Int o);
 Infra_Api Int Play_Stop(Int o);
+
+typedef Int (*Play_StatusEvent_Maide)(Int play, Int arg);
+typedef Int (*Play_CaseEvent_Maide)(Int play, Int arg);
+typedef Int (*Play_PosEvent_Maide)(Int play, Int arg);
 
 InfraApiNew(Stream)
 Infra_Api Int Stream_KindGet(Int o);
