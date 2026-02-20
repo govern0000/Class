@@ -1,20 +1,20 @@
 #pragma once
 
-#include <QVideoSink>
-#include <QVideoFrame>
+#include <QMediaPlayer>
 
 #include "Pronate.hpp"
 
-class VideoOutIntern : public QVideoSink
+class PlayIntern : public QMediaPlayer
 {
     Q_OBJECT
 
 public:
     Bool Init();
 
-    Int VideoOut;
+    Int Play;
 
 private slots:
 
-    void FrameEventHandle(const QVideoFrame &frame);
+    void StatusEventHandle();
+    void CaseEventHandle(QMediaPlayer::PlaybackState newState);
 };
