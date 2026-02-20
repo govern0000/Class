@@ -461,6 +461,8 @@ Infra_Api Int Play_StatusGet(Int o);
 Infra_Api Int Play_StatusSet(Int o, Int value);
 Infra_Api Int Play_CaseGet(Int o);
 Infra_Api Int Play_CaseSet(Int o, Int value);
+Infra_Api Int Play_RateGet(Int o);
+Infra_Api Int Play_RateSet(Int o, Int value);
 Infra_Api Int Play_SeekGet(Int o);
 Infra_Api Int Play_SeekSet(Int o, Int value);
 Infra_Api Int Play_TimeGet(Int o);
@@ -471,6 +473,8 @@ Infra_Api Int Play_StatusEventStateGet(Int o);
 Infra_Api Int Play_StatusEventStateSet(Int o, Int value);
 Infra_Api Int Play_CaseEventStateGet(Int o);
 Infra_Api Int Play_CaseEventStateSet(Int o, Int value);
+Infra_Api Int Play_RateEventStateGet(Int o);
+Infra_Api Int Play_RateEventStateSet(Int o, Int value);
 Infra_Api Int Play_PosEventStateGet(Int o);
 Infra_Api Int Play_PosEventStateSet(Int o, Int value);
 
@@ -483,6 +487,7 @@ Infra_Api Int Play_Stop(Int o);
 
 typedef Int (*Play_StatusEvent_Maide)(Int play, Int arg);
 typedef Int (*Play_CaseEvent_Maide)(Int play, Int arg);
+typedef Int (*Play_RateEvent_Maide)(Int play, Int arg);
 typedef Int (*Play_PosEvent_Maide)(Int play, Int arg);
 
 InfraApiNew(Stream)
