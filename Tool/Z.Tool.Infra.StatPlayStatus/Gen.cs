@@ -17,7 +17,7 @@ class Gen : StatGen
         if (index == 0)
         {
             String ka;
-            ka = this.S("Int Stat_Var_NetworkStatus#ItemName# = QAbstractSocket::UnknownSocketError + 1;\n");
+            ka = this.S("Int Stat_Var_PlayStatus#ItemName# = QAbstractSocket::UnknownSocketError + 1;\n");
 
             String itemName;
             itemName = iter.Index as String;
