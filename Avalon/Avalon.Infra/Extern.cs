@@ -475,6 +475,8 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Play_StatusSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_CaseGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_CaseSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_RateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_RateSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_SeekGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_SeekSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_TimeGet(ulong o);
@@ -485,6 +487,8 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Play_StatusEventStateSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_CaseEventStateGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_CaseEventStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_RateEventStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_RateEventStateSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_PosEventStateGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_PosEventStateSet(ulong o, ulong value);
 
@@ -497,6 +501,7 @@ public static class Extern
 
     public delegate ulong Play_StatusEvent_Maide(ulong play, ulong arg);
     public delegate ulong Play_CaseEvent_Maide(ulong play, ulong arg);
+    public delegate ulong Play_RateEvent_Maide(ulong play, ulong arg);
     public delegate ulong Play_PosEvent_Maide(ulong play, ulong arg);
 
     [DllImport(InfraLib)] public extern static ulong Stream_New();
