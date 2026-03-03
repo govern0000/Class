@@ -145,6 +145,26 @@ Int Intern_State_Frame_DrawEvent(Int frame, Int arg)
     return Intern_State_Call(frame, arg, 2);
 }
 
+Int Intern_State_Play_StatusEvent(Int play, Int arg)
+{
+    return Intern_State_Call(play, arg, 1);
+}
+
+Int Intern_State_Play_CaseEvent(Int play, Int arg)
+{
+    return Intern_State_Call(play, arg, 2);
+}
+
+Int Intern_State_Play_RateEvent(Int play, Int arg)
+{
+    return Intern_State_Call(play, arg, 3);
+}
+
+Int Intern_State_Play_PosEvent(Int play, Int arg)
+{
+    return Intern_State_Call(play, arg, 4);
+}
+
 Int Intern_State_VideoOut_FrameEvent(Int videoOut, Int arg)
 {
     return Intern_State_Call(videoOut, arg, 1);
