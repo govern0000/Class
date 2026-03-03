@@ -5639,7 +5639,7 @@ Int Intern_Extern_Play_PosSet(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Play_StatusEventStateGet(Eval* eval, Int frame)
+Int Intern_Extern_Play_StatusStateGet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -5647,12 +5647,12 @@ Int Intern_Extern_Play_StatusEventStateGet(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Play_StatusEventStateGet(a0);
+    a = Play_StatusStateGet(a0);
 
     Return;
 }
 
-Int Intern_Extern_Play_StatusEventStateSet(Eval* eval, Int frame)
+Int Intern_Extern_Play_StatusStateSet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 2;
@@ -5661,12 +5661,12 @@ Int Intern_Extern_Play_StatusEventStateSet(Eval* eval, Int frame)
     Param(1);
 
     Int a;
-    a = Play_StatusEventStateSet(a0, a1);
+    a = Play_StatusStateSet(a0, a1);
 
     Return;
 }
 
-Int Intern_Extern_Play_CaseEventStateGet(Eval* eval, Int frame)
+Int Intern_Extern_Play_CaseStateGet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -5674,12 +5674,12 @@ Int Intern_Extern_Play_CaseEventStateGet(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Play_CaseEventStateGet(a0);
+    a = Play_CaseStateGet(a0);
 
     Return;
 }
 
-Int Intern_Extern_Play_CaseEventStateSet(Eval* eval, Int frame)
+Int Intern_Extern_Play_CaseStateSet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 2;
@@ -5688,12 +5688,12 @@ Int Intern_Extern_Play_CaseEventStateSet(Eval* eval, Int frame)
     Param(1);
 
     Int a;
-    a = Play_CaseEventStateSet(a0, a1);
+    a = Play_CaseStateSet(a0, a1);
 
     Return;
 }
 
-Int Intern_Extern_Play_RateEventStateGet(Eval* eval, Int frame)
+Int Intern_Extern_Play_RateStateGet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -5701,12 +5701,12 @@ Int Intern_Extern_Play_RateEventStateGet(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Play_RateEventStateGet(a0);
+    a = Play_RateStateGet(a0);
 
     Return;
 }
 
-Int Intern_Extern_Play_RateEventStateSet(Eval* eval, Int frame)
+Int Intern_Extern_Play_RateStateSet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 2;
@@ -5715,12 +5715,12 @@ Int Intern_Extern_Play_RateEventStateSet(Eval* eval, Int frame)
     Param(1);
 
     Int a;
-    a = Play_RateEventStateSet(a0, a1);
+    a = Play_RateStateSet(a0, a1);
 
     Return;
 }
 
-Int Intern_Extern_Play_PosEventStateGet(Eval* eval, Int frame)
+Int Intern_Extern_Play_PosStateGet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -5728,12 +5728,12 @@ Int Intern_Extern_Play_PosEventStateGet(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Play_PosEventStateGet(a0);
+    a = Play_PosStateGet(a0);
 
     Return;
 }
 
-Int Intern_Extern_Play_PosEventStateSet(Eval* eval, Int frame)
+Int Intern_Extern_Play_PosStateSet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 2;
@@ -5742,7 +5742,7 @@ Int Intern_Extern_Play_PosEventStateSet(Eval* eval, Int frame)
     Param(1);
 
     Int a;
-    a = Play_PosEventStateSet(a0, a1);
+    a = Play_PosStateSet(a0, a1);
 
     Return;
 }
