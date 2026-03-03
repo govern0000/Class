@@ -1,9 +1,6 @@
 #pragma once
 
-#include <QMediaPlayer>
-#include <QAudioOutput>
-#include <QIODevice>
-
+#include "PlayIntern.hpp"
 #include "VideoOutIntern.hpp"
 
 #include "Pronate.hpp"
@@ -17,7 +14,7 @@ struct Play
     Int CaseState;
     Int RateState;
     Int PosState;
-    QMediaPlayer* Intern;
+    PlayIntern* Intern;
 };
 
 #define CP(a) ((Play*)(a))
