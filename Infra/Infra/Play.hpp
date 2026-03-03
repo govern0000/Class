@@ -13,6 +13,10 @@ struct Play
     Int Source;
     Int VideoOut;
     Int AudioOut;
+    Int StatusState;
+    Int CaseState;
+    Int RateState;
+    Int PosState;
     QMediaPlayer* Intern;
 };
 
