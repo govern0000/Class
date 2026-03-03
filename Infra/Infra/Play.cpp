@@ -18,7 +18,7 @@ Int Play_Final(Int o)
     m = CP(o);
 
     delete m->Intern;
-    
+
     return true;
 }
 
