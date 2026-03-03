@@ -471,14 +471,14 @@ class Extern : Any
     maide prusate Int Play_TimeSet(var Int o, var Int value) { }
     maide prusate Int Play_PosGet(var Int o) { }
     maide prusate Int Play_PosSet(var Int o, var Int value) { }
-    maide prusate Int Play_StatusEventStateGet(var Int o) { }
-    maide prusate Int Play_StatusEventStateSet(var Int o, var Int value) { }
-    maide prusate Int Play_CaseEventStateGet(var Int o) { }
-    maide prusate Int Play_CaseEventStateSet(var Int o, var Int value) { }
-    maide prusate Int Play_RateEventStateGet(var Int o) { }
-    maide prusate Int Play_RateEventStateSet(var Int o, var Int value) { }
-    maide prusate Int Play_PosEventStateGet(var Int o) { }
-    maide prusate Int Play_PosEventStateSet(var Int o, var Int value) { }
+    maide prusate Int Play_StatusStateGet(var Int o) { }
+    maide prusate Int Play_StatusStateSet(var Int o, var Int value) { }
+    maide prusate Int Play_CaseStateGet(var Int o) { }
+    maide prusate Int Play_CaseStateSet(var Int o, var Int value) { }
+    maide prusate Int Play_RateStateGet(var Int o) { }
+    maide prusate Int Play_RateStateSet(var Int o, var Int value) { }
+    maide prusate Int Play_PosStateGet(var Int o) { }
+    maide prusate Int Play_PosStateSet(var Int o, var Int value) { }
 
     maide prusate Int Play_SourceThisSet(var Int o) { }
     maide prusate Int Play_HasVideo(var Int o) { }
