@@ -57,6 +57,7 @@ Int Frame_DrawEvent(Int o);
 
 Int Play_StatusEvent(Int o);
 Int Play_CaseEvent(Int o);
+Int Play_RateEvent(Int o);
 Int Play_PosEvent(Int o);
 
 Int VideoOut_Intern(Int o);
