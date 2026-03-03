@@ -434,6 +434,26 @@ Int Intern_Intern_StateFrameDrawEvent(Eval* eval, Int frame)
     return Intern_Intern_State(eval, frame, InternState(Frame_DrawEvent));
 }
 
+Int Intern_Intern_StatePlayStatusEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Play_StatusEvent));
+}
+
+Int Intern_Intern_StatePlayCaseEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Play_CaseEvent));
+}
+
+Int Intern_Intern_StatePlayRateEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Play_RateEvent));
+}
+
+Int Intern_Intern_StatePlayPosEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Play_PosEvent));
+}
+
 Int Intern_Intern_StateVideoOutFrameEvent(Eval* eval, Int frame)
 {
     return Intern_Intern_State(eval, frame, InternState(VideoOut_FrameEvent));
