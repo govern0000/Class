@@ -47,7 +47,7 @@ Int varClass##_##name##Set(Int o, Int value)\
 
 #define CppField(varClass, name) \
 CppFieldGet(varClass, name)\
-CppFieldSet(varClass, name)
+CppFieldSet(varClass, name)\
 
 
 #define PosValue(prefix) \
