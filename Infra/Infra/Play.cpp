@@ -170,3 +170,42 @@ Int Play_PosSet(Int o, Int value)
     m->Intern->setPosition(u);
     return true;
 }
+
+CppField(Play, StatusState)
+CppField(Play, CaseState)
+CppField(Play, RateState)
+CppField(Play, PosState)
+
+Int Play_StatusEvent(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    Int state;
+    state = m->StatusState;
+
+    if (state == null)
+    {
+        return true;
+    }
+    
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Play_Status_Maide maide;
+    maide = (TimeEvent_Elapse_Maide)aa;
+    
+    maide(o, arg);
+    
+    return true;
+}
+
+Int Play_CaseEvent(Int o);
+Int Play_PosEvent(Int o);
