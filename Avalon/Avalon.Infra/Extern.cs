@@ -483,14 +483,14 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Play_TimeSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Play_PosGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_PosSet(ulong o, ulong value);
-    [DllImport(InfraLib)] public extern static ulong Play_StatusEventStateGet(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Play_StatusEventStateSet(ulong o, ulong value);
-    [DllImport(InfraLib)] public extern static ulong Play_CaseEventStateGet(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Play_CaseEventStateSet(ulong o, ulong value);
-    [DllImport(InfraLib)] public extern static ulong Play_RateEventStateGet(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Play_RateEventStateSet(ulong o, ulong value);
-    [DllImport(InfraLib)] public extern static ulong Play_PosEventStateGet(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Play_PosEventStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_StatusStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_StatusStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_CaseStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_CaseStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_RateStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_RateStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Play_PosStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Play_PosStateSet(ulong o, ulong value);
 
     [DllImport(InfraLib)] public extern static ulong Play_SourceThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_HasVideo(ulong o);
@@ -499,10 +499,10 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Play_Pause(ulong o);
     [DllImport(InfraLib)] public extern static ulong Play_Stop(ulong o);
 
-    public delegate ulong Play_StatusEvent_Maide(ulong play, ulong arg);
-    public delegate ulong Play_CaseEvent_Maide(ulong play, ulong arg);
-    public delegate ulong Play_RateEvent_Maide(ulong play, ulong arg);
-    public delegate ulong Play_PosEvent_Maide(ulong play, ulong arg);
+    public delegate ulong Play_Status_Maide(ulong play, ulong arg);
+    public delegate ulong Play_Case_Maide(ulong play, ulong arg);
+    public delegate ulong Play_Rate_Maide(ulong play, ulong arg);
+    public delegate ulong Play_Pos_Maide(ulong play, ulong arg);
 
     [DllImport(InfraLib)] public extern static ulong Stream_New();
     [DllImport(InfraLib)] public extern static ulong Stream_Delete(ulong o);
