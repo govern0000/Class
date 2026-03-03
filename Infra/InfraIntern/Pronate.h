@@ -80,4 +80,12 @@ Int Intern_State_Frame_TypeEvent(Int frame, Int arg, Int index, Int value);
 
 Int Intern_State_Frame_DrawEvent(Int frame, Int arg);
 
+Int Intern_State_Play_StatusEvent(Int play, Int arg);
+
+Int Intern_State_Play_CaseEvent(Int play, Int arg);
+
+Int Intern_State_Play_RateEvent(Int play, Int arg);
+
+Int Intern_State_Play_PosEvent(Int play, Int arg);
+
 Int Intern_State_VideoOut_FrameEvent(Int videoOut, Int arg);
