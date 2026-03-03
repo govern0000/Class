@@ -29,5 +29,6 @@ Int StateFrameTypeEvent|
 Int StateFrameDrawEvent|
 Int StatePlayStatusEvent|
 Int StatePlayCaseEvent|
+Int StatePlayRateEvent|
 Int StatePlayPosEvent|
 Int StateVideoOutFrameEvent|
