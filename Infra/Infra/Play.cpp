@@ -209,5 +209,35 @@ Int Play_StatusEvent(Int o)
     return true;
 }
 
-Int Play_CaseEvent(Int o);
+Int Play_CaseEvent(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    Int state;
+    state = m->CaseState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Play_Case_Maide maide;
+    maide = (Play_Case_Maide)aa;
+
+    maide(o, arg);
+
+    return true;
+}
+
 Int Play_PosEvent(Int o);
