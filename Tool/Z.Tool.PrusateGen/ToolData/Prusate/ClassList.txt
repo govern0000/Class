@@ -104,7 +104,6 @@ Frame
     Shown
     Out()
     TypeState
-    PointerState
     DrawState
     Update(rect)
     Close()
@@ -251,14 +250,14 @@ Play
     Execute()
     Pause()
     Stop()
-    StatusEventState
-    CaseEventState
-    RateEventState
-    PosEventState
-    StatusEvent(play, arg) --
-    CaseEvent(play, arg) --
-    RateEvent(play, arg) --
-    PosEvent(play, arg) --
+    StatusState
+    CaseState
+    RateState
+    PosState
+    Status(play, arg) --
+    Case(play, arg) --
+    Rate(play, arg) --
+    Pos(play, arg) --
 
 Stream
     Kind
