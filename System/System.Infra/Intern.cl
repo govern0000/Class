@@ -58,5 +58,13 @@ class Intern : Any
 
     maide prusate Int StateFrameDrawEvent() { }
 
+    maide prusate Int StatePlayStatusEvent() { }
+
+    maide prusate Int StatePlayCaseEvent() { }
+
+    maide prusate Int StatePlayRateEvent() { }
+
+    maide prusate Int StatePlayPosEvent() { }
+
     maide prusate Int StateVideoOutFrameEvent() { }
 }
