@@ -6,7 +6,9 @@ Int Play_Init(Int o)
 {
     Play* m;
     m = CP(o);
-    m->Intern = new QMediaPlayer;
+    m->Intern = new PlayIntern;
+    m->Intern->Play = o;
+    m->Intern->Init();
     return true;
 }
 
