@@ -173,10 +173,10 @@ Int Play_PosSet(Int o, Int value)
     return true;
 }
 
-CppField(Play, StatusState)
-CppField(Play, CaseState)
-CppField(Play, RateState)
-CppField(Play, PosState)
+CppField(Play, StatusState);
+CppField(Play, CaseState);
+CppField(Play, RateState);
+CppField(Play, PosState);
 
 Int Play_StatusEvent(Int o)
 {
