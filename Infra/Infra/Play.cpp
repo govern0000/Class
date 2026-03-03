@@ -271,4 +271,33 @@ Int Play_RateEvent(Int o)
     return true;
 }
 
-Int Play_PosEvent(Int o);
+Int Play_PosEvent(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    Int state;
+    state = m->PosState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Play_Pos_Maide maide;
+    maide = (Play_Pos_Maide)aa;
+
+    maide(o, arg);
+
+    return true;
+}
