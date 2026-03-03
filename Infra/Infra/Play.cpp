@@ -188,7 +188,7 @@ Int Play_StatusEvent(Int o)
     {
         return true;
     }
-    
+
     Int aa;
     aa = State_MaideGet(state);
     Int arg;
@@ -200,10 +200,10 @@ Int Play_StatusEvent(Int o)
     }
 
     Play_Status_Maide maide;
-    maide = (TimeEvent_Elapse_Maide)aa;
-    
+    maide = (Play_Status_Maide)aa;
+
     maide(o, arg);
-    
+
     return true;
 }
 
