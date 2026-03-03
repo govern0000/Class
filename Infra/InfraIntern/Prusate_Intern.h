@@ -31,4 +31,8 @@ Intern_Api Int Intern_Intern_StateNetworkHostNewPeer(Eval* eval, Int frame);
 Intern_Api Int Intern_Intern_StateScreenDimendEvent(Eval* eval, Int frame);
 Intern_Api Int Intern_Intern_StateFrameTypeEvent(Eval* eval, Int frame);
 Intern_Api Int Intern_Intern_StateFrameDrawEvent(Eval* eval, Int frame);
+Intern_Api Int Intern_Intern_StatePlayStatusEvent(Eval* eval, Int frame);
+Intern_Api Int Intern_Intern_StatePlayCaseEvent(Eval* eval, Int frame);
+Intern_Api Int Intern_Intern_StatePlayRateEvent(Eval* eval, Int frame);
+Intern_Api Int Intern_Intern_StatePlayPosEvent(Eval* eval, Int frame);
 Intern_Api Int Intern_Intern_StateVideoOutFrameEvent(Eval* eval, Int frame);
