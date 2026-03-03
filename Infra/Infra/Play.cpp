@@ -149,7 +149,38 @@ Int Play_TimeGet(Int o)
     return a;
 }
 
-FieldDefaultSet(Play, Time)
+FieldDefaultSet(Play, Time);
+
+Int Play_StatusGet(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    QMediaPlayer::Error error;
+    error = m->Intern->error();
+
+    Int a;
+    a = error;
+    return a;
+}
+
+FieldDefaultSet(Play, Status);
+
+Int Play_CaseGet(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    QMediaPlayer::PlaybackState ka;
+    ka = m->Intern->playbackState();
+
+    Int k;
+    k = ka + 1;
+
+    Int a;
+    a = k;
+    return a;
+}
 
 Int Play_PosGet(Int o)
 {
