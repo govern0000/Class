@@ -469,14 +469,14 @@ Infra_Api Int Play_TimeGet(Int o);
 Infra_Api Int Play_TimeSet(Int o, Int value);
 Infra_Api Int Play_PosGet(Int o);
 Infra_Api Int Play_PosSet(Int o, Int value);
-Infra_Api Int Play_StatusEventStateGet(Int o);
-Infra_Api Int Play_StatusEventStateSet(Int o, Int value);
-Infra_Api Int Play_CaseEventStateGet(Int o);
-Infra_Api Int Play_CaseEventStateSet(Int o, Int value);
-Infra_Api Int Play_RateEventStateGet(Int o);
-Infra_Api Int Play_RateEventStateSet(Int o, Int value);
-Infra_Api Int Play_PosEventStateGet(Int o);
-Infra_Api Int Play_PosEventStateSet(Int o, Int value);
+Infra_Api Int Play_StatusStateGet(Int o);
+Infra_Api Int Play_StatusStateSet(Int o, Int value);
+Infra_Api Int Play_CaseStateGet(Int o);
+Infra_Api Int Play_CaseStateSet(Int o, Int value);
+Infra_Api Int Play_RateStateGet(Int o);
+Infra_Api Int Play_RateStateSet(Int o, Int value);
+Infra_Api Int Play_PosStateGet(Int o);
+Infra_Api Int Play_PosStateSet(Int o, Int value);
 
 Infra_Api Int Play_SourceThisSet(Int o);
 Infra_Api Int Play_HasVideo(Int o);
@@ -485,10 +485,10 @@ Infra_Api Int Play_Execute(Int o);
 Infra_Api Int Play_Pause(Int o);
 Infra_Api Int Play_Stop(Int o);
 
-typedef Int (*Play_StatusEvent_Maide)(Int play, Int arg);
-typedef Int (*Play_CaseEvent_Maide)(Int play, Int arg);
-typedef Int (*Play_RateEvent_Maide)(Int play, Int arg);
-typedef Int (*Play_PosEvent_Maide)(Int play, Int arg);
+typedef Int (*Play_Status_Maide)(Int play, Int arg);
+typedef Int (*Play_Case_Maide)(Int play, Int arg);
+typedef Int (*Play_Rate_Maide)(Int play, Int arg);
+typedef Int (*Play_Pos_Maide)(Int play, Int arg);
 
 InfraApiNew(Stream)
 Infra_Api Int Stream_KindGet(Int o);
