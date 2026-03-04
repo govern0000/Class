@@ -107,8 +107,8 @@ public class Thread : Any
         object ao;
         ao = internIntern.HandleTarget(arg);
 
-        Thread a;        
-        a = (Thread)ao;
+        Thread a;
+        a = ao as Thread;
 
         InternIntern.ThisThread = a;
 
