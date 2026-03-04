@@ -17,7 +17,7 @@ public class Thread : Any
             if (aa is Value)
             {
                 Value k;
-                k = (Value)aa;
+                k = aa as Value;
 
                 long o;
                 o = k.Int;
