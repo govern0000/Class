@@ -12,18 +12,15 @@ public class Thread : Any
         ulong oa;
         oa = 0;
 
-        if (!(aa == null))
+        Value k;
+        k = aa as Value;
+
+        if (!(k == null))
         {
-            if (aa is Value)
-            {
-                Value k;
-                k = aa as Value;
+            long o;
+            o = k.Int;
 
-                long o;
-                o = k.Int;
-
-                oa = (ulong)o;
-            }
+            oa = (ulong)o;
         }
 
         return oa;
