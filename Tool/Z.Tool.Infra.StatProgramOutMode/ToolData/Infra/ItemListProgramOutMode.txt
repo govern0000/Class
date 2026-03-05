@@ -1,5 +1,5 @@
 SeparateChannels
 MergedChannels
 ForwardedChannels
-ForwardedErrorChannel
 ForwardedOutputChannel
+ForwardedErrorChannel
