@@ -197,6 +197,8 @@ void Main_ScreenDimendHandle(const QSizeF &size)
     Int screen;
     screen = Main_Screen();
 
+    Screen_Size(screen);
+
     Screen_Dimend(screen);
 
     Screen_DimendEvent(screen);
