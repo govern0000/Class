@@ -44,15 +44,15 @@ Int Screen_InternSet(Int o, Int value)
     return true;
 }
 
-CppFieldGet(Screen, Size)
+CppFieldGet(Screen, Size);
 
-FieldDefaultSet(Screen, Size)
+FieldDefaultSet(Screen, Size);
 
-CppFieldGet(Screen, Dimend)
+CppFieldGet(Screen, Dimend);
 
-FieldDefaultSet(Screen, Dimend)
+FieldDefaultSet(Screen, Dimend);
 
-CppField(Screen, DimendState)
+CppField(Screen, DimendState);
 
 Int Screen_Size(Int o)
 {
