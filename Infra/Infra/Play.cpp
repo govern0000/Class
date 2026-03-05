@@ -182,6 +182,8 @@ Int Play_CaseGet(Int o)
     return a;
 }
 
+FieldDefaultSet(Play, Case);
+
 Int Play_PosGet(Int o)
 {
     Play* m;
