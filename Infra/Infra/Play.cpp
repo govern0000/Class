@@ -200,6 +200,8 @@ Int Play_SeekGet(Int o)
     return a;
 }
 
+FieldDefaultSet(Play, Seek);
+
 Int Play_PosGet(Int o)
 {
     Play* m;
