@@ -184,6 +184,21 @@ Int Play_CaseGet(Int o)
 
 FieldDefaultSet(Play, Case);
 
+Int Play_RateGet(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    qreal rate;
+    rate = m->Intern->playbackRate();
+
+    ValueFromInternValue(rate);
+
+    Int a;
+    a = rateA;
+    return a;
+}
+
 Int Play_SeekGet(Int o)
 {
     Play* m;
