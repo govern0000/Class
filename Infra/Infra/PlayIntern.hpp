@@ -17,5 +17,6 @@ private slots:
 
     void StatusEventHandle();
     void CaseEventHandle(QMediaPlayer::PlaybackState newState);
+    void RateEventHandle(qreal rate);
     void PosEventHandle(qint64 position);
 };
