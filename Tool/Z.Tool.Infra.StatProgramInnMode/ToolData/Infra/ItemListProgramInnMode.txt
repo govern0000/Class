@@ -1,3 +1,2 @@
-Stopped
-Playing
-Paused
+Managed
+Forwarded
