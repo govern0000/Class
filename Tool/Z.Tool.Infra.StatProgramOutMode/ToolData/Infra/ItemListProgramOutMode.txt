@@ -1,2 +1,5 @@
-Managed
-Forwarded
+SeparateChannels
+MergedChannels
+ForwardedChannels
+ForwardedErrorChannel
+ForwardedOutputChannel
