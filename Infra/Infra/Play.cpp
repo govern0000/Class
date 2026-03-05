@@ -184,6 +184,22 @@ Int Play_CaseGet(Int o)
 
 FieldDefaultSet(Play, Case);
 
+Int Play_SeekGet(Int o)
+{
+    Play* m;
+    m = CP(o);
+
+    bool ba;
+    ba = m->Intern->isSeekable();
+
+    Bool b;
+    b = ba;
+
+    Bool a;
+    a = b;
+    return a;
+}
+
 Int Play_PosGet(Int o)
 {
     Play* m;
