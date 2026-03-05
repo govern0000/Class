@@ -138,19 +138,6 @@ Int Play_HasAudio(Int o)
     return a;
 }
 
-Int Play_TimeGet(Int o)
-{
-    Play* m;
-    m = CP(o);
-    qint64 u;
-    u = m->Intern->duration();
-    Int a;
-    a = u;
-    return a;
-}
-
-FieldDefaultSet(Play, Time);
-
 Int Play_StatusGet(Int o)
 {
     Play* m;
@@ -228,6 +215,19 @@ Int Play_SeekGet(Int o)
 }
 
 FieldDefaultSet(Play, Seek);
+
+Int Play_TimeGet(Int o)
+{
+    Play* m;
+    m = CP(o);
+    qint64 u;
+    u = m->Intern->duration();
+    Int a;
+    a = u;
+    return a;
+}
+
+FieldDefaultSet(Play, Time);
 
 Int Play_PosGet(Int o)
 {
