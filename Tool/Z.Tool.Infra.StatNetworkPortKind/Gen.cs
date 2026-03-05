@@ -21,7 +21,7 @@ class Gen : StatGen
         if (index < 2)
         {
             String itemName;
-            itemName = (String)iter.Index;
+            itemName = iter.Index as String;
 
             long ka;
             ka = index + 1;
