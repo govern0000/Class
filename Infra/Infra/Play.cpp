@@ -199,6 +199,18 @@ Int Play_RateGet(Int o)
     return a;
 }
 
+Int Play_RateSet(Int o, Int value)
+{
+    Play* m;
+    m = CP(o);
+
+    InternValue(value);
+
+    m->Intern->setPlaybackRate(valueU);
+
+    return true;
+}
+
 Int Play_SeekGet(Int o)
 {
     Play* m;
