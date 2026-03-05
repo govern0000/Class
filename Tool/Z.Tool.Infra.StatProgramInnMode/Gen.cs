@@ -1,4 +1,4 @@
-namespace Z.Tool.Infra.StatPlayCase;
+namespace Z.Tool.Infra.StatProgramInnMode;
 
 class Gen : StatGen
 {
