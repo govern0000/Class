@@ -1,6 +1,6 @@
 namespace Avalon.Infra;
 
-class IntLess : Less
+public class IntLess : Less
 {
     public override bool Init()
     {
