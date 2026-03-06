@@ -55,6 +55,7 @@ global using NetworkCaseList = Avalon.Network.CaseList;
 global using NetworkStatusList = Avalon.Network.StatusList;
 global using Console = Avalon.Console.Console;
 global using Program = Avalon.Console.Program;
+global using ProgramOutModeList = Avalon.Console.ProgramOutModeList;
 global using EntryEntry = Avalon.Entry.Entry;
 global using STAThreadAttribute = System.STAThreadAttribute;
 global using File = System.IO.File;
