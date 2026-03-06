@@ -1,4 +1,4 @@
-namespace Z.Tool.Avalon.NetworkCaseList;
+namespace Z.Tool.Avalon.ProgramOutModeList;
 
 public class Gen : SourceGen
 {

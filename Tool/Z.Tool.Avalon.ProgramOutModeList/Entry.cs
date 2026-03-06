@@ -1,4 +1,4 @@
-namespace Z.Tool.Avalon.NetworkCaseList;
+namespace Z.Tool.Avalon.ProgramOutModeList;
 
 class Entry : EntryEntry
 {
