@@ -19,10 +19,10 @@ Int Program_Final(Int o)
     return true;
 }
 
-CppField(Program, Name)
-CppField(Program, Argue)
-CppField(Program, WorkFold)
-CppField(Program, Environ)
+CppField(Program, Name);
+CppField(Program, Argue);
+CppField(Program, WorkFold);
+CppField(Program, Environ);
 
 Int Program_Execute(Int o)
 {
@@ -120,7 +120,7 @@ Int Program_StatusGet(Int o)
     return a;
 }
 
-FieldDefaultSet(Program, Status)
+FieldDefaultSet(Program, Status);
 
 Int Program_InternArgueSet(Int result, Int argue)
 {
