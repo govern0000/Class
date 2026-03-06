@@ -735,6 +735,10 @@ class Extern : Any
     maide prusate Int Program_WorkFoldSet(var Int o, var Int value) { }
     maide prusate Int Program_EnvironGet(var Int o) { }
     maide prusate Int Program_EnvironSet(var Int o, var Int value) { }
+    maide prusate Int Program_OutModeGet(var Int o) { }
+    maide prusate Int Program_OutModeSet(var Int o, var Int value) { }
+    maide prusate Int Program_InnModeGet(var Int o) { }
+    maide prusate Int Program_InnModeSet(var Int o, var Int value) { }
     maide prusate Int Program_IdentGet(var Int o) { }
     maide prusate Int Program_IdentSet(var Int o, var Int value) { }
     maide prusate Int Program_StatusGet(var Int o) { }
