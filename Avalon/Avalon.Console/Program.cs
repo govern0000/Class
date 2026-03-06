@@ -25,6 +25,8 @@ public class Program : Any
     public virtual ListList Argue { get; set; }
     public virtual String WorkFold { get; set; }
     public virtual Table Environ { get; set; }
+    public virtual ProgramOutMode OutMode { get; set; }
+    public virtual ProgramInnMode InnMode { get; set; }
     public virtual long Ident
     {
         get
