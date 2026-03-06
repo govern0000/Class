@@ -8796,6 +8796,60 @@ Int Intern_Extern_Program_EnvironSet(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Program_OutModeGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Program_OutModeGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Program_OutModeSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Program_OutModeSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Program_InnModeGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Program_InnModeGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Program_InnModeSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Program_InnModeSet(a0, a1);
+
+    Return;
+}
+
 Int Intern_Extern_Program_IdentGet(Eval* eval, Int frame)
 {
     Int paramCount;
