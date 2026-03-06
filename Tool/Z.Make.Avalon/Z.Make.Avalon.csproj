@@ -11,6 +11,8 @@
         <ProjectReference Include="../Z.Tool.Avalon.NetworkPortKindList/Z.Tool.Avalon.NetworkPortKindList.csproj" />
         <ProjectReference Include="../Z.Tool.Avalon.NetworkStatusList/Z.Tool.Avalon.NetworkStatusList.csproj" />
         <ProjectReference Include="../Z.Tool.Avalon.StorageStatusList/Z.Tool.Avalon.StorageStatusList.csproj" />
+        <ProjectReference Include="../Z.Tool.Avalon.ProgramOutModeList/Z.Tool.Avalon.ProgramOutModeList.csproj" />
+        <ProjectReference Include="../Z.Tool.Avalon.ProgramInnModeList/Z.Tool.Avalon.ProgramInnModeList.csproj" />
     </ItemGroup>
 
 </Project>
