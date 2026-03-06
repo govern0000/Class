@@ -117,9 +117,13 @@ public class Program : Any
         Extern.Program_ArgueSet(this.Intern, argueU);
         Extern.Program_WorkFoldSet(this.Intern, workFoldU);
         Extern.Program_EnvironSet(this.Intern, environU);
+        Extern.Program_OutModeSet(this.Intern, outModeU);
+        Extern.Program_InnModeSet(this.Intern, innModeU);
 
         Extern.Program_Execute(this.Intern);
 
+        Extern.Program_InnModeSet(this.Intern, 0);
+        Extern.Program_OutModeSet(this.Intern, 0);
         Extern.Program_EnvironSet(this.Intern, 0);
         Extern.Program_WorkFoldSet(this.Intern, 0);
         Extern.Program_ArgueSet(this.Intern, 0);
