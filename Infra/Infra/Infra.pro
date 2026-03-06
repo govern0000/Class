@@ -123,6 +123,8 @@ SOURCES += \
     Stat_NetworkCase.cpp \
     Stat_NetworkPortKind.cpp \
     Stat_NetworkStatus.cpp \
+    Stat_ProgramOutMode.cpp \
+    Stat_ProgramInnMode.cpp \
     Stat_BrushKind.cpp \
     Stat_SlashCape.cpp \
     Stat_SlashJoin.cpp \
