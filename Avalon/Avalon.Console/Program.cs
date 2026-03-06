@@ -99,6 +99,20 @@ public class Program : Any
             environU = this.InternStringEntryListCreate(this.Environ);
         }
 
+        ulong outModeU;
+        outModeU = 0;
+        if (!(this.OutMode == null))
+        {
+            outModeU = this.OutMode.Intern;
+        }
+
+        ulong innModeU;
+        innModeU = 0;
+        if (!(this.InnMode == null))
+        {
+            innModeU = this.InnMode.Intern;
+        }
+
         Extern.Program_NameSet(this.Intern, nameU);
         Extern.Program_ArgueSet(this.Intern, argueU);
         Extern.Program_WorkFoldSet(this.Intern, workFoldU);
