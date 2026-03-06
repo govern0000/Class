@@ -31,7 +31,7 @@ Business Gene Plat include module list list below:
 - Test.
 - Log.
 - Shell.
-- Regex.
+- Pattern.
 
 In MARK, All Plat is Endgame Gene Plat except
 Business Gene Plat is Effecon Gene Plat.
