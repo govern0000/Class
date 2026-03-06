@@ -852,6 +852,13 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Stat_NetworkStatusSslInternalError(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_NetworkStatusSslInvalidUserDataError(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_NetworkStatusTemporaryError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramOutModeSeparateChannels(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramOutModeMergedChannels(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramOutModeForwardedChannels(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramOutModeForwardedOutputChannel(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramOutModeForwardedErrorChannel(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramInnModeManaged(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_ProgramInnModeForwarded(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_BrushKindColor(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_BrushKindPolate(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_BrushKindImage(ulong o);
@@ -882,5 +889,13 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Stat_ImageFormatBmp(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_ImageFormatJpg(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_ImageFormatPng(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayStatusNoError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayStatusResourceError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayStatusFormatError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayStatusNetworkError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayStatusAccessDeniedError(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayCaseStopped(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayCasePlaying(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_PlayCasePaused(ulong o);
 
 }
