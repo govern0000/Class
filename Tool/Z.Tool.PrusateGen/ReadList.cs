@@ -18,6 +18,8 @@ public class ReadList : ToolBase
         this.ExecuteList("NetworkCase");
         this.ExecuteList("NetworkPortKind");
         this.ExecuteList("NetworkStatus");
+        this.ExecuteList("ProgramOutMode");
+        this.ExecuteList("ProgramInnMode");
         this.ExecuteList("BrushKind");
         this.ExecuteList("SlashLine");
         this.ExecuteList("SlashCape");
@@ -26,6 +28,8 @@ public class ReadList : ToolBase
         this.ExecuteList("PolateSpread");
         this.ExecuteList("Comp");
         this.ExecuteList("ImageFormat");
+        this.ExecuteList("PlayStatus");
+        this.ExecuteList("PlayCase");
 
         bool b;
         b = this.SetStatMethod();
