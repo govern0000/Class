@@ -247,8 +247,8 @@ class Demo : TextAdd
         this.ArrayAddInt(array, 2633);
         this.ArrayAddInt(array, 2631);
 
-        LessA less;
-        less = new LessA();
+        IntLess less;
+        less = new IntLess();
         less.Init();
 
         Range range;
