@@ -402,6 +402,8 @@ Program
     Argue
     WorkFold
     Environ
+    OutMode
+    InnMode
     Ident
     Status
     Execute()
