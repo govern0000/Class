@@ -23,6 +23,8 @@ CppField(Program, Name);
 CppField(Program, Argue);
 CppField(Program, WorkFold);
 CppField(Program, Environ);
+CppField(Program, OutMode);
+CppField(Program, InnMode);
 
 Int Program_Execute(Int o)
 {
