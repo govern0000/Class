@@ -11,6 +11,8 @@ struct Program
     Int Argue;
     Int WorkFold;
     Int Environ;
+    Int OutMode;
+    Int InnMode;
     QProcess* Intern;
 };
 
