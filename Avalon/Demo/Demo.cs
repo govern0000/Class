@@ -1458,10 +1458,6 @@ class Demo : TextAdd
         environ.Less = this.SLess;
         environ.Init();
 
-        this.ListInfra.TableAdd(environ, this.S("INFRA_OUT_PATH"), this.S("DemoNetworkOut.txt"));
-        this.ListInfra.TableAdd(environ, this.S("INFRA_ERR_PATH"), this.S("DemoNetworkErr.txt"));
-        this.ListInfra.TableAdd(environ, this.S("INFRA_INN_PATH"), this.S("DemoData/ProgramInn.txt"));
-
         Program program;
         program = new Program();
         program.Init();
@@ -1469,6 +1465,7 @@ class Demo : TextAdd
         program.Argue = list;
         program.WorkFold = null;
         program.Environ = environ;
+        program.OutMode = ProgramOutModeList.This.ForwardedChannels;
 
         program.Execute();
 
