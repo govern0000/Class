@@ -1484,6 +1484,58 @@ class Demo : TextAdd
         return true;
     }
 
+    private bool ExecuteNetworkProgramA()
+    {
+        this.Console.Out.Write(this.S("Network Program A Start\n"));
+
+        ThreadThread hostThread;
+        hostThread = new ThreadThread();
+        hostThread.Init();
+
+        NetworkHostState state;
+        state = new NetworkHostState();
+        state.Demo = this;
+        state.Init();
+
+        hostThread.ExecuteState = state;
+
+        hostThread.Execute();
+
+        List list;
+        list = new List();
+        list.Init();
+
+        Table environ;
+        environ = new Table();
+        environ.Less = this.SLess;
+        environ.Init();
+
+        this.ListInfra.TableAdd(environ, this.S("INFRA_OUT_PATH"), this.S("DemoNetworkOut.txt"));
+        this.ListInfra.TableAdd(environ, this.S("INFRA_ERR_PATH"), this.S("DemoNetworkErr.txt"));
+        this.ListInfra.TableAdd(environ, this.S("INFRA_INN_PATH"), this.S("DemoData/ProgramInn.txt"));
+
+        Program program;
+        program = new Program();
+        program.Init();
+        program.Name = this.S("DemoNetwork.exe");
+        program.Argue = list;
+        program.WorkFold = null;
+        program.Environ = environ;
+
+        program.Execute();
+
+        program.Wait();
+
+        hostThread.Wait();
+
+        program.Final();
+
+        hostThread.Final();
+
+        this.Console.Out.Write(this.S("Network Program A End\n"));
+        return true;
+    }
+
     private bool ExecuteThread()
     {
         ThreadPhore phore;
