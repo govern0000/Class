@@ -119,7 +119,7 @@ Int Program_IdentGet(Int o)
     return a;
 }
 
-FieldDefaultSet(Program, Ident)
+FieldDefaultSet(Program, Ident);
 
 Int Program_Wait(Int o)
 {
