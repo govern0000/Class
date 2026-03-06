@@ -5,6 +5,7 @@ global using String = Avalon.Infra.String;
 global using Range = Avalon.Infra.Range;
 global using InfraInfra = Avalon.Infra.Infra;
 global using ListList = Avalon.List.List;
+global using Array = Avalon.List.Array;
 global using Table = Avalon.List.Table;
 global using Iter = Avalon.List.Iter;
 global using ListInfra = Avalon.List.Infra;
