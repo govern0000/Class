@@ -825,6 +825,13 @@ class Extern : Any
     maide prusate Int Stat_NetworkStatusSslInternalError(var Int o) { }
     maide prusate Int Stat_NetworkStatusSslInvalidUserDataError(var Int o) { }
     maide prusate Int Stat_NetworkStatusTemporaryError(var Int o) { }
+    maide prusate Int Stat_ProgramOutModeSeparateChannels(var Int o) { }
+    maide prusate Int Stat_ProgramOutModeMergedChannels(var Int o) { }
+    maide prusate Int Stat_ProgramOutModeForwardedChannels(var Int o) { }
+    maide prusate Int Stat_ProgramOutModeForwardedOutputChannel(var Int o) { }
+    maide prusate Int Stat_ProgramOutModeForwardedErrorChannel(var Int o) { }
+    maide prusate Int Stat_ProgramInnModeManaged(var Int o) { }
+    maide prusate Int Stat_ProgramInnModeForwarded(var Int o) { }
     maide prusate Int Stat_BrushKindColor(var Int o) { }
     maide prusate Int Stat_BrushKindPolate(var Int o) { }
     maide prusate Int Stat_BrushKindImage(var Int o) { }
@@ -855,5 +862,13 @@ class Extern : Any
     maide prusate Int Stat_ImageFormatBmp(var Int o) { }
     maide prusate Int Stat_ImageFormatJpg(var Int o) { }
     maide prusate Int Stat_ImageFormatPng(var Int o) { }
+    maide prusate Int Stat_PlayStatusNoError(var Int o) { }
+    maide prusate Int Stat_PlayStatusResourceError(var Int o) { }
+    maide prusate Int Stat_PlayStatusFormatError(var Int o) { }
+    maide prusate Int Stat_PlayStatusNetworkError(var Int o) { }
+    maide prusate Int Stat_PlayStatusAccessDeniedError(var Int o) { }
+    maide prusate Int Stat_PlayCaseStopped(var Int o) { }
+    maide prusate Int Stat_PlayCasePlaying(var Int o) { }
+    maide prusate Int Stat_PlayCasePaused(var Int o) { }
 
 }
