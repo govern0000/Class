@@ -38,6 +38,10 @@ Int Program_Execute(Int o)
     workFold = m->WorkFold;
     Int environA;
     environA = m->Environ;
+    Int outMode;
+    outMode = m->OutMode;
+    Int innMode;
+    innMode = m->InnMode;
 
     QString nameU;
     Int ua;
