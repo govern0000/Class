@@ -78,10 +78,21 @@ Int Program_Execute(Int o)
         Program_InternEnvironSet(ud, environA);
     }
 
+    Int kaa;
+    kaa = 0;
+    if (!(outMode == null))
+    {
+        kaa = outMode - 1;
+    }
+
+    QProcess::ProcessChannelMode outModeU;
+    outModeU = (QProcess::ProcessChannelMode)kaa;
+
     m->Intern->setProgram(nameU);
     m->Intern->setArguments(argueU);
     m->Intern->setWorkingDirectory(workFoldU);
     m->Intern->setProcessEnvironment(environU);
+    m->Intern->setProcessChannelMode(outModeU);
     m->Intern->start();
     return true;
 }
