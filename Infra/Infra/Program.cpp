@@ -88,11 +88,22 @@ Int Program_Execute(Int o)
     QProcess::ProcessChannelMode outModeU;
     outModeU = (QProcess::ProcessChannelMode)kaa;
 
+    Int kab;
+    kab = 0;
+    if (!(innMode == null))
+    {
+        kab = innMode - 1;
+    }
+
+    QProcess::InputChannelMode innModeU;
+    innModeU = (QProcess::InputChannelMode)kab;
+
     m->Intern->setProgram(nameU);
     m->Intern->setArguments(argueU);
     m->Intern->setWorkingDirectory(workFoldU);
     m->Intern->setProcessEnvironment(environU);
     m->Intern->setProcessChannelMode(outModeU);
+    m->Intern->setInputChannelMode(innModeU);
     m->Intern->start();
     return true;
 }
