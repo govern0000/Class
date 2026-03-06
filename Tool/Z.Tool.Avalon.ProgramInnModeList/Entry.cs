@@ -1,4 +1,4 @@
-namespace Z.Tool.Avalon.ProgramOutModeList;
+namespace Z.Tool.Avalon.ProgramInnModeList;
 
 class Entry : EntryEntry
 {
