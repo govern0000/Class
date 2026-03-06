@@ -9916,6 +9916,97 @@ Int Intern_Extern_Stat_NetworkStatusTemporaryError(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Stat_ProgramOutModeSeparateChannels(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramOutModeSeparateChannels(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramOutModeMergedChannels(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramOutModeMergedChannels(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramOutModeForwardedChannels(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramOutModeForwardedChannels(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramOutModeForwardedOutputChannel(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramOutModeForwardedOutputChannel(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramOutModeForwardedErrorChannel(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramOutModeForwardedErrorChannel(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramInnModeManaged(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramInnModeManaged(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_ProgramInnModeForwarded(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_ProgramInnModeForwarded(a0);
+
+    Return;
+}
+
 Int Intern_Extern_Stat_BrushKindColor(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -10302,6 +10393,110 @@ Int Intern_Extern_Stat_ImageFormatPng(Eval* eval, Int frame)
 
     Int a;
     a = Stat_ImageFormatPng(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayStatusNoError(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayStatusNoError(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayStatusResourceError(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayStatusResourceError(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayStatusFormatError(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayStatusFormatError(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayStatusNetworkError(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayStatusNetworkError(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayStatusAccessDeniedError(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayStatusAccessDeniedError(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayCaseStopped(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayCaseStopped(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayCasePlaying(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayCasePlaying(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_PlayCasePaused(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_PlayCasePaused(a0);
 
     Return;
 }
