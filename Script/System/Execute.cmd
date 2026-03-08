@@ -1,6 +1,8 @@
 @echo off
 
+set InfraLibraryFold=C:\Users\aaabb\Package\Class\Out\Infra
+
 pushd Out\Class\Module
-..\Library\Alan-SystemDemo-96207.08.47.exe "-" "-"
+set "PATH=%InfraLibraryFold%;%PATH%" && ..\Library\Alan-SystemDemo-96207.08.47.exe "-" "-"
 echo Status: %errorlevel%
 popd
