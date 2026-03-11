@@ -103,12 +103,16 @@ Frame
     TitleThisSet()
     Shown
     Out()
+    Cursor
+    CursorThisSet()
     TypeState
     DrawState
+    PointerState
     Update(rect)
     Close()
     Type(frame, arg, index, value) --
     Draw(frame, arg) --
+    Pointer(frame, arg, kind, valueA, valueB) --
 
 Draw
     Size
