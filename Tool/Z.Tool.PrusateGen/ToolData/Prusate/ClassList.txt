@@ -105,13 +105,13 @@ Frame
     Out()
     Cursor
     CursorThisSet()
-    TypeState
     DrawState
+    TypeState
     PointerState
     Update(rect)
     Close()
-    Type(frame, arg, index, value) --
     Draw(frame, arg) --
+    Type(frame, arg, index, value) --
     Pointer(frame, arg, kind, valueA, valueB) --
 
 Draw
