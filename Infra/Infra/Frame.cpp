@@ -122,37 +122,6 @@ Int Frame_Close(Int o)
     return true;
 }
 
-Int Frame_TypeEvent(Int o, Int index, Int value)
-{
-    Frame* m;
-    m = CP(o);
-
-    Int state;
-    state = m->TypeState;
-
-    if (state == null)
-    {
-        return true;
-    }
-
-    Int aa;
-    aa = State_MaideGet(state);
-    Int arg;
-    arg = State_ArgGet(state);
-
-    if (aa == null)
-    {
-        return true;
-    }
-
-    Frame_Type_Maide maide;
-    maide = (Frame_Type_Maide)aa;
-
-    maide(o, arg, index, value);
-
-    return true;
-}
-
 Int Frame_DrawEvent(Int o)
 {
     Frame* m;
@@ -180,6 +149,37 @@ Int Frame_DrawEvent(Int o)
     maide = (Frame_Draw_Maide)aa;
 
     maide(o, arg);
+
+    return true;
+}
+
+Int Frame_TypeEvent(Int o, Int index, Int value)
+{
+    Frame* m;
+    m = CP(o);
+
+    Int state;
+    state = m->TypeState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Frame_Type_Maide maide;
+    maide = (Frame_Type_Maide)aa;
+
+    maide(o, arg, index, value);
 
     return true;
 }
