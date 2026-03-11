@@ -7,8 +7,9 @@
 struct Frame
 {
     Int Title;
-    Int TypeState;
     Int DrawState;
+    Int TypeState;
+    Int PointerState;
     FrameIntern* Intern;
 };
 
