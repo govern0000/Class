@@ -222,18 +222,24 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Frame_TitleSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Frame_ShownGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_ShownSet(ulong o, ulong value);
-    [DllImport(InfraLib)] public extern static ulong Frame_TypeStateGet(ulong o);
-    [DllImport(InfraLib)] public extern static ulong Frame_TypeStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorSet(ulong o, ulong value);
     [DllImport(InfraLib)] public extern static ulong Frame_DrawStateGet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_DrawStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_TypeStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_TypeStateSet(ulong o, ulong value);
+    [DllImport(InfraLib)] public extern static ulong Frame_PointerStateGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_PointerStateSet(ulong o, ulong value);
 
     [DllImport(InfraLib)] public extern static ulong Frame_TitleThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_Out(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Frame_CursorThisSet(ulong o);
     [DllImport(InfraLib)] public extern static ulong Frame_Update(ulong o, ulong rect);
     [DllImport(InfraLib)] public extern static ulong Frame_Close(ulong o);
 
-    public delegate ulong Frame_Type_Maide(ulong frame, ulong arg, ulong index, ulong value);
     public delegate ulong Frame_Draw_Maide(ulong frame, ulong arg);
+    public delegate ulong Frame_Type_Maide(ulong frame, ulong arg, ulong index, ulong value);
+    public delegate ulong Frame_Pointer_Maide(ulong frame, ulong arg, ulong kind, ulong valueA, ulong valueB);
 
     [DllImport(InfraLib)] public extern static ulong Draw_New();
     [DllImport(InfraLib)] public extern static ulong Draw_Delete(ulong o);
