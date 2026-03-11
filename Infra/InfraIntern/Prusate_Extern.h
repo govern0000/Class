@@ -218,13 +218,18 @@ Intern_Api Int Intern_Extern_Frame_TitleGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_TitleSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_ShownGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_ShownSet(Eval* e, Int f);
-Intern_Api Int Intern_Extern_Frame_TypeStateGet(Eval* e, Int f);
-Intern_Api Int Intern_Extern_Frame_TypeStateSet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_CursorGet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_CursorSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_DrawStateGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_DrawStateSet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_TypeStateGet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_TypeStateSet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_PointerStateGet(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_PointerStateSet(Eval* e, Int f);
 
 Intern_Api Int Intern_Extern_Frame_TitleThisSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Out(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Frame_CursorThisSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Update(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Frame_Close(Eval* e, Int f);
 
