@@ -86,10 +86,23 @@ void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
 
 void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
 {
-    Int index;
-    index = ev->buttons().toInt();
+    Int kind;
+    kind = 0;
 
-    this->PointEventHandle(4, index, valueA, valueB, 0, 0);
+    if (ev->button() == Qt::LeftButton)
+    {
+        kind = 4;
+    }
+
+    if (ev->button() == Qt::RightButton)
+    {
+        kind = 5;
+    }
+
+    if (!(kind == 0))
+    {
+        this->PointerEventHandle(kind, 0, 0);
+    }
 
     ev->accept();
 }
