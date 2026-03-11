@@ -66,9 +66,6 @@ void FrameIntern::mouseReleaseEvent(QMouseEvent* ev)
 
 void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
 {
-    Int index;
-    index = ev->buttons().toInt();
-
     Int valueA;
     Int valueB;
     valueA = ev->pos().x();
