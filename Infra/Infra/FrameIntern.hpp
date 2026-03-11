@@ -30,5 +30,5 @@ protected:
 private:
     Int DrawEventHandle();
     Int TypeEventHandle(Int index, Int value);
-    Int PointEventHandle(Int kind, Int valueA, Int valueB);
+    Int PointerEventHandle(Int kind, Int valueA, Int valueB);
 };
