@@ -31,11 +31,6 @@ void FrameIntern::mousePressEvent(QMouseEvent* ev)
     Int index;
     index = ev->buttons().toInt();
 
-    Int valueA;
-    Int valueB;
-    valueA = ev->pos().x();
-    valueB = ev->pos().y();
-
     this->PointEventHandle(1, index, valueA, valueB, 0, 0);
 
     ev->accept();
@@ -123,5 +118,14 @@ Int FrameIntern::TypeEventHandle(Int index, Int value)
     frame = this->Frame;
 
     Frame_TypeEvent(frame, index, value);
+    return true;
+}
+
+Int FrameIntern::PointEventHandle(Int kind, Int valueA, Int valueB)
+{
+    Int frame;
+    frame = this->Frame;
+
+    Frame_PointerEvent(frame, kind, valueA, valueB);
     return true;
 }
