@@ -7,6 +7,7 @@
 struct Frame
 {
     Int Title;
+    Int Cursor;
     Int DrawState;
     Int TypeState;
     Int PointerState;
