@@ -119,7 +119,7 @@ Int FrameIntern::TypeEventHandle(Int index, Int value)
     return true;
 }
 
-Int FrameIntern::PointEventHandle(Int kind, Int valueA, Int valueB)
+Int FrameIntern::PointerEventHandle(Int kind, Int valueA, Int valueB)
 {
     Int frame;
     frame = this->Frame;
