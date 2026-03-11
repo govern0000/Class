@@ -216,13 +216,18 @@ class Extern : Any
     maide prusate Int Frame_TitleSet(var Int o, var Int value) { }
     maide prusate Int Frame_ShownGet(var Int o) { }
     maide prusate Int Frame_ShownSet(var Int o, var Int value) { }
-    maide prusate Int Frame_TypeStateGet(var Int o) { }
-    maide prusate Int Frame_TypeStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_CursorGet(var Int o) { }
+    maide prusate Int Frame_CursorSet(var Int o, var Int value) { }
     maide prusate Int Frame_DrawStateGet(var Int o) { }
     maide prusate Int Frame_DrawStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_TypeStateGet(var Int o) { }
+    maide prusate Int Frame_TypeStateSet(var Int o, var Int value) { }
+    maide prusate Int Frame_PointerStateGet(var Int o) { }
+    maide prusate Int Frame_PointerStateSet(var Int o, var Int value) { }
 
     maide prusate Int Frame_TitleThisSet(var Int o) { }
     maide prusate Int Frame_Out(var Int o) { }
+    maide prusate Int Frame_CursorThisSet(var Int o) { }
     maide prusate Int Frame_Update(var Int o, var Int rect) { }
     maide prusate Int Frame_Close(var Int o) { }
 
