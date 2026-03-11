@@ -66,7 +66,7 @@ void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointEventHandle(3, index, valueA, valueB, 0, 0);
+    this->PointEventHandle(0, valueA, valueB);
 
     ev->accept();
 }
@@ -76,11 +76,6 @@ void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
     Int index;
     index = ev->buttons().toInt();
 
-    Int valueA;
-    Int valueB;
-    valueA = ev->pos().x();
-    valueB = ev->pos().y();
-
     this->PointEventHandle(4, index, valueA, valueB, 0, 0);
 
     ev->accept();
@@ -88,22 +83,12 @@ void FrameIntern::mouseDoubleClickEvent(QMouseEvent* ev)
 
 void FrameIntern::wheelEvent(QWheelEvent* ev)
 {
-    Int index;
-    index = ev->buttons().toInt();
-
-    QPoint ka;
-    ka = QCursor::pos(null);
-
     Int valueA;
     Int valueB;
-    Int valueC;
-    Int valueD;
-    valueA = ka.x();
-    valueB = ka.y();
-    valueC = ev->angleDelta().x();
-    valueD = ev->angleDelta().y();
+    valueA = ev->angleDelta().x();
+    valueB = ev->angleDelta().y();
 
-    this->PointEventHandle(5, index, valueA, valueB, valueC, valueD);
+    this->PointEventHandle(1, valueA, valueB);
 
     ev->accept();
 }
