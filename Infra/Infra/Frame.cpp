@@ -27,7 +27,7 @@ Int Frame_Final(Int o)
     return true;
 }
 
-CppField(Frame, Title)
+CppField(Frame, Title);
 
 Int Frame_TitleThisSet(Int o)
 {
@@ -68,8 +68,8 @@ Int Frame_ShownSet(Int o, Int value)
     return true;
 }
 
-CppField(Frame, DrawState)
-CppField(Frame, TypeState)
+CppField(Frame, DrawState);
+CppField(Frame, TypeState);
 
 Int Frame_Out(Int o)
 {
