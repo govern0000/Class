@@ -5,6 +5,11 @@ Bool FrameIntern::Init()
     return true;
 }
 
+void FrameIntern::paintEvent(QPaintEvent* ev)
+{
+    this->DrawEventHandle();
+}
+
 void FrameIntern::keyPressEvent(QKeyEvent* ev)
 {
     Int index;
@@ -19,11 +24,6 @@ void FrameIntern::keyReleaseEvent(QKeyEvent* ev)
     index = ev->key();
 
     this->TypeEventHandle(index, false);
-}
-
-void FrameIntern::paintEvent(QPaintEvent* ev)
-{
-    this->DrawEventHandle();
 }
 
 void FrameIntern::mousePressEvent(QMouseEvent* ev)
