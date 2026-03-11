@@ -43,7 +43,7 @@ void FrameIntern::mousePressEvent(QMouseEvent* ev)
 
     if (!(kind == 0))
     {
-        this->PointEventHandle(2, kind, 0, 0);
+        this->PointerEventHandle(kind, 0, 0);
     }
 
     ev->accept();
