@@ -74,7 +74,7 @@ void FrameIntern::mouseMoveEvent(QMouseEvent* ev)
     valueA = ev->pos().x();
     valueB = ev->pos().y();
 
-    this->PointEventHandle(0, valueA, valueB);
+    this->PointerEventHandle(0, valueA, valueB);
 
     ev->accept();
 }
@@ -96,7 +96,7 @@ void FrameIntern::wheelEvent(QWheelEvent* ev)
     valueA = ev->angleDelta().x();
     valueB = ev->angleDelta().y();
 
-    this->PointEventHandle(1, valueA, valueB);
+    this->PointerEventHandle(1, valueA, valueB);
 
     ev->accept();
 }
