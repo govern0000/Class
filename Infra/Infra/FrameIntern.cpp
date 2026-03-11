@@ -31,6 +31,11 @@ void FrameIntern::mousePressEvent(QMouseEvent* ev)
     Int index;
     index = ev->buttons().toInt();
 
+    Int valueA;
+    Int valueB;
+    valueA = ev->pos().x();
+    valueB = ev->pos().y();
+
     this->PointEventHandle(1, index, valueA, valueB, 0, 0);
 
     ev->accept();
