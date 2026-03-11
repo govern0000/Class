@@ -52,8 +52,9 @@ Int Screen_Size(Int o);
 Int Screen_Dimend(Int o);
 Int Screen_DimendEvent(Int o);
 
-Int Frame_TypeEvent(Int o, Int index, Int field);
 Int Frame_DrawEvent(Int o);
+Int Frame_TypeEvent(Int o, Int index, Int value);
+Int Frame_PointerEvent(Int o, Int kind, Int valueA, Int valueB);
 
 Int Play_StatusEvent(Int o);
 Int Play_CaseEvent(Int o);
