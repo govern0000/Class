@@ -183,3 +183,34 @@ Int Frame_TypeEvent(Int o, Int index, Int value)
 
     return true;
 }
+
+Int Frame_PointerEvent(Int o, Int kind, Int valueA, Int valueB)
+{
+    Frame* m;
+    m = CP(o);
+
+    Int state;
+    state = m->PointerState;
+
+    if (state == null)
+    {
+        return true;
+    }
+
+    Int aa;
+    aa = State_MaideGet(state);
+    Int arg;
+    arg = State_ArgGet(state);
+
+    if (aa == null)
+    {
+        return true;
+    }
+
+    Frame_Pointer_Maide maide;
+    maide = (Frame_Pointer_Maide)aa;
+
+    maide(o, arg, kind, valueA, valueB);
+
+    return true;
+}
