@@ -51,15 +51,23 @@ void FrameIntern::mousePressEvent(QMouseEvent* ev)
 
 void FrameIntern::mouseReleaseEvent(QMouseEvent* ev)
 {
-    Int index;
-    index = ev->buttons().toInt();
+    Int kind;
+    kind = 0;
 
-    Int valueA;
-    Int valueB;
-    valueA = ev->pos().x();
-    valueB = ev->pos().y();
+    if (ev->button() == Qt::LeftButton)
+    {
+        kind = 2;
+    }
 
-    this->PointEventHandle(2, index, valueA, valueB, 0, 0);
+    if (ev->button() == Qt::RightButton)
+    {
+        kind = 3;
+    }
+
+    if (!(kind == 0))
+    {
+        this->PointerEventHandle(kind, 0, 0);
+    }
 
     ev->accept();
 }
