@@ -2575,7 +2575,7 @@ Int Intern_Extern_Frame_ShownSet(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Frame_TypeStateGet(Eval* eval, Int frame)
+Int Intern_Extern_Frame_CursorGet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 1;
@@ -2583,12 +2583,12 @@ Int Intern_Extern_Frame_TypeStateGet(Eval* eval, Int frame)
     Param(0);
 
     Int a;
-    a = Frame_TypeStateGet(a0);
+    a = Frame_CursorGet(a0);
 
     Return;
 }
 
-Int Intern_Extern_Frame_TypeStateSet(Eval* eval, Int frame)
+Int Intern_Extern_Frame_CursorSet(Eval* eval, Int frame)
 {
     Int paramCount;
     paramCount = 2;
@@ -2597,7 +2597,7 @@ Int Intern_Extern_Frame_TypeStateSet(Eval* eval, Int frame)
     Param(1);
 
     Int a;
-    a = Frame_TypeStateSet(a0, a1);
+    a = Frame_CursorSet(a0, a1);
 
     Return;
 }
@@ -2629,6 +2629,60 @@ Int Intern_Extern_Frame_DrawStateSet(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Frame_TypeStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_TypeStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_TypeStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Frame_TypeStateSet(a0, a1);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_PointerStateGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_PointerStateGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_PointerStateSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Frame_PointerStateSet(a0, a1);
+
+    Return;
+}
+
 Int Intern_Extern_Frame_TitleThisSet(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -2651,6 +2705,19 @@ Int Intern_Extern_Frame_Out(Eval* eval, Int frame)
 
     Int a;
     a = Frame_Out(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Frame_CursorThisSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Frame_CursorThisSet(a0);
 
     Return;
 }
