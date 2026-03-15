@@ -1,11 +1,11 @@
 class Entry : Any
 {
-    maide prusate Int Execute()
+    maide private Int PrivateExecute()
     {
         this.MainBefore();
 
         var Int a;
-        a : this.ExecuteMain();
+        a : this.Main();
 
         a : this.StatusWrite(a);
 
@@ -65,7 +65,7 @@ class Entry : Any
         return true;
     }
 
-    maide precate Int ExecuteMain()
+    maide precate Int Main()
     {
         return 0;
     }
