@@ -2,7 +2,7 @@ namespace Saber.Docue;
 
 public class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Gen gen;
         gen = new Gen();

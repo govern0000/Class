@@ -2,7 +2,7 @@ namespace Saber.Class;
 
 public class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Console console;
         console = new Console();

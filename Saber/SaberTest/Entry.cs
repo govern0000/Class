@@ -2,7 +2,7 @@ namespace Saber.Test;
 
 public class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Test a;
         a = new Test();
