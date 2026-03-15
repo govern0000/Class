@@ -50,6 +50,8 @@ class Gen : ToolBase
         this.ExecuteOne("Infra.StatPolateKind");
         this.ExecuteOne("Infra.StatPolateSpread");
         this.ExecuteOne("Infra.StatImageFormat");
+        this.ExecuteOne("Infra.StatPlayStatus");
+        this.ExecuteOne("Infra.StatPlayCase");
         this.ExecuteOne("MathGen");
         this.ExecuteOne("PrusateGen");
         this.ExecuteOne("InternGen");
