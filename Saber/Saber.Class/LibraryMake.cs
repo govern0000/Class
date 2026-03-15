@@ -803,7 +803,7 @@ public class LibraryMake : TextAdd
         Program program;
         program = new Program();
         program.Init();
-        program.Name = this.S("clang.exe");
+        program.Name = this.S("gcc.exe");
         program.Argue = list;
         program.WorkFold = this.GenModuleFoldPath;
         program.Environ = null;
