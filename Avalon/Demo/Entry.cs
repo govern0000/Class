@@ -2,7 +2,7 @@ namespace Demo;
 
 class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Demo demo;
         demo = new Demo();
