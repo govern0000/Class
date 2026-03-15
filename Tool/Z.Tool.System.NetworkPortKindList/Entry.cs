@@ -2,7 +2,7 @@ namespace Z.Tool.System.NetworkPortKindList;
 
 class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Gen gen;
         gen = new Gen();

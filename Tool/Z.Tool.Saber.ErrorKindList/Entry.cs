@@ -2,7 +2,7 @@ namespace Z.Tool.Saber.ErrorKindList;
 
 class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
         Gen gen;
         gen = new Gen();

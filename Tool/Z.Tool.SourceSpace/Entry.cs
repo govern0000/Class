@@ -2,17 +2,14 @@ namespace Z.Tool.SourceSpace;
 
 class Entry : EntryEntry
 {
-    protected override long ExecuteMain()
+    protected override long Main()
     {
-        SourceSpace k;
-        k = new SourceSpace();
-        k.Init();
-
-        k.Path = this.Arg.GetAt(0) as String;
-
-        long a;
-        a = k.Execute();
-        return a;
+        Gen gen;
+        gen = new Gen();
+        gen.Init();
+        long o;
+        o = gen.Execute();
+        return o;
     }
 
     [STAThread]
