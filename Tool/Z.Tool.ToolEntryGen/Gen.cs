@@ -20,6 +20,8 @@ class Gen : ToolBase
         this.ExecuteOne("Avalon.NetworkCaseList");
         this.ExecuteOne("Avalon.NetworkPortKindList");
         this.ExecuteOne("Avalon.NetworkStatusList");
+        this.ExecuteOne("Avalon.ProgramOutModeList");
+        this.ExecuteOne("Avalon.ProgramInnModeList");
         this.ExecuteOne("Saber.CountList");
         this.ExecuteOne("Saber.LimitList");
         this.ExecuteOne("Saber.IndexList");
