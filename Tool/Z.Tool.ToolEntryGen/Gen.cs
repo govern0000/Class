@@ -55,7 +55,6 @@ class Gen : ToolBase
         this.ExecuteOne("MathGen");
         this.ExecuteOne("PrusateGen");
         this.ExecuteOne("InternGen");
-        this.ExecuteOne("SourceSpace");
         this.ExecuteOne("TypeBoardSvg");
 
         return true;
