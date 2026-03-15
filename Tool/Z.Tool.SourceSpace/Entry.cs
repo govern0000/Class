@@ -4,8 +4,8 @@ class Entry : EntryEntry
 {
     protected override long Main()
     {
-        Gen gen;
-        gen = new Gen();
+        SourceSpace gen;
+        gen = new SourceSpace();
         gen.Init();
         long o;
         o = gen.Execute();
