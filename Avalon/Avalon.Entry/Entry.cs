@@ -18,12 +18,12 @@ public class Entry : Any
     private StorageComp StorageComp { get; set; }
     private string[] InternArg { get; set; }
 
-    public virtual int Execute()
+    private int PrivateExecute()
     {
         this.MainBefore();
 
         long k;
-        k = this.ExecuteMain();
+        k = this.Main();
 
         k = this.StatusWrite(k);
 
@@ -104,7 +104,7 @@ public class Entry : Any
         return true;
     }
 
-    protected virtual long ExecuteMain()
+    protected virtual long Main()
     {
         return 0;
     }
@@ -259,7 +259,7 @@ public class Entry : Any
         entry.Init();
         entry.ArgSet(arg);
         int o;
-        o = entry.Execute();
+        o = entry.PrivateExecute();
         return o;
     }
 }
