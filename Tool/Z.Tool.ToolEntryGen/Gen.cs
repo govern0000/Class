@@ -40,6 +40,8 @@ class Gen : ToolBase
         this.ExecuteOne("Infra.StatNetworkCase");
         this.ExecuteOne("Infra.StatNetworkPortKind");
         this.ExecuteOne("Infra.StatNetworkStatus");
+        this.ExecuteOne("Infra.StatProgramOutMode");
+        this.ExecuteOne("Infra.StatProgramInnMode");
         this.ExecuteOne("Infra.StatBrushKind");
         this.ExecuteOne("Infra.StatSlashCape");
         this.ExecuteOne("Infra.StatSlashJoin");
