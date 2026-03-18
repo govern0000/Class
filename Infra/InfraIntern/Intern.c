@@ -429,6 +429,11 @@ Int Intern_Intern_StateFrameTypeEvent(Eval* eval, Int frame)
     return Intern_Intern_State(eval, frame, InternState(Frame_TypeEvent));
 }
 
+Int Intern_Intern_StateFramePointerEvent(Eval* eval, Int frame)
+{
+    return Intern_Intern_State(eval, frame, InternState(Frame_PointerEvent));
+}
+
 Int Intern_Intern_StateFrameDrawEvent(Eval* eval, Int frame)
 {
     return Intern_Intern_State(eval, frame, InternState(Frame_DrawEvent));
