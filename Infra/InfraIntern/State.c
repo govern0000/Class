@@ -181,7 +181,7 @@ Int Intern_State_Frame_PointerEvent(Int frame, Int arg, Int kind, Int valueA, In
 
 Int Intern_State_Frame_DrawEvent(Int frame, Int arg)
 {
-    return Intern_State_Call(frame, arg, 2);
+    return Intern_State_Call(frame, arg, 3);
 }
 
 Int Intern_State_Play_StatusEvent(Int play, Int arg)
