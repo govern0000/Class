@@ -26,6 +26,7 @@ Int StateNetworkDataEvent|
 Int StateNetworkHostNewPeer|
 Int StateScreenDimendEvent|
 Int StateFrameTypeEvent|
+Int StateFramePointerEvent|
 Int StateFrameDrawEvent|
 Int StatePlayStatusEvent|
 Int StatePlayCaseEvent|
