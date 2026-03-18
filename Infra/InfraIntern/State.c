@@ -140,6 +140,45 @@ Int Intern_State_Frame_TypeEvent(Int frame, Int arg, Int index, Int value)
     return true;
 }
 
+Int Intern_State_Frame_PointerEvent(Int frame, Int arg, Int kind, Int valueA, Int valueB)
+{
+    Int k;
+    k = Intern_State_CallEval();
+
+    Eval* eval;
+    eval = CastPointer(k);
+
+    Int ka;
+    ka = arg;
+    RefKindSet(ka, RefKindAny);
+
+    RefKindSet(kind, RefKindInt);
+    RefKindSet(valueA, RefKindInt);
+    RefKindSet(valueB, RefKindInt);
+
+    eval->S[eval->N] = ka;
+
+    eval->N = eval->N + 1;
+
+    eval->S[eval->N] = kind;
+
+    eval->N = eval->N + 1;
+
+    eval->S[eval->N] = valueA;
+
+    eval->N = eval->N + 1;
+
+    eval->S[eval->N] = valueB;
+
+    eval->N = eval->N + 1;
+
+    Intern_Call(eval, 4, 3, 2);
+
+    eval->N = eval->N - 1;
+
+    return true;
+}
+
 Int Intern_State_Frame_DrawEvent(Int frame, Int arg)
 {
     return Intern_State_Call(frame, arg, 2);
