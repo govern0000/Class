@@ -78,6 +78,8 @@ Int Intern_State_Screen_DimendEvent(Int screen, Int arg);
 
 Int Intern_State_Frame_TypeEvent(Int frame, Int arg, Int index, Int value);
 
+Int Intern_State_Frame_PointerEvent(Int frame, Int arg, Int kind, Int valueA, Int valueB);
+
 Int Intern_State_Frame_DrawEvent(Int frame, Int arg);
 
 Int Intern_State_Play_StatusEvent(Int play, Int arg);
