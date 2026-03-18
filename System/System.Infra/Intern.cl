@@ -56,6 +56,8 @@ class Intern : Any
 
     maide prusate Int StateFrameTypeEvent() { }
 
+    maide prusate Int StateFramePointerEvent() { }
+
     maide prusate Int StateFrameDrawEvent() { }
 
     maide prusate Int StatePlayStatusEvent() { }
