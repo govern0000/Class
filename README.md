@@ -13,3 +13,5 @@ Any object can be assigned without boxing to root base type.
 Any object includes standard bool type and standard integer type.
 
 Any object includes byte array type.
+
+Any object includes object array type.
