@@ -21,3 +21,5 @@ Class uses 1 integer type for both signed and unsigned integer operations.
 The integer type is also used to represent 1 Mathematics Floating Point value.
 
 Class unify Instance Member and Static Member into Instance Member.
+
+Class has expression that get the shared instance of a class.
