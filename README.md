@@ -1,3 +1,3 @@
 # Class
 
-Class program lang repo.
+Class programming language repo.
