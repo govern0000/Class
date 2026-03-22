@@ -17,3 +17,5 @@ Any object includes byte array type.
 Any object includes object array type.
 
 Class uses 1 integer type for both signed and unsigned integer operations.
+
+The integer type is also used to represent 1 Mathematics Floating Point value.
