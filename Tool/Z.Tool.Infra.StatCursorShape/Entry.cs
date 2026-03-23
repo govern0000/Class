@@ -1,4 +1,4 @@
-namespace Z.Tool.Infra.StatFrameCursor;
+namespace Z.Tool.Infra.StatCursorShape;
 
 class Entry : EntryEntry
 {
