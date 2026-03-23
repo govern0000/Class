@@ -278,6 +278,10 @@ typedef Int (*Frame_Draw_Maide)(Int frame, Int arg);
 typedef Int (*Frame_Type_Maide)(Int frame, Int arg, Int index, Int value);
 typedef Int (*Frame_Pointer_Maide)(Int frame, Int arg, Int kind, Int valueA, Int valueB);
 
+InfraApiNew(Cursor)
+Infra_Api Int Cursor_ShapeGet(Int o);
+Infra_Api Int Cursor_ShapeSet(Int o, Int value);
+
 InfraApiNew(Draw)
 Infra_Api Int Draw_SizeGet(Int o);
 Infra_Api Int Draw_SizeSet(Int o, Int value);
@@ -850,4 +854,26 @@ Infra_Api Int Stat_PlayStatusAccessDeniedError(Int o);
 Infra_Api Int Stat_PlayCaseStopped(Int o);
 Infra_Api Int Stat_PlayCasePlaying(Int o);
 Infra_Api Int Stat_PlayCasePaused(Int o);
+Infra_Api Int Stat_CursorShapeArrow(Int o);
+Infra_Api Int Stat_CursorShapeUpArrow(Int o);
+Infra_Api Int Stat_CursorShapeCross(Int o);
+Infra_Api Int Stat_CursorShapeWait(Int o);
+Infra_Api Int Stat_CursorShapeIBeam(Int o);
+Infra_Api Int Stat_CursorShapeSizeVer(Int o);
+Infra_Api Int Stat_CursorShapeSizeHor(Int o);
+Infra_Api Int Stat_CursorShapeSizeBDiag(Int o);
+Infra_Api Int Stat_CursorShapeSizeFDiag(Int o);
+Infra_Api Int Stat_CursorShapeSizeAll(Int o);
+Infra_Api Int Stat_CursorShapeBlank(Int o);
+Infra_Api Int Stat_CursorShapeSplitV(Int o);
+Infra_Api Int Stat_CursorShapeSplitH(Int o);
+Infra_Api Int Stat_CursorShapePointingHand(Int o);
+Infra_Api Int Stat_CursorShapeForbidden(Int o);
+Infra_Api Int Stat_CursorShapeWhatsThis(Int o);
+Infra_Api Int Stat_CursorShapeBusy(Int o);
+Infra_Api Int Stat_CursorShapeOpenHand(Int o);
+Infra_Api Int Stat_CursorShapeClosedHand(Int o);
+Infra_Api Int Stat_CursorShapeDragCopy(Int o);
+Infra_Api Int Stat_CursorShapeDragMove(Int o);
+Infra_Api Int Stat_CursorShapeDragLink(Int o);
 
