@@ -8,6 +8,7 @@ HEADERS += \
     AudioOut.hpp \
     Brush.hpp \
     Console.hpp \
+    Cursor.hpp \
     Data.h \
     Draw.hpp \
     Entry.h \
@@ -72,6 +73,7 @@ SOURCES += \
     AudioOut.cpp \
     Brush.cpp \
     Console.cpp \
+    Cursor.cpp \
     Data.c \
     Draw.cpp \
     Entry.c \
