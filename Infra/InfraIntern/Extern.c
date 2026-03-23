@@ -2749,6 +2749,83 @@ Int Intern_Extern_Frame_Close(Eval* eval, Int frame)
     Return;
 }
 
+Int Intern_Extern_Cursor_New(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 0;
+
+    Int a;
+    a = Cursor_New();
+
+    Return;
+}
+
+Int Intern_Extern_Cursor_Delete(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Cursor_Delete(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Cursor_Init(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Cursor_Init(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Cursor_Final(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Cursor_Final(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Cursor_ShapeGet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Cursor_ShapeGet(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Cursor_ShapeSet(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 2;
+
+    Param(0);
+    Param(1);
+
+    Int a;
+    a = Cursor_ShapeSet(a0, a1);
+
+    Return;
+}
+
 Int Intern_Extern_Draw_New(Eval* eval, Int frame)
 {
     Int paramCount;
@@ -10564,6 +10641,292 @@ Int Intern_Extern_Stat_PlayCasePaused(Eval* eval, Int frame)
 
     Int a;
     a = Stat_PlayCasePaused(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeArrow(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeArrow(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeUpArrow(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeUpArrow(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeCross(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeCross(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeWait(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeWait(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeIBeam(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeIBeam(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSizeVer(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSizeVer(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSizeHor(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSizeHor(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSizeBDiag(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSizeBDiag(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSizeFDiag(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSizeFDiag(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSizeAll(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSizeAll(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeBlank(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeBlank(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSplitV(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSplitV(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeSplitH(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeSplitH(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapePointingHand(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapePointingHand(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeForbidden(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeForbidden(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeWhatsThis(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeWhatsThis(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeBusy(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeBusy(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeOpenHand(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeOpenHand(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeClosedHand(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeClosedHand(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeDragCopy(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeDragCopy(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeDragMove(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeDragMove(a0);
+
+    Return;
+}
+
+Int Intern_Extern_Stat_CursorShapeDragLink(Eval* eval, Int frame)
+{
+    Int paramCount;
+    paramCount = 1;
+
+    Param(0);
+
+    Int a;
+    a = Stat_CursorShapeDragLink(a0);
 
     Return;
 }
