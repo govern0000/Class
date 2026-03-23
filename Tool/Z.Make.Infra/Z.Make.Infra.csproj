@@ -26,6 +26,7 @@
         <ProjectReference Include="../Z.Tool.Infra.StatImageFormat/Z.Tool.Infra.StatImageFormat.csproj" />
         <ProjectReference Include="../Z.Tool.Infra.StatPlayCase/Z.Tool.Infra.StatPlayCase.csproj" />
         <ProjectReference Include="../Z.Tool.Infra.StatPlayStatus/Z.Tool.Infra.StatPlayStatus.csproj" />
+        <ProjectReference Include="../Z.Tool.Infra.StatCursorShape/Z.Tool.Infra.StatCursorShape.csproj" />
     </ItemGroup>
 
 </Project>
