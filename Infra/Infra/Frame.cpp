@@ -75,15 +75,19 @@ Int Frame_CursorThisSet(Int o)
     Frame* m;
     m = CP(o);
 
-    Qt::CursorShape k;
-    k = (Qt::CursorShape)(m->Cursor);
+    if (m->Cursor == null)
+    {
+        m->Intern->setCursor(Qt::BlankCursor);
+        return true;
+    }
 
-    QCursor cursor;
-    cursor = m->Intern->cursor();
+    Int k;
+    k = Cursor_Intern(m->Cursor);
 
-    cursor.setShape(k);
+    QCursor* cursor;
+    cursor = (QCursor*)k;
 
-    m->Intern->setCursor(cursor);
+    m->Intern->setCursor(*cursor);
 
     return true;
 }
