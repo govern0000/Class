@@ -114,6 +114,9 @@ Frame
     Type(frame, arg, index, value) --
     Pointer(frame, arg, kind, valueA, valueB) --
 
+Cursor
+    Shape
+
 Draw
     Size
     Out
