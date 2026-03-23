@@ -23,3 +23,12 @@ Int Cursor_Init(Int o)
 
     return true;
 }
+
+Int Cursor_Final(Int o)
+{
+    Cursor* m;
+    m = CP(o);
+
+    delete m->Intern;
+    return true;
+}
