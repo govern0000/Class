@@ -135,6 +135,7 @@ SOURCES += \
     Stat_ImageFormat.cpp \
     Stat_PlayCase.cpp \
     Stat_PlayStatus.cpp \
+    Stat_CursorShape.cpp \
     State.c \
     Storage.cpp \
     StorageComp.cpp \
