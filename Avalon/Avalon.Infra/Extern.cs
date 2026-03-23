@@ -241,6 +241,13 @@ public static class Extern
     public delegate ulong Frame_Type_Maide(ulong frame, ulong arg, ulong index, ulong value);
     public delegate ulong Frame_Pointer_Maide(ulong frame, ulong arg, ulong kind, ulong valueA, ulong valueB);
 
+    [DllImport(InfraLib)] public extern static ulong Cursor_New();
+    [DllImport(InfraLib)] public extern static ulong Cursor_Delete(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Cursor_Init(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Cursor_Final(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Cursor_ShapeGet(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Cursor_ShapeSet(ulong o, ulong value);
+
     [DllImport(InfraLib)] public extern static ulong Draw_New();
     [DllImport(InfraLib)] public extern static ulong Draw_Delete(ulong o);
     [DllImport(InfraLib)] public extern static ulong Draw_Init(ulong o);
@@ -903,5 +910,27 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Stat_PlayCaseStopped(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_PlayCasePlaying(ulong o);
     [DllImport(InfraLib)] public extern static ulong Stat_PlayCasePaused(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeArrow(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeUpArrow(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeCross(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeWait(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeIBeam(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSizeVer(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSizeHor(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSizeBDiag(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSizeFDiag(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSizeAll(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeBlank(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSplitV(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeSplitH(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapePointingHand(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeForbidden(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeWhatsThis(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeBusy(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeOpenHand(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeClosedHand(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeDragCopy(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeDragMove(ulong o);
+    [DllImport(InfraLib)] public extern static ulong Stat_CursorShapeDragLink(ulong o);
 
 }
