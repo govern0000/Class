@@ -56,6 +56,8 @@ Int Frame_DrawEvent(Int o);
 Int Frame_TypeEvent(Int o, Int index, Int value);
 Int Frame_PointerEvent(Int o, Int kind, Int valueA, Int valueB);
 
+Int Cursor_Intern(Int o);
+
 Int Play_StatusEvent(Int o);
 Int Play_CaseEvent(Int o);
 Int Play_RateEvent(Int o);
