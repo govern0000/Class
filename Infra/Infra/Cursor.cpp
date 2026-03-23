@@ -32,3 +32,5 @@ Int Cursor_Final(Int o)
     delete m->Intern;
     return true;
 }
+
+CppField(Cursor, Shape);
