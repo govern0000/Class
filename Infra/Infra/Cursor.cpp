@@ -34,3 +34,13 @@ Int Cursor_Final(Int o)
 }
 
 CppField(Cursor, Shape);
+
+Int Cursor_Intern(Int o)
+{
+    Cursor* m;
+    m = CP(o);
+
+    Int a;
+    a = CastInt(m->Intern);
+    return a;
+}
