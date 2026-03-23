@@ -30,6 +30,7 @@ public class ReadList : ToolBase
         this.ExecuteList("ImageFormat");
         this.ExecuteList("PlayStatus");
         this.ExecuteList("PlayCase");
+        this.ExecuteList("CursorShape");
 
         bool b;
         b = this.SetStatMethod();
