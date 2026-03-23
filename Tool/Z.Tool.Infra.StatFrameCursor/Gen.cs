@@ -1,4 +1,4 @@
-namespace Z.Tool.Infra.StatPlayCase;
+namespace Z.Tool.Infra.StatFrameCursor;
 
 class Gen : StatGen
 {
