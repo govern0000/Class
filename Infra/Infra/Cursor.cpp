@@ -19,5 +19,7 @@ Int Cursor_Init(Int o)
         shape = (Qt::CursorShape)k;
     }
 
+    m->Intern = new QCursor(shape);
+
     return true;
 }
