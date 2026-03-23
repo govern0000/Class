@@ -231,6 +231,13 @@ class Extern : Any
     maide prusate Int Frame_Update(var Int o, var Int rect) { }
     maide prusate Int Frame_Close(var Int o) { }
 
+    maide prusate Int Cursor_New() { }
+    maide prusate Int Cursor_Delete(var Int o) { }
+    maide prusate Int Cursor_Init(var Int o) { }
+    maide prusate Int Cursor_Final(var Int o) { }
+    maide prusate Int Cursor_ShapeGet(var Int o) { }
+    maide prusate Int Cursor_ShapeSet(var Int o, var Int value) { }
+
     maide prusate Int Draw_New() { }
     maide prusate Int Draw_Delete(var Int o) { }
     maide prusate Int Draw_Init(var Int o) { }
@@ -875,5 +882,27 @@ class Extern : Any
     maide prusate Int Stat_PlayCaseStopped(var Int o) { }
     maide prusate Int Stat_PlayCasePlaying(var Int o) { }
     maide prusate Int Stat_PlayCasePaused(var Int o) { }
+    maide prusate Int Stat_CursorShapeArrow(var Int o) { }
+    maide prusate Int Stat_CursorShapeUpArrow(var Int o) { }
+    maide prusate Int Stat_CursorShapeCross(var Int o) { }
+    maide prusate Int Stat_CursorShapeWait(var Int o) { }
+    maide prusate Int Stat_CursorShapeIBeam(var Int o) { }
+    maide prusate Int Stat_CursorShapeSizeVer(var Int o) { }
+    maide prusate Int Stat_CursorShapeSizeHor(var Int o) { }
+    maide prusate Int Stat_CursorShapeSizeBDiag(var Int o) { }
+    maide prusate Int Stat_CursorShapeSizeFDiag(var Int o) { }
+    maide prusate Int Stat_CursorShapeSizeAll(var Int o) { }
+    maide prusate Int Stat_CursorShapeBlank(var Int o) { }
+    maide prusate Int Stat_CursorShapeSplitV(var Int o) { }
+    maide prusate Int Stat_CursorShapeSplitH(var Int o) { }
+    maide prusate Int Stat_CursorShapePointingHand(var Int o) { }
+    maide prusate Int Stat_CursorShapeForbidden(var Int o) { }
+    maide prusate Int Stat_CursorShapeWhatsThis(var Int o) { }
+    maide prusate Int Stat_CursorShapeBusy(var Int o) { }
+    maide prusate Int Stat_CursorShapeOpenHand(var Int o) { }
+    maide prusate Int Stat_CursorShapeClosedHand(var Int o) { }
+    maide prusate Int Stat_CursorShapeDragCopy(var Int o) { }
+    maide prusate Int Stat_CursorShapeDragMove(var Int o) { }
+    maide prusate Int Stat_CursorShapeDragLink(var Int o) { }
 
 }
