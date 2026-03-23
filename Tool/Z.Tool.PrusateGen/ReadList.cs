@@ -135,7 +135,7 @@ public class ReadList : ToolBase
         while (i < count)
         {
             String a;
-            a = (String)array.GetAt(i);
+            a = array.GetAt(i) as String;
 
             Text ka;
             ka = this.TextCreate(a);
@@ -144,7 +144,7 @@ public class ReadList : ToolBase
             colArray = this.TextLimit(ka, space);
 
             Text kaa;
-            kaa = (Text)colArray.GetAt(0);
+            kaa = colArray.GetAt(0) as Text;
 
             String name;
             name = this.StringCreate(kaa);
