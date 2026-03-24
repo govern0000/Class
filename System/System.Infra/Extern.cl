@@ -350,6 +350,7 @@ class Extern : Any
     maide prusate Int Form_ValueGet(var Int o, var Int col, var Int row) { }
     maide prusate Int Form_ValueSet(var Int o, var Int col, var Int row, var Int value) { }
     maide prusate Int Form_Mul(var Int o, var Int other) { }
+    maide prusate Int Form_MulPos(var Int o, var Int result, var Int pos) { }
     maide prusate Int Form_Ident(var Int o) { }
     maide prusate Int Form_IsInvertible(var Int o) { }
     maide prusate Int Form_Invert(var Int o, var Int result) { }
