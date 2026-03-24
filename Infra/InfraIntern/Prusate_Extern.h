@@ -352,6 +352,7 @@ Intern_Api Int Intern_Extern_Form_Scale(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_ValueGet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_ValueSet(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_Mul(Eval* e, Int f);
+Intern_Api Int Intern_Extern_Form_MulPos(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_Ident(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_IsInvertible(Eval* e, Int f);
 Intern_Api Int Intern_Extern_Form_Invert(Eval* e, Int f);
