@@ -376,6 +376,7 @@ Infra_Api Int Form_Scale(Int o, Int colScale, Int rowScale);
 Infra_Api Int Form_ValueGet(Int o, Int col, Int row);
 Infra_Api Int Form_ValueSet(Int o, Int col, Int row, Int value);
 Infra_Api Int Form_Mul(Int o, Int other);
+Infra_Api Int Form_MulPos(Int o, Int result, Int pos);
 Infra_Api Int Form_Ident(Int o);
 Infra_Api Int Form_IsInvertible(Int o);
 Infra_Api Int Form_Invert(Int o, Int result);
