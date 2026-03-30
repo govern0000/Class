@@ -29,7 +29,7 @@ make class for effect.
 
 Make module with Single has develop execute certain.
 
-Single is effecon in make module for effect.
+Single is endgame in make module for effect.
 
 Single is object oriented.
 Single is class base.
