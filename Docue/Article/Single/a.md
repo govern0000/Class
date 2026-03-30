@@ -22,6 +22,8 @@ Single is not enough general to make model package.
 
 Class is most gain program lang in make class for effect.
 
+Single is also most gain program lang in make class for effect.
+
 Single has more high develop execute certain than Sand in
 make class for effect.
 
