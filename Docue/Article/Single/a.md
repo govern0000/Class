@@ -107,7 +107,7 @@ Comp has result class.
 Field syntax has option.
 Field syntax can has Storage of class Storage before "get" index word.
 
-Var has Type of class TypeName instead of Class of class ClassName.
+Var has result class.
 
 ReferExecute syntax has option.
 ReferExecute syntax can has Storage of class Storage after Var and before limit semicolon token.
