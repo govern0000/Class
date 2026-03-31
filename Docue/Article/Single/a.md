@@ -81,7 +81,7 @@ After the execute is executed, the any is deleted and does not exist.
 
 Using any comp on any ref that refers to any that does not exist is a programming error.
 
-Single Field and Maide can be glob comp.
+Single Field and Maide has none glob comp.
 
 Single Class has Struct comp.
 
