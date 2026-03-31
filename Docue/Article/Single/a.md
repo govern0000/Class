@@ -119,10 +119,10 @@ Inf it is follow by none, the storage is size with count 1 of the any size.
 Inf it is follow by Count, the storage is size with count Count of the any size.
 Count is not zero.
 
-Single comp syntax does not have Storage beside name of result Type.
+Single comp syntax does not have Storage beside name of result class.
 Inf it has, abstract of comp is tagged with the existence of storage.
 
-Single Var syntax does not have Storage beside name of the var Type.
+Single Var syntax does not have Storage beside name of the var class.
 Inf it has, abstract of var is tagged with the existence of storage.
 
 Single does not need enum.
