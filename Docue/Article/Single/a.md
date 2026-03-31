@@ -51,11 +51,7 @@ Single has Class.
 
 Single has none smaller Int type, none Struct type.
 
-ClassType is type that is a class.
-IntType is type that is builtin Int kind.
-StructType is type that is a struct defined in a class.
-
-Single output and input of lang elements has Type.
+Single output and input of lang elements has Class.
 
 Single builtin Int is 60 bits, same as Class Lang.
 Builtin Int value is stored in ref holder ref value.
