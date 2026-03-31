@@ -15,7 +15,7 @@ Single is used to make class for effect.
 Single is used to make effect plat.
 
 Single is not enough general to make model.
-Single New allocated ClassType any need to be deleted,
+Single New allocated any need to be deleted,
 when the module need to continue execution.
 
 Single is not enough general to make model package.
