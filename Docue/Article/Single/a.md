@@ -85,6 +85,9 @@ Single Field and Maide has none glob comp.
 
 Single Class has none Struct comp.
 
+Single all class in current program is value alloc the class shared instance and all the instances are init
+at program init.
+
 Single CastOperate is same as Class Lang.
 If the operate casts to class that is not value class and not Any class and 
 the input of the operate refers to any that does not exist, 
