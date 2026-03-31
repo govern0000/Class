@@ -62,6 +62,8 @@ Single builtin String value uses 32 bits int as char unit.
 
 Builtin Bool, Int, String is class.
 
+Builtin Any is class.
+
 Operate results ref.
 Mark inputs ref.
 
