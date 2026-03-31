@@ -119,16 +119,6 @@ Inf it is follow by none, the storage is size with count 1 of the any size.
 Inf it is follow by Count, the storage is size with count Count of the any size.
 Count is not zero.
 
-GlobCallOperate is operate that trigg glob maide call.
-The operate has syntax that start with "glob" index word, follow by
-Class of class ClassName, follow by limit dot token, follow by Maide
-of class MaideName, follow by limit brace round open token, follow
-by Argue of class Argue, follow by limit brace round close token.
-Glob maide with maide name Maide in class Class is trigg call.
-Argue is pass into the maide in the call.
-The operate result ref value that the maide return.
-The operate Type is the result Type of the maide.
-
 Single comp syntax does not have Storage beside name of result Type.
 Inf it has, abstract of comp is tagged with the existence of storage.
 
