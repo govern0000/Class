@@ -68,7 +68,7 @@ Operate results ref.
 Mark inputs ref.
 
 Single memory management is manual memory management.
-Single NewOperate and ShareOperate have memory allocation.
+Single NewOperate has memory allocation.
 The memory allocation does not have auto delete.
 
 Single has DeleteExecute.
