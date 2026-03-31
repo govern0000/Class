@@ -103,29 +103,8 @@ Calling Final maide on Bool or Int does nothing, only returns Bool true.
 
 Single System modules Bool and Int classes has no comp defined on them.
 
-TypeName is name of Type.
-TypeName is base class.
-
-1 TypeName derive class is ClassTypeName.
-ClassTypeName is name for ClassType.
-ClassTypeName syntax is Class of class ClassName.
-Class is name of the Class of the ClassType.
-
-1 TypeName derive class is IntTypeName.
-IntTypeName is name for IntType.
-IntTypeName syntax is Int of class IntKind.
-Int is kind of the IntType.
-
-1 TypeName derive class is StructTypeName.
-StructTypeName is name for StructType.
-StructTypeName syntax is Class of class ClassName, follow by
-limit dot token, follow by Struct of class StructName.
-Class is name of the Class that the Struct of the StructType is define in.
-Struct is name of the Struct of the StructType.
-
 Comp has Type of class TypeName instead of Class of class ClassName.
 Type is result Type of the comp.
-Comp that has "glob" index word after Count index word is glob comp.
 Field syntax has option.
 Field syntax can has Storage of class Storage before "get" index word.
 
