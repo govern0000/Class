@@ -87,6 +87,7 @@ Single Class has none Struct comp.
 
 Single all class in current program is value alloc the class shared instance and all the instances are init
 at program init.
+All the instance can be init because init is only heap execute certain, all the class init heap alloc is bounded at 16 mega count.
 
 Single ShareOperate result the shared instance that is already value alloced and inited.
 
