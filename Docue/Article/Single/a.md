@@ -124,8 +124,7 @@ ReferExecute syntax has option.
 ReferExecute syntax can has Storage of class Storage after Var and before limit semicolon token.
 
 Storage is data storage of any.
-Storage syntax start with "val" index word, follow by none orn Count of class IntDecValue
-orn Count of class IntHexValue.
+Storage syntax start with "val" index word, follow by none orn Count of class IntHexValue.
 Inf it is follow by none, the storage is size with count 1 of the any size.
 Inf it is follow by Count, the storage is size with count Count of the any size.
 Count is not zero.
