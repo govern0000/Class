@@ -59,7 +59,8 @@ Builtin Bool value is stored in ref holder ref value.
 Ref is 64 bits, same as Class Lang.
 
 Single builtin String value uses 32 bits int as char unit.
-Builtin String is ClassType.
+
+Builtin Bool, Int, String is class.
 
 Operate results ref.
 Mark inputs ref.
