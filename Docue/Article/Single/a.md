@@ -96,9 +96,7 @@ Struct is done with class that derive from Any.
 The any of the class is value alloc with Storage.
 
 Single CastOperate is same as Class Lang.
-If the operate casts to class that is not value class and not Any class and 
-the input of the operate refers to any that does not exist, 
-the operate is a programming error.
+if the input of the CastOperate refer to any that not exist, it is a programming error.
 
 Single System.Infra module Any class has 1 maide.
 The maide name is "Final".
