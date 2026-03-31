@@ -103,8 +103,7 @@ Calling Final maide on Bool or Int does nothing, only returns Bool true.
 
 Single System modules Bool and Int classes has no comp defined on them.
 
-Comp has Type of class TypeName instead of Class of class ClassName.
-Type is result Type of the comp.
+Comp has result class.
 Field syntax has option.
 Field syntax can has Storage of class Storage before "get" index word.
 
