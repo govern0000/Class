@@ -83,7 +83,7 @@ Using any comp on any ref that refers to any that does not exist is a programmin
 
 Single Field and Maide has none glob comp.
 
-Single Class has Struct comp.
+Single Class has none Struct comp.
 
 Single CastOperate is same as Class Lang.
 If the operate casts to class that is not value class and not Any class and 
