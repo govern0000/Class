@@ -119,21 +119,6 @@ Inf it is follow by none, the storage is size with count 1 of the any size.
 Inf it is follow by Count, the storage is size with count Count of the any size.
 Count is not zero.
 
-GlobGetOperate is operate that trigg glob field get.
-The operate has syntax that start with "glob" index word, follow by
-Class of class ClassName, follow by limit dot token, follow by Field
-of class FieldName.
-Glob field with field name Field in class Class is trigg get.
-The operate result ref value that the field get return.
-The operate Type is result Type of the field.
-
-GlobSetMark is mark that trigg glob field set.
-The mark has syntax that is same as GlobGetOperate.
-Glob field with field name Field in class Class is trigg set with Value
-from AreExecute.
-The mark input ref value to the field set.
-The mark Type is result Type of the field.
-
 GlobCallOperate is operate that trigg glob maide call.
 The operate has syntax that start with "glob" index word, follow by
 Class of class ClassName, follow by limit dot token, follow by Maide
