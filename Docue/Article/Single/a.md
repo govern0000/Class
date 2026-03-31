@@ -47,8 +47,9 @@ The port is same as in Class Lang module source port.
 
 Single has type checking, name checking and count checking.
 
-Single has Type.
-Type is ClassType, IntType orn StructType.
+Single has Class.
+
+Single has none smaller Int type, none Struct type.
 
 ClassType is type that is a class.
 IntType is type that is builtin Int kind.
