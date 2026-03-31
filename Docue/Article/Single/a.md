@@ -90,6 +90,8 @@ at program init.
 
 Single ShareOperate result the shared instance that is already value alloced and inited.
 
+Single ShareOperate is call execute certain.
+
 Single CastOperate is same as Class Lang.
 If the operate casts to class that is not value class and not Any class and 
 the input of the operate refers to any that does not exist, 
