@@ -96,7 +96,7 @@ Word "effecon" has meaning that is effective.
 
 Word "order" has meaning that is order.
 
-Word "econam" has meaning that is eco system.
+Word "econia" has meaning that is eco system.
 
 Word "default" has meaning that is no fault.
 
