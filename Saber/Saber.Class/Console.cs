@@ -991,7 +991,7 @@ public class Console : TextAdd
         return a;
     }
 
-    protected virtual Array SourceNameList(String foldPath)
+    public virtual Array SourceNameList(String foldPath)
     {
         Array fileArray;
         fileArray = this.FileList(foldPath);
@@ -1034,7 +1034,7 @@ public class Console : TextAdd
         return a;
     }
 
-    protected virtual bool SetSource(Array array)
+    public virtual bool SetSource(Array array)
     {
         long count;
         count = array.Count;
@@ -1059,7 +1059,7 @@ public class Console : TextAdd
         return true;
     }
 
-    protected virtual bool ReadSourceText(bool fileExtend)
+    public virtual bool ReadSourceText(bool fileExtend)
     {
         Array array;
         array = this.Source;
