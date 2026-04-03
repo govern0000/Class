@@ -492,7 +492,7 @@ public class Console : TextAdd
         return true;
     }
 
-    protected virtual bool ReadPort()
+    public virtual bool ReadPort()
     {
         String combine;
         combine = this.TextInfra.PathCombine;
@@ -536,7 +536,7 @@ public class Console : TextAdd
         return true;
     }
 
-    protected virtual bool PortModuleLoad()
+    public virtual bool PortModuleLoad()
     {
         this.ModuleTable = this.ClassInfra.TableCreateModuleRefLess();
         this.ImportClass = this.ClassInfra.TableCreateStringLess();
