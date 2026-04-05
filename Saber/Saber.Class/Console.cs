@@ -1086,8 +1086,10 @@ public class Console : TextAdd
             String kk;
             kk = this.StorageInfra.TextRead(filePath);
 
+            a.String = kk;
+
             Array text;
-            text = this.TextLine(this.TextCreate(kk));
+            text = this.TextLine(this.TextCreate(a.String));
    
             a.Text = text;
 
