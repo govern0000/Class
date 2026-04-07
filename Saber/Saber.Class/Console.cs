@@ -177,6 +177,8 @@ public class Console : TextAdd
     public virtual PortPort Port { get; set; }
     public virtual Array PortError { get; set; }
     public virtual bool ErrorWrite { get; set; }
+    public virtual String ClassPath { get; set; }
+    public virtual bool MakeSystem { get; set; }
     public virtual BinaryRead BinaryRead { get; set; }
     public virtual BinaryWrite BinaryWrite { get; set; }
     public virtual ModulePort ModulePort { get; set; }
@@ -195,8 +197,6 @@ public class Console : TextAdd
     protected virtual StorageComp StorageComp { get; set; }
     protected virtual Out Out { get; set; }
     protected virtual Out Err { get; set; }
-    protected virtual String ClassPath { get; set; }
-    protected virtual bool MakeSystem { get; set; }
     protected virtual ModuleRefLess ModuleRefLess { get; set; }
     protected virtual TextLess StorageNameLess { get; set; }
     protected virtual String SClass { get; set; }
