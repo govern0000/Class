@@ -235,15 +235,11 @@ public class Table : List
             return null;
         }
 
-        TreeNodeResult k;
-        k = this.Tree.Node(index);
-        if (!k.HasNode)
-        {
-            return null;
-        }
+        object kk;
+        kk = this.SortDict[index];
 
         ListNode listNode;
-        listNode = k.Node.Value as ListNode;
+        listNode = kk as ListNode;
         ListNode a;
         a = listNode;
         return a;
