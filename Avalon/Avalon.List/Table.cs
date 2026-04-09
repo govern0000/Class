@@ -4,9 +4,13 @@ public class Table : List
 {
     public override bool Init()
     {
-        this.Tree = new Tree();
-        this.Tree.Less = this.Less;
-        this.Tree.Init();
+        LessCompare compare;
+        compare = new LessCompare();
+        compare.Less = this.Less;
+        compare.Init();
+
+        this.SortDict = new SortDict(compare);
+
         this.List = new List();
         this.List.Init();
         return true;
@@ -59,8 +63,9 @@ public class Table : List
         {
         }
     }
-    private Tree Tree { get; set; }
+
     private List List { get; set; }
+    private SortDict SortDict { get; set; }
 
     public override object Get(object index)
     {
