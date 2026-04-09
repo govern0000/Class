@@ -182,7 +182,7 @@ public class Table : List
 
         this.List.Rem(node);
 
-        this.Tree.Rem(index);
+        this.SortDict.Remove(index);
 
         this.Count = this.List.Count;
         return true;
