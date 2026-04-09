@@ -162,7 +162,7 @@ public class Table : List
         object k;
         k = this.List.Ins(node, entry);
 
-        this.Tree.Ins(entry.Index, k);
+        this.SortDict[entry.Index] = k;
 
         this.Count = this.List.Count;
 
