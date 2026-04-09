@@ -190,7 +190,7 @@ public class Table : List
 
     public override bool Clear()
     {
-        this.Tree.Clear();
+        this.SortDict.Clear();
 
         this.List.Clear();
 
