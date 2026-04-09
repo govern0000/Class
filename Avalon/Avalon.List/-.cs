@@ -3,3 +3,5 @@ global using Any = Avalon.Infra.Any;
 global using Range = Avalon.Infra.Range;
 global using Less = Avalon.Infra.Less;
 global using InfraInfra = Avalon.Infra.Infra;
+global using SortDict = System.Collections.Generic.SortedDictionary<object, object>;
+global using ICompare = System.Collections.Generic.IComparer<object>;
