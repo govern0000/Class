@@ -1198,7 +1198,7 @@ class Demo : TextAdd
 
         try
         {
-            Directory.Delete(destPathAa);
+            Directory.Delete(destPathAa, true);
         }
         catch
         {
