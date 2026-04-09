@@ -215,6 +215,7 @@ public class Table : List
         TableIter k;
         k = new TableIter();
         k.Init();
+
         Iter a;
         a = k;
         return a;
@@ -223,7 +224,8 @@ public class Table : List
     public override bool IterSet(Iter iter)
     {
         TableIter a;
-        a = (TableIter)iter;
+        a = iter as TableIter;
+
         this.List.IterSet(a.ListIter);
         return true;
     }
