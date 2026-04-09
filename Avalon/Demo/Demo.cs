@@ -406,7 +406,7 @@ class Demo : TextAdd
         b = b & this.MathValid(value, 0x1921fb5444280, -47);
 
         value = this.Math.Sin(value);
-        b = b & this.MathValid(value, 0x14611a6263314, -89);
+        b = b & this.MathValid(value, 0x14611a6000000, -89);
 
         ka.Expo = -41;
 
