@@ -77,7 +77,7 @@ public class Table : List
         }
 
         Entry entry;
-        entry = (Entry)node.Value;
+        entry = node.Value as Entry;
         object a;
         a = entry.Value;
         return a;
@@ -93,7 +93,7 @@ public class Table : List
         }
 
         Entry entry;
-        entry = (Entry)node.Value;
+        entry = node.Value as Entry;
         entry.Value = value;
         return true;
     }
@@ -122,7 +122,7 @@ public class Table : List
         object k;
         k = this.List.Add(entry);
 
-        this.Tree.Ins(entry.Index, k);
+        this.SortDict[entry.Index] = k;
 
         this.Count = this.List.Count;
 
