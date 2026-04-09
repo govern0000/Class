@@ -237,6 +237,11 @@ public class Table : List
             return null;
         }
 
+        if (!this.SortDict.ContainsKey(index))
+        {
+            return null;
+        }
+
         object kk;
         kk = this.SortDict[index];
 
