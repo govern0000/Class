@@ -50,5 +50,10 @@ class Tree : Any
                 x.P.ChildSet(true, y);
             }
         }
+
+        y.ChildSet(false, x);
+        x.P = y;
+
+        return true;
     }
 }
