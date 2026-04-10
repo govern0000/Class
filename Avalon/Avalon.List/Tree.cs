@@ -59,6 +59,31 @@ class Tree : Any
 
     protected virtual bool Insert(TreeNode z)
     {
+        TreeNode y;
+        TreeNode x;
+
+        y = this.Nil;
+        x = this.Root;
+
+        while (!(x == this.Nil))
+        {
+            y = x;
+
+            bool ba;
+            ba = (this.Less.Execute(z, x) < 0);
+            
+            if (ba)
+            {
+                x = x.Child(false);
+            }
+
+            if (!ba)
+            {
+                x = x.Child(true);
+            }
+        }
+
+        z.P = y;
         return true;
     }
 
