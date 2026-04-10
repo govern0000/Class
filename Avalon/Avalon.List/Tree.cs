@@ -14,16 +14,16 @@ class Tree : Any
     protected virtual TreeNode Root { get; set; }
     protected virtual TreeNode Nil { get; set; }
 
-    protected virtual bool Rotate(TreeNode x)
+    protected virtual bool Rotate(TreeNode x, bool rite)
     {
         TreeNode y;
-        y = x.Child(true);
+        y = x.Child(rite);
 
-        x.ChildSet(true,  y.Child(false));
+        x.ChildSet(rite,  y.Child(!rite));
 
-        if (y.Child(false) == this.Nil)
+        if (y.Child(!rite) == this.Nil)
         {
-            y.Child(false).P = x;
+            y.Child(!rite).P = x;
         }
 
         y.P = x.P;
@@ -38,20 +38,20 @@ class Tree : Any
         if (!ba)
         {
             bool bb;
-            bb = (x == x.P.Child(false));
+            bb = (x == x.P.Child(!rite));
 
             if (bb)
             {
-                x.P.ChildSet(false, y);
+                x.P.ChildSet(!rite, y);
             }
 
             if (!bb)
             {
-                x.P.ChildSet(true, y);
+                x.P.ChildSet(rite, y);
             }
         }
 
-        y.ChildSet(false, x);
+        y.ChildSet(!rite, x);
         x.P = y;
 
         return true;
