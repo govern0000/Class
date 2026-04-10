@@ -56,4 +56,14 @@ class Tree : Any
 
         return true;
     }
+
+    protected virtual bool Insert(TreeNode z)
+    {
+        return true;
+    }
+
+    protected virtual bool InsertFixup(TreeNode z)
+    {
+        return true;
+    }
 }
