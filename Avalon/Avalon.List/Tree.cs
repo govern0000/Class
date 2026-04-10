@@ -28,9 +28,27 @@ class Tree : Any
 
         y.P = x.P;
 
-        if (x.P == this.Nil)
+        bool ba;
+        ba = (x.P == this.Nil);
+        if (ba)
         {
-            
+            this.Root = y;
+        }
+
+        if (!ba)
+        {
+            bool bb;
+            bb = (x == x.P.Child(false));
+
+            if (bb)
+            {
+                x.P.ChildSet(false, y);
+            }
+
+            if (!bb)
+            {
+                x.P.ChildSet(true, y);
+            }
         }
     }
 }
