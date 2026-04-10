@@ -18,7 +18,7 @@ class Tree : Any
     {
         TreeNode y;
         y = x.Child(true);
-        
+
         x.ChildSet(true,  y.Child(false));
 
         if (y.Child(false) == this.Nil)
