@@ -8,4 +8,17 @@ class TreeNode : Any
     public virtual bool Red { get; set; }
     public virtual object Index { get; set; }
     public virtual object Value { get; set; }
+
+    public virtual TreeNode Child(bool rite)
+    {
+        TreeNode a;
+        a = this.Lite;
+
+        if (rite)
+        {
+            a = this.Rite;
+        }
+
+        return a;
+    }
 }
