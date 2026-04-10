@@ -21,4 +21,19 @@ class TreeNode : Any
 
         return a;
     }
+
+    public virtual bool ChildSet(bool rite, TreeNode value)
+    {
+        if (!rite)
+        {
+            this.Lite = value;
+        }
+
+        if (rite)
+        {
+            this.Rite = value;
+        }
+
+        return true;
+    }
 }
