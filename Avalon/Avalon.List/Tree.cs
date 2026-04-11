@@ -71,7 +71,7 @@ class Tree : Any
 
             bool ba;
             ba = (this.Less.Execute(z, x) < 0);
-            
+
             if (ba)
             {
                 x = x.Child(false);
