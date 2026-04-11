@@ -128,6 +128,17 @@ class Tree : Any
 
             TreeNode y;
             y = z.P.P.Child(b);
+
+            bool bb;
+            bb = y.Red;
+
+            if (bb)
+            {
+                z.P.Red = false;
+                y.Red = false;
+                z.P.P.Red = true;
+                z = z.P.P;
+            }
         }
         return true;
     }
