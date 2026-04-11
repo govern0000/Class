@@ -121,6 +121,14 @@ class Tree : Any
 
     protected virtual bool InsertFixup(TreeNode z)
     {
+        while (z.P.Red)
+        {
+            bool b;
+            b = (z.P == z.P.P.Child(false));
+
+            TreeNode y;
+            y = z.P.P.Child(b);
+        }
         return true;
     }
 }
