@@ -139,6 +139,16 @@ class Tree : Any
                 z.P.P.Red = true;
                 z = z.P.P;
             }
+
+            if (!bb)
+            {
+                if (z == z.P.Child(b))
+                {
+                    z = z.P;
+
+                    this.Rotate(z, !b);
+                }
+            }
         }
         return true;
     }
