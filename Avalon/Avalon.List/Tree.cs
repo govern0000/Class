@@ -155,6 +155,8 @@ class Tree : Any
                 this.Rotate(z.P.P, b);
             }
         }
+
+        this.Root.Red = false;
         return true;
     }
 }
