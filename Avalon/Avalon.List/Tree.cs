@@ -7,6 +7,8 @@ class Tree : Any
         base.Init();
         this.Nil = new TreeNode();
         this.Nil.Init();
+
+        this.Root = this.Nil;
         return true;
     }
 
