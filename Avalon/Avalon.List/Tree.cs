@@ -86,6 +86,30 @@ class Tree : Any
         }
 
         z.P = y;
+
+        bool bb;
+        bb = (y == this.Nil);
+
+        if (bb)
+        {
+            this.Root = z;
+        }
+        
+        if (!bb)
+        {
+            bool bc;
+            bc = (this.Less.Execute(z, y) < 0);
+
+            if (bc)
+            {
+                y.ChildSet(false, z);
+            }
+
+            if (!bc)
+            {
+                y.ChildSet(true, z);
+            }
+        }
         return true;
     }
 
