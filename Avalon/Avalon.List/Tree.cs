@@ -148,6 +148,11 @@ class Tree : Any
 
                     this.Rotate(z, !b);
                 }
+
+                z.P.Red = false;
+                z.P.P.Red = true;
+
+                this.Rotate(z.P.P, b);
             }
         }
         return true;
