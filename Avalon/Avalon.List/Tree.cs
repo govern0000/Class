@@ -110,6 +110,12 @@ class Tree : Any
                 y.ChildSet(true, z);
             }
         }
+
+        z.ChildSet(false, this.Nil);
+        z.ChildSet(true, this.Nil);
+        z.Red = true;
+
+        this.InsertFixup(z);
         return true;
     }
 
