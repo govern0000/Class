@@ -276,6 +276,11 @@ class Tree : Any
 
     protected bool DeleteFixup(TreeNode x)
     {
+        while (!(x == this.Root) & !x.Color)
+        {
+            bool b;
+            b = (x == x.P.Child(false));
+        }
         return false;
     }
 }
