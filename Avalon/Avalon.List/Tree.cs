@@ -160,6 +160,15 @@ class Tree : Any
         return true;
     }
 
+    protected virtual TreeNode Minimum(TreeNode x)
+    {
+        while (!(x.Child(false) == this.Nil))
+        {
+            x = x.Child(false);
+        }
+        return x;
+    }
+
     protected virtual bool Transplant(TreeNode u, TreeNode v)
     {
         bool b;
