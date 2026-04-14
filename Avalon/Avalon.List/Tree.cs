@@ -219,6 +219,19 @@ class Tree : Any
 
             this.Transplant(z, z.Child(true));
         }
+
+        if (!b)
+        {
+            bool ba;
+            ba = (z.Child(true) == this.Nil);
+            
+            if (ba)
+            {
+                x = z.Child(false);
+
+                this.Transplant(z, z.Child(false));
+            }
+        }
         return true;
     }
 }
