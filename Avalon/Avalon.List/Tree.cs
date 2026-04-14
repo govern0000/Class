@@ -224,7 +224,7 @@ class Tree : Any
         {
             bool ba;
             ba = (z.Child(true) == this.Nil);
-            
+
             if (ba)
             {
                 x = z.Child(false);
