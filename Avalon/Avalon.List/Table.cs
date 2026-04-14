@@ -179,7 +179,7 @@ public class Table : List
 
         this.List.Rem(node);
 
-        this.SortDict.Remove(index);
+        this.Tree.Rem(index);
 
         this.Count = this.List.Count;
         return true;
@@ -187,7 +187,7 @@ public class Table : List
 
     public override bool Clear()
     {
-        this.SortDict.Clear();
+        this.Tree.Clear();
 
         this.List.Clear();
 
