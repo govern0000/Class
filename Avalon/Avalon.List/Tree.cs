@@ -317,8 +317,21 @@ class Tree : Any
 
                     w = x.P.Child(b);
                 }
+
+                w.Color = x.P.Color;
+
+                x.P.Color = false;
+
+                w.Child(b).Color = false;
+
+                this.Rotate(x.P, !b);
+
+                x = this.Root;
             }
         }
+
+        x.Color = false;
+
         return false;
     }
 }
