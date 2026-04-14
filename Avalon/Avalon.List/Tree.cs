@@ -16,6 +16,18 @@ class Tree : Any
     protected virtual TreeNode Root { get; set; }
     protected virtual TreeNode Nil { get; set; }
 
+    public virtual bool Ins(object index, object value)
+    {
+        TreeNode node;
+        node = new TreeNode();
+        node.Init();
+        node.Index = index;
+        node.Value = value;
+
+        this.Insert(node);
+        return true;
+    }
+
     protected virtual bool Rotate(TreeNode x, bool rite)
     {
         TreeNode y;
