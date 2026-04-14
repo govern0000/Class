@@ -53,6 +53,26 @@ class Tree : Any
         return null;
     }
 
+    protected virtual TreeNode Find(TreeNode x, object k)
+    {
+        if (x == this.Nil)
+        {
+            return x;
+        }
+
+        if (this.Less.Execute(k, x.Index) == 0)
+        {
+            return x;
+        }
+
+        if (this.Less.Execute(k, x.Index) < 0)
+        {
+            return this.Find(x.Child(false), k);
+        }
+
+        return this.Find(x.Child(true), k);
+    }
+
     protected virtual bool Rotate(TreeNode x, bool rite)
     {
         TreeNode y;
