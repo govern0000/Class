@@ -159,7 +159,7 @@ public class Table : List
         object k;
         k = this.List.Ins(node, entry);
 
-        this.Tree[entry.Index] = k;
+        this.Tree.Ins(entry.Index, k);
 
         this.Count = this.List.Count;
 
