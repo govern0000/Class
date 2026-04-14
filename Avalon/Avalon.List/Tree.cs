@@ -256,6 +256,14 @@ class Tree : Any
 
                     y.Child(true).P = y;
                 }
+
+                this.Transplant(z, y);
+
+                y.ChildSet(false, z.Child(false));
+
+                y.Child(false).P = y;
+
+                y.Color = z.Color;
             }
         }
         return true;
