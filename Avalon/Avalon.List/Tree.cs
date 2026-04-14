@@ -239,6 +239,23 @@ class Tree : Any
                 yOriginalColor = y.Color;
 
                 x = y.Child(true);
+
+                bool bb;
+                bb = (y.P == z);
+
+                if (bb)
+                {
+                    x.P = y;
+                }
+
+                if (!bb)
+                {
+                    this.Transplant(y, y.Child(true));
+
+                    y.ChildSet(true, z.Child(true));
+
+                    y.Child(true).P = y;
+                }
             }
         }
         return true;
