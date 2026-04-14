@@ -201,10 +201,24 @@ class Tree : Any
 
     protected virtual bool Delete(TreeNode z)
     {
+        TreeNode x;
+        x = null;
+
         TreeNode y;
         y = z;
+
         bool yOriginalColor;
-        yOriginalColor = false;
+        yOriginalColor = y.Color;
+
+        bool b;
+        b = (z.Child(false) == this.Nil);
+
+        if (b)
+        {
+            x = z.Child(true);
+
+            this.Transplant(z, z.Child(true));
+        }
         return true;
     }
 }
