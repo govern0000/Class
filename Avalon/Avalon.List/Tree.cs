@@ -34,6 +34,12 @@ class Tree : Any
         return true;
     }
 
+    public virtual bool Clear()
+    {
+        this.Root = this.Nil;
+        return true;
+    }
+
     protected virtual bool Rotate(TreeNode x, bool rite)
     {
         TreeNode y;
