@@ -5,11 +5,6 @@ Int Intern_Share(Int info, Eval* eval)
     Int* p;
     p = CastPointer(info);
 
-    Int phore;
-    phore = p[4];
-
-    Phore_Open(phore);
-
     Int share;
     share = p[3];
 
@@ -25,6 +20,11 @@ Int Intern_Share(Int info, Eval* eval)
 
     if (b)
     {
+        Int phore;
+        phore = p[4];
+
+        Phore_Open(phore);
+
         Intern_New(1, info, eval);
 
         Int k;
@@ -39,9 +39,9 @@ Int Intern_Share(Int info, Eval* eval)
         Intern_Call(eval, 1, 3, 0);
 
         eval->N = eval->N - 1;
-    }
 
-    Phore_Close(phore);
+        Phore_Close(phore);
+    }
 
     return 0;
 }
