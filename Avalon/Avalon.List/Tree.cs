@@ -30,6 +30,14 @@ class Tree : Any
 
     public virtual bool Rem(object index)
     {
+        TreeNode node;
+        node = this.Get(index);
+
+        if (node == null)
+        {
+            return false;
+        }
+
         this.Delete(node);
         return true;
     }
@@ -38,6 +46,11 @@ class Tree : Any
     {
         this.Root = this.Nil;
         return true;
+    }
+
+    public virtual TreeNode Get(object index)
+    {
+        return null;
     }
 
     protected virtual bool Rotate(TreeNode x, bool rite)
