@@ -266,6 +266,16 @@ class Tree : Any
                 y.Color = z.Color;
             }
         }
+
+        if (!yOriginalColor)
+        {
+            this.DeleteFixup(x);
+        }
         return true;
+    }
+
+    protected bool DeleteFixup(TreeNode x)
+    {
+        return false;
     }
 }
