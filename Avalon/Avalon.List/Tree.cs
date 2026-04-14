@@ -59,7 +59,7 @@ class Tree : Any
         return true;
     }
 
-    public virtual bool Insert(TreeNode z)
+    protected virtual bool Insert(TreeNode z)
     {
         TreeNode y;
         TreeNode x;
@@ -199,7 +199,7 @@ class Tree : Any
         return true;
     }
 
-    public virtual bool Delete(TreeNode z)
+    protected virtual bool Delete(TreeNode z)
     {
         TreeNode x;
         x = null;
