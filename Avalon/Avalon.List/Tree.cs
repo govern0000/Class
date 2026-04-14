@@ -50,7 +50,9 @@ class Tree : Any
 
     public virtual TreeNode Get(object index)
     {
-        return null;
+        TreeNode a;
+        a = this.Find(this.Root, index);
+        return a;
     }
 
     protected virtual TreeNode Find(TreeNode x, object k)
