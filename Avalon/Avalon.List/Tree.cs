@@ -160,7 +160,7 @@ class Tree : Any
         return true;
     }
 
-    protected virtual bool Transplant(TreeNode u, TreeNode v) 
+    protected virtual bool Transplant(TreeNode u, TreeNode v)
     {
         bool b;
         b = (u.P == this.Nil);
