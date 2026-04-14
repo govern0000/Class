@@ -119,7 +119,7 @@ class Tree : Any
         return true;
     }
 
-    protected virtual bool InsertFixup(TreeNode z)
+    protected virtual bool InsertFixup(TreeNode z) 
     {
         while (z.P.Red)
         {
