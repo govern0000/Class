@@ -294,6 +294,16 @@ class Tree : Any
 
                 w = x.P.Child(b);
             }
+
+            bool ba;
+            ba = (!w.Child(!b).Color & !w.Child(b).Color);
+
+            if (ba)
+            {
+                w.Color = true;
+
+                x = x.P;
+            }
         }
         return false;
     }
