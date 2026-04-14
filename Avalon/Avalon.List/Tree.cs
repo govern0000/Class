@@ -304,6 +304,20 @@ class Tree : Any
 
                 x = x.P;
             }
+
+            if (!ba)
+            {
+                if (!w.Child(b).Color)
+                {
+                    w.Child(!b).Color = false;
+
+                    w.Color = true;
+
+                    this.Rotate(w, b);
+
+                    w = x.P.Child(b);
+                }
+            }
         }
         return false;
     }
