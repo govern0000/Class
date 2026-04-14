@@ -231,6 +231,15 @@ class Tree : Any
 
                 this.Transplant(z, z.Child(false));
             }
+
+            if (!ba)
+            {
+                y = this.Minimum(z.Child(true));
+
+                yOriginalColor = y.Color;
+
+                x = y.Child(true);
+            }
         }
         return true;
     }
