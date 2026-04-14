@@ -28,7 +28,7 @@ class Tree : Any
         return true;
     }
 
-    public virtual bool Rem(TreeNode node)
+    public virtual bool Rem(object index)
     {
         this.Delete(node);
         return true;
