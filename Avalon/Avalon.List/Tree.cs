@@ -113,7 +113,7 @@ class Tree : Any
 
         z.ChildSet(false, this.Nil);
         z.ChildSet(true, this.Nil);
-        z.Red = true;
+        z.Color = true;
 
         this.InsertFixup(z);
         return true;
@@ -121,7 +121,7 @@ class Tree : Any
 
     protected virtual bool InsertFixup(TreeNode z)
     {
-        while (z.P.Red)
+        while (z.P.Color)
         {
             bool b;
             b = (z.P == z.P.P.Child(false));
@@ -130,13 +130,13 @@ class Tree : Any
             y = z.P.P.Child(b);
 
             bool bb;
-            bb = y.Red;
+            bb = y.Color;
 
             if (bb)
             {
-                z.P.Red = false;
-                y.Red = false;
-                z.P.P.Red = true;
+                z.P.Color = false;
+                y.Color = false;
+                z.P.P.Color = true;
                 z = z.P.P;
             }
 
@@ -149,14 +149,14 @@ class Tree : Any
                     this.Rotate(z, !b);
                 }
 
-                z.P.Red = false;
-                z.P.P.Red = true;
+                z.P.Color = false;
+                z.P.P.Color = true;
 
                 this.Rotate(z.P.P, b);
             }
         }
 
-        this.Root.Red = false;
+        this.Root.Color = false;
         return true;
     }
 
@@ -196,6 +196,15 @@ class Tree : Any
         }
 
         v.P = u.P;
+        return true;
+    }
+
+    protected virtual bool Delete(TreeNode z)
+    {
+        TreeNode y;
+        y = z;
+        bool yOriginalColor;
+        yOriginalColor = false;
         return true;
     }
 }
