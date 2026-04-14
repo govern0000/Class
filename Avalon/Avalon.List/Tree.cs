@@ -28,6 +28,12 @@ class Tree : Any
         return true;
     }
 
+    public virtual bool Rem(TreeNode node)
+    {
+        this.Delete(node);
+        return true;
+    }
+
     protected virtual bool Rotate(TreeNode x, bool rite)
     {
         TreeNode y;
