@@ -234,13 +234,16 @@ public class Table : List
             return null;
         }
 
-        if (!this.SortDict.ContainsKey(index))
+        TreeNode ka;
+        ka = this.Tree.Get(index);
+
+        if (ka == null)
         {
             return null;
         }
 
         object kk;
-        kk = this.SortDict[index];
+        kk = ka.Value;
 
         ListNode listNode;
         listNode = kk as ListNode;
