@@ -159,4 +159,34 @@ class Tree : Any
         this.Root.Red = false;
         return true;
     }
+
+    protected virtual bool Transplant(TreeNode u, TreeNode v)
+    {
+        bool b;
+        b = (u.P == this.Nil);
+
+        if (b)
+        {
+            this.Root = v;
+        }
+
+        if (!b)
+        {
+            bool ba;
+            ba = (u == u.P.Child(false));
+
+            if (ba)
+            {
+                u.P.ChildSet(false, v);
+            }
+
+            if (!ba)
+            {
+                u.P.ChildSet(true, v);
+            }
+        }
+
+        v.P = u.P;
+        return true;
+    }
 }
