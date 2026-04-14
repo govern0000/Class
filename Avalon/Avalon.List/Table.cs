@@ -119,7 +119,7 @@ public class Table : List
         object k;
         k = this.List.Add(entry);
 
-        this.SortDict[entry.Index] = k;
+        this.Tree.Ins(entry.Index, k);
 
         this.Count = this.List.Count;
 
