@@ -280,6 +280,20 @@ class Tree : Any
         {
             bool b;
             b = (x == x.P.Child(false));
+
+            TreeNode w;
+            w = x.P.Child(b);
+
+            if (w.Color)
+            {
+                w.Color = false;
+
+                x.P.Color = true;
+
+                this.Rotate(x.P, !b);
+
+                w = x.P.Child(b);
+            }
         }
         return false;
     }
