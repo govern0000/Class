@@ -33,11 +33,6 @@ class Tree : Any
         TreeNode node;
         node = this.Get(index);
 
-        if (node == null)
-        {
-            return false;
-        }
-
         this.Delete(node);
         return true;
     }
