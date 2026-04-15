@@ -246,7 +246,7 @@ class Demo : TextAdd
         kab.Value = kb;
 
         object kdf;
-        kdf = table.Ins(kk, kab);
+        kdf = table.Ins(ka, kab);
 
         Value kdg;
         kdg = kdf as Value;
