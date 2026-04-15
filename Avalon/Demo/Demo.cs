@@ -215,7 +215,7 @@ class Demo : TextAdd
 
         this.Console.Out.Write(this.AddClear().AddS("Table Rem ").Add(this.StatusString(b)).AddLine().AddResult());
 
-        kk = array.GetAt(1);
+        kk = array.GetAt(0);
 
         Value ka;
         ka = new Value();
@@ -234,6 +234,23 @@ class Demo : TextAdd
         Value kde;
         kde = kdd as Value;
 
+        Value kb;
+        kb = new Value();
+        kb.Init();
+        kb.Int = 792461;
+
+        ListEntry kab;
+        kab = new ListEntry();
+        kab.Init();
+        kab.Index = kb;
+        kab.Value = kb;
+
+        object kdf;
+        kdf = table.Ins(kk, kab);
+
+        Value kdg;
+        kdg = kdf as Value;
+
         array = this.ListInfra.ArrayCreateList(table);
 
         b = (array.Count == 3);
@@ -241,6 +258,7 @@ class Demo : TextAdd
         b = b & this.ArrayIntSame(array, 1, 792461);
         b = b & this.ArrayIntSame(array, 2, 8197);
         b = b & kde == ka;
+        b = b & kdg == kb;
 
         this.Console.Out.Write(this.AddClear().AddS("Table Ins ").Add(this.StatusString(b)).AddLine().AddResult());
 
