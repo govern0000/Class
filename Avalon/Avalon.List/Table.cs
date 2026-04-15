@@ -4,9 +4,12 @@ public class Table : List
 {
     public override bool Init()
     {
-        this.Tree = new Tree();
-        this.Tree.Less = this.Less;
-        this.Tree.Init();
+        LessCompare compare;
+        compare = new LessCompare();
+        compare.Less = this.Less;
+        compare.Init();
+
+        this.SortDict = new SortDict(compare);
 
         this.List = new List();
         this.List.Init();
@@ -15,7 +18,7 @@ public class Table : List
 
     public virtual Less Less { get; set; }
     public override object Start
-    { 
+    {
         get
         {
             object value;
@@ -62,7 +65,7 @@ public class Table : List
     }
 
     private List List { get; set; }
-    private Tree Tree { get; set; }
+    private SortDict SortDict { get; set; }
 
     public override object Get(object index)
     {
@@ -119,7 +122,7 @@ public class Table : List
         object k;
         k = this.List.Add(entry);
 
-        this.Tree.Ins(entry.Index, k);
+        this.SortDict[entry.Index] = k;
 
         this.Count = this.List.Count;
 
@@ -159,7 +162,7 @@ public class Table : List
         object k;
         k = this.List.Ins(node, entry);
 
-        this.Tree.Ins(entry.Index, k);
+        this.SortDict[entry.Index] = k;
 
         this.Count = this.List.Count;
 
@@ -179,7 +182,7 @@ public class Table : List
 
         this.List.Rem(node);
 
-        this.Tree.Rem(index);
+        this.SortDict.Remove(index);
 
         this.Count = this.List.Count;
         return true;
@@ -187,7 +190,7 @@ public class Table : List
 
     public override bool Clear()
     {
-        this.Tree.Clear();
+        this.SortDict.Clear();
 
         this.List.Clear();
 
@@ -234,16 +237,13 @@ public class Table : List
             return null;
         }
 
-        TreeNode ka;
-        ka = this.Tree.Get(index);
-
-        if (ka == null)
+        if (!this.SortDict.ContainsKey(index))
         {
             return null;
         }
 
         object kk;
-        kk = ka.Value;
+        kk = this.SortDict[index];
 
         ListNode listNode;
         listNode = kk as ListNode;
