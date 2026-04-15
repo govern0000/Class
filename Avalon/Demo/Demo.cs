@@ -220,7 +220,7 @@ class Demo : TextAdd
         Value ka;
         ka = new Value();
         ka.Init();
-        ka.Int = 792461;
+        ka.Int = 10000;
 
         ListEntry kaa;
         kaa = new ListEntry();
@@ -237,7 +237,7 @@ class Demo : TextAdd
         Value kb;
         kb = new Value();
         kb.Init();
-        kb.Int = 792461;
+        kb.Int = 80000;
 
         ListEntry kab;
         kab = new ListEntry();
@@ -254,9 +254,9 @@ class Demo : TextAdd
         array = this.ListInfra.ArrayCreateList(table);
 
         b = (array.Count == 3);
-        b = b & this.ArrayIntSame(array, 0, 983501);
-        b = b & this.ArrayIntSame(array, 1, 792461);
-        b = b & this.ArrayIntSame(array, 2, 8197);
+        b = b & this.ArrayIntSame(array, 0, 80000);
+        b = b & this.ArrayIntSame(array, 1, 10000);
+        b = b & this.ArrayIntSame(array, 2, 983501);
         b = b & kde == ka;
         b = b & kdg == kb;
 
