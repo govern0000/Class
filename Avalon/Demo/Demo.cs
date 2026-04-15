@@ -197,13 +197,21 @@ class Demo : TextAdd
         object kk;
         kk = array.GetAt(1);
 
-        table.Rem(kk);
+        object ke;
+        ke = array.GetAt(2);
+
+        bool ba;
+        ba = true;
+
+        ba = ba & table.Rem(kk);
+
+        ba = ba & table.Rem(ke);
 
         array = this.ListInfra.ArrayCreateList(table);
 
-        b = (array.Count == 2);
+        b = (array.Count == 1);
         b = b & this.ArrayIntSame(array, 0, 983501);
-        b = b & this.ArrayIntSame(array, 1, 8197);
+        b = b & ba;
 
         this.Console.Out.Write(this.AddClear().AddS("Table Rem ").Add(this.StatusString(b)).AddLine().AddResult());
 
@@ -220,7 +228,11 @@ class Demo : TextAdd
         kaa.Index = ka;
         kaa.Value = ka;
 
-        table.Ins(kk, kaa);
+        object kdd;
+        kdd = table.Ins(kk, kaa);
+
+        Value kde;
+        kde = kdd as Value;
 
         array = this.ListInfra.ArrayCreateList(table);
 
@@ -228,6 +240,7 @@ class Demo : TextAdd
         b = b & this.ArrayIntSame(array, 0, 983501);
         b = b & this.ArrayIntSame(array, 1, 792461);
         b = b & this.ArrayIntSame(array, 2, 8197);
+        b = b & kde == ka;
 
         this.Console.Out.Write(this.AddClear().AddS("Table Ins ").Add(this.StatusString(b)).AddLine().AddResult());
 
