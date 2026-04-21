@@ -36,6 +36,13 @@ Sone is class base.
 
 The word "Sone" is this program lang node name.
 
+Sone word has spell.
+The spell is:
+"S" for Seer Care.
+"o" for order execute.
+"n" for node class.
+"e" for effect any.
+
 Sone source item root node is Class node.
 
 Sone has all Class Lang lang element nodes.
