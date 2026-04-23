@@ -4230,21 +4230,6 @@ Int Intern_Extern_Form_Mul(Eval* eval, Int frame)
     Return;
 }
 
-Int Intern_Extern_Form_MulPos(Eval* eval, Int frame)
-{
-    Int paramCount;
-    paramCount = 3;
-
-    Param(0);
-    Param(1);
-    Param(2);
-
-    Int a;
-    a = Form_MulPos(a0, a1, a2);
-
-    Return;
-}
-
 Int Intern_Extern_Form_Ident(Eval* eval, Int frame)
 {
     Int paramCount;
