@@ -360,7 +360,6 @@ public static class Extern
     [DllImport(InfraLib)] public extern static ulong Form_ValueGet(ulong o, ulong col, ulong row);
     [DllImport(InfraLib)] public extern static ulong Form_ValueSet(ulong o, ulong col, ulong row, ulong value);
     [DllImport(InfraLib)] public extern static ulong Form_Mul(ulong o, ulong other);
-    [DllImport(InfraLib)] public extern static ulong Form_MulPos(ulong o, ulong result, ulong pos);
     [DllImport(InfraLib)] public extern static ulong Form_Ident(ulong o);
     [DllImport(InfraLib)] public extern static ulong Form_IsInvertible(ulong o);
     [DllImport(InfraLib)] public extern static ulong Form_Invert(ulong o, ulong result);
