@@ -183,7 +183,6 @@ Form
     ValueGet(col, row)
     ValueSet(col, row, value)
     Mul(other)
-    MulPos(result, pos)
     Ident()
     IsInvertible()
     Invert(result)
