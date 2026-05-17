@@ -12,7 +12,7 @@ class Stream : Any
         this.InternData : extern.Data_New();
         extern.Data_Init(this.InternData);
 
-        this.InternRange :extern.Range_New();
+        this.InternRange : extern.Range_New();
         extern.Range_Init(this.InternRange);
 
         var Bool b;
